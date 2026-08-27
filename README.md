@@ -1,0 +1,134 @@
+# Ambiguity Is Not Conflict
+
+[![Protocol status](https://img.shields.io/badge/evidence-protocol%20only-blue)](docs/research/research_contract.md)
+[![Repository checks](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/workflows/quality.yml/badge.svg)](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/workflows/quality.yml)
+
+**Identifiable cross-modal conflict estimation for calibrated selective
+decisions.**
+
+This repository is the standalone research home for a single question:
+
+> At the atomic clinical-finding level, can a cross-modal conflict component
+> respond specifically to controlled image--report incompatibility, rather
+> than image ambiguity, text ambiguity, missingness, corruption, epistemic
+> uncertainty, or output uncertainty, and add held-out decision value at a
+> fixed review budget?
+
+The project is currently at **protocol stage**. No core experiment has been
+run, no candidate method has been promoted, and nothing here establishes
+clinical benefit or deployment readiness.
+
+## Intended Contribution
+
+The intended contribution is a conditional conflict estimand and a controlled,
+clinician-reviewed evaluation design that can falsify whether cross-modal
+conflict is separately identifiable. The paper's identity is **not** “Gaussian
+embeddings” or any single distance. Probabilistic embeddings, deterministic
+compatibility models, ensembles, approximate-Bayesian methods, semantic
+entropy, generic failure predictors, and conformal selection are candidates to
+compare under matched conditions.
+
+```text
+controlled image--report interventions
+        -> identifiable uncertainty components
+        -> held-out calibrated error risk
+        -> selective or human-review value
+```
+
+## Research Objects
+
+For image input \(x_v\), text input \(x_t\), model parameters \(\theta\), and
+output \(\hat y\), the programme keeps the following objects distinct:
+
+```math
+A_v = A(x_v), \qquad
+A_t = A(x_t), \qquad
+M_v = M(x_v), \qquad
+M_t = M(x_t), \qquad
+C_{vt} = C(x_v,x_t), \qquad
+U_{\mathrm{epi}} = U(\theta\mid\mathcal D), \qquad
+U_{\mathrm{out}} = U(\hat y).
+```
+
+Here \(A_v,A_t\) denote within-modality ambiguity, while \(M_v,M_t\)
+denote missingness or quality loss. They are not interchangeable.
+
+Cross-modal conflict is an input relationship. Hallucination is an output
+failure. Calibration failure and overconfident error are separate outcome
+properties. The [problem taxonomy](docs/research/problem_taxonomy.md) defines
+the permitted terminology.
+
+## Current Decisions and Open Gates
+
+| Item | Current status |
+| --- | --- |
+| Project identity | **Decided:** `Ambiguity Is Not Conflict` |
+| Primary route | **Decided in principle:** controlled identification of image--report conflict before calibration or decision claims |
+| Validation domain | **Primary candidate:** chest radiography at atomic finding level |
+| Data route | **Candidate:** MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as an external stress test |
+| Representation | **Open comparison:** no probabilistic or Bayesian method is presumed superior |
+| Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
+| Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
+
+See the [research contract](docs/research/research_contract.md),
+[roadmap](docs/roadmap.md), and [decision log](docs/research/decision_log.md)
+for the authoritative state.
+
+## Repository Map
+
+```text
+docs/research/               canonical scientific contract and protocols
+docs/research/templates/     frozen-brief and evidence-record templates
+docs/roadmap.md              evidence gates and 12-month submission plan
+experiments/research_core/   reserved; no core experiment is implemented
+configs/                     reserved for frozen experiment configurations
+src/                         reserved until the protocol defines an interface
+tests/                       repository-contract tests
+scripts/                     lightweight validation utilities
+data/                        governance-only placeholder; raw data are ignored
+reports/tables/              permitted generated tables after authorization
+reports/figures/             permitted generated figures after authorization
+paper/                       manuscript workspace after evidence promotion
+```
+
+## Canonical Reading Order
+
+1. [Research contract](docs/research/research_contract.md)
+2. [Scope charter](docs/research/scope_charter.md)
+3. [Problem taxonomy](docs/research/problem_taxonomy.md)
+4. [Research question and hypotheses](docs/research/research_question.md)
+5. [Measurement protocol](docs/research/measurement_protocol.md)
+6. [Evaluation protocol](docs/research/evaluation_protocol.md)
+7. [Data and clinical governance](docs/research/data_governance.md)
+8. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+9. [Literature matrix](docs/research/literature_matrix.md)
+10. [Submission strategy](docs/research/submission_strategy.md)
+11. [Decision log](docs/research/decision_log.md)
+
+## Repository Checks
+
+The initial repository contains governance tests, not scientific tests:
+
+```bash
+python -m pip install -r requirements-dev.txt
+pytest -q
+python scripts/check_repository.py
+```
+
+These checks verify structure and internal documentation links. They do not
+validate a scientific claim.
+
+## Data, Privacy, and Clinical Boundary
+
+No restricted medical data, credentials, identifiers, personal
+correspondence, or private supervisor messages may be committed. Dataset
+access, synthetic clinical contradictions, clinician annotation, and human
+studies each require their own approval and decision record. See
+[data/README.md](data/README.md).
+
+## Citation and Reuse
+
+The repository has a machine-readable [citation record](CITATION.cff), but it
+does not yet represent a published paper or released scientific result. No
+open-source licence has been selected; see
+[the licensing status](docs/licensing.md) before reusing material.

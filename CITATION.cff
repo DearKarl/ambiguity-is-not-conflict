@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: >-
+  This repository currently contains a research protocol rather than a
+  published result. Cite the archived release associated with any future paper.
+title: "Ambiguity Is Not Conflict"
+type: software
+authors:
+  - family-names: Meng
+    given-names: Karl
+repository-code: "https://github.com/DearKarl/ambiguity-is-not-conflict"
+abstract: >-
+  Protocol and reproducibility scaffold for identifying cross-modal conflict
+  separately from unimodal ambiguity and evaluating calibrated selective
+  decisions in medical image--text systems.

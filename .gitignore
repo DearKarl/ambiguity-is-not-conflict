@@ -1,0 +1,42 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Editors and local environments
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Research data and model artifacts are local unless explicitly approved.
+data/*
+!data/README.md
+!data/.gitignore
+checkpoints/
+models/
+wandb/
+mlruns/
+*.ckpt
+*.pth
+*.pt
+
+# Generated paper output
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
