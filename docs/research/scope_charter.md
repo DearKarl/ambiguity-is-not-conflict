@@ -2,7 +2,7 @@
 
 **Status:** Canonical one-paper boundary
 
-**Decision:** DR-0002
+**Decision:** DR-0002 and DR-0006
 
 ## Title-Level Direction
 
@@ -13,6 +13,10 @@ The paper will study whether cross-modal conflict can be identified separately
 from ambiguity within either modality, then test whether the identified
 component adds calibrated and decision-relevant information beyond simpler
 baselines.
+
+Chest radiography is the primary validation domain, not part of the scientific
+construct or title. Any breadth study must replicate the same construct and
+cannot become a second research direction.
 
 ## Canonical Research Object
 
@@ -46,8 +50,9 @@ be identifiable.
   semantic uncertainty, and conformal selection as comparisons;
 - construct validity, proper scores, calibration, overconfident error,
   risk--coverage, fixed-budget review, and failure-case analysis;
-- a pre-specified cross-backbone breadth test and an independent or natural
-  stress set within the same scientific route;
+- a pre-specified cross-backbone breadth test and, subject to its own bounded
+  data/scope/governance decision, either a second medical dataset or a small
+  controlled general-domain benchmark that tests the same construct;
 - a clinician-reviewed retrospective subset after governance approval.
 
 ## Out of Scope Without a New Decision Record
@@ -74,15 +79,18 @@ be identifiable.
 
 ## Primary Contribution Boundary
 
-The benchmark alone is insufficient for a Main Track method paper, and a new
-embedding alone is insufficient for a source-identification paper. The primary
-route therefore requires all three:
+The single intended primary contribution is a formal conditional conflict
+estimand together with an estimator or general estimation framework whose
+interpretation can be falsified. The benchmark alone is insufficient for a
+Main Track method paper, and a new embedding alone is insufficient for a
+source-identification paper.
 
-1. a formal conditional conflict estimand;
-2. an estimator or estimation framework whose interpretation is tested by
-   controlled interventions;
-3. held-out evidence that the identified component matters beyond matched
-   simpler predictors.
-
-The exact estimator remains open. A negative comparison is valid and may force
-a narrower evaluation-paper claim.
+Controlled interventions provide identification evidence; matched held-out
+comparisons provide incremental-validity evidence; calibration and selective
+review provide downstream decision evidence. These are supports for the one
+central contribution, not separate contribution claims. The exact estimator
+remains open, and deterministic, evidential, probabilistic, Bayesian, ensemble,
+and semantic-entropy methods remain candidate comparison families, with
+conformal methods as candidate risk-control layers. Gate 0 must freeze the
+smallest matched set capable of falsifying the claim. A negative comparison is
+valid and may force a narrower evaluation-paper claim.

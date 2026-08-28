@@ -21,6 +21,10 @@ planned method or experiment is not a result. Any conflict between a task brief
 and this directory is resolved in favour of the most recent approved decision
 record.
 
+Bounded maintenance and execution briefs are stored under
+[`task_briefs/`](task_briefs/). They authorize only their named action and do
+not supersede the canonical contract or decision log.
+
 ## Evidence Labels
 
 - **literature lead**: relevant work awaiting bibliographic or implementation

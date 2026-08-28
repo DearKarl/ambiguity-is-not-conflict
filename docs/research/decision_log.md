@@ -75,6 +75,51 @@ decisions are separated explicitly.
 - **Licence:** No open-source licence is silently granted; licensing remains a
   recorded pre-release decision.
 
+## DR-0006 — Main Track Paper Identity and Promotion Boundary
+
+- **Date:** 2026-08-29
+- **Status:** Approved planning clarification by the Commander
+- **Decision:** Keep NeurIPS 2027 Main Track as the primary strategic target
+  and plan the paper as **Use-Inspired** if the official 2027 rules retain an
+  applicable contribution type. The single intended primary contribution is a
+  formal conditional-conflict estimand plus an estimator or general estimation
+  framework; chest radiography remains the primary validation domain rather
+  than part of the title or scientific construct.
+- **Verified facts:** The 2026 Main Track handbook defined a Use-Inspired type
+  around novel methods, tasks, or metrics associated with a real-world use
+  case. The 2026 reviewer guidance did not require originality to take the
+  form of a new architecture. The 2026 call prohibited track/type switching
+  and simultaneous submissions across NeurIPS tracks/types. Official links and
+  the evidence classification are recorded in the
+  [submission strategy](submission_strategy.md#venue-fit-evidence-classification).
+- **Inference:** A domain-general estimand and non-trivial estimator supported
+  by controlled medical evidence is more defensible as a Main Track method
+  paper than a benchmark comparison or renamed distributional distance.
+- **Assumptions:** The 2027 call will retain compatible contribution and track
+  rules; time, compute, dataset access, and clinical support will become
+  documented resources rather than planning expectations.
+- **Evidence boundary:** Controlled medical benchmarking, candidate
+  probabilistic embeddings, calibration analysis, and selective review are
+  evidence for or against the central contribution—not parallel contribution
+  claims. Passing the Month-3 development gate is necessary but not sufficient
+  for Main Track readiness and cannot be promoted as confirmatory evidence.
+- **Breadth boundary:** The Main Track plan seeks replication across at least
+  two materially different VLM backbone families and, after a separate bounded
+  data/scope/governance decision, either a second medical dataset or a small
+  controlled general-domain benchmark testing the same construct. Neither
+  option is authorized for execution by this decision.
+- **Track contingency:** Evaluations & Datasets is only a pre-submission
+  fallback for the same route if the enduring result is evaluation science and
+  the estimator is secondary. The same paper will not be submitted to both.
+- **Reopening condition:** Reassess after the official 2027 calls appear, if
+  the Month-3 method gate fails, if the matched deterministic predictor
+  subsumes the candidate, if breadth or confirmatory evidence cannot be
+  defended, or if the scientific contribution becomes primarily an evaluation
+  resource.
+- **Permitted claim:** This is a submission-planning decision, not evidence of
+  construct identifiability, 2027 eligibility, acceptance, publication, or
+  clinical benefit.
+
 ## Open Gate 0 Decisions
 
 - atomic finding ontology and exact prediction unit;
@@ -87,5 +132,6 @@ decisions are separated explicitly.
 - target-distribution cohort and any prevalence weighting;
 - compute ceiling and reproducibility budget;
 - pre-specified distribution shift and subgroup set;
-- cross-backbone breadth and independent/natural stress set;
+- cross-backbone breadth and the governed choice of a second medical dataset
+  or small controlled general-domain benchmark;
 - final NeurIPS 2027 track and deadline after the official call.

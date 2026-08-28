@@ -34,11 +34,18 @@ ambiguity.
 - write a failure audit and Month-3 decision record.
 
 **Promote only if:** reviewers can distinguish the constructs, the intervention
-is not trivial, and at least one candidate passes the pre-specified specificity
-and non-redundancy thresholds.
+is not trivial, and at least one candidate passes every necessary criterion in
+the measurement protocol: stronger response to controlled incompatibility than
+to matched controls; persistence after conditioning on `A_v`, `A_t`, `M_v`,
+`M_t`, and source; a frozen non-trivial gain over deterministic similarity
+without subsumption by the matched deterministic predictor; and artifact,
+normalization, leakage, repetition, and failure-case checks.
 
 **Kill or redesign if:** the construct, labels, access, compute, or annotation
 route fails the criteria in the measurement protocol.
+
+Passing this development-only gate is necessary but not sufficient for the
+Main Track method claim; confirmatory evidence remains required.
 
 ## Month 4–5 — Confirmatory Benchmark Construction
 
@@ -61,8 +68,9 @@ cohort audit pass their frozen thresholds.
 - train/evaluate frozen deterministic and uncertainty-aware candidates;
 - run required ablations, repeated seeds, and resource accounting;
 - test construct specificity and stability under the declared shift;
-- run the frozen cross-backbone breadth test and approved independent or
-  natural stress set;
+- run the frozen cross-backbone breadth test and the separately approved second
+  medical dataset or small controlled general-domain benchmark testing the same
+  construct;
 - lock the candidate for final outcome evaluation without inspecting final
   endpoints.
 
@@ -85,7 +93,8 @@ calibration criteria.
 
 ## Month 8–9 — Selective Review and Main Paper
 
-**Outcome:** submission-ready Main Track package if all earlier gates pass.
+**Outcome:** submission-ready Main Track package, planned as Use-Inspired if an
+applicable 2027 contribution type exists, only if all earlier gates pass.
 
 - evaluate `answer | human_review` at equal review budgets or coverage;
 - complete ablations, compute statement, limitations, ethics, and
@@ -108,7 +117,7 @@ the best-fitting next venue without manufacturing new claims.
 - archive exact submission artifacts and decision records;
 - if not accepted or if the deadline is missed, choose one fit-based venue
   family and revise the same paper;
-- plan follow-up clinical or general-domain validation only after the primary
+- plan any validation beyond the frozen breadth study only after the primary
   study is complete.
 
 Acceptance is not a milestone under the project's control. A rigorous

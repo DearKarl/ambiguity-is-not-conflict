@@ -10,15 +10,21 @@ ambiguity, text ambiguity, missingness, corruption, epistemic uncertainty, or
 output uncertainty, and add held-out prediction of overconfident model errors
 at a fixed review budget?
 
-## Intended Primary Claim
+## Intended Claim Structure
 
-A formally defined, conditionally estimated cross-modal conflict component can
-be separately identified under controlled interventions and provides
-non-redundant, calibrated information for selective review beyond frozen
-unimodal uncertainty, ordinary confidence, output uncertainty, and matched
+**Central claim to test.** A formally defined conditional cross-modal conflict
+estimand and estimator or estimation framework can identify incompatibility
+under controlled interventions after accounting for image ambiguity, text
+ambiguity, and modality-specific information loss.
+
+**Downstream support claims to test.** If construct identification passes, the
+frozen conflict component provides non-redundant calibrated information and
+selective-review value beyond unimodal ambiguity measures, ordinary
+confidence, epistemic uncertainty, output uncertainty, and matched
 deterministic failure predictors.
 
-This is the claim to test, not a result.
+These are hypotheses, not results. The downstream claims support the central
+contribution and cannot substitute for failed construct identification.
 
 ## H1 — Conflict Specificity
 

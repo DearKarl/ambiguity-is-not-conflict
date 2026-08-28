@@ -132,20 +132,27 @@ small clinician-reviewed intervention set. It compares one deterministic
 similarity baseline, one matched deterministic compatibility predictor, and at
 most two tractable uncertainty-aware candidates.
 
-The route is killed or redesigned before scale-up if any of the following
-holds:
+Promotion out of the kill-test stage requires at least one pre-specified
+candidate to satisfy all of the following:
 
-- clinical reviewers cannot reliably distinguish conflict from ambiguity;
-- intervention cells contain obvious non-semantic artifacts;
-- no candidate shows the pre-specified conflict-specific paired response;
-- the response disappears after controlling for \(A_v\), \(A_t\), \(M_v\),
-  \(M_t\), and source;
-- the matched deterministic predictor fully subsumes the candidate at the
-  smallest effect considered meaningful;
-- annotation, data access, or compute cannot support a confirmatory study.
+1. respond more strongly to controlled incompatibility than to matched image
+   ambiguity, text ambiguity, missingness, and corruption controls;
+2. retain a non-negligible conflict effect after conditioning on `A_v`, `A_t`,
+   `M_v`, `M_t`, and source;
+3. exceed deterministic similarity by a pre-specified non-trivial margin and
+   not be fully subsumed by the matched deterministic compatibility/failure
+   predictor at the smallest effect considered meaningful;
+4. survive surface-artifact, representation-scale/normalization,
+   patient/source-leakage, repetition, and failure-case checks.
 
-The kill test cannot be promoted as confirmatory evidence, and its outcomes
-cannot be used to repeatedly redefine the primary endpoint.
+The route is killed or redesigned before scale-up if any required condition
+fails, or if clinical reviewers cannot reliably distinguish conflict from
+ambiguity, intervention cells contain obvious non-semantic artifacts, or
+annotation, data access, or compute cannot support a confirmatory study.
+
+Passing this development-only gate is necessary but not sufficient for a Main
+Track method claim. The kill test cannot be promoted as confirmatory evidence,
+and its outcomes cannot be used to repeatedly redefine the primary endpoint.
 
 ## Required Pre-Execution Artifacts
 

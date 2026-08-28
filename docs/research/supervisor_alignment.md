@@ -42,6 +42,11 @@ supervisor.
   identification.
 - Plan for a NeurIPS 2027 Main Track submission, subject to scientific kill
   gates and the official 2027 call.
+- Use **Use-Inspired** as the provisional contribution-type framing if the
+  official 2027 rules retain an applicable category.
+- Treat the conditional-conflict estimand plus estimator/framework as the
+  single intended primary contribution; benchmark, representation,
+  calibration, and selective-review work are supporting evidence.
 - Use medical image--text systems as the primary validation domain unless a
   formal decision record changes the route.
 
@@ -61,4 +66,5 @@ supervisor.
 - annotation sample, rubric, adjudication, and clinician time;
 - primary estimand, endpoint, smallest effect, and final statistical plan;
 - frozen backbone and compute boundary;
-- whether evidence ultimately fits Main Track or Evaluations & Datasets better.
+- whether the evidence clears the Main Track bar or requires the same-route
+  Evaluations & Datasets pre-submission fallback after the official calls.

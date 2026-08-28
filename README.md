@@ -20,13 +20,18 @@ clinical benefit or deployment readiness.
 
 ## Intended Contribution
 
-The intended contribution is a conditional conflict estimand and a controlled,
-clinician-reviewed evaluation design that can falsify whether cross-modal
-conflict is separately identifiable. The paper's identity is **not** “Gaussian
-embeddings” or any single distance. Probabilistic embeddings, deterministic
-compatibility models, ensembles, approximate-Bayesian methods, semantic
-entropy, generic failure predictors, and conformal selection are candidates to
-compare under matched conditions.
+The single intended primary contribution is a formal conditional conflict
+estimand and an estimator or estimation framework that can be falsified under
+controlled interventions after accounting for ambiguity and information loss
+within each modality. The controlled medical benchmark, probabilistic
+embeddings, calibration analysis, and selective review are supporting evidence
+or candidate implementations—not four parallel contribution claims.
+
+The paper's identity is **not** “Gaussian embeddings” or any single distance.
+Probabilistic embeddings, deterministic compatibility models, evidential
+methods, ensembles, approximate-Bayesian methods, semantic entropy, generic
+failure predictors, and conformal selection remain candidates to compare under
+matched conditions.
 
 ```text
 controlled image--report interventions
@@ -64,10 +69,11 @@ the permitted terminology.
 | --- | --- |
 | Project identity | **Decided:** `Ambiguity Is Not Conflict` |
 | Primary route | **Decided in principle:** controlled identification of image--report conflict before calibration or decision claims |
-| Validation domain | **Primary candidate:** chest radiography at atomic finding level |
+| Validation domain | **Primary route:** chest radiography at atomic finding level; the exact task and dataset remain Gate 0 decisions |
 | Data route | **Candidate:** MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as an external stress test |
 | Representation | **Open comparison:** no probabilistic or Bayesian method is presumed superior |
 | Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
+| Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
 | Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
 
 See the [research contract](docs/research/research_contract.md),

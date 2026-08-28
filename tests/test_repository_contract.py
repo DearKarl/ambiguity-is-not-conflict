@@ -47,3 +47,22 @@ def test_protocol_record_is_not_a_fake_release() -> None:
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     assert "date-released:" not in citation
     assert "\nversion:" not in citation
+
+
+def test_submission_identity_remains_conditional_and_single_route() -> None:
+    strategy = (
+        ROOT / "docs/research/submission_strategy.md"
+    ).read_text(encoding="utf-8").lower()
+    assert "use-inspired" in strategy
+    assert "2027 call not yet available" in strategy
+    assert "single intended primary contribution" in strategy
+    assert "not a second project or a simultaneous submission" in strategy
+
+
+def test_month_three_gate_is_not_confirmatory_evidence() -> None:
+    measurement = (
+        ROOT / "docs/research/measurement_protocol.md"
+    ).read_text(encoding="utf-8").lower()
+    assert "necessary but not sufficient" in measurement
+    assert "matched deterministic compatibility/failure" in measurement
+    assert "cannot be promoted as confirmatory evidence" in measurement
