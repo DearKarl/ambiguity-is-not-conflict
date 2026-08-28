@@ -3,7 +3,7 @@
 **Status:** Finite blocker inventory; Gate 0 remains open
 
 **Audit date:** 2026-08-29
-**Evidence class:** Protocol and decision support under TB-0003--TB-0008, with
+**Evidence class:** Protocol and decision support under TB-0003--TB-0009, with
 independent scientific/statistical/model-governance challenge
 
 ## Bottom Line
@@ -18,8 +18,10 @@ approval is implied. The remaining blockers form six auditable clusters:
    task/unit, ontology, `MV-1`/`MT-1`, reader design, and the later
    model-independent `MV-1` task-evidence qualification are unsigned. TB-0008
    makes the reader coefficient/allocation and selected/evaluable finite-roster
-   qualification analysis exact candidates, but its simulation, roster,
-   clinical, governance, and resource decisions remain open.
+   qualification analysis exact candidates. TB-0009 compiles 10,847
+   reliability and 2,438 pre-calibration `MV-1` candidate cells without
+   running them, but simulation, roster, clinical, governance, and resource
+   decisions remain open.
 2. **Method and comparison identity:** TB-0006 selected no pointwise estimator;
    all three candidates reduced to deterministic or occupied forms. Owners have
    not approved the recommended framework-centered claim amendment or supplied
@@ -36,9 +38,11 @@ approval is implied. The remaining blockers form six auditable clusters:
    final-source exclusion, and the recommended VisMin breadth identity still
    lacks an approved immutable snapshot, rights audit, and construct-portability
    decision.
-6. **Resources and governance:** reader/compute/storage ceilings, downstream
-   target-outcome power, permitted derivatives, retention/deletion/backup
-   terms, and every accountable sign-off remain open.
+6. **Resources and governance:** the successful simulation path reaches up to
+   1,594,200,000 outer datasets and 15,940,405,800,000 nested bootstraps, while
+   CPU-core-hours, RAM, scratch, persistent storage, wall time, cost, capacity,
+   downstream target-outcome power, permitted derivatives, retention/deletion/
+   backup terms, and every accountable sign-off remain open.
 
 No valid ambiguity intervention is declared: degradation, masking,
 compression, evidence removal, and hedging retain their distinct constructs.
@@ -86,7 +90,7 @@ sample floor.
 | Backbone and checkpoint exposure | The primary feature identity lead is BiomedCLIP `9f341de24bfb00180f1b847274256e9b65a3a32e` through OpenCLIP 2.23.0 `f08f25f3f226bdb538de2b4ed48a9213ba6b179e`; both publish MIT terms but remain unknown-exposure. SigLIP2/Qwen are other unknown-exposure sensitivity candidates; BioViL-T and CheXzero are known-exposure diagnostics. A ResNet-50 plus original-BERT pair is a source/type/time-auditable strict non-VLM control lead. | Decision- and feasibility-blocked | Approve the immutable feature route and three-tier rule; separately secure a development-only or sequestered strict route or narrow every held-out/generalization claim. No named snapshot proves MIMIC exclusion or authorizes download. |
 | Development, calibration, and final partitions | Recommended `G0-MV-Q A`: within official-train bucket 0--69, a distinct `AINC/v1/mv1-qualification` HMAC rank first reserves 150 strict-single-frontal metadata candidates per positive/negative report-screen sampling stratum (300 total) to seek at least 108 evaluable blocks per independently assigned intact-image polarity; they are removed from fit/development and every protected/target population. Remaining bucket 0--69 supports fit/development, bucket 70--84 one-time Month-3 screening, and bucket 85--99 untouched construct confirmation; one keyed eligible study per patient is mandatory. | Candidate; decision- and feasibility-blocked | Approve A or retain 128/stratum only under `G0-MV-Q B`, plus approve algorithm/key custody. A later metadata-only stage may verify screened counts by report-screen stratum, but cannot verify independent image polarity, intervention validity, 216 evaluable pairs, or the q gate; only separately authorized reader qualification may do so. A shortfall in either polarity stops `MV-1`. Reconcile official validation/test roles with checkpoint exposure. |
 | Construct and target sampling | Balanced intervention blocks identify the construct; the strict-single-frontal official-test cohort at natural prevalence is the proposed separate target population, with unit weights unless enrichment is prospectively approved; AP-versus-PA is the proposed shift. | Candidate; feasibility-blocked | Approve exact inclusion, independent labels, weights, shift, subgroup minimums, and insufficient-cell consequence. |
-| Compute and annotation budget | Explicit planning ceilings and stop rules are proposed in the resource audit; `G0-MV-Q A` reallocates 19 hours from contingency to make the qualification row 129 hours and the reserve 69 while retaining the 500/1,350 ceilings. No resource is assumed available. | Candidate; approval-blocked | Commander, clinical owner, resource owner, and infrastructure owner must approve the reallocation and secure capacity; simulation or timing failure reopens the budget. |
+| Compute and annotation budget | Explicit planning ceilings and stop rules are proposed; `G0-MV-Q A` reallocates 19 clinical hours, while TB-0009 enumerates 10,847 reliability and 2,438 pre-calibration `MV-1` cells. No CPU/RAM/scratch/wall-time simulation allocation or resource availability is established. | Candidate; simulation-, feasibility-, and approval-blocked | Choose `G0-RESOURCES A/B/C`. Before Gate-0 closure, Commander, clinical, statistical, resource, governance, and infrastructure owners must approve a non-core computational design, workload-equivalent generic-kernel benchmark, and conservative storage/contingency capacity or a prospective proof-preserving redesign. Project RNG/DGP/calibration/bootstrap implementation remains post-Gate-0. Resource failure narrows or stops; it cannot lower fixed counts or gates. |
 | Breadth | VisMin is the recommended one general-domain breadth identity, conditional on exact snapshot/asset terms and successful construct-portability audit; PadChest-GR is the finite alternative. Execution remains downstream of the primary-instrument pass. | Candidate; decision- and feasibility-blocked | Choose the identity and freeze its immutable snapshot, rights, analogue controls, and stop rule at Gate 0; a later brief may authorize execution only after promotion. |
 | Promotion, kill, and fallback | Construct failure, `MV-1` qualification failure, orientation-safe artifact recovery, unreliable labels, deterministic subsumption, exposure failure, and insufficient feasibility have explicit stop consequences. The exact pointwise-instrument identity freezes at Gate 0; its fitted instance/configuration locks before Month 3. | Candidate; approval-blocked | Approve the dossier's staged locks; do not weaken a failed instrument into a Main Track method claim. |
 | Artifacts, retention, and sharing | Exact construction balance is the recommended identifying control; four probe views are diagnostic vetoes unless a separately powered bounded-recoverability claim is funded. Restricted inputs and record-level derivatives remain in an approved environment. | Decision-, specification-, power-, and governance-blocked | Choose artifact option A or B; freeze exact feature/model/tuning/software pipelines; obtain written DUA/ethics/institutional terms for annotations, embeddings, checkpoints, counterfactual text, retention/deletion/backup, and aggregate release. |
@@ -137,7 +141,10 @@ determinate-conflict specificity and association under natural ambiguity.
    retention/deletion/backup, and the later metadata-only query.
 5. **Model/resources/breadth:** freeze immutable backbone identities and
    exposure tiers, the VisMin snapshot/rights/portability choice or its finite
-   alternative, and hard compute, storage, and annotation ceilings.
+   alternative, hard compute/storage/annotation ceilings, and a resource-
+   qualified non-core computational design plus conservative capacity
+   allocation, or a prospective proof-preserving replacement. Exact scientific
+   simulation implementation remains post-Gate-0.
 6. **Gate-0 record:** sign one dated decision record containing every dossier
    choice and named owner approval, then
    issue a new bounded feasibility brief. Approval does not itself authorize
@@ -154,8 +161,9 @@ determinate-conflict specificity and association under natural ambiguity.
 
 This audit establishes a finite, reviewable Gate-0 blocker/choice inventory,
 including a formal kill of the current pointwise estimator candidates, and
-makes its remaining owner blockers explicit; it is not a complete freeze
-package. It does not establish
+makes its remaining owner blockers explicit. It also records an exact
+candidate-cell inventory and hardware-neutral simulation workload, not
+feasibility. It is not a complete freeze package. It does not establish
 novelty, construct identifiability, dataset/model availability, annotation
 reliability, empirical feasibility, clinical value, Gate-0 closure, NeurIPS
 eligibility under the unpublished 2027 call, or publication.

@@ -35,6 +35,7 @@ REQUIRED_PATHS = (
     "docs/research/execution_budget_and_backbone_audit.md",
     "docs/research/estimator_formalization_audit.md",
     "docs/research/reader_measurement_and_mv1_qualification_audit.md",
+    "docs/research/simulation_resource_feasibility_audit.md",
     "docs/research/gate0_decision_dossier.md",
     "docs/research/gate0_closure_audit.md",
     "docs/research/baselines_and_ablations.md",
@@ -47,10 +48,13 @@ REQUIRED_PATHS = (
     "docs/research/task_briefs/TB-0006-estimator-formalization-audit.md",
     "docs/research/task_briefs/TB-0007-confer-evidence-status-reconciliation.md",
     "docs/research/task_briefs/TB-0008-reader-measurement-mv1-qualification.md",
+    "docs/research/task_briefs/TB-0009-simulation-resource-feasibility.md",
     "experiments/research_core/README.md",
     "reports/tables/gate0_power_sensitivity.csv",
     "reports/tables/mv1_qualification_yield_sensitivity.csv",
+    "reports/tables/simulation_resource_manifest_summary.csv",
     "scripts/calculate_mv1_qualification_design.py",
+    "scripts/enumerate_simulation_resource_manifest.py",
 )
 
 FORBIDDEN_BASENAMES = {

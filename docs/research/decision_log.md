@@ -508,6 +508,55 @@ decisions are separated explicitly.
   clinical validity, feasibility, Gate-0 closure, venue readiness, acceptance,
   or publication.
 
+## DR-0012 — Simulation Manifest and Resource-Qualification Boundary
+
+- **Date:** 2026-08-29
+- **Status:** Proposed protocol-compilation recommendation; requires Commander,
+  clinical, statistical, resource, governance, and infrastructure decisions
+  through `G0-READERS`, `G0-MV-Q`, and `G0-RESOURCES`; simulation- and
+  feasibility-blocked; not executable
+- **Repository facts:** Prospectively clarified canonical enumeration yields
+  10,847 reliability candidates, `K_plan=4,416`, and 2,438 pre-calibration
+  `MV-1` candidates. The combined sorted canonical-ID SHA-256 is
+  `4e914a602b418c7fbbcccb1e98d9f09a3d339009e9c2befcdd098e34604695a0`.
+  The successful full path contains up to 1,594,200,000 outer datasets and
+  15,940,405,800,000 nested bootstrap analyses.
+- **Inference:** These logical counts rule out calling the current contract
+  resource-qualified without a non-core computational design, proposed storage
+  schema, generic workload-equivalent microbenchmark, conservative scaling
+  uncertainty, contingency, and explicit allocation. They do not by themselves
+  prove hardware infeasibility; exact scientific implementation remains post-
+  Gate-0.
+- **Assumptions and bounds:** The full `MV-1` envelope assumes every candidate
+  calibrates; its bootstrap-index upper bound assumes every candidate is
+  evaluable in every outer replication. Calibration admissibility and realized
+  yield were not generated. CPU time, RAM, scratch, persistent-result bytes,
+  wall time, cost, and capacity remain unidentified.
+- **Compilation decision:** Numeric lexemes, one-factor crosses, zero-
+  missingness planning rows, finite inequality filtering, six null pairs, all
+  three pre-calibration q distributions, and asymmetric defaults are frozen
+  prospectively. A failed calibration fails the design and never deletes a
+  manifest row or shrinks the family.
+- **Finite owner choice:** `G0-RESOURCES A` later resource-qualifies the
+  unchanged contract; B commissions a proof-preserving computational redesign
+  and full re-enumeration before setting ceilings; C rejects or narrows the
+  affected reader/`MV-1` route. B is recommended only as the next bounded
+  design action. No option, implementation, benchmark, or run is approved.
+- **Kill boundary:** No project RNG, DGP, calibration, bootstrap, simulation,
+  or benchmark may run under this record. Pre-Gate-0 resource evidence is
+  limited to a separately authorized non-core design and generic workload-
+  equivalent microbenchmark that implements none of those project primitives.
+  Exact scientific implementation requires Gate-0 freeze plus a later brief
+  covering software/hardware, deterministic reduction/restart, result/storage
+  schema, proof obligations, resource allocation, and applicable approvals.
+  Lowering 120,000 or 9,999, deleting hard cells, weakening 108 or `0.10`, or
+  pruning after outcomes is prohibited.
+- **Permitted claim:** The repository contains a deterministic candidate-cell
+  inventory and hardware-neutral logical-workload audit. This is not
+  implementation correctness, runtime, affordability, statistical operating
+  performance, resource availability, reader reliability, `MV-1` validity,
+  Gate-0 closure, venue readiness, acceptance, or publication.
+
 ## Open Gate 0 Decisions
 
 - approve or reject explicit claim narrowing to determinate-conflict
@@ -521,6 +570,10 @@ decisions are separated explicitly.
 - `G0-READERS A/B` and `G0-MV-Q A/B/C`: exact reader coefficient/allocation,
   finite-roster claim, text/cross-modal panels, adjudication, simulation,
   ethics, governance, yield, panel schedule, workload, and kill rules;
+- `G0-RESOURCES A/B/C`: later resource-qualify the unchanged 10,847-plus-2,438
+  candidate contract, commission a proof-preserving redesign and complete
+  re-enumeration, or reject/narrow the affected route; no runtime/capacity fact
+  or option approval currently exists;
 - `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
   theory candidate; then one exact non-outcome-selected pointwise instrument,
   matched backbone/baseline implementations, exact ablation/applicability map,

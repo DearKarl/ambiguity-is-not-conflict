@@ -3,7 +3,7 @@
 **Status:** Finite blocker/decision inventory; Gate 0 remains open
 
 **Date:** 2026-08-29
-**Evidence class:** Protocol and decision support under TB-0005--TB-0008
+**Evidence class:** Protocol and decision support under TB-0005--TB-0009
 
 ## Outcome
 
@@ -21,6 +21,13 @@ later reader-based task-relevance qualification for `MV-1`, target/shift
 details, breadth snapshot, and institutional retention terms remain open. It
 does not authorize
 access or turn a later development result into evidence.
+
+TB-0009 has now compiled the pre-reader simulation into 10,847 reliability
+candidates and 2,438 pre-calibration `MV-1` candidates. The successful full
+path reaches up to 1,594,200,000 outer datasets and 15,940,405,800,000 nested
+bootstrap analyses, but CPU, memory, storage, wall time, cost, and capacity are
+unverified. This makes `G0-RESOURCES` a simulation-feasibility blocker rather
+than a generic unchecked budget row.
 
 The recommended package is:
 
@@ -45,8 +52,9 @@ The recommended package is:
    method, partitions/sampling, governed breadth snapshot, resources, and
    permitted-artifact boundary are approved; after Gate 0, lock the fitted
    instances/configurations before the Month-3 holdout; and
-8. issue a new bounded authorization for each later metadata, environment,
-   annotation, model, development, holdout, or confirmation action.
+8. issue a new bounded authorization for each later simulation design/
+   benchmark, metadata, environment, annotation, model, development, holdout,
+   or confirmation action.
 
 ## Facts
 
@@ -128,7 +136,7 @@ project work.
 | `G0-SHIFT` | **A:** freeze AP-versus-PA view position as the one declared acquisition shift and primary subgroup audit, requiring at least 50 independently labelled patients per view; **B:** choose another shift/subgroup set and recalculate | **A** as a low-field metadata candidate | Clinical, statistical, and governance owners | `OPEN / FEASIBILITY` | Insufficient cells yield an inconclusive shift audit; no post-results demographic or acquisition subgroup may be promoted. |
 | `G0-RETENTION` | **A:** keep all restricted inputs and record-level derivatives in the approved environment, export only disclosure-cleared aggregates, and obtain exact DUA/ethics retention/deletion/backup terms before closure; **B:** approve a different written institutional boundary | **A** | Governance/ethics/infrastructure and Commander | `OPEN / EXTERNAL VERIFICATION` | No annotations, counterfactual text, embeddings, checkpoints, weights, or record-level artifacts may be created, retained, or exported. |
 | `G0-CHECKPOINT` | **A:** adopt the three-tier exposure rule and require a clean control/cohort before strict confirmation; **B:** accept only a manifest-cleared pretrained VLM and remain blocked until one exists; **C:** call undocumented exposure clean | **A**; reject C | Model, governance, statistical owners and Commander | `OPEN` | Under A, BiomedCLIP/SigLIP2/Qwen remain sensitivity only and BioViL-T diagnostic only; without a strict component, all confirmation wording is narrowed. B can stop the MIMIC route. C is prohibited. |
-| `G0-RESOURCES` | **A:** approve the proposed 1-TB, 300/1,500-GPU-hour, and 500/1,350-clinical-person-hour ceilings plus the `G0-MV-Q A` reallocation: 129 hours for 300-candidate qualification and 69 hours unallocated contingency; **B:** replace them with verified alternative ceilings and recalculate | No factual recommendation until availability is verified | Commander, clinical, resource, and infrastructure owners | `OPEN` | The balanced total hides reduced contingency; the first four phases become 486 hours. No environment, model, reader, or development brief may issue. Resource shortage narrows or stops the route; it does not weaken scientific gates. |
+| `G0-RESOURCES` | **A:** retain the proposed storage/GPU/clinical ceilings and resource-qualify the unchanged pre-reader simulation only after a non-core computational design, workload-equivalent generic-kernel benchmark, conservative scaling/storage/contingency bound, and explicit capacity allocation; **B:** commission a prospective proof-preserving computational redesign and re-enumeration before setting verified ceilings; **C:** reject or narrow the affected reader/`MV-1` route before execution | **B** as the next bounded design action, not as approval of a redesign or run | Commander, clinical, statistical, resource, governance, and infrastructure owners | `OPEN / SIMULATION- AND FEASIBILITY-BLOCKED` | TB-0009 finds 10,847 reliability and 2,438 pre-calibration `MV-1` candidates, up to 1,594,200,000 outer datasets and 15,940,405,800,000 nested bootstraps, but no runtime/capacity fact. Pre-Gate-0 resource work may not implement the project RNG/DGP/calibration/bootstrap pipeline; exact scientific implementation remains post-Gate-0. The clinical total still hides reduced contingency. Resource shortage narrows or stops the route; it never lowers 120,000/9,999, deletes hard cells, or weakens scientific gates. |
 | `G0-STAGING` | **A:** follow the canonical contract: freeze the exact pointwise instrument/interface, backbone, baseline/calibration, partitions/sampling, breadth, resources, and governance at Gate 0; lock the fitted instance/config before Month-3 and final power before confirmation; **B:** approve a dated canonical amendment | **A** | Commander, scientific supervisor, statistical, governance, and model owners | `OPEN` | The older “named from development” ambiguity is now reconciled in `measurement_protocol.md`: only the fitted instance of a Gate-0-frozen identity may be locked later. No later brief may override an unfrozen canonical item. |
 | `G0-DOWNSTREAM` | **A:** retain the image-grounded error endpoint, `0.02` Brier-skill SESOI, `0.01` `A_BSS` margin, calibration tolerances, 90% coverage, and `0.01` risk margin as prospective targets; **B:** revise before any natural-target analysis | **A** as a design target, not yet power-ready | Commander, clinical, and statistical owners | `OPEN` | H3/H4 and deterministic downstream subsumption cannot be tested until target prevalence, covariance, model complexity, loss, and review costs support a new calculation. |
 | `G0-BREADTH` | **A:** freeze VisMin as the one governed small general-domain breadth benchmark, with added `MV-1`/`MT-1`-analogue controls and exact snapshot/asset-term audit before Gate-0 closure; **B:** freeze PadChest-GR as the independent medical breadth route | **A**, while execution remains conditional on a primary-instrument pass | Commander, scientific supervisor, governance/licensing, and statistical owners | `OPEN / FEASIBILITY` | The identity must be chosen at Gate 0 even though execution is later. Missing snapshot/rights/construct portability leaves Gate 0 open; breadth is not a parallel project. |
@@ -224,6 +232,8 @@ select replacements silently:
 | Lock | Must be frozen before | Required content |
 | --- | --- | --- |
 | Secure metadata feasibility brief | Any MIMIC query | Approved account/DUA, exact metadata fields, query, aggregate cells, disclosure rule, compute/storage, stop condition |
+| Non-core simulation resource brief | Any pre-Gate-0 workload-equivalent microbenchmark | TB-0009 hashes and static algorithm/schema design; artificial buffers only; no project RNG/DGP/calibration/bootstrap/statistic; conservative scaling plus CPU/RAM/scratch/storage/wall-time/cost/contingency allocation; statistical, resource, infrastructure, security, and governance approval |
+| Post-Gate-0 simulation implementation brief | Any project RNG stream, DGP, calibration, bootstrap statistic, or scientific simulation code | Gate-0-approved identity and resources; exact implementation/schema; output-equivalence proof for compression; deterministic streams/reduction/restart; frozen software/hardware; code review; no scientific execution |
 | Annotation qualification brief | Any reader contact or clinical item | Ethics determination, access basis, exact roster, compensation, interface, examples, timing/reliability rules, permitted outputs |
 | Model/environment brief | Any repository/checkpoint download or model execution | Reverify the Gate-0-approved immutable revisions/hashes and licences; authorize code security, local cache, network, hardware, exposure tier, and preprocessing without changing identity |
 | Development brief | Any core implementation/training | Implement only the Gate-0-approved exact pointwise instrument/interface and comparator definitions under their declared information/capacity budgets; dev-only inputs, seeds, logging, ceilings, no holdout access |
@@ -267,7 +277,7 @@ No box is checked by this dossier.
   `G0-READERS`, `G0-ESTIMAND`,
   `G0-INFERENCE`, `G0-METHOD`, `G0-BASELINES`, `G0-ABLATIONS`, `G0-MODEL`, `G0-CALIBRATION`,
   `G0-ARTIFACT`, `G0-DATA`, `G0-SAMPLING`, `G0-SHIFT`, `G0-CHECKPOINT`,
-  `G0-STAGING`, `G0-DOWNSTREAM`, and `G0-BREADTH`.
+  `G0-RESOURCES`, `G0-STAGING`, `G0-DOWNSTREAM`, and `G0-BREADTH`.
 - [ ] Governance/ethics/infrastructure/licensing owners: `G0-TASK`,
   `G0-READERS`, `G0-MV-Q`, `G0-BASELINES`, `G0-MODEL`, `G0-DATA`, `G0-SAMPLING`,
   `G0-SHIFT`, `G0-RETENTION`, `G0-CHECKPOINT`, `G0-RESOURCES`,

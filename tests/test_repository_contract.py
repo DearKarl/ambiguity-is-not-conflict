@@ -6,6 +6,11 @@ from pathlib import Path
 from statistics import NormalDist
 
 from scripts.check_repository import collect_errors
+from scripts.enumerate_simulation_resource_manifest import (
+    build_mv_manifest,
+    build_reliability_manifest,
+    manifest_sha256,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -504,3 +509,53 @@ def test_mv1_yield_table_is_reproducible_and_exposes_fragility() -> None:
         text=True,
     ).stdout
     assert generated == table_path.read_text(encoding="utf-8")
+
+
+def test_simulation_manifest_is_exact_reproducible_and_non_executable() -> None:
+    reliability = build_reliability_manifest()
+    mv = build_mv_manifest()
+    assert len(reliability.entries) == 10_847
+    assert sum(
+        "planning" in entry.families for entry in reliability.entries.values()
+    ) == 4_416
+    assert len(mv.entries) == 2_438
+    assert sum("planning" in entry.families for entry in mv.entries.values()) == 2_304
+    assert manifest_sha256(reliability.entries) == (
+        "4823bd2f52547673c173aec89ecd3b3c1d416769ee9abde9e3b71bb1fb0245d6"
+    )
+    assert manifest_sha256(mv.entries) == (
+        "1cacee1ebe5aa7b43d37a09d39285a9637c6c274012a7335998bb707bd7ee8c7"
+    )
+
+    table_path = ROOT / "reports/tables/simulation_resource_manifest_summary.csv"
+    generated = subprocess.run(
+        [sys.executable, "scripts/enumerate_simulation_resource_manifest.py"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    assert generated == table_path.read_text(encoding="utf-8")
+    with table_path.open(encoding="utf-8", newline="") as handle:
+        rows = {
+            (row["scope"], row["metric"]): row for row in csv.DictReader(handle)
+        }
+    assert rows[("combined", "candidate_cell_count")]["value"] == "13285"
+    assert rows[("combined", "planning_candidate_cell_count")]["value"] == "6720"
+    assert rows[("combined", "nested_bootstrap_analysis_count")]["value"] == (
+        "15940405800000"
+    )
+    assert rows[("combined", "persistent_result_bytes")]["value"] == (
+        "not_identifiable"
+    )
+
+    audit = " ".join(
+        (ROOT / "docs/research/simulation_resource_feasibility_audit.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "not resource-qualified" in audit
+    assert "no option is selected" in audit
+    assert "no project random stream" in audit
+    assert "does not establish implementation correctness" in audit

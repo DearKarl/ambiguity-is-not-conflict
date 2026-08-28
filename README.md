@@ -48,6 +48,12 @@ candidates per report-screen stratum because the prior 128-per-stratum plan is
 fragile across the declared synthetic attrition sensitivity. This is a
 proposed owner choice, not reader evidence, feasibility, or authorization.
 
+The [simulation resource-feasibility audit](docs/research/simulation_resource_feasibility_audit.md)
+compiles that contract into 10,847 reliability candidates and 2,438
+pre-calibration `MV-1` candidates. Its exact hashes and logical-work counts
+show that the design is not resource-qualified; they are not runtime,
+affordability, capacity, or statistical-performance evidence.
+
 ```text
 controlled image--report interventions
         -> controlled construct-specificity test
@@ -134,20 +140,21 @@ paper/                       manuscript workspace after evidence promotion
 7. [Annotation and intervention protocol](docs/research/annotation_and_intervention_protocol.md)
 8. [Intervention option audit](docs/research/intervention_option_audit.md)
 9. [Reader measurement and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
-10. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
-11. [Evaluation protocol](docs/research/evaluation_protocol.md)
-12. [Data and clinical governance](docs/research/data_governance.md)
-13. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
-14. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
-15. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
-16. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
-17. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-18. [Literature matrix](docs/research/literature_matrix.md)
-19. [Novelty audit](docs/research/novelty_audit.md)
-20. [Submission strategy](docs/research/submission_strategy.md)
-21. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
-22. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-23. [Decision log](docs/research/decision_log.md)
+10. [Simulation resource-feasibility audit](docs/research/simulation_resource_feasibility_audit.md)
+11. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
+12. [Evaluation protocol](docs/research/evaluation_protocol.md)
+13. [Data and clinical governance](docs/research/data_governance.md)
+14. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
+15. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
+16. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
+17. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
+18. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+19. [Literature matrix](docs/research/literature_matrix.md)
+20. [Novelty audit](docs/research/novelty_audit.md)
+21. [Submission strategy](docs/research/submission_strategy.md)
+22. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+23. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+24. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 

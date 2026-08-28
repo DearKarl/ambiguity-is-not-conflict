@@ -4,8 +4,8 @@
 clinical work is authorized
 
 **Date:** 2026-08-29
-**Evidence class:** Official model documentation plus unverified resource
-ceilings
+**Evidence class:** Official model documentation, unverified resource
+ceilings, and TB-0009 deterministic simulation-workload arithmetic
 
 ## Blocking Finding
 
@@ -112,6 +112,33 @@ The cumulative GPU ceiling is a guardrail, not an allocation. A later run
 matrix must show why every backbone × method × seed cell is necessary and fit
 inside it. Failed runs count. Hardware, wall time, energy where available,
 peak memory, trainable parameters, and tuning attempts are retained.
+
+## Pre-Reader Simulation Resource Status
+
+The [simulation resource-feasibility audit](simulation_resource_feasibility_audit.md)
+compiles the TB-0008 contract into 10,847 reliability candidates and 2,438
+pre-calibration `MV-1` candidates. Its successful full path contains up to
+1,594,200,000 outer datasets and 15,940,405,800,000 nested bootstrap analyses.
+These are exact or explicitly bounded logical work units, not CPU/GPU time,
+memory, storage, cost, energy, or feasibility measurements.
+
+No row above allocates CPU-core-hours, peak RAM, scratch, persistent-output
+storage, wall time, or contingency for this simulation. The metadata CPU row
+cannot be repurposed, and the accelerator ceiling cannot be treated as an
+available allocation. Consequently `G0-READERS`, `G0-MV-Q`, and
+`G0-RESOURCES` remain simulation- and feasibility-blocked.
+
+The recommended next resource action is a separately bounded, non-core,
+proof-preserving computational-design and workload-equivalent generic-kernel
+benchmark brief. It may not implement or call the project RNG, DGP,
+calibration equations, bootstrap statistic, or scientific pipeline while Gate
+0 is open; exact scientific implementation remains a post-Gate-0 action.
+Streaming, exact sufficient statistics, canonical deduplication, and
+independent-cell parallelism may reduce implementation cost only if they
+preserve the frozen outputs. Any statistical replacement, staged design, or
+grid change requires prospective statistical proof, a dated amendment, and
+complete re-enumeration. Lowering 120,000 or 9,999, deleting hard cells, or
+weakening scientific thresholds to fit a ceiling is prohibited.
 
 ## Clinical-Workload Assumptions
 
@@ -220,7 +247,8 @@ the same information and at least comparable capacity/tuning opportunity.
 
 ## Permitted Claim
 
-This audit identifies a conditional backbone route and hard planning ceilings.
-It does not establish checkpoint cleanliness, model availability, secure
-capacity, clinician capacity, feasibility, performance, clinical benefit,
-Gate-0 closure, or venue fit.
+This audit identifies a conditional backbone route, hard planning ceilings,
+and a deterministic simulation-workload envelope. It does not establish
+checkpoint cleanliness, model availability, secure capacity, clinician or
+simulation capacity, runtime, affordability, feasibility, performance,
+clinical benefit, Gate-0 closure, or venue fit.

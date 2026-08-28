@@ -592,6 +592,15 @@ and q fields are indexed by independently assigned polarity, not screen label.
 `state_reader_sd` is the exact SD used for both independently tagged coverage-
 and state-category reader vectors.
 
+TB-0009 prospectively freezes the numeric lexemes before execution.
+Reliability prevalence and missingness use decimal strings `"0.00"`,
+`"0.05"`, `"0.10"`, `"0.15"`, and `"0.20"` as applicable; percentages in
+the explanatory factor list are not identifier lexemes. MV q zero is
+`"0.00"`. Integer `n` and selection-slope strings retain their printed
+integer form. Planning-region inequalities select only the finite levels
+printed in the applicable factor grid; they do not introduce a continuous
+grid.
+
 Reliability axis identifiers, in order, are `image_technical`,
 `image_coverage`, `image_semantic`, `image_polarity`, `text_integrity`,
 `text_target_polarity`, `text_commitment`, `text_interpretation`,
@@ -754,17 +763,25 @@ are the coverage and false-promotion truths.
 
 The exact scenario set is the union of: (i) the reference cell
 `a=0.90, sigma_R=0.25, sigma_I=0.50, m=0.05, repeat=0.85`, common accuracy,
-symmetric confusion, MCAR, and printed allocation; (ii) every one-factor value
-listed above with other factors at reference, including each axis/class as the
-designated prevalence class, designated-low accuracy class, or
-class-missingness class as applicable; and (iii) the Cartesian adversarial set
+symmetric confusion, MCAR, and printed allocation; (ii) the prospectively
+clarified one-factor family with all unmentioned factors at reference: every
+class crossed with each designated prevalence fraction, every printed `a`
+run once in common mode and once with each class designated low, every printed
+reader SD, item SD, repeat stability, and both confusion modes, plus one MCAR
+row at `m=0.00` and MCAR, reader-dependent, and every class-dependent target
+at each of `m in {0.05,0.10}`; and (iii) the Cartesian adversarial set
 `a in {0.80,0.90}`, `sigma_R in {0.25,0.75}`,
 `sigma_I in {0.50,1.00}`, `m in {0.05,0.10}`, both confusion modes, all
 three missingness modes (with every required `c_miss` for the class-dependent
 mode), each axis/class designated at 10% prevalence, common accuracy, and
 repeat stability 0.85. Duplicate cells are run once by canonical serialized
 cell ID. Add as a fourth set every Cartesian cell in the reliability planning
-region specified under operating criteria below.
+region specified under operating criteria below. That planning family retains
+reader- and class-mode labels at `m=0.00` as distinct canonical rows entering
+`K_plan`, despite behaviorally identical zero-missingness generation. The
+fixed `0.50/0.70` ambiguity mixture is within-cell and creates no extra cell.
+The exact inventory and workload compilation are in the
+[simulation resource-feasibility audit](simulation_resource_feasibility_audit.md).
 
 The simulation must run the complete alpha, bootstrap, missingness, and
 multi-threshold gate separately for every named axis. It must report coverage,
@@ -908,28 +925,38 @@ transformed panel order and key-permuted reader-ID order—probability-noise `U`
 coverage `U`, and categorical-state `U`. Transform them by the raw-word rule
 above. Cycle the exact panel templates over candidate-vector index so
 calibration averages the frozen assignment.
-For each trial `mu`, use 80 bisection iterations on `alpha in [-30,30]` for
-the yield equation; then use 80 bisection iterations over the admissible beta
-mean (or two-point mixing probability) for the q equation. Before the outer
-bisection, evaluate 1,001 equally spaced admissible means; any decrease in the
+For each trial `mu`, first evaluate both endpoints `alpha=-30,30` once, then
+use exactly 80 midpoint evaluations for bisection of the yield equation,
+caching the retained endpoint value at every step. Use 80 midpoint evaluations
+over the admissible beta mean (or two-point mixing probability) for the q
+equation. Before the outer bisection, evaluate 1,001 equally spaced admissible
+means; those already include and cache its two endpoints. Any decrease in the
 calibrated selected q larger than `1e-6`, or any missing bracket, makes the cell
 inadmissible. Validate the solution on an independent `2^22`-vector stream
 using tag `polarity + "/validate"`; both absolute residuals must be at most
 `0.0005`.
 No failed calibration draw is reused in the outer simulation.
 
-The exact MV scenario set is the union of: (i) the reference cell
+The exact MV candidate scenario set is the union of: (i) the reference cell
 `n=150`, fidelity `(0.90,0.90)`, yield `(0.85,0.85)`, q target
 `(0.20,0.20)`, beta SD `0.15`, probability severity `0.05`, noise `0.07`,
 state severity `0.25`, patient-state SD `0.50`, correct-state probability
 `0.95`, opposite-error fraction `0.50`, and selection slope `-1`; (ii) every
 one-factor value listed above
-with other factors at reference; (iii) every q null-boundary pair above crossed
-with both n values, every admissible q distribution, and every selection slope
-at other reference factors; and (iv) asymmetric fidelity pairs crossed with
+with other factors at reference; (iii) exactly the null pairs
+`(0.10,0.10)`, `(0.20,0.00)`, `(0.00,0.20)`, `(0.30,0.00)`,
+`(0.00,0.30)`, and `(0.15,0.05)`, crossed with both n values, all three
+syntactically declared q-distribution configurations, and every selection
+slope at other reference factors; and (iv) asymmetric fidelity pairs crossed with
 yield pairs `(0.75,0.90)` and `(0.90,0.75)` and q alternatives
-`(0.25,0.15)` and `(0.15,0.25)`; and (v) every Cartesian cell in the MV
-planning region specified below. Duplicate canonical cell IDs run once.
+`(0.25,0.15)` and `(0.15,0.25)`, with every unmentioned factor—including
+`n`, q distribution/SD, severities, state parameters, and slope—at reference;
+and (v) every Cartesian cell in the MV planning region specified below.
+Duplicate canonical cell IDs run once. All three q distributions stay in the
+pre-calibration candidate manifest. A non-positive beta shape, missing
+calibration bracket, nonmonotonicity, or failed validation is a failed design
+cell, never a reason to delete it or reduce the family; a successful full run
+requires every candidate to calibrate.
 
 The simulation must generate individual reader probabilities, enforce the
 cyclic disjoint-panel schedule and four-of-five state rules, apply selection,
@@ -1004,7 +1031,10 @@ is one for `x=N` and otherwise
   half-width is below `0.003`; verify that numerical fact in the reviewed
   implementation. There is no data-dependent extension, early stop, or cell-
   specific replication count. A numerical half-width of `0.003` or greater
-  fails.
+  fails. For `MV-1`, calibration is a mandatory precondition rather than a
+  manifest filter: if any candidate cell fails calibration, the proposed
+  design fails and cannot claim a successful operating-characteristic run.
+  Failure-only termination cannot promote evidence or authorize pruning.
 - The simulation code, seed derivation, software lock, all failed cells, and
   exact resource use must be reviewed before reader contact.
 
@@ -1047,6 +1077,13 @@ operations, storage, parallelism, software, and projected cost. If it does not
 fit, `G0-READERS`/`G0-MV-Q` remain simulation-blocked until an equally valid
 pre-data redesign is approved; replication counts may not be shortened after
 inspecting favourable cells.
+
+TB-0009 compiles that candidate manifest and hardware-neutral logical workload
+in the [simulation resource-feasibility audit](simulation_resource_feasibility_audit.md).
+It finds 10,847 reliability candidates, `K_plan=4,416`, and 2,438
+pre-calibration `MV-1` candidates, but no runtime, storage, affordability, or
+capacity fact. The contract therefore remains resource- and simulation-
+blocked.
 
 ## Finite Owner Choice
 
