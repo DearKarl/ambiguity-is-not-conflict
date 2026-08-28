@@ -1,0 +1,15 @@
+screened_per_polarity,required_evaluable_per_polarity,independent_pair_evaluable_probability,expected_evaluable_per_polarity,probability_meet_one_polarity,probability_meet_both_polarities,minimum_equal_yield_for_90pct_joint_probability,assumption_scope
+128,108,0.800,102.400,0.128320,0.016466,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+128,108,0.825,105.600,0.336826,0.113452,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+128,108,0.850,108.800,0.635890,0.404356,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+128,108,0.875,112.000,0.883219,0.780077,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+128,108,0.900,115.200,0.983895,0.968049,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+128,108,0.925,118.400,0.999435,0.998870,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+128,108,0.950,121.600,0.999998,0.999997,0.887018868,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.800,120.000,0.993029,0.986107,0.773382117,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.825,123.750,0.999499,0.998998,0.773382117,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.850,127.500,0.999986,0.999972,0.773382117,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.875,131.250,1.000000,1.000000,0.773382117,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.900,135.000,1.000000,1.000000,0.773382117,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.925,138.750,1.000000,1.000000,0.773382117,perfect_screen_polarity_and_independent_equal_yield
+150,108,0.950,142.500,1.000000,1.000000,0.773382117,perfect_screen_polarity_and_independent_equal_yield

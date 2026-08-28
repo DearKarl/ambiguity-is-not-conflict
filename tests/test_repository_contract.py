@@ -1,5 +1,7 @@
 import csv
 import math
+import subprocess
+import sys
 from pathlib import Path
 from statistics import NormalDist
 
@@ -321,14 +323,17 @@ def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
     assert "open / kill recommended" in dossier
     assert "tb-0006" in dossier and "pointwise method-claim kill" in dossier
     assert "fitted instance/config" in dossier
-    assert "task-evidence" in dossier and "q_v" in dossier
+    assert "reader-based task-relevance" in dossier and "l_bal" in dossier
     assert "g0-inference" in dossier and "9,999 fixed-seed resamples" in dossier
     assert "g0-ablations" in dossier and "remove `c_vt`" in dossier
     assert "ainc/v1/mv1-qualification" in dossier
-    assert "256-screened/216-evaluable" in dossier
+    assert "300-screened/216-evaluable" in dossier
+    assert "g0-mv-q" in dossier
     assert "does not" in dossier and "close gate 0" in dossier
     assert "224 -> 112 -> 224" in intervention
-    assert "strictly above `0.10`" in intervention
+    assert "`l_bal > 0.10`" in intervention
+    assert "`l_present > 0`" in intervention
+    assert "`l_absent > 0`" in intervention
     assert "108 evaluable independent" in intervention
     assert "216 total" in intervention
     assert "sole-polarity-slot redaction" in intervention
@@ -348,7 +353,9 @@ def test_backbone_and_natural_ambiguity_resources_are_not_overclaimed() -> None:
     assert "natural-ambiguity veto audit" in resources
     assert "deferred until after a month-3 pass" in resources
     assert "unallocated reserve" in resources
-    assert "all 256 ranked candidates" in resources
+    assert "all 300 ranked candidates" in resources
+    assert "first four rows total 486" in resources
+    assert "69-hour reserve" in resources
     assert "locked reliability" in resources
     assert "1,350" in resources
 
@@ -433,3 +440,67 @@ def test_gate_zero_identity_is_not_selected_from_development() -> None:
     assert "named and approved at gate 0" in measurement
     assert "single fitted instance" in measurement
     assert "named from development" not in measurement
+
+
+def test_reader_and_mv1_qualification_contract_is_exact_and_non_executable() -> None:
+    audit = " ".join(
+        (ROOT / "docs/research/reader_measurement_and_mv1_qualification_audit.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "nominal krippendorff alpha" in audit
+    assert "selected/evaluable-population" in audit
+    assert "finite-roster target" in audit
+    assert "h_{b,intact}-h_{b,mv1}" in audit
+    assert "all ten probability ratings recorded" in audit
+    assert "repeat ratings never become additional inter-reader codings" in audit
+    assert "pcg64dxsm" in audit
+    assert "compact utf-8 json" in audit
+    assert "seed(k,c,t)" in audit
+    assert "random_raw()" in audit
+    assert "exact intended-class crosswalk" in audit
+    assert "omit a polarity main effect" in audit
+    assert "p(e=1 | y)=rho_y" in audit
+    assert "opposite-polarity vote" in audit
+    assert "not intervention-construction validity" in audit
+    assert "(0.30,0)" in audit and "(0,0.30)" in audit
+    assert "simultaneous coverage" in audit
+    assert "exactly 75 first presentations" in audit
+    assert "exactly 125 first presentations" in audit
+    assert "l_{bal}>0.10" in audit
+    assert "l_{present}>0" in audit and "l_{absent}>0" in audit
+    assert "exactly 9,999" in audit
+    assert "120,000 outer replications" in audit
+    assert "clopper--pearson" in audit
+    assert "panel/readers" in audit
+    assert "does not establish reliability" in audit
+    assert "no option is selected" in audit
+
+
+def test_mv1_yield_table_is_reproducible_and_exposes_fragility() -> None:
+    table_path = ROOT / "reports/tables/mv1_qualification_yield_sensitivity.csv"
+    with table_path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    keyed = {
+        (int(row["screened_per_polarity"]), float(row["independent_pair_evaluable_probability"])): row
+        for row in rows
+    }
+    assert keyed[(128, 0.85)]["probability_meet_both_polarities"] == "0.404356"
+    assert keyed[(128, 0.85)][
+        "minimum_equal_yield_for_90pct_joint_probability"
+    ] == "0.887018868"
+    assert keyed[(150, 0.80)]["probability_meet_both_polarities"] == "0.986107"
+    assert keyed[(150, 0.80)][
+        "minimum_equal_yield_for_90pct_joint_probability"
+    ] == "0.773382117"
+
+    generated = subprocess.run(
+        [sys.executable, "scripts/calculate_mv1_qualification_design.py"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    assert generated == table_path.read_text(encoding="utf-8")

@@ -11,15 +11,17 @@ analysis is authorized
 - **`MV-1` task-relevance qualification population:** within official-train
   HMAC bucket 0--69, apply a separate governed
   `AINC/v1/mv1-qualification` HMAC rank before model fitting. Reserve the first
-  128 strict-single-frontal metadata candidates in each positive/negative
-  report-screen sampling stratum (256 total) and remove them from every
+  150 strict-single-frontal metadata candidates in each positive/negative
+  report-screen sampling stratum (300 total) and remove them from every
   fit/development, Month-3, confirmation, calibration, and target population.
   Qualification also remains disjoint from reader training and locked
   reliability sets. Report-screen polarity is a sampling aid, not image truth.
   The design requires at least 108 evaluable same-polarity sibling blocks in
   each independently assigned intact-image polarity after its frozen reader/
   intervention rules; a shortfall in either polarity stops `MV-1`, with no
-  outcome-driven replacement or top-up beyond the ranked 256.
+  outcome-driven replacement or top-up beyond the ranked 300. This larger
+  reservation is the recommended `G0-MV-Q A` choice, not owner approval or
+  observed feasibility.
 - **Fit/development population:** official-train HMAC bucket 0--69 only; used
   to fit, orient, normalize, tune, and freeze candidates only after the nested
   qualification reserve above is removed.
@@ -142,34 +144,51 @@ Month 3, and confirmation, counterbalance reader/panel assignment across
 sibling state and source polarity. Let `pbar_intact,b` and `pbar_MV-1,b` be the
 mean `0--1` presence probabilities from disjoint five-reader image-only panels
 for patient block `b`. Both siblings must independently retain complete prescribed
-coverage, a determinate state, and the same polarity. Define:
+coverage, a determinate state, the same polarity, all ten probabilities
+recorded, and non-negative probability support for the assigned state. With
+`a_y=+1` for present and `a_y=-1` for absent, define:
 
 ```math
-q_b=|\bar p_{intact,b}-0.5|-|\bar p_{MV-1,b}-0.5|,
-\qquad q_{v,y}=\mathbb E[q_b\mid Y_v=y],
-\qquad q_{v,bal}=\tfrac12(q_{v,present}+q_{v,absent}).
+h_{b,s}=a_y(\bar p_{b,s}-0.5)\ge0,
+\qquad q_b=h_{b,intact}-h_{b,MV-1},
+\qquad q_{v,y}^{R}=\mathbb E_R[q_b\mid S=1,E=1,Y_v=y],
+\qquad q_{v,bal}^{R}=\tfrac12(q_{v,present}^{R}+q_{v,absent}^{R}).
 ```
 
-The candidate qualification rule is a patient-clustered one-sided 95% lower
-bound for `q_v,bal` **strictly above `0.10`**, with at least 108 evaluable
-patient blocks in each independently assigned image polarity. This requires a non-trivial movement
+Here `S` denotes prospective metadata-screen membership; `E` includes complete
+same-polarity and assigned-support-aligned evaluability; and `R` denotes the
+locked finite ten-reader roster and counterbalanced assignment schedule. The
+primary target is therefore the
+selected/evaluable population conditional on that roster, not all screened
+patients or a population of possible readers.
+
+The candidate qualification rule uses the exact stratified patient bootstrap
+and one-sided max-`t` family in the [reader measurement and MV-1 qualification
+audit](reader_measurement_and_mv1_qualification_audit.md). It requires
+`L_bal > 0.10`, `L_present > 0`, and `L_absent > 0`, plus at least 108
+evaluable patient blocks in each independently assigned image polarity and no
+reader/panel sensitivity veto. This requires non-trivial balanced movement
 toward evidential indifference without changing the independently assigned
-finding state. The threshold is a prospective design choice, not a clinical
-constant, and no candidate-model representation or score may enter eligibility,
-qualification, or severity choice.
+finding state, while prohibiting a null or reversed polarity from being hidden
+by the balanced mean. The thresholds are prospective design choices, not
+clinical constants, and no candidate-model representation or score may enter
+screening, eligibility, qualification, or severity choice.
 
 Because each polarity stratum's `q_b` is bounded in `[-0.5,0.5]`, its worst-case
 SD is `0.50`. For the equal-weight mean of two independent stratum means,
 one-sided `alpha=0.05`, 90% power, null boundary `0.10`, and planning truth
 `0.20` give a crude normal-approximation minimum of 108 evaluable independent
 patient blocks per polarity (216 total).
-Patient-clustered simulation of the complete disjoint-reader pipeline,
-attrition, selection into the same-polarity population, counterbalanced panel
-assignment, and reader severity/dependence
-must replace that approximation before an annotation brief. Gate-0 approval
-can freeze this rule; only a later authorized qualification exercise can pass
-it. Failure means `MV-1` is merely fixed resolution attenuation, cannot complete
-primary `J_id`, and triggers the pre-specified stop/reopen rule.
+The deterministic ideal-yield audit shows that 128 candidates per polarity
+requires approximately `0.887019` independent pair yield to reach both 108
+floors with 90% probability, whereas 150 requires approximately `0.773382`.
+These figures assume perfect report-screen polarity and independence and are
+not feasibility evidence. The audit's complete pre-reader simulation must
+replace both this yield calculation and the crude power approximation before
+an annotation brief. Gate-0 approval can freeze the rule; only a later
+authorized qualification exercise can pass it. Failure means `MV-1` is merely
+fixed resolution attenuation, cannot complete primary `J_id`, and triggers the
+pre-specified stop/reopen rule.
 
 ### Candidate construct thresholds
 

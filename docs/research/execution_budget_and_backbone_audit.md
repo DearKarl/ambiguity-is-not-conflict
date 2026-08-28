@@ -118,35 +118,48 @@ peak memory, trainable parameters, and tuning attempts are retained.
 The stronger measurement candidate requires at least ten image readers when
 original/altered image siblings each need disjoint five-reader panels, at least
 six text readers for disjoint three-reader polarity panels, and at least six
-cross-modal readers for disjoint unanimous three-person sibling panels.
+cross-modal readers for disjoint unanimous three-person sibling panels. The
+`G0-READERS A` reliability candidate makes the image, text, and pair rosters
+mutually exclusive, so it requires at least 22 qualified people unless a new
+dependence, blinding, precision, and workload design is approved.
 Planning rates are at most two minutes per image rating, 30 seconds per text
-rating, and two minutes per cross-modal/adjudication action, with a 15% blinded
-unimodal repeat and up to 20% adjudication.
+rating, and two minutes per cross-modal/adjudication action. Under the locked
+reliability allocation, the per-reader ceiling rule gives exactly 120 image,
+114 text, and 72 pair-repeat ratings; up to 20% pair adjudication is also
+budgeted.
 
 The proposed workload worksheet is deliberately conservative:
 
 | Phase | Frozen planning workload | Candidate person-hours |
 | --- | --- | ---: |
 | Qualification/timing | Training/meetings plus 60 screened sources; two image inputs × five, three text variants × three, four cross-modal pairs × three, 15% unimodal repeats, 20% pair adjudication | 80 |
-| Locked reliability | Disjoint 150-unit set: image items × five, text items × up to five, and pair-validity items × three; 15% unimodal repeats; 20% pair adjudication/meetings | 60 |
-| `MV-1` task-relevance qualification | All 256 ranked candidates (128 per report-screen sampling stratum) receive intact and transformed sibling panels × five so attrition is observed rather than assumed; 15% blinded image repeats, panel balancing, audit, and meetings; independently assigned image polarity must yield at least 108 evaluable blocks per state | 110 |
+| Locked reliability | Disjoint 150-unit set: image items × five, text items × five, and pair-validity items × three; exactly 120 image, 114 text, and 72 pair-repeat ratings under `ceil(0.15 N_r)` per reader; 20% pair adjudication/meetings | 60 |
+| `MV-1` task-relevance qualification | Recommended `G0-MV-Q A`: all 300 ranked candidates (150 per report-screen sampling stratum) receive intact and transformed sibling panels × five so attrition is observed rather than assumed; 15% blinded image repeats, cyclic disjoint-panel balancing, audit, and meetings; independently assigned image polarity must yield at least 108 evaluable blocks per state | 129 |
 | Month-3 construct | 260 original images screened × five; 216 altered `M_v` images × five; 216 × three text variants × three; 216 × four pairs × three; repeats/adjudication/meetings | 217 |
 | Four-control confirmation | 470 original images screened × five; up to two altered images for each of 400 eligible sources × five; 400 × four text variants × three; 400 × six pairs × three; repeats/adjudication/meetings | 605 |
 | Natural-ambiguity veto audit | After a Month-3 pass and before claim promotion: up to 100 recruited candidates; original image × five and text × five ratings, 15% blinded repeats, overlap review, adjudication, and meetings | 45 |
 | Natural-target QA | Separately approved target checks, error labels, calibration/decision QA, and meetings | 145 |
-| Rounding/timing contingency | Unallocated reserve; it cannot substitute for an omitted required phase | 88 |
+| Rounding/timing contingency | Unallocated reserve after explicitly reallocating 19 hours to the enlarged `MV-1` qualification candidate; it cannot substitute for an omitted required phase | 69 |
 | **Total ceiling** | Qualification through target audit | **1,350** |
 
-The first four rows total 467 and fit under the 500-hour stage ceiling; the
+The first four rows total 486 and fit under the 500-hour stage ceiling; the
 natural-ambiguity audit is expressly deferred until after a Month-3 pass and is
 not charged to the stage ceiling. The pre-target rows including that audit
-total 1,117 hours. It is a veto-only observational audit, not an ambiguity-
+total 1,136 hours. It is a veto-only observational audit, not an ambiguity-
 identification result, and requires its own bounded authorization. A 60-source
 timing/rubric pilot **would require a later bounded authorization** and stops if
 median image time exceeds 2.5 minutes, text time exceeds 45 seconds, cross-
 modal time exceeds two minutes, roster allocation fails, reliability/
 retraining violates the annotation protocol, or the projected stage/
 cumulative total exceeds 500/1,350 hours.
+
+The 300-candidate row and 69-hour reserve are a balanced worksheet, not
+verified capacity. The [reader measurement and MV-1 qualification
+audit](reader_measurement_and_mv1_qualification_audit.md) derives the
+synthetic yield risk, finite-roster analysis, simulation contract, and
+`110(300/256)=128.9`-hour linear scaling. Any owner rejection or timing
+overrun reopens `G0-MV-Q` and `G0-RESOURCES`; the scientific floor may not be
+weakened to restore contingency.
 
 The optional orientation-safe four-probe equivalence route is incompatible
 with these ceilings under the current linear worksheet: its illustrative

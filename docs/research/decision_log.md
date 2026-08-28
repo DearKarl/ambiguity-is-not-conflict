@@ -382,6 +382,10 @@ decisions are separated explicitly.
   later independent readers must yield at least 108 evaluable blocks per intact-
   image polarity. A shortfall in either state stops `MV-1`; this rule is not
   data-access authorization.
+- **Supersession note:** TB-0008/DR-0011 retains this entry as history but
+  recommends replacing its crude 128-per-stratum reservation and unspecified
+  reader precision with the exact 150-per-stratum `G0-MV-Q A` package. Neither
+  version is approved.
 - **Stop boundary:** Rejection/non-verification leaves Gate 0 open; failure of
   either exact control, construction balance, reader reliability, checkpoint
   tier, power/resources, `psi_mag`, `A_psi`, or downstream `A_BSS` invokes the
@@ -447,6 +451,63 @@ decisions are separated explicitly.
   deterministic subsumption, framework novelty, construct validation, venue
   readiness, acceptance, or publication.
 
+## DR-0011 — Reader Measurement and MV-1 Qualification Candidate
+
+- **Date:** 2026-08-29
+- **Status:** Proposed protocol recommendation; requires Commander, clinical,
+  statistical, ethics, governance, infrastructure, and resource-owner
+  decisions through `G0-READERS`, `G0-MV-Q`, `G0-DATA`, and `G0-RESOURCES`;
+  simulation- and feasibility-blocked; not executable
+- **Repository facts:** The prior protocol fixed five-reader image panels, a
+  150-cluster reliability phase, at least 108 evaluable `MV-1` blocks per
+  independent image polarity, and a 128-per-report-screen-stratum reservation,
+  but it did not freeze the primary reliability coefficient, exact interval,
+  finite-reader claim, joint polarity gate, or complete simulation contract.
+- **Deterministic planning fact:** Under the explicitly idealized assumptions
+  of perfect report-screen polarity and independent equal pair yield, 128
+  candidates per polarity has joint probability `0.404356` of reaching both
+  108 floors at 85% yield and requires approximately `0.887019` yield for 90%
+  joint probability. With 150 candidates, 80% yield gives `0.986107` joint
+  probability and the 90% threshold is approximately `0.773382`. This is
+  synthetic arithmetic, not MIMIC, reader, or intervention evidence.
+- **Inference:** The qualification target is conditional on prospective
+  screening, same-polarity evaluability, the locked finite reader roster, and
+  its panel schedule. It cannot support all-patient or reader-population
+  generalization. A balanced attenuation can hide a null or reversed polarity,
+  so polarity-specific positive guardrails are necessary.
+- **Assumptions:** Candidate counts, report-screen fidelity, pair yield,
+  reader credentials/availability, per-rating time, ethics, access, and budget
+  are unverified. The yield table's independence and perfect-screen assumptions
+  are deliberately optimistic.
+- **Reader recommendation (`G0-READERS A`):** Use nominal Krippendorff alpha
+  separately for every categorical gate with the exact 150-cluster marginal
+  allocation, 9,999-resample patient/source-cluster percentile interval, macro
+  and class-specific agreement formulas, missingness/repeat rules,
+  hierarchical sensitivities, and a complete pre-reader simulation. No failed
+  axis may be averaged away or rescued by a sensitivity coefficient.
+- **Qualification recommendation (`G0-MV-Q A`):** Reserve 150 candidates per
+  report-screen stratum (300 total); retain 108 evaluable blocks per independent
+  polarity; use the selected/evaluable finite-roster estimand, cyclic disjoint
+  ten-reader panels, and a 9,999-resample joint one-sided max-`t` gate requiring
+  `L_bal > 0.10`, `L_present > 0`, and `L_absent > 0`, plus the frozen
+  reader/panel sensitivity veto. No model score may affect screening,
+  eligibility, severity, replacement, or qualification.
+- **Resource consequence:** Linear scaling changes the qualification row from
+  110 to 129 hours, the first-four-phase total from 467 to 486, and—if the
+  cumulative 1,350-hour ceiling is retained—the unallocated reserve from 88 to
+  69 hours. This balances a worksheet but does not verify capacity.
+- **Kill boundary:** No annotation brief may issue until owners approve the
+  instrument and roster, ethics/governance/resources are resolved, and the
+  exact pre-reader simulation meets coverage, false-qualification, joint-yield,
+  joint-power, and Monte-Carlo precision rules. Failure reopens or kills
+  `MV-1`; it never lowers 108, weakens `0.10`, reuses sibling readers, or
+  selects a replacement after scores.
+- **Permitted claim:** The repository contains an exact pre-execution reader
+  and `MV-1` qualification candidate plus reproducible synthetic yield
+  arithmetic. This is not reader reliability, image truth, task relevance,
+  clinical validity, feasibility, Gate-0 closure, venue readiness, acceptance,
+  or publication.
+
 ## Open Gate 0 Decisions
 
 - approve or reject explicit claim narrowing to determinate-conflict
@@ -454,10 +515,12 @@ decisions are separated explicitly.
 - provisional pleural-effusion finding, strict single-frontal-image unit, and
   exact visibility/eligibility rule;
 - two-stage MIMIC resource/query record, HMAC partitions including the
-  256-screened/216-evaluable, equal-polarity `MV-1` qualification reserve, secure access route,
+  recommended 300-screened/216-evaluable, equal-polarity `MV-1`
+  qualification reserve, secure access route,
   aggregate outputs, screening floors, and derived-artifact terms;
-- five-reader image protocol, text/cross-modal panels, sample, reader model,
-  adjudication, reliability thresholds, ethics, and workload;
+- `G0-READERS A/B` and `G0-MV-Q A/B/C`: exact reader coefficient/allocation,
+  finite-roster claim, text/cross-modal panels, adjudication, simulation,
+  ethics, governance, yield, panel schedule, workload, and kill rules;
 - `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
   theory candidate; then one exact non-outcome-selected pointwise instrument,
   matched backbone/baseline implementations, exact ablation/applicability map,

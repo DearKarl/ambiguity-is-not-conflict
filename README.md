@@ -41,6 +41,13 @@ specificity estimand remains a possible measurement-framework contribution,
 subject to an explicit owner-approved claim amendment and a separate novelty
 assessment; Gate 0 remains open.
 
+The [reader and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
+now supplies an exact finite-roster measurement candidate, joint polarity gate,
+simulation contract, and deterministic yield audit. It recommends 150 screened
+candidates per report-screen stratum because the prior 128-per-stratum plan is
+fragile across the declared synthetic attrition sensitivity. This is a
+proposed owner choice, not reader evidence, feasibility, or authorization.
+
 ```text
 controlled image--report interventions
         -> controlled construct-specificity test
@@ -126,20 +133,21 @@ paper/                       manuscript workspace after evidence promotion
 6. [Measurement protocol](docs/research/measurement_protocol.md)
 7. [Annotation and intervention protocol](docs/research/annotation_and_intervention_protocol.md)
 8. [Intervention option audit](docs/research/intervention_option_audit.md)
-9. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
-10. [Evaluation protocol](docs/research/evaluation_protocol.md)
-11. [Data and clinical governance](docs/research/data_governance.md)
-12. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
-13. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
-14. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
-15. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
-16. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-17. [Literature matrix](docs/research/literature_matrix.md)
-18. [Novelty audit](docs/research/novelty_audit.md)
-19. [Submission strategy](docs/research/submission_strategy.md)
-20. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
-21. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-22. [Decision log](docs/research/decision_log.md)
+9. [Reader measurement and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
+10. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
+11. [Evaluation protocol](docs/research/evaluation_protocol.md)
+12. [Data and clinical governance](docs/research/data_governance.md)
+13. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
+14. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
+15. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
+16. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
+17. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+18. [Literature matrix](docs/research/literature_matrix.md)
+19. [Novelty audit](docs/research/novelty_audit.md)
+20. [Submission strategy](docs/research/submission_strategy.md)
+21. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+22. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+23. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 

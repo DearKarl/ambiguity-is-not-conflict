@@ -75,11 +75,11 @@ semantics-preserving corruption.
 | Exact operation | After the frozen geometry/rendering step and before channel normalization, deterministically area-average the `224 x 224` reference input to `112 x 112`, then restore it to `224 x 224` with bilinear interpolation. Freeze library, version, coordinate convention, antialias flag, boundary handling, value range, and rounding. No stochastic augmentation, sharpening, denoising, or recompression is allowed. |
 | Severity | One fixed `2x` per-axis bottleneck. No severity may be selected after candidate-score inspection. |
 | Semantic-state rule | Primary `MV-1` accepts only `protocol-defined loss but interpretable`, complete prescribed field, `A_v=determinate`, and the same `Y_v` as the intact sibling. Task-critical or ambiguous variants are rejected from this contrast, not pooled. |
-| Task-relevance qualification | On a prospectively sampled qualification set disjoint from reader training/reliability, development, Month 3, confirmation, calibration, and target evidence, use disjoint five-reader image-only panels for intact and transformed siblings. Counterbalance reader/panel assignment across sibling state and source polarity. For panel-mean presence probabilities on the `0--1` scale, define `q_b = abs(pbar_intact,b - 0.5) - abs(pbar_MV-1,b - 0.5)`, `q_v,y = E[q_b | independently assigned intact Y_v=y]`, and the construct-transport estimand `q_v,bal = 0.5(q_v,present + q_v,absent)`. Require at least 108 evaluable blocks of each independent polarity. The candidate gate is a patient-clustered one-sided 95% lower bound for `q_v,bal` **strictly above `0.10`**. No model score enters this gate. |
+| Task-relevance qualification | On a prospectively sampled qualification set disjoint from reader training/reliability, development, Month 3, confirmation, calibration, and target evidence, use a locked finite ten-reader roster and cyclic disjoint five-reader image-only panels for intact/transformed siblings. With `a_y=+1` for present and `a_y=-1` for absent, require assigned-state support `h_s=a_y(pbar_s-0.5)>=0` in both panels and define `q_b=h_intact-h_MV-1`. Estimate selected/evaluable finite-roster means `q_v,y` by independently assigned intact polarity and `q_v,bal = 0.5(q_v,present + q_v,absent)`. The recommended reservation is 150 metadata candidates per report-screen stratum (300 total), with at least 108 evaluable blocks per independent polarity. A patient-stratified joint one-sided 95% max-`t` family must have `L_bal > 0.10`, `L_present > 0`, and `L_absent > 0`; reader/panel sensitivity vetoes also apply. No model score enters selection or qualification. Exact analysis and simulation rules are in the [reader measurement and MV-1 qualification audit](reader_measurement_and_mv1_qualification_audit.md). |
 | Within-source reference | The exact pre-bottleneck `224 x 224` compatible image--text pair from the same source block. |
 | Reader acceptance | Independent five-reader panels for intact and transformed siblings; at least four of five on the transformed panel must accept interpretable protocol-defined loss, full field coverage, a determinate state, and the same finding polarity established independently on the intact sibling. No more than one reader may flag ambiguity or task-critical loss. Cross-modal review must find no contrary evidence introduced. |
 | Artifact threat | A resampling signature can become a shortcut for the `M_v` arm. The kernel and output geometry must be constant, the control response remains inside `abs(D_Mv)`, and no claim of artifact absence follows from a weak probe. |
-| Kill consequence | Reject `MV-1` if state preservation, task-relevance qualification, reader reliability, polarity-specific eligible yield, or reproducible rendering fails. If the operation preserves polarity but fails `q_v,bal`, it may be reported only as fixed resolution attenuation and cannot complete primary `J_id`. If a valid estimator responds to a qualified control as strongly as conflict, the estimator—not the control result—is killed by `psi_mag`. Replacing the severity requires a new prospective decision. |
+| Kill consequence | Reject `MV-1` if state preservation, task-relevance qualification, reader reliability, polarity-specific eligible yield, or reproducible rendering fails. If the operation preserves polarity but fails any member of the joint q family (`L_bal > 0.10`, `L_present > 0`, `L_absent > 0`), it may be reported only as fixed resolution attenuation and cannot complete primary `J_id`. If a valid estimator responds to a qualified control as strongly as conflict, the estimator—not the control result—is killed by `psi_mag`. Replacing the severity requires a new prospective decision. |
 
 The `224` interface is tied to the conditional primary BiomedCLIP candidate.
 A different primary input resolution requires a dated amendment specifying the
@@ -90,12 +90,16 @@ The `0.10` probability-scale threshold is a prospective design choice, not a
 validated clinical constant. Since each stratum's `q_b` has worst-case bounded
 SD `0.50`, one-sided `alpha=0.05`, 90% power, and planning truth
 `q_v,bal=0.20` give a crude equal-allocation minimum of 108 evaluable independent
-patient blocks per image polarity (216 total). A patient-clustered simulation,
-attrition allowance, reader-dependence
-model, and resource approval must replace this approximation before an
-annotation brief is issued. Approving the rule at Gate 0 does not count as
-passing it: the operation remains unvalidated until a later authorized,
-model-independent qualification exercise passes prospectively.
+patient blocks per image polarity (216 total). The subsequent exact-design
+audit retains that floor but adds simultaneous positive polarity guardrails,
+recommends 150 screened candidates per report-screen stratum, and requires a
+patient/reader/panel simulation of coverage, false qualification, joint power,
+selection, and yield before an annotation brief. At 85% ideal independent pair
+yield, the prior 128-per-stratum reservation has only `0.404356` probability of
+meeting both 108 floors; this is synthetic arithmetic, not feasibility
+evidence. Approving the rule at Gate 0 does not count as passing it: the
+operation remains unvalidated until a later authorized, model-independent
+qualification exercise passes prospectively.
 
 ### Rejected or diagnostic image options
 

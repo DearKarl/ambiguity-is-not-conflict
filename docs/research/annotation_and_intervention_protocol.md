@@ -63,6 +63,11 @@ The image schema is constrained in this order:
    determinate.
 4. If `A_v=determinate`, `Y_v` must be exactly `present` or `absent`.
    `Y_v=undefined` with `A_v=determinate` is invalid.
+5. A determinate `present` rating requires presence probability at least 50;
+   a determinate `absent` rating requires probability at most 50. An
+   inconsistent categorical/probability record is an instrument error, not a
+   disagreement to be repaired after review. An unassessable rating retains a
+   structurally missing probability.
 
 Thus `M_v` exposure is not a synonym for semantic indeterminacy: a frozen,
 semantics-preserving degradation may retain a determinate state, whereas
@@ -205,17 +210,19 @@ validated universal cutoffs.
 3. Evaluate the locked rubric on a disjoint 150-unit reliability set, with
    five independent image ratings, five independent ratings for natural text
    items, and disjoint unanimous three-reader panels for opposite-polarity text
-   siblings, with patient/source clustering retained. These counts and roster
-   sizes require a dedicated precision and allocation calculation before
-   approval.
-4. For nominal/ordinal fields, pre-specify one primary reliability coefficient
-   and report Krippendorff's alpha with a patient-cluster bootstrap 95%
-   interval, a prevalence-robust coefficient as sensitivity, category
-   prevalence, class-specific and raw exact agreement, pairwise confusion,
-   intra-reader agreement, adjudication rate, and missingness. For 0--100
-   probabilities, additionally report within-unit dispersion and calibration
-   against the adjudicated determinate label only as a reader-behaviour
-   diagnostic.
+   siblings, with patient/source clustering retained. The exact marginal
+   allocation, repeat selection, and pre-reader precision simulation are the
+   unapproved `G0-READERS A` candidate in the [reader measurement and MV-1
+   qualification audit](reader_measurement_and_mv1_qualification_audit.md).
+4. For every categorical gating axis, the recommended primary coefficient is
+   nominal Krippendorff alpha with the audit's exact patient/source-cluster
+   bootstrap interval. Ordinal alpha and Gwet AC1/AC2 are sensitivities.
+   Report category prevalence, the audit-defined macro and class-specific
+   exact agreement, pairwise confusion, intra-reader agreement, adjudication,
+   and missingness. For 0--100 probabilities, additionally report within-unit
+   dispersion and calibration against the independently locked determinate
+   polarity only as a reader-behaviour diagnostic. This package is not approved
+   and cannot be replaced after results.
 5. Candidate promotion requires the primary coefficient at least 0.80, lower
    95% bound at least 0.67, observed agreement at least 0.85, and class-specific
    positive agreement at least 0.75 for every gating axis: technical integrity/
@@ -302,18 +309,25 @@ same determinate image polarity survives **and** a model-independent
 qualification set disjoint from reader training/reliability and every model or
 protected/target population yields a patient-clustered one-sided 95% lower bound
 strictly above `0.10` for
-`q_v,bal = 0.5(q_v,present+q_v,absent)`, where each polarity-specific term is
-`E[abs(pbar_intact-0.5)-abs(pbar_MV-1-0.5) | Y_v]` and has at least 108
-evaluable independent blocks; `MT-1` redacts the sole
+`q_v,bal = 0.5(q_v,present+q_v,absent)`, with simultaneous one-sided lower
+bounds for both polarity-specific terms strictly above zero. Each term is
+`E_R[h_intact-h_MV-1 | S=1,E=1,Y_v]` for the locked finite roster, with
+`h_s=a_y(pbar_s-0.5)>=0`, `a_y=+1` for present, and `a_y=-1` for absent;
+each polarity has at least 108
+evaluable independent blocks. The `G0-MV-Q A` candidate reserves 150
+metadata-screened cases per report-screen stratum (300 total), uses a locked
+finite ten-reader roster with cyclic disjoint panels, and conditions its claim
+on the selected/evaluable population; `MT-1` redacts the sole
 text polarity slot and is accepted only as task-critical target-state loss
-with `Y_t=undefined`. The `MV-1` threshold and its crude 108-per-polarity/
-216-total planning calculation are candidates requiring statistical, clinical, reader-
-dependence, attrition, and resource approval. Approving the rule does not pass
-the later qualification gate. Their exact operations, state rules, severities,
-references, reader gates, and kill consequences are specified prospectively,
-but remain clinical/statistical approval blockers. Gate 0 cannot close until a
-dated owner decision accepts the protocol, and `J_id` cannot be called
-executable until the later authorized `MV-1` qualification passes. Full-
+with `Y_t=undefined`. Their exact operations, estimand, joint max-`t` interval,
+polarity guardrails, panel schedule, yield arithmetic, simulation contract, and
+approximately 129-hour planning row are specified in the [reader measurement
+and MV-1 qualification audit](reader_measurement_and_mv1_qualification_audit.md).
+They remain statistical, clinical, reader-dependence, attrition, governance,
+and resource approval blockers. Approving the rule does not pass the later
+qualification gate. Gate 0 cannot close until a dated owner decision accepts
+the protocol, and `J_id` cannot be called executable until the later authorized
+`MV-1` qualification passes. Full-
 modality missingness and every alternate degradation/corruption remain
 diagnostics or rejected options as recorded; outcomes may never choose among
 them.
