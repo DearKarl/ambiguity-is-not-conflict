@@ -38,8 +38,8 @@ decisions are separated explicitly.
 - **Status:** Candidate; requires Gate 0 and governance approval
 - **Decision:** Plan around atomic findings in chest radiograph--report pairs,
   with MIMIC-CXR/JPG as the candidate patient-level source, a
-  clinician-reviewed controlled subset, and ReXErr only as an external stress
-  test.
+  clinician-reviewed controlled subset, and ReXErr only as a MIMIC-derived
+  synthetic stress test.
 - **Assumptions:** Timely access, defensible finding labels, clinician time, and
   permitted derived artifacts.
 - **Stop condition:** Do not access data until the dataset decision record and
@@ -120,14 +120,82 @@ decisions are separated explicitly.
   construct identifiability, 2027 eligibility, acceptance, publication, or
   clinical benefit.
 
+## DR-0007 — Gate-0 Atomic Route Recommendation
+
+- **Date:** 2026-08-29
+- **Status:** Proposed; not approved and not executable
+- **Verified literature facts:** Existing work already defines modality
+  conflict, uncertainty-adjusted confident disagreement, evidential
+  conflict/vacuity, dissent-versus-ambiguity regimes, controlled conflict under
+  varying unimodal difficulty, and paired conflict/degradation benchmarks. The
+  audited primary sources and explicit claim boundaries are recorded in the
+  [novelty audit](novelty_audit.md).
+- **Verified data facts:** MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0 are one
+  restricted coupled source. Their structured labels and test annotations are
+  report-derived or report-annotated. ReXErr is MIMIC-derived. Official-source
+  access and rights findings are recorded in the
+  [dataset feasibility audit](dataset_feasibility_audit.md).
+- **Inference:** Those prior works make the broad “first conflict estimator
+  after accounting for modality uncertainty” claim unavailable. Report-side
+  labels cannot independently define image truth or image ambiguity, and ReXErr
+  cannot supply independent breadth. The narrowest defensible first route is
+  an asymmetric, image-grounded, single-finding task requiring independent
+  verification that the finding is decidable from the exact frontal image,
+  with a counterbalanced atomic text assertion. Pleural-effusion
+  presence/absence is provisional. Conflict is defined only for determinate
+  image and text states; genuine ambiguity, missingness, and corruption form
+  separate controls in a declared fractional design.
+- **Proposed construct package:** Independently elicit image-only and text-only
+  interpretation distributions; treat ambiguity-adjusted excess disagreement
+  only as a semantic-distribution diagnostic pending an analytic equivalence
+  screen, not as conflict in ambiguous cells; validate every candidate through
+  a within-source conflict contrast and an identified specificity margin using
+  only valid randomized or counterbalanced controls; keep natural-ambiguity
+  comparisons as separate conservative falsification audits; and use a matched
+  deterministic compatibility/density-ratio predictor as an exact kill
+  comparator. Full ambiguity-separation identification requires a valid
+  governed intervention or separately defended exchangeability and transport
+  assumptions. The energy-distance-like quantity is not itself a novelty claim
+  or a selected estimator.
+- **Proposed data package:** Treat coupled MIMIC as the conditional primary
+  route, VisMin as the preferred low-friction general-domain stress candidate
+  only with added construct controls, PadChest-GR as the preferred independent
+  medical reserve pending rights clarification, and ReXErr as stress evidence
+  only.
+- **Governance boundary:** No data/model access, download, unapproved
+  hosted-API use, clinical annotation, synthetic clinical editing,
+  implementation, or experiment is authorized. Restricted MIMIC content and
+  record-level derivatives must not enter Codex/ChatGPT, GitHub, or CI. Derived
+  datasets, annotations, embeddings, checkpoints, and weights remain restricted
+  pending written permission.
+- **Approval required:** The Commander and relevant clinical/governance owner
+  must approve the exact finding/image input, annotation and reliability
+  thresholds, governed ambiguity intervention or explicit
+  identification/claim-narrowing rule, downstream error outcome, numerical
+  smallest effects, deterministic-subsumption margin, power and budget, data
+  versions/access and secure environment, permitted artifacts, and breadth
+  route in a later dated decision.
+- **Kill boundary:** Reject before implementation any score that is a monotone
+  transform or minor parameterization of known uncertainty-adjusted
+  disagreement. Kill the Main Track estimator claim if existing evidential or
+  matched deterministic methods meet the frozen specificity and downstream
+  equivalence margins. Passing Month 3 remains necessary, not sufficient.
+- **Permitted claim:** This record is a decision packet only. It is not Gate-0
+  closure, novelty proof, research evidence, data authorization, publication
+  prediction, or clinical-value evidence.
+
 ## Open Gate 0 Decisions
 
-- atomic finding ontology and exact prediction unit;
+- singleton finding, study-level versus verified single-frontal-image input,
+  and exact prediction unit;
 - MIMIC resource/version and approved access route;
-- natural versus edited intervention mixture;
+- determinate compatibility cells, fractional ambiguity/missingness controls,
+  and natural versus edited intervention mixture;
 - clinician rubric, sample, adjudication, and reliability threshold;
-- primary conflict estimator and matched backbone;
-- exact primary estimand, smallest effect, and power target;
+- primary conflict estimator, matched backbone, and pre-implementation
+  equivalence screen against the closest published scores;
+- exact primary estimand, numerical specificity margin, simultaneous interval,
+  deterministic-subsumption boundary, and power target;
 - final risk outcome and calibration tolerance;
 - target-distribution cohort and any prevalence weighting;
 - compute ceiling and reproducibility budget;
