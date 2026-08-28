@@ -559,3 +559,38 @@ def test_simulation_manifest_is_exact_reproducible_and_non_executable() -> None:
     assert "no option is selected" in audit
     assert "no project random stream" in audit
     assert "does not establish implementation correctness" in audit
+
+
+def test_noncore_simulation_design_preserves_gate_and_proof_boundaries() -> None:
+    design = " ".join(
+        (ROOT / "docs/research/noncore_simulation_computational_design.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    brief = " ".join(
+        (ROOT / "docs/research/task_briefs/TB-0010-noncore-simulation-resource-design.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "static proof-obligation candidate" in design
+    assert "no benchmark" in design
+    assert "k_plan=4,416" in design
+    assert "572.5 decimal gb" in design
+    assert "p0-manifest" in design and "p11-resource" in design
+    assert "counters alone fail" in design
+    assert "1-0.99^{299}>0.95" in design
+    assert "2,723,199,652,800,000" in design
+    assert "14,503,497,089,155,072" in design
+    assert "probability construction" in design
+    assert "100-iteration missingness solve" in design
+    assert "alpha=0.05/4,416" in design
+    assert "numerical parameter" in design
+    assert "m_{peak,system}" in design
+    assert "t_{worker,hard}" in design
+    assert "may not be multiplied by the workload" in design
+    assert "g0-method" in design and "owner-blocked" in design
+    assert "g0-resources" in design and "remain open" in design
+    assert "fewer than 120,000/9,999" in brief
+    assert "no external action is authorized except the final" in brief

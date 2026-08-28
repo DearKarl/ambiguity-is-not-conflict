@@ -54,6 +54,12 @@ pre-calibration `MV-1` candidates. Its exact hashes and logical-work counts
 show that the design is not resource-qualified; they are not runtime,
 affordability, capacity, or statistical-performance evidence.
 
+The [non-core simulation computational design](docs/research/noncore_simulation_computational_design.md)
+now specifies the stage graph, proposed audit schema, deterministic restart and
+output-equivalence obligations, and a future artificial-buffer benchmark
+contract. It ran no benchmark or scientific code and leaves the exact output
+registry, measured resources, named capacity, and `G0-RESOURCES` decision open.
+
 ```text
 controlled image--report interventions
         -> controlled construct-specificity test
@@ -141,20 +147,21 @@ paper/                       manuscript workspace after evidence promotion
 8. [Intervention option audit](docs/research/intervention_option_audit.md)
 9. [Reader measurement and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
 10. [Simulation resource-feasibility audit](docs/research/simulation_resource_feasibility_audit.md)
-11. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
-12. [Evaluation protocol](docs/research/evaluation_protocol.md)
-13. [Data and clinical governance](docs/research/data_governance.md)
-14. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
-15. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
-16. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
-17. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
-18. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-19. [Literature matrix](docs/research/literature_matrix.md)
-20. [Novelty audit](docs/research/novelty_audit.md)
-21. [Submission strategy](docs/research/submission_strategy.md)
-22. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
-23. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-24. [Decision log](docs/research/decision_log.md)
+11. [Non-core simulation computational design](docs/research/noncore_simulation_computational_design.md)
+12. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
+13. [Evaluation protocol](docs/research/evaluation_protocol.md)
+14. [Data and clinical governance](docs/research/data_governance.md)
+15. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
+16. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
+17. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
+18. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
+19. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+20. [Literature matrix](docs/research/literature_matrix.md)
+21. [Novelty audit](docs/research/novelty_audit.md)
+22. [Submission strategy](docs/research/submission_strategy.md)
+23. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+24. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+25. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 

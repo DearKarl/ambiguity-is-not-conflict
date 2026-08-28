@@ -128,9 +128,17 @@ cannot be repurposed, and the accelerator ceiling cannot be treated as an
 available allocation. Consequently `G0-READERS`, `G0-MV-Q`, and
 `G0-RESOURCES` remain simulation- and feasibility-blocked.
 
-The recommended next resource action is a separately bounded, non-core,
-proof-preserving computational-design and workload-equivalent generic-kernel
-benchmark brief. It may not implement or call the project RNG, DGP,
+The [non-core computational design](noncore_simulation_computational_design.md)
+now supplies a static stage graph, proposed audit schema, restart rules,
+proof-obligation register, workload crosswalk, and future benchmark acceptance
+equations. Its proposed minimum successful-path audit payload is approximately
+572.5 decimal GB before unresolved permutation/output extensions, overhead,
+scratch, redundancy, or backups. This is schema arithmetic, not measured
+storage or an allocation, and the exact output registry remains open.
+
+The recommended next resource action is to close that registry and semantic-
+count ledger, then issue a separately bounded workload-equivalent generic-
+kernel benchmark brief. It may not implement or call the project RNG, DGP,
 calibration equations, bootstrap statistic, or scientific pipeline while Gate
 0 is open; exact scientific implementation remains a post-Gate-0 action.
 Streaming, exact sufficient statistics, canonical deduplication, and

@@ -208,43 +208,55 @@ most 3,411,784,800,000 raw words if every candidate reaches every outer
 replication. These counts exclude the separately counted analysis-bootstrap
 streams.
 
-No persistent-output byte count follows. The protocol does not freeze result
-schema, numeric precision, compression, normalization of repeated metadata,
-checkpoint frequency, retention, transient batch size, or deterministic
-reduction order. CPU-core-hours, RAM, scratch, wall time, energy, and cost are
-likewise not identifiable without implementation and a separately authorized
-synthetic-kernel benchmark.
+No persistent-output byte count follows from TB-0009 alone. TB-0010's
+[non-core computational design](noncore_simulation_computational_design.md)
+now proposes a normalized uncompressed audit schema and derives a minimum
+successful-path payload of approximately 572.5 decimal GB before permutation
+payloads, output-registry extensions, aggregate/failure records, container
+overhead, scratch, redundancy, or backups. That arithmetic is neither a final
+storage upper bound nor an allocation. The exact output registry, CPU-core-
+hours, RAM, scratch, wall time, energy, cost, and capacity remain unidentified
+without the later locks and separately authorized generic-kernel benchmark.
 
 ## Required Later Resource Evidence and Post-Gate-0 Implementation
 
 Gate 0 cannot require core simulation implementation as its own prerequisite:
 the repository execution gate forbids that implementation while Gate 0 is
-open. Resource qualification must therefore use a separately authorized,
-**non-core** pre-Gate-0 computational-design record and workload-equivalent
-microbenchmark. It may benchmark generic array traversal, deterministic
-reduction, index-streaming, and serialization kernels with artificial buffers;
-it may not implement or invoke the project RNG, DGP, calibration equations,
-bootstrap statistic, promotion gate, or scientific pipeline.
+open. Resource qualification must therefore use the now-documented
+**non-core** pre-Gate-0 computational design and a separately authorized
+workload-equivalent microbenchmark. The design freezes a stage graph, proposed
+schema, restart semantics, proof register, workload crosswalk, and acceptance
+equations; it does not discharge any proof or resource term. The later
+benchmark may measure generic array traversal, deterministic reduction,
+index-streaming, and serialization kernels with artificial buffers; it may not
+implement or invoke the project RNG, DGP, calibration equations, bootstrap
+statistic, promotion gate, or scientific pipeline.
 
-That pre-Gate-0 record must freeze or conservatively bound:
+Before benchmark **execution**, its bounded brief and preflight must freeze or
+conservatively bound:
 
 - immutable candidate-manifest hashes, family provenance, calibration-failure
   handling, and proof that `K_plan` remains 4,416;
 - static per-cell counts for random words, generated ratings and repeats, quadrature,
   calibration vector passes, bootstrap selections/statistic recomputations,
   fixed-effect/leave-one-reader fits, and exact-binomial calls;
-- a proposed persistent result schema, byte widths, metadata normalization, checkpoint
-  and restart policy, retention/compression, batch size, peak RAM/VRAM,
-  scratch, and I/O;
-- candidate hardware, workers, numeric precision, NumPy/inverse-CDF/BLAS versions,
-  deterministic chunk/reduction order, retry treatment, and independent-stream
-  preservation; and
-- measured generic-kernel throughput, a conservative mapping to CPU/GPU hours,
-  wall time, cost/energy where applicable, scaling uncertainty, failed-cell
-  cost, and contingency.
+- the complete persistent result/output registry, byte widths, metadata
+  normalization, checkpoint and restart policy, retention/compression,
+  artificial-buffer shapes, batch candidates, system-wide RAM/scratch
+  equations, and I/O schema; and
+- candidate hardware, load strata, workers, numeric precision, relevant
+  numerical-library versions, deterministic chunk/reduction order, retry/
+  deadline treatment, independent-stream preservation, exact kernel
+  numerators, and the permitted non-project RNG/surrogate boundary.
 
-The non-core microbenchmark requires its own bounded brief plus statistical,
-resource, infrastructure, security, and governance review. It supplies
+The output/metric registry and semantic-count ledger must close before timing;
+their compiler/harness work, if any, requires the benchmark brief's exact
+authorization. The non-core microbenchmark requires statistical, resource,
+infrastructure, security, and governance pre-review. Its **outputs** must then
+include measured generic-kernel throughput and failures, familywise timing/
+tail evidence, a conservative mapping to CPU/RAM/scratch/storage/wall time,
+cost/energy where applicable, scaling/dependence uncertainty, failed-cell and
+retry cost, contingency, and explicit capacity. It supplies
 resource-planning evidence only and cannot validate implementation or operating
 performance. Only after Gate 0 freezes may a separate core-implementation brief
 realize the exact scientific RNG/DGP/calibration/bootstrap pipeline, freeze its
@@ -259,8 +271,10 @@ is needed or authorized for any simulation stage.
   benchmark, conservative scaling bound, storage plan, uncertainty/contingency
   calculation, and explicit named-owner approval demonstrate that the complete
   successful path fits. Exact scientific implementation remains post-Gate-0.
-- **B — recommended next design action, not selected:** issue a later bounded
-  proof-preserving computational-design brief. It may use canonical
+- **B — prospective redesign, not selected:** TB-0010 records the static design
+  needed to test the unchanged contract under A; it does not instantiate B. If
+  the completed registry and later generic benchmark reject A, a separately
+  authorized proof-preserving redesign may use canonical
   deduplication, deterministic streaming/batching, algebraically exact
   sufficient statistics, restartable independent-cell parallelism, and
   pre-outer failure-only staging. A calibration failure, a 41/61-node

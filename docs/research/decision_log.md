@@ -557,6 +557,51 @@ decisions are separated explicitly.
   performance, resource availability, reader reliability, `MV-1` validity,
   Gate-0 closure, venue readiness, acceptance, or publication.
 
+## DR-0013 — Static Simulation Computation and Benchmark Boundary
+
+- **Date:** 2026-08-29
+- **Status:** Proposed non-core resource-design recommendation under TB-0010;
+  requires statistical, scientific, resource, infrastructure, security,
+  governance, and Commander decisions; not executable
+- **Facts:** TB-0009 freezes 13,285 candidate cells, 6,720 planning cells,
+  120,000 outer replications per executable cell, and 9,999 analysis
+  bootstraps. TB-0010 specifies a stage graph, normalized catalogue/audit/
+  checkpoint proposal, deterministic restart rules, output-equivalence proof
+  register, workload-to-generic-kernel crosswalk, and conservative resource
+  equations. No implementation or benchmark ran.
+- **Inference:** Independent cell/outer identities support restartable
+  scheduling, but streaming, sufficient statistics, batching, caching, and
+  parallel reduction are valid only after exact conformance to a frozen
+  reference. Counters alone cannot satisfy the per-replication audit contract.
+- **Assumptions and bounds:** Under the proposed packed minimum schema, the
+  successful-path audit payload is approximately 572.5 decimal GB before
+  permutation/output extensions, aggregate/failure records, format overhead,
+  scratch, redundancy, and backups. This is not a final storage upper bound or
+  allocation. Runtime, RAM, scratch, I/O, wall time, cost/energy, parallel
+  efficiency, and capacity remain unmeasured.
+- **Design recommendation:** Close the exact numeric/output registry and
+  semantic-count ledger, then authorize only a generic artificial-buffer
+  benchmark under a new brief. Test whether the unchanged contract can satisfy
+  `G0-RESOURCES A` before considering a scientific redesign under B. This is a
+  sequencing recommendation, not selection of A/B/C; it supersedes only
+  DR-0012's recommendation that B be the immediate next action.
+- **Proof boundary:** Later optimized paths must preserve canonical cells and
+  hashes, every seed/tag/raw word and bootstrap index, reference-order statistic
+  bits, strict inequalities, failure classifications, multiplicity families,
+  reconstructible audit outputs, and byte-identical atomic restart. Failure
+  retains the reference path or stops; approximate agreement is insufficient.
+- **Kill boundary:** No project RNG, DGP, calibration, bootstrap statistic,
+  reliability statistic, FE/LOO analysis, simulation, benchmark, model, data,
+  reader, or external resource action is authorized. No capacity decision may
+  use guessed compression or omit an unresolved schema/kernel term. Resource
+  shortage narrows, redesigns, or stops; it never reduces 120,000/9,999,
+  prunes cells, or weakens gates.
+- **Permitted claim:** The repository contains a static computation,
+  audit-schema, proof-obligation, and future artificial-buffer benchmark design
+  for the unchanged pre-reader simulation. This is not correctness,
+  calibration admissibility, feasibility, operating performance, Gate-0
+  closure, acceptance, or publication.
+
 ## Open Gate 0 Decisions
 
 - approve or reject explicit claim narrowing to determinate-conflict
@@ -570,10 +615,11 @@ decisions are separated explicitly.
 - `G0-READERS A/B` and `G0-MV-Q A/B/C`: exact reader coefficient/allocation,
   finite-roster claim, text/cross-modal panels, adjudication, simulation,
   ethics, governance, yield, panel schedule, workload, and kill rules;
-- `G0-RESOURCES A/B/C`: later resource-qualify the unchanged 10,847-plus-2,438
-  candidate contract, commission a proof-preserving redesign and complete
-  re-enumeration, or reject/narrow the affected route; no runtime/capacity fact
-  or option approval currently exists;
+- `G0-RESOURCES A/B/C`: close TB-0010's output/count registry and later
+  resource-qualify the unchanged 10,847-plus-2,438 candidate contract,
+  commission a proof-preserving redesign and complete re-enumeration, or
+  reject/narrow the affected route; no benchmark, runtime/capacity fact, or
+  option approval currently exists;
 - `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
   theory candidate; then one exact non-outcome-selected pointwise instrument,
   matched backbone/baseline implementations, exact ablation/applicability map,
