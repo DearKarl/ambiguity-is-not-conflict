@@ -234,9 +234,10 @@ decisions are separated explicitly.
   deterministic predictor is 0.10; scale-free `theta` is secondary unless
   separately powered. The proposed two-control cardinality requires one exact
   clinically approved `M_v` and one exact `M_t` operation, severity,
-  acceptance rule, and reference; none is yet frozen. Exactly one primary
-  uncertainty-aware method must be named from development before Month 3, with
-  every other candidate secondary. Month 3 uses one-sided 90% simultaneous development
+  acceptance rule, and reference; none is yet frozen. The canonical contract
+  requires exactly one primary uncertainty-aware estimator definition/interface
+  and matched comparator route at Gate 0; development may fit/tune only within
+  those rules, and their fitted instances lock before Month 3. Month 3 uses one-sided 90% simultaneous development
   bounds and an operational floor of 216 balanced evaluable independent
   patients under the stated assumptions; confirmation
   uses one-sided 97.5% bounds and approximately 320 patients for two controls
@@ -250,13 +251,15 @@ decisions are separated explicitly.
   model complexity, calibration sample, loss, and review cost are frozen.
 - **Proposed model/resource decision:** Treat BiomedCLIP as a conditional
   primary candidate, SigLIP2 as unknown-exposure matched breadth, a ResNet-50
-  plus BiomedBERT pair as a lower-intent unknown-overlap non-VLM architectural
-  control, BioViL-T as a known-
+  plus original-BERT pair as a source/type/time-auditable strict non-VLM
+  control lead, BioViL-T as a known-
   exposure diagnostic, and Qwen2.5-VL as an interface stress candidate. No
   pretrained VLM is yet unconditionally confirmatory on MIMIC. Candidate
   ceilings are 1 TB restricted storage, 300 GPU-hours through Month 3, 1,500
   cumulative GPU-hours, 400 clinical person-hours through Month 3, and 1,200
-  cumulative clinical person-hours. The cumulative worksheet explicitly
+  cumulative clinical person-hours. These earlier clinical ceilings are
+  superseded as planning candidates by DR-0009 after adding the independent
+  `MV-1` task-relevance qualification. The cumulative worksheet explicitly
   reserves 45 hours for a veto-only natural-ambiguity audit after a Month-3
   pass; that audit is not part of the Month-3 stage ceiling and is not an
   ambiguity-identification result.
@@ -280,34 +283,144 @@ decisions are separated explicitly.
   identifiability proof, empirical evidence, venue readiness, clinical value,
   acceptance, or publication.
 
+## DR-0009 — Finite Gate-0 Decision Package and Staged Locks
+
+- **Date:** 2026-08-29
+- **Status:** Proposed; every named owner choice remains open and non-executable
+- **Verified facts:** Primary observer studies show that chest-image resolution
+  and compression effects are task/severity dependent, not universally
+  semantics-preserving. A calibrated dose-like simulation requires acquisition/
+  detector assumptions absent from post-processed JPG. Primary radiology
+  schemas distinguish positive, negative, uncertain, and missing/no-proposition
+  text states. Official model documentation gives explicit MIMIC exposure for
+  BioViL-T but no patient-level exclusion manifest for BiomedCLIP or SigLIP2.
+  Sources and transfer limits are recorded in the
+  [intervention audit](intervention_option_audit.md),
+  [literature matrix](literature_matrix.md), and
+  [backbone audit](execution_budget_and_backbone_audit.md).
+- **Inference:** For a truly atomic binary assertion, target-state information
+  cannot be removed while retaining a unique fully recoverable `Y_t`; the
+  coherent primary text-loss option therefore makes `Y_t` undefined and must
+  not be called ambiguity. Exact 2x2 construction balance can eliminate
+  enumerated isolated-modality/process marginals, while learned probes remain
+  lower-bound falsification instruments rather than proof of artifact absence.
+  The canonical contract requires one exact primary estimator/interface before
+  core development; development locks its fitted instance and configuration
+  before the Month-3 holdout rather than choosing an estimator identity from
+  protected outcomes.
+- **Proposed decision package:** Approve the narrower determinate-conflict
+  specificity route; provisionally retain the single-frontal pleural-effusion
+  task; use only `MV-1` antialiased `224 -> 112 -> 224` resolution attenuation
+  with preserved image polarity **conditional on** a disjoint reader-based
+  equal-polarity `q_v,bal` task-evidence gate whose one-sided 95% lower bound is
+  strictly above `0.10` with at least 108 evaluable blocks per independently
+  assigned image polarity, and `MT-1` sole-polarity-slot redaction with undefined text state;
+  keep natural ambiguity veto-only; use construction
+  balance plus orientation-safe diagnostic recoverability
+  `R=max(BA,1-BA)`; and adopt strict-confirmatory, unknown-exposure sensitivity,
+  and known-exposure diagnostic model tiers.
+- **Inference decision:** The finite candidate uses at least 9,999 fixed-seed
+  patient-cluster studentized max-`t` resamples, one-sided 90% simultaneous
+  Month-3 bounds (`alpha_F=0.10`, 80% target family power), one-sided 97.5%
+  confirmatory bounds (`alpha_F=0.025`, 90% target family power), a fixed
+  construct-to-advantage-to-downstream-to-decision sequence, and Holm or
+  Romano--Wolf control for secondary families. Commander/statistical approval
+  remains open; Month 3 cannot establish confirmation or equivalence.
+- **Baseline/ablation decision:** In addition to the finite baseline identities,
+  freeze removal of `C_vt`; separate removal of `A_v`, `A_t`, `M_v`, and `M_t`;
+  matched point-softmax/point-embedding replacement; fixed-mean scale/covariance
+  removal where applicable; raw-SD versus median/MAD normalization; and four
+  modality/nuisance/provenance recovery views. Exact implementations, licences,
+  and applicability mapping remain Gate-0 blockers.
+- **Artifact decision:** The recommended current-budget option makes structural
+  balance an instrument invariant and learned probes veto-only. Any lower bound
+  for `R` above `0.55` kills; crossing `0.55` is inconclusive; an upper bound
+  below it supports only the exact frozen-probe/population statement. A formal
+  four-probe equivalence claim requires a separately simulated and funded
+  design. Orientation-safe crude IUT planning is approximately 1,047/1,757
+  evaluable Month-3/confirmation patients, already outside current ceilings;
+  the Month-3 figure is a non-promotable developmental screen and cannot
+  establish equivalence.
+  No margin may be widened to fit budget without a prospective consequence-
+  based justification.
+- **Checkpoint decision:** BiomedCLIP, SigLIP2, and Qwen remain unknown-exposure
+  sensitivity; BioViL-T remains known-exposure diagnostic. Strict evidence
+  requires a cleared manifest/source route, development-only representation,
+  or sequestered/post-checkpoint cohort. A ResNet-50 plus original-BERT pair is
+  only a source/type/time-auditable strict non-VLM control lead. Without a
+  strict route, prohibit clean-checkpoint/strict-heldout wording and narrow the
+  generalization claim.
+- **Staging decision:** Gate 0 freezes the task/unit, data/governance,
+  interventions, exact estimator definition/interface, exact comparator route,
+  backbone revisions, baseline/calibration implementations, partitions/
+  sampling, breadth identity/snapshot, resources, and promotion/stopping logic.
+  A later development brief remains bounded to HMAC bucket 0--69 and may only
+  fit/tune within those rules; the fitted estimator/comparator instances,
+  normalizers, probes, code, and configurations lock before bucket 70--84;
+  strict evidence and full patient-clustered construct/probe/target power must
+  lock before confirmation.
+- **Open owners:** The complete finite Commander, clinical, statistical,
+  governance, infrastructure, resource, and model-owner choices are in the
+  [Gate-0 decision dossier](gate0_decision_dossier.md). No check box is signed.
+- **Resource revision:** Adding the disjoint, crude 256-screened/216-evaluable
+  balanced `MV-1`
+  qualification without reusing the 150-unit image reliability set changes the
+  proposed clinical planning ceiling to 500 hours through Month 3 and 1,350
+  cumulative. This is a worksheet consequence, not
+  verified availability; the Commander, clinical, resource, and infrastructure
+  owners must approve or replace it.
+- **Qualification partition:** Within official-train HMAC bucket 0--69, a
+  separate governed `AINC/v1/mv1-qualification` rank reserves 128
+  strict-single-frontal metadata candidates per positive/negative report-screen
+  sampling stratum (256 total) before model fitting. They are excluded from
+  reader training/reliability, fit/development, Month 3, confirmation,
+  calibration, and target evidence. Report-screen polarity is not image truth;
+  later independent readers must yield at least 108 evaluable blocks per intact-
+  image polarity. A shortfall in either state stops `MV-1`; this rule is not
+  data-access authorization.
+- **Stop boundary:** Rejection/non-verification leaves Gate 0 open; failure of
+  either exact control, construction balance, reader reliability, checkpoint
+  tier, power/resources, `psi_mag`, `A_psi`, or downstream `A_BSS` invokes the
+  documented kill/narrow rule. Do not select replacement controls or margins
+  after candidate-score inspection.
+- **Permitted claim:** The repository contains a finite blocker/choice inventory
+  and staged authorization map, not a complete Gate-0 freeze package. This is not owner approval, Gate-0
+  closure, ambiguity identification, intervention validity, data/model/reader
+  authorization, scientific evidence, venue readiness, acceptance, or
+  publication.
+
 ## Open Gate 0 Decisions
 
 - approve or reject explicit claim narrowing to determinate-conflict
   specificity while H2 remains unresolved;
 - provisional pleural-effusion finding, strict single-frontal-image unit, and
   exact visibility/eligibility rule;
-- two-stage MIMIC resource/query record, HMAC partitions, secure access route,
+- two-stage MIMIC resource/query record, HMAC partitions including the
+  256-screened/216-evaluable, equal-polarity `MV-1` qualification reserve, secure access route,
   aggregate outputs, screening floors, and derived-artifact terms;
 - five-reader image protocol, text/cross-modal panels, sample, reader model,
   adjudication, reliability thresholds, ethics, and workload;
-- primary conflict estimator, matched backbone, and pre-implementation
-  equivalence screen against the closest published scores;
+- primary conflict estimator, matched backbone/baseline implementations,
+  exact ablation/applicability map, and pre-implementation equivalence screen
+  against the closest published scores;
 - magnitude-safe primary endpoint, compatible-reference scale, 0.20 construct
-  threshold, secondary `theta`, simultaneous interval, 0.10 uncertainty-aware
-  material-advantage boundary, and 216/320-or-400 operational floors;
-- exact one-per-modality `M_v/M_t` operations, severities, acceptance rules,
-  and within-source references, plus the single primary method identity before
-  Month 3;
-- four-probe artifact family, exact probe implementations, `chance + 0.05`
-  equivalence margin, and the unresolved 385/624 precision or 1,293/1,976
-  family-power burden;
+  threshold, secondary `theta`, the `G0-INFERENCE` max-`t`/multiplicity/fixed-
+  sequence package, 0.10 uncertainty-aware material-advantage boundary, and
+  216/320-or-400 operational floors;
+- owner approval of exact `MV-1`/`MT-1` operations, severities/state rules,
+  acceptance rules, within-source references, the `MV-1` task-evidence endpoint/
+  threshold/power, and the exact primary estimator/interface at Gate 0; fitted
+  instances and configurations then lock separately before Month 3;
+- artifact option A (exact balance plus diagnostic veto) or B (powered bounded
+  frozen-probe recoverability), orientation-safe `R=max(BA,1-BA)`, exact probe
+  implementations, and the unresolved approximate 1,047/1,757 IUT burden for B;
 - final task-error outcome, 0.02 Brier-skill increment, 0.01 `A_BSS` method-
   difference margin, calibration tolerances, target prevalence/covariance/
   power, 90% coverage budget, and 0.01 risk margin;
 - target-distribution cohort and any prevalence weighting;
 - conditional checkpoint shortlist/exposure audit and proposed 1-TB,
-  300/1,500-GPU-hour, and 400/1,200-clinical-person-hour ceilings;
+  300/1,500-GPU-hour, and revised 500/1,350-clinical-person-hour ceilings;
 - pre-specified distribution shift and subgroup set;
-- cross-backbone breadth and the governed choice of a second medical dataset
-  or small controlled general-domain benchmark;
+- the Gate-0 breadth choice between VisMin and PadChest-GR, plus immutable
+  snapshot, rights, construct-portability, and later execution boundary;
 - final NeurIPS 2027 track and deadline after the official call.

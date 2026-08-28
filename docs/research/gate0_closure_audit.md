@@ -1,42 +1,52 @@
 # Gate 0 Closure Audit
 
-**Status:** Freeze candidate; Gate 0 remains open
+**Status:** Finite blocker inventory; Gate 0 remains open
 
 **Audit date:** 2026-08-29
-**Evidence class:** Protocol and decision support under TB-0003, with
-TB-0004 independent-review blocker remediation
+**Evidence class:** Protocol and decision support under TB-0003--TB-0005, with
+independent scientific/statistical/model-governance challenge
 
 ## Bottom Line
 
 The repository now specifies a single, falsifiable route at substantially more
-detail, but it is **not execution-ready**. No approval is implied by this
-document. The five scientifically material blockers are:
+detail, but it is **not execution-ready**. TB-0005 has converted previously
+open-ended intervention, artifact, checkpoint, and staging questions into the
+finite choices in the [decision dossier](gate0_decision_dossier.md). No
+approval is implied. The remaining blockers form six auditable clusters:
 
-1. no valid image- or text-ambiguity intervention, or approved observational
-   identification/transport route, has yet separated genuine interpretive
-   multiplicity from information loss or epistemic qualification;
-2. the proposed two-control roles have no clinically approved exact `M_v` and
-   `M_t` operation, severity, acceptance rule, or within-source reference, so
-   `J_id` and its power rows remain conditional rather than executable;
-3. no candidate backbone has yet supplied auditable evidence that its training
-   patients or source records are disjoint from the proposed MIMIC final set;
-4. the proposed `chance + 0.05` four-probe artifact-equivalence claim requires
-   materially more independent patients than the current construct floors
-   under the conservative precision/power calculation;
-5. the exact primary estimator identity, matched deterministic comparison, and
-   downstream event rate/covariance remain unfrozen, so the full `A_psi`,
-   `A_BSS`, calibration, and decision sequence is not yet power-ready.
+1. **Scientific boundary and clinical construct:** scope narrowing, the exact
+   task/unit, ontology, `MV-1`/`MT-1`, reader design, and the later
+   model-independent `MV-1` task-evidence qualification are unsigned.
+2. **Method and comparison identity:** no exact primary estimator formula/
+   interface is specified; baseline/ablation/probe implementations, licences, analytic-
+   equivalence screen, immutable backbone revisions, and calibration rule are
+   not yet a complete approved package, and older “named from development”
+   wording still requires a dated canonical reconciliation.
+3. **Data and target design:** exact institutional terms, official-role
+   partitions, target cohort, sampling/weighting, AP-versus-PA shift cells, and
+   subgroup feasibility remain unverified.
+4. **Artifact claim and power:** the owner has not chosen diagnostic-veto versus
+   powered bounded-probe evidence; exact probe pipelines are unspecified and
+   present construct floors cannot establish four-probe equivalence.
+5. **Checkpoint and breadth evidence:** no candidate pretrained VLM proves
+   final-source exclusion, and the recommended VisMin breadth identity still
+   lacks an approved immutable snapshot, rights audit, and construct-portability
+   decision.
+6. **Resources and governance:** reader/compute/storage ceilings, downstream
+   target-outcome power, permitted derivatives, retention/deletion/backup
+   terms, and every accountable sign-off remain open.
 
-The first blocker limits the identified Month-3 claim to conflict specificity
-among determinate cases plus conservative natural-ambiguity falsification. It
-does not justify calling blur, masking, compression, or evidence removal an
-ambiguity intervention; hedging is not a text-ambiguity route. The second means
-even the narrowed specificity family requires clinical/statistical freezing
-before execution. The third prevents a strict held-out cross-backbone claim
-until checkpoint provenance and patient exposure are resolved. The fourth
-means non-significant artifact recovery cannot be called an artifact-
-equivalence pass. The fifth prevents the construct sample floor from being
-presented as power for the complete Main Track promotion sequence.
+No valid ambiguity intervention is declared: degradation, masking,
+compression, evidence removal, and hedging retain their distinct constructs.
+The exact primary estimator definition/interface and exact matched comparator
+route are **Gate-0 owner decisions** under the canonical contract. Development
+may occur only under a later bounded brief and only inside those frozen rules;
+the fitted instances, normalization, code, and configurations lock before the
+Month-3 set opens. A post-development change of estimator identity reopens Gate
+0 rather than selecting a winner from protected outcomes.
+Target prevalence/covariance and the complete downstream power calculation are
+likewise a hard pre-confirmation lock, not evidence supplied by the construct
+sample floor.
 
 ## Status Vocabulary
 
@@ -45,7 +55,9 @@ presented as power for the complete Main Track promotion sequence.
 | **Verified** | A repository or official-source fact has been checked; it is not an approval or empirical result. |
 | **Candidate** | A complete reviewable protocol option exists but has not been approved. |
 | **Approval-blocked** | A named Commander, clinical, governance, supervisor, or resource decision is required. |
+| **Decision-blocked** | A finite choice exists in the decision dossier, but the named owner has not selected it. |
 | **Feasibility-blocked** | The answer requires a later bounded check in an approved environment. |
+| **Specification-blocked** | The finite role is known but exact formula, implementation, revision, or legal identity is still missing. |
 | **Not specified** | The contract requirement still lacks a defensible candidate. |
 
 ## Requirement-by-Requirement Audit
@@ -56,17 +68,19 @@ presented as power for the complete Main Track promotion sequence.
 | Dataset, version, access, exclusions, and split | Coupled MIMIC-CXR v2.1.0 reports plus MIMIC-CXR-JPG v2.1.0 images/metadata; patient/source-graph partitions; no access yet. | Candidate; governance- and feasibility-blocked | Approve the pre-access record, secure environment, account/DUA route, and later metadata-only feasibility brief. |
 | Ontology and intervention taxonomy | Separate labels for finding state, ambiguity, technical gradability/information loss, missingness, and cross-modal compatibility; conflict is defined only for determinate modality states. | Candidate | Approve the independent annotation rubric and atomic assertion grammar. |
 | Image and text ambiguity | Natural ambiguity is independently annotated and used as a falsification audit. An explicit hedge is epistemic qualification, not automatically linguistic ambiguity. No defensible image- or text-ambiguity intervention is currently frozen. | Approval-blocked | Approve either a valid governed intervention/transport estimand or the narrower determinate-conflict claim. |
-| Conflict estimand and construct SESOI | Recommended primary endpoint is the magnitude-safe `psi_mag = min_j E[D_C - abs(D_j)]` on a frozen compatible-reference SD scale; signed `psi_id` remains diagnostic because nuisance responses can cancel. The two modality roles are proposed, but their exact operations are unresolved. | Candidate; approval-blocked | Approve one exact `M_v` and one exact `M_t` operation, severity, acceptance rule, and reference; approve the scale, 0.20 specificity SESOI, and 0.10 uncertainty-aware material-advantage margin. `theta` remains secondary unless separately powered. |
-| Endpoint, interval, and multiplicity | Month 3 uses one-sided 90% simultaneous development bounds; later confirmation uses one-sided 97.5% patient-cluster max-`t` bounds across frozen identified controls. Natural ambiguity remains outside the causal family. | Candidate | Statistical owner must validate the resampling implementation before execution. |
+| Conflict estimand and construct SESOI | Recommended primary endpoint is the magnitude-safe `psi_mag = min_j E[D_C - abs(D_j)]` on a frozen compatible-reference SD scale; signed `psi_id` remains diagnostic. The finite family is `MV-1` half-resolution attenuation plus `MT-1` sole-polarity-slot redaction. | Candidate; approval-blocked | Clinical/statistical owners approve or reject both exact controls and their references; approve and power the independent equal-polarity `MV-1` rule requiring the one-sided 95% lower bound for `q_v,bal` strictly above 0.10 with at least 108 evaluable blocks per independent image polarity; Commander/statistical owner approve the scale, 0.20 specificity SESOI, and 0.10 uncertainty-aware material-advantage margin. `theta` remains secondary unless separately powered. |
+| Endpoint, interval, and multiplicity | `G0-INFERENCE A` proposes at least 9,999 fixed-seed patient-cluster studentized max-`t` resamples; one-sided 90% Month-3 bounds (`alpha_F=0.10`, 80% target family power); one-sided 97.5% confirmation bounds (`alpha_F=0.025`, 90% target family power); fixed-sequence primary claims; and Holm/Romano--Wolf secondary control. Natural ambiguity remains outside the causal family. | Candidate; approval-blocked | Commander/statistical owner must approve A or a fully recalculated B before any protected set opens. Month 3 cannot establish confirmation, non-inferiority, or equivalence. |
 | Downstream outcome and calibration | Independently labelled image-grounded model error; paired Brier-skill improvement on a natural target cohort, with `A_BSS` against the matched deterministic predictor plus calibration-in-the-large and slope diagnostics. | Candidate; approval- and power-blocked | Approve outcome definition, target population, candidate 0.02 Brier-skill SESOI, 0.01 method-difference margin, event rate/covariance calculation, calibration tolerances, and review budget. |
-| Baselines and ablations | Month-3 minimum set: raw similarity, matched learned deterministic predictor, evidential comparator, probabilistic/distributional comparator, and matched point-softmax adapter where applicable. | Candidate | Freeze exact implementations, licences, information budgets, and the pre-results analytic equivalence screen. |
-| Backbone and checkpoint exposure | BiomedCLIP and SigLIP2 are low-friction candidates; BioViL-T and CheXzero have explicit MIMIC exposure. No audited checkpoint currently establishes disjointness from final MIMIC patients. | Feasibility-blocked | Complete official training-corpus/split audit and choose a strict-confirmatory architecture or explicitly narrow the evidence class. |
-| Development, calibration, and final partitions | Exact HMAC roles separate 70% fit/development, 15% one-time Month-3 advance/kill screening for the already named primary candidate, and 15% untouched construct confirmation within official train; one keyed eligible study per patient is mandatory. | Candidate; feasibility-blocked | Approve algorithm/key custody and reconcile official validation/test roles with checkpoint exposure. |
-| Construct and target sampling | Balanced intervention blocks identify the construct; a separate natural, patient-separated cohort supports prevalence-sensitive calibration and decision claims. | Candidate | Freeze natural cohort inclusion, sampling weights, shift, and subgroup minimum sizes. |
+| Primary estimator | The exact estimator/interface is not specified; only occupied candidate families and an analytic-equivalence veto are documented. | Not specified | Complete a bounded formalization audit and approve one exact formula/interface before Gate 0 can close. A family-first development choice would require a dated canonical amendment. |
+| Baselines | Proposed minimum identities are raw cosine, a matched learned deterministic predictor, a task-valid evidential comparator, a ProbVLM-style adapter, and a matched point-softmax adapter. | Candidate; specification-blocked | Freeze exact implementations, licences, information budgets, and the pre-results analytic-equivalence screen at Gate 0. |
+| Ablations | Proposed minimum set removes `C_vt`; removes `A_v`, `A_t`, `M_v`, and `M_t` one at a time; substitutes matched point-softmax/point embeddings; removes scale/covariance while holding means fixed where applicable; compares raw-SD with median/MAD normalization; and freezes four modality/nuisance/provenance recovery views. | Candidate; specification-blocked | Scientific/statistical/model owners approve the exact set and implementation/applicability map. An inapplicable row requires a pre-results matched substitute or narrower claim. |
+| Backbone and checkpoint exposure | BiomedCLIP/SigLIP2/Qwen are unknown-exposure sensitivity candidates; BioViL-T and CheXzero are known-exposure diagnostics. A ResNet-50 plus original-BERT pair is a source/type/time-auditable strict non-VLM control lead. No audited checkpoint currently establishes strict pretrained-VLM disjointness. | Decision- and feasibility-blocked | Approve the three-tier rule and audit immutable identities, releases, licences, and lineage before Gate 0 closes; separately secure a development-only or sequestered strict route or narrow every held-out/generalization claim. |
+| Development, calibration, and final partitions | Within official-train bucket 0--69, a distinct `AINC/v1/mv1-qualification` HMAC rank first reserves 128 strict-single-frontal metadata candidates per positive/negative report-screen sampling stratum (256 total) to seek at least 108 evaluable blocks per independently assigned intact-image polarity; they are removed from fit/development and every protected/target population. Remaining bucket 0--69 supports fit/development, bucket 70--84 one-time Month-3 screening, and bucket 85--99 untouched construct confirmation; one keyed eligible study per patient is mandatory. | Candidate; feasibility-blocked | Approve algorithm/key custody. A later metadata-only stage may verify 256 candidates by report-screen stratum, but cannot verify independent image polarity, intervention validity, 216 evaluable pairs, or `q_v,bal`; only the separately authorized reader qualification may do so. A shortfall in either polarity stops `MV-1`. Reconcile official validation/test roles with checkpoint exposure. |
+| Construct and target sampling | Balanced intervention blocks identify the construct; the strict-single-frontal official-test cohort at natural prevalence is the proposed separate target population, with unit weights unless enrichment is prospectively approved; AP-versus-PA is the proposed shift. | Candidate; feasibility-blocked | Approve exact inclusion, independent labels, weights, shift, subgroup minimums, and insufficient-cell consequence. |
 | Compute and annotation budget | Explicit planning ceilings and stop rules are proposed in the resource audit; no resource is assumed available. | Candidate; approval-blocked | Commander, clinical owner, and infrastructure owner must confirm ceilings and secure capacity. |
-| Breadth | VisMin is the preferred low-friction general-domain stress candidate; PadChest-GR is the preferred independent medical reserve. Neither is a second route or authorized. | Candidate; deferred | Freeze only after the primary construct instrument passes; run a separate licence/governance decision. |
-| Promotion, kill, and fallback | Construct failure, artifact recovery, unreliable labels, deterministic subsumption, exposure failure, and insufficient feasibility all have explicit stop consequences. | Candidate | Approve DR-0008; do not weaken a failed estimator into a Main Track method claim. |
-| Artifacts, retention, and sharing | Restricted inputs and record-level derivatives remain in an approved environment; only specifically permitted aggregate outputs may leave after disclosure review. | Governance-blocked | Obtain a written DUA/ethics/institutional determination for annotations, embeddings, checkpoints, and counterfactual text. |
+| Breadth | VisMin is the recommended one general-domain breadth identity, conditional on exact snapshot/asset terms and successful construct-portability audit; PadChest-GR is the finite alternative. Execution remains downstream of the primary-instrument pass. | Candidate; decision- and feasibility-blocked | Choose the identity and freeze its immutable snapshot, rights, analogue controls, and stop rule at Gate 0; a later brief may authorize execution only after promotion. |
+| Promotion, kill, and fallback | Construct failure, `MV-1` qualification failure, orientation-safe artifact recovery, unreliable labels, deterministic subsumption, exposure failure, and insufficient feasibility have explicit stop consequences. The exact estimator identity freezes at Gate 0; its fitted instance/configuration locks before Month 3. | Candidate; approval-blocked | Approve the dossier's staged locks; do not weaken a failed estimator into a Main Track method claim. |
+| Artifacts, retention, and sharing | Exact construction balance is the recommended identifying control; four probe views are diagnostic vetoes unless a separately powered bounded-recoverability claim is funded. Restricted inputs and record-level derivatives remain in an approved environment. | Decision-, specification-, power-, and governance-blocked | Choose artifact option A or B; freeze exact feature/model/tuning/software pipelines; obtain written DUA/ethics/institutional terms for annotations, embeddings, checkpoints, counterfactual text, retention/deletion/backup, and aggregate release. |
 
 ## Identification Boundary
 
@@ -103,21 +117,33 @@ determinate-conflict specificity and association under natural ambiguity.
 2. **Clinical task:** approve the provisional finding, exact-image unit and
    technical-integrity/input-coverage rubric, assertion grammar,
    qualifications, and reliability gate.
-3. **Statistics:** approve score normalization, magnitude-safe construct
-   endpoint, SESOIs, simultaneous interval, development sample ceiling,
-   downstream proper-score SESOI, and deterministic kill rule.
-4. **Data/governance:** approve the pre-access MIMIC record, secure processing,
-   permitted derivatives, retention, and the later metadata-only query.
-5. **Model/resources:** freeze an exposure-audited backbone route and hard
-   compute, storage, and annotation ceilings.
-6. **Gate-0 record:** sign one dated decision record containing the above and
+3. **Method/statistics:** specify and approve one exact estimator/interface,
+   exact matched baselines, ablations, and probe pipelines, score normalization, `MV-1`
+   qualification endpoint/power, construct endpoint, SESOIs, multiplicity,
+   downstream proper-score target, calibration, and deterministic kill rule.
+4. **Data/governance:** approve the pre-access MIMIC record, exact partitions,
+   target sampling/weights/shift, secure processing, permitted derivatives,
+   retention/deletion/backup, and the later metadata-only query.
+5. **Model/resources/breadth:** freeze immutable backbone identities and
+   exposure tiers, the VisMin snapshot/rights/portability choice or its finite
+   alternative, and hard compute, storage, and annotation ceilings.
+6. **Gate-0 record:** sign one dated decision record containing every dossier
+   choice and named owner approval, then
    issue a new bounded feasibility brief. Approval does not itself authorize
    record inspection, annotation, model use, or experiments.
+7. **Pre-Month-3 lock:** after authorized development only, freeze the fitted
+   instances/configurations of the already Gate-0-named estimator and matched
+   deterministic comparator, plus every normalizer/code/probe/threshold choice,
+   before bucket 70--84 is opened.
+8. **Pre-confirmation lock:** verify a strict evidence tier or narrow the claim,
+   and approve the patient-clustered construct/probe plus target-outcome power
+   calculations before any confirmatory or natural-target set is opened.
 
 ## Permitted Claim
 
-This audit establishes that the project has a reviewable Gate-0 freeze
-candidate and makes its remaining blockers explicit. It does not establish
+This audit establishes a finite, reviewable Gate-0 blocker/choice inventory and
+makes its remaining owner blockers explicit; it is not a complete freeze
+package. It does not establish
 novelty, construct identifiability, dataset/model availability, annotation
 reliability, empirical feasibility, clinical value, Gate-0 closure, NeurIPS
 eligibility under the unpublished 2027 call, or publication.

@@ -7,13 +7,28 @@
 
 ## Analysis Populations
 
+- **`MV-1` task-relevance qualification population:** within official-train
+  HMAC bucket 0--69, apply a separate governed
+  `AINC/v1/mv1-qualification` HMAC rank before model fitting. Reserve the first
+  128 strict-single-frontal metadata candidates in each positive/negative
+  report-screen sampling stratum (256 total) and remove them from every
+  fit/development, Month-3, confirmation, calibration, and target population.
+  Qualification also remains disjoint from reader training and locked
+  reliability sets. Report-screen polarity is a sampling aid, not image truth.
+  The design requires at least 108 evaluable same-polarity sibling blocks in
+  each independently assigned intact-image polarity after its frozen reader/
+  intervention rules; a shortfall in either polarity stops `MV-1`, with no
+  outcome-driven replacement or top-up beyond the ranked 256.
 - **Fit/development population:** official-train HMAC bucket 0--69 only; used
-  to fit, orient, normalize, tune, and freeze candidates.
+  to fit, orient, normalize, tune, and freeze candidates only after the nested
+  qualification reserve above is removed.
 - **Month-3 primary-candidate screen:** official-train HMAC bucket 70--84,
-  opened once after one primary uncertainty-aware method and its matched
-  deterministic comparator are named from development; used only to kill or
-  provisionally advance that already named candidate. Nothing is selected or
-  refit there, and it cannot supply confirmatory evidence.
+  opened once after the Gate-0-approved exact uncertainty-aware estimator and
+  matched deterministic comparator have been fit/tuned only in development and
+  their fitted instances, normalizers, orientations, code, and configurations
+  are locked; used only to kill or provisionally advance those already frozen
+  instances. Nothing is selected or refit there, and it cannot supply
+  confirmatory evidence.
 - **Construct-confirmatory population:** untouched patients with complete,
   independently accepted paired intervention blocks from official-train HMAC
   bucket 85--99. Exactly one keyed source block per patient is mandatory; all
@@ -83,8 +98,9 @@ primary:
 `J_id` contains only randomized or valid counterbalanced controls. Its proposed
 Month-3 cardinality and modality roles are one image-information-loss contrast
 `M_v` and one text-information-loss contrast `M_t`, each on the complete source
-block. Their exact operation, severity, acceptance rule, and within-source
-reference remain unresolved clinical/statistical freeze items; consequently
+block. TB-0005 supplies the exact proposed `MV-1`/`MT-1` operations, severities,
+acceptance rules, and within-source references, but owner approval and the
+separate `MV-1` task-relevance qualification remain unresolved; consequently
 the family is not executable and the two-control power grid is conditional.
 Surface-form, unselected missingness, and unrelated-finding probes are
 additional diagnostics and cannot substitute for either modality. A four-
@@ -93,6 +109,44 @@ and intervention-validity rules are approved before scores are inspected;
 otherwise the permitted claim names only the approved `M_v` and `M_t` roles.
 Natural image or text ambiguity remains `gamma_A`, a separate veto-only
 falsification audit.
+
+### Model-independent `MV-1` task-relevance qualification
+
+Pixel removal and a visible resampling signature do not by themselves show
+that `MV-1` attenuates evidence relevant to the pleural-effusion task. On a
+prospectively sampled qualification population disjoint from fit/development,
+Month 3, and confirmation, counterbalance reader/panel assignment across
+sibling state and source polarity. Let `pbar_intact,b` and `pbar_MV-1,b` be the
+mean `0--1` presence probabilities from disjoint five-reader image-only panels
+for patient block `b`. Both siblings must independently retain complete prescribed
+coverage, a determinate state, and the same polarity. Define:
+
+```math
+q_b=|\bar p_{intact,b}-0.5|-|\bar p_{MV-1,b}-0.5|,
+\qquad q_{v,y}=\mathbb E[q_b\mid Y_v=y],
+\qquad q_{v,bal}=\tfrac12(q_{v,present}+q_{v,absent}).
+```
+
+The candidate qualification rule is a patient-clustered one-sided 95% lower
+bound for `q_v,bal` **strictly above `0.10`**, with at least 108 evaluable
+patient blocks in each independently assigned image polarity. This requires a non-trivial movement
+toward evidential indifference without changing the independently assigned
+finding state. The threshold is a prospective design choice, not a clinical
+constant, and no candidate-model representation or score may enter eligibility,
+qualification, or severity choice.
+
+Because each polarity stratum's `q_b` is bounded in `[-0.5,0.5]`, its worst-case
+SD is `0.50`. For the equal-weight mean of two independent stratum means,
+one-sided `alpha=0.05`, 90% power, null boundary `0.10`, and planning truth
+`0.20` give a crude normal-approximation minimum of 108 evaluable independent
+patient blocks per polarity (216 total).
+Patient-clustered simulation of the complete disjoint-reader pipeline,
+attrition, selection into the same-polarity population, counterbalanced panel
+assignment, and reader severity/dependence
+must replace that approximation before an annotation brief. Gate-0 approval
+can freeze this rule; only a later authorized qualification exercise can pass
+it. Failure means `MV-1` is merely fixed resolution attenuation, cannot complete
+primary `J_id`, and triggers the pre-specified stop/reopen rule.
 
 ### Candidate construct thresholds
 
@@ -106,8 +160,9 @@ All thresholds are proposals requiring approval:
   separate multiplicity and power decision is approved;
 - expected direction: every primary conflict contrast is positive;
 - nuisance recoverability is governed by the separate artifact-probe design
-  below; its current `chance + 0.05` equivalence target is feasibility-blocked,
-  not silently assumed to pass.
+  below; design balance plus diagnostic veto is recommended at current floors,
+  while any formal orientation-safe `chance +/- 0.05` bounded-probe claim is
+  feasibility-blocked and never silently assumed to pass.
 
 The 0.20 threshold is a design choice that rejects very small standardized
 separations; it is not an empirically or clinically validated constant.
@@ -154,18 +209,21 @@ does not manufacture a deterministic win from an underpowered comparison.
 3. Report simultaneous component bounds and take their minimum as the bound
    for the intersection claim. For signed `psi_id`, report both smooth
    components `E[D_C-D_j]` and `E[D_C+D_j]` for every control.
-4. Before the Month-3 set is opened, development bucket 0--69 must yield
-   exactly one named primary uncertainty-aware candidate and one matched
-   deterministic comparator. Month 3 can kill or provisionally advance only
-   that candidate; every other method is secondary and cannot be promoted by
-   being the best observed holdout result. If more than one candidate is made
-   primary, the method-by-control and method-difference family and power grid
-   must be expanded prospectively.
+4. Gate 0 must already name exactly one primary uncertainty-aware estimator
+   definition/interface and one matched deterministic comparator definition.
+   Before the Month-3 set is opened, development bucket 0--69 may fit/tune only
+   within those frozen rules and must lock exactly one fitted instance of each.
+   Month 3 can kill or provisionally advance only those instances; every other
+   method is secondary and cannot be promoted by being the best observed
+   holdout result. A change of estimator identity reopens Gate 0; an expanded
+   primary method family requires a prospective contract amendment and revised
+   power grid before any protected set is opened.
 5. Month 3 uses one-sided 90% simultaneous screening bounds, family
    `alpha_F=0.10`, and 80% target family power. It cannot establish
    confirmatory evidence, non-inferiority, or equivalence.
-6. Confirmation uses one frozen estimator, untouched patients, one-sided
-   97.5% simultaneous bounds, `alpha_F=0.025`, and 90% target family power.
+6. Confirmation uses the same frozen estimator identity and prospectively
+   locked fitted instance, untouched patients, one-sided 97.5% simultaneous
+   bounds, `alpha_F=0.025`, and 90% target family power.
 7. Claims follow a fixed sequence: construct specificity; material advantage
    over the matched deterministic predictor; downstream proper-score
    increment; fixed-budget decision value. A failed rung stops promotion.
@@ -239,58 +297,123 @@ primary method family requires simulation and a revised grid before execution.
 
 ## Artifact-Condition Recoverability Audit
 
-The candidate primary probe family contains four separately trained condition-
-recovery probes for `conflict` versus `compatible`: image-only; text-only;
-structured nuisance-only (length, punctuation, negation/template, view and
-rendering descriptors); and provenance/process-only. Each exact feature set,
-model class, capacity/tuning budget, and missing-value rule remains a Gate-0
-freeze item. A weak probe is not evidence of artifact absence.
+The candidate primary probe family contains four condition-recovery views for
+`conflict` versus `compatible`: image-only; text-only; structured nuisance-only
+(length, punctuation, polarity/template, view and rendering descriptors); and
+provenance/process-only. Each exact feature set, transparent/flexible model
+class, capacity/tuning budget, orientation rule, permutation calibration, and
+missing-value rule remains a Gate-0 freeze item. A weak probe is not evidence
+of artifact absence.
 
-- Fit and tune probes only on the 70% development pool.
-- Open the 15% Month-3 pool once for frozen development screening; never refit
-  there. Use the untouched confirmation pool for later inference.
-- Counterbalance polarity and source state so chance balanced accuracy is 0.50;
-  use patient-level blocks and the same complete-case rule as the construct
-  endpoint.
-- Report simultaneous patient-level bounds across all four probes. The
-  candidate equivalence target is an upper bound at most 0.55. A lower bound
-  above 0.55 is instrument failure; an upper bound at most 0.55 supports the
-  bounded probe-equivalence claim; anything between is inconclusive, not a
-  pass.
-- Use one-sided 90% Month-3 and 97.5% confirmatory family bounds with the same
-  family alpha as the construct stage. Model/feature variants are included in
-  the family rather than selected after evaluation.
+### Design-first invariant
 
-This `+0.05` margin is currently a **feasibility blocker**. With four
-independent Bernoulli-like probe components and true balanced accuracy 0.50, a
-Bonferroni normal approximation uses:
+The recommended Gate-0 option is exact structural balance plus a diagnostic
+probe veto, not a global artifact-equivalence prerequisite at the construct
+sample floors. Within every patient partition:
+
+1. each exact clear image is paired with both approved text polarities under
+   equal weights;
+2. each exact atomic string/template/polarity and recorded process path is
+   crossed equally over image-positive and image-negative source blocks;
+3. editor/reader pool, renderer, filename, order, punctuation/length strata,
+   and provenance are randomized or exactly balanced independently of `C*`;
+4. every sibling stays in its patient block, and failure of a required sibling
+   removes or prospectively reconstructs the entire block; and
+5. byte-level and row-level balance is verified from the construction manifest
+   before any estimator or probe score is evaluated.
+
+This controls the enumerated empirical marginals by construction. It does not
+prove equality of all latent feature distributions or exclude interaction
+artifacts. Frozen probes audit implementation failure and residual
+recoverability:
+
+- fit, tune, and orient them only on the 70% development pool, including the
+  complete tuning pipeline in fixed-label-permutation diagnostics;
+- open the Month-3 pool once for the frozen development screen and never refit
+  there; reserve the untouched confirmation pool for later inference;
+- use patient-level blocks and the same complete-case rule as the construct
+  endpoint; and
+- include every pre-specified model/feature variant in the frozen family.
+
+These conflict-versus-compatible probes do not validate the `M_v` or `M_t`
+arms. The manipulated modality is intentionally different and may trivially
+identify its information-loss arm. For each control arm, separately require
+exact identity of the non-target modality, identical source/process/provenance
+paths, the frozen severity/reader gate, and an arm-specific audit that excludes
+the manipulated modality. Any hidden condition field or process-only recovery
+kills that control; recovery from the intentionally altered modality is
+reported as manipulation fidelity, not leakage. The estimator's response to
+the altered modality remains the primary `abs(D_j)` nuisance penalty.
+
+For raw held-out balanced accuracy `BA_j`, define orientation-safe
+recoverability:
 
 ```math
-n_{precision}=\left\lceil
-\frac{z^2_{1-\alpha_F/4}(0.25)}{0.05^2}
-\right\rceil,
+R_j=0.50+|BA_j-0.50|=\max(BA_j,1-BA_j).
 ```
 
-which requires 385/624 independent patients merely for a simultaneous 0.05
-one-sided upper half-width in Month 3/confirmation. For a one-sided equivalence
-test of null balanced accuracy 0.55 under true balanced accuracy 0.50, the
-corresponding family-power approximation is:
+A raw `BA_j` well below 0.50 remains recoverable after label flipping and must
+not pass. A lower bound for any `R_j` above 0.55 is instrument failure. An
+interval crossing 0.55 is inconclusive. An upper bound strictly below 0.55
+supports only bounded recoverability for that exact frozen probe algorithm,
+feature view, and population—not artifact absence, distributional equality,
+Bayes unrecoverability, or transfer.
+
+Under the recommended diagnostic-veto option, demonstrated recovery kills the
+instrument, but failure to demonstrate recovery is not an equivalence pass.
+The route may advance only with the narrower construction-balance and exact-
+probe report. This choice requires Commander/statistical approval in the
+[decision dossier](gate0_decision_dossier.md).
+
+### Optional powered bounded-probe claim
+
+If a formal four-probe statement is required, define the global claim and null
+as:
 
 ```math
-n_{power}=\left\lceil
-\frac{[z_{1-\alpha_F/4}\sqrt{0.55(0.45)}+
-z_{1-(1-power_F)/4}\sqrt{0.50(0.50)}]^2}{0.05^2}
+H_1:\max_j R_j<0.55,
+\qquad
+H_0:\max_j R_j\geq0.55.
+```
+
+Equivalently, every raw `BA_j` must be strictly inside `(0.45,0.55)`. This is a
+conjunctive intersection--union decision: each component equivalence test may
+use the stage's nominal alpha without alpha/K correction for the global Type-I
+error, while joint power remains a separate design requirement. With `K=4`, a
+centered Bernoulli-like approximation, truth `BA=0.50`, two-sided equivalence,
+and conservative beta allocation over `2K` directional failures uses:
+
+```math
+n_{IUT}=\left\lceil
+\frac{[z_{1-\alpha_F}\sqrt{0.55(0.45)}+
+z_{1-(1-power_F)/(2K)}\sqrt{0.50(0.50)}]^2}{0.05^2}
 \right\rceil.
 ```
 
-This raises the planning counts to 1,293/1,976 before attrition or clustering.
-Balanced-
-accuracy stratification, trained-probe uncertainty, and dependence can change
-these values and require simulation. Therefore the present 216/320-or-400
-construct floors cannot certify `chance + 0.05` artifact equivalence. Gate 0
-must either approve the larger probe design, justify a different margin from
-scientific consequences, or narrow the claim; it may not treat non-significant
-recovery as absence of artifacts.
+This gives illustrative minima of 1,047 Month-3 and 1,757 confirmatory
+independent patients, or approximately 1,232 and 2,068 screened at 15% loss.
+The 1,047 figure is only a non-promotable developmental bounded-recoverability
+screen: Month 3 cannot establish equivalence or turn an artifact result into
+confirmatory evidence. Only a later untouched confirmatory design could
+support the bounded four-probe statement, and only after the complete patient-
+clustered probe-selection pipeline is simulation-powered.
+Linear scaling of the current reader worksheet gives approximately 1,302
+clinical hours through Month 3 and 2,657 hours for the confirmation row alone;
+this is an unverified planning approximation. The former exceeds the revised
+500-hour stage ceiling, while the confirmation row alone exceeds the 1,350-hour
+cumulative ceiling.
+If separately simultaneous two-sided component intervals are required,
+replacing `alpha_F` with `alpha_F/(2K)` gives crude minima of 1,756 and 2,463
+before loss. These replace the older orientation-unsafe one-sided
+1,293/1,976 approximation.
+
+All of these calculations omit balanced-accuracy stratification,
+trained-probe/tuning variability, patient dependence, permutation calibration,
+the folded non-smooth statistic, and model selection. A patient-clustered
+simulation of the complete pipeline is mandatory before a powered claim. The
+present 216/320-or-400 construct floors cannot certify `chance +/- 0.05`
+bounded-probe equivalence. A wider margin requires a prospective
+consequence-based bias argument; budget convenience is not a justification.
 
 ## Downstream Risk, Calibration, and Decision Candidates
 
@@ -362,6 +485,12 @@ Gate 0 cannot be represented as closed.
   [Exact and Approximate Stepdown Methods for Multiple Hypothesis Testing](https://doi.org/10.1198/016214504000000539).
 - Schuirmann,
   [two one-sided tests for equivalence](https://pubmed.ncbi.nlm.nih.gov/3450848/).
+- Lopez-Paz and Oquab,
+  [classifier two-sample testing](https://arxiv.org/abs/1610.06545), and Ojala
+  and Garriga,
+  [classifier permutation testing](https://www.jmlr.org/beta/papers/v11/ojala10a.html).
+- Eaton and Muirhead,
+  [intersection--union testing](https://doi.org/10.1016/j.jspi.2007.03.021).
 - Eldridge, Ashby, and Kerry,
   [sample-size effects of unequal cluster size](https://pubmed.ncbi.nlm.nih.gov/16943232/).
 - Riley and colleagues,

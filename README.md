@@ -77,10 +77,14 @@ the permitted terminology.
 | Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
 
 The current [Gate-0 closure audit](docs/research/gate0_closure_audit.md) supplies
-a freeze candidate, not approval. It recommends narrowing the first identified
-claim to determinate-conflict specificity while natural ambiguity remains a
-falsification audit. A valid ambiguity-identification route and an
-exposure-audited confirmatory VLM remain unresolved blockers.
+a freeze candidate, not approval. The
+[decision dossier](docs/research/gate0_decision_dossier.md) reduces the
+remaining intervention, artifact, checkpoint, and staging questions to finite
+owner choices. It recommends narrowing the first identified claim to
+determinate-conflict specificity while natural ambiguity remains a
+falsification audit. A valid ambiguity-identification route or explicit claim
+narrowing, owner-approved controls, and a strict confirmatory evidence tier
+remain unresolved blockers.
 
 See the [research contract](docs/research/research_contract.md),
 [roadmap](docs/roadmap.md), and [decision log](docs/research/decision_log.md)
@@ -112,18 +116,20 @@ paper/                       manuscript workspace after evidence promotion
 5. [Atomic task and estimand packet](docs/research/task_estimand_options.md)
 6. [Measurement protocol](docs/research/measurement_protocol.md)
 7. [Annotation and intervention protocol](docs/research/annotation_and_intervention_protocol.md)
-8. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
-9. [Evaluation protocol](docs/research/evaluation_protocol.md)
-10. [Data and clinical governance](docs/research/data_governance.md)
-11. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
-12. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
-13. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
-14. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-15. [Literature matrix](docs/research/literature_matrix.md)
-16. [Novelty audit](docs/research/novelty_audit.md)
-17. [Submission strategy](docs/research/submission_strategy.md)
-18. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-19. [Decision log](docs/research/decision_log.md)
+8. [Intervention option audit](docs/research/intervention_option_audit.md)
+9. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
+10. [Evaluation protocol](docs/research/evaluation_protocol.md)
+11. [Data and clinical governance](docs/research/data_governance.md)
+12. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
+13. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
+14. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
+15. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+16. [Literature matrix](docs/research/literature_matrix.md)
+17. [Novelty audit](docs/research/novelty_audit.md)
+18. [Submission strategy](docs/research/submission_strategy.md)
+19. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+20. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+21. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 

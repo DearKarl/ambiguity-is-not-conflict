@@ -177,7 +177,7 @@ an amended reader-dependence model and new precision/workload calculation.
 | Determinate compatibility | Hold one independently clear image fixed; pair matched atomic assertions with same versus opposite polarity | Primary within-source `tau_C` | Both assertion versions must remain determinate, fluent, length/template matched, and independently verified. |
 | Semantic-preserving text form | Paraphrase, negation template, punctuation, or length-matched rewrite without polarity change | Surface-artifact control | Any semantic-state change invalidates the control. |
 | Explicit text uncertainty | Randomized clinically valid modal/hedged wording whose independent readers classify commitment as uncertainty-qualified | Epistemic-form control, not automatically `A_t` | A hedge does not establish multiple readings; deletion, truncation, or no mention is `M_t`. |
-| Image information loss | Pre-specified quality change such as resolution/compression/crop only when the changed information can be quantified and the image remains safe to review | `M_v` negative control | It must never be named image ambiguity merely because confidence falls. |
+| Image information loss | Pre-specified quality change only when changed information is mechanically specified, the finding state remains determinate, and a separate model-independent reader endpoint demonstrates non-trivial task-evidence attenuation | `M_v` negative control | It must never be named image ambiguity merely because confidence falls; discarded pixels alone do not establish task relevance. |
 | Text information loss | Pre-specified truncation or missing critical clause | `M_t` negative control | A well-formed hedge is not truncation. |
 | Natural ambiguity | Independently identified gradable images or complete texts with at least two clinically reasonable interpretations | Conservative `gamma_A` falsification audit | Matching/weighting does not make this randomized and cannot establish causal separation. |
 | Unrelated finding | Change an out-of-task proposition while preserving the target assertion | Semantic-specificity control | Must not alter target-finding entailment. |
@@ -294,24 +294,42 @@ Each intended variant uses a condition-specific acceptance gate:
 - The frozen modality/nuisance probe family governs condition recoverability.
 
 Only the proposed Month-3 **cardinality and modality roles** are currently
-fixed: one `M_v` contrast and one `M_t` contrast. Their exact operations,
-severity values, acceptance rules, and within-source references remain
-clinical/statistical approval blockers. Gate 0 cannot close, and `J_id` cannot
-be called executable, until those identities are named in a dated decision.
-Full-modality missingness and every alternate degradation/corruption remain
-diagnostics unless one is selected prospectively; outcomes may never choose
-among them.
+fixed: one `M_v` contrast and one `M_t` contrast. TB-0005 now supplies one
+finite recommended identity for each in the
+[intervention option audit](intervention_option_audit.md): `MV-1` is exact
+antialiased `224 -> 112 -> 224` resolution attenuation retained only when the
+same determinate image polarity survives **and** a model-independent
+qualification set disjoint from reader training/reliability and every model or
+protected/target population yields a patient-clustered one-sided 95% lower bound
+strictly above `0.10` for
+`q_v,bal = 0.5(q_v,present+q_v,absent)`, where each polarity-specific term is
+`E[abs(pbar_intact-0.5)-abs(pbar_MV-1-0.5) | Y_v]` and has at least 108
+evaluable independent blocks; `MT-1` redacts the sole
+text polarity slot and is accepted only as task-critical target-state loss
+with `Y_t=undefined`. The `MV-1` threshold and its crude 108-per-polarity/
+216-total planning calculation are candidates requiring statistical, clinical, reader-
+dependence, attrition, and resource approval. Approving the rule does not pass
+the later qualification gate. Their exact operations, state rules, severities,
+references, reader gates, and kill consequences are specified prospectively,
+but remain clinical/statistical approval blockers. Gate 0 cannot close until a
+dated owner decision accepts the protocol, and `J_id` cannot be called
+executable until the later authorized `MV-1` qualification passes. Full-
+modality missingness and every alternate degradation/corruption remain
+diagnostics or rejected options as recorded; outcomes may never choose among
+them.
 
-The candidate chance-equivalence tolerance is a stage-specific simultaneous
-upper bound no greater than `chance + 0.05` balanced accuracy for every
-probe in the frozen four-probe modality/nuisance family: image-only, text-only,
-structured nuisance-only, and provenance/process-only. It is one-sided 90% in
-Month-3 development and one-sided 97.5% in later confirmation. The exact
-family, split, multiplicity, and precision blocker are defined in the
-[statistical analysis plan](statistical_analysis_plan.md). A lower bound above
-the margin kills the instrument; an upper bound within it supports only the
-bounded probe claim; an interval crossing it is inconclusive and cannot be
-called artifact survival.
+The recommended artifact option first enforces exact image/text/template/
+process balance from the construction manifest, then uses the frozen four-
+probe modality/nuisance family as a diagnostic veto. Orientation-safe
+recoverability is `R=max(BA,1-BA)`: sub-chance balanced accuracy cannot pass by
+sign error. A lower bound for any `R` above `0.55` kills the instrument; an
+upper bound strictly below `0.55` supports only the exact bounded-probe claim; an
+interval crossing it is inconclusive. At the present sample ceilings, no weak
+or non-significant result may be called artifact equivalence or artifact
+survival. The design invariants, optional powered conjunction, and feasibility
+burden are defined in the
+[statistical analysis plan](statistical_analysis_plan.md) and remain an open
+owner choice in the [decision dossier](gate0_decision_dossier.md).
 
 ## Governance and Stop Rules
 

@@ -15,7 +15,10 @@ exposure, but absence of a stated MIMIC source is not proof of patient-level
 non-exposure. BiomedCLIP is the strongest small conditional candidate;
 SigLIP2 is the best matched general-domain dual-encoder breadth candidate;
 BioViL-T supplies a useful exposure-positive diagnostic; Qwen2.5-VL is an
-interface-diverse stress candidate. Every exact checkpoint remains unapproved.
+interface-diverse stress candidate. A source/type/time-auditable ImageNet-1K
+ResNet-50 plus original BooksCorpus/Wikipedia BERT is a candidate strict
+**non-VLM control**, not strict VLM breadth. Every exact checkpoint remains
+unapproved.
 
 ## Official-Source Shortlist
 
@@ -24,6 +27,7 @@ interface-diverse stress candidate. Every exact checkpoint remains unapproved.
 | Conditional primary representation: [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) | Microsoft model card describes a PubMedBERT plus ViT-B/16 contrastive model trained on 15 million PubMed Central figure-caption pairs, with 224-pixel images, 256-token context, and MIT licence. | No explicit MIMIC training is stated, but no patient/block exclusion manifest is supplied and scientific papers may reproduce source images/text. Strict confirmation requires an immutable checkpoint SHA, training-snapshot provenance, and approved perceptual/text overlap audit; otherwise sensitivity only. |
 | Matched general-domain dual-encoder breadth: [SigLIP2 base patch16 224](https://huggingface.co/google/siglip2-base-patch16-224) | Google card documents a ViT-B image-text encoder, 224-pixel interface, WebLI-based training, Transformers support, and Apache-2.0 licence. | No sample-level MIMIC exclusion is documented. Eligible only as unknown-exposure breadth/sensitivity unless an overlap audit clears the final blocks. |
 | Lower-intent, unknown-overlap non-VLM architectural control: [TorchVision ResNet-50 V2](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet50.html) plus [BiomedBERT abstracts](https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract) | Official pages describe an ImageNet-1K vision encoder and PubMed-abstract text encoder. They are not jointly pretrained and therefore are not a pretrained VLM. | No intentional MIMIC source is documented, but exact web/literature overlap is unknown. It remains unknown-exposure sensitivity unless the same audit clears it; it cannot be called contamination-negative or strict-confirmatory. Freeze inherited ImageNet, TorchVision, BiomedBERT code/weight licences and exact revisions before use. |
+| Source/type/time-auditable strict-control lead: [TorchVision ResNet-50](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet50.html) plus [original BERT](https://aclanthology.org/N19-1423/) | TorchVision documents ImageNet-1K weights; the BERT paper documents BooksCorpus and English Wikipedia pretraining. The components are not jointly pretrained, and an approved cross-modal head would be trained only on project-development patients. | Candidate strict **non-VLM** control only if immutable original weight/conversion lineage, dates, declared-source completeness, licences, and the development-only training boundary are independently cleared before download. It cannot establish strict medical-VLM or cross-VLM confirmation. |
 | Known-exposure diagnostic: [BioViL-T](https://huggingface.co/microsoft/BiomedVLP-BioViL-T) | Microsoft card explicitly describes PubMed plus MIMIC/MIMIC-CXR training and an MIT-licensed radiology vision-language interface. | Categorically ineligible for primary or confirmatory MIMIC evidence; retain only as a contamination-positive diagnostic. Custom-code loading requires a separate pinned-code security review. |
 | Interface-diverse stress: [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) | Official card supplies an image-text-to-text Transformers interface and Apache-2.0 licence for the 7B checkpoint. | Training overlap is not documented at sample level and the generative interface is not estimator-matched. Sensitivity/breadth only; freeze prompts, verbalizers, tokenization, pixel range, and local next-token scoring. No hosted API. |
 
@@ -69,6 +73,25 @@ absence of evidence.
 6. If the training manifest is unavailable or incomplete, retain
    `unknown-exposure sensitivity` status. No strict held-out wording is allowed.
 
+The finite evidence-tier decision is:
+
+- `strict-confirmatory`: a complete source/patient manifest and overlap audit;
+  a representation whose documented source/type/time cannot contain the target
+  records and whose project head uses development patients only; or a
+  sequestered/post-checkpoint target cohort;
+- `unknown-exposure sensitivity`: project-fit splits are respected but
+  pretraining exposure remains unknown; and
+- `known-exposure diagnostic`: official documentation or an audit establishes
+  source/final-patient exposure.
+
+BiomedCLIP, SigLIP2, and Qwen2.5-VL remain unknown-exposure sensitivity;
+BioViL-T remains known-exposure diagnostic. The source/time-auditable generic
+pair is only a strict-control lead. If no strict route is available before
+confirmation, claims must be narrowed to project-split intervention response
+under unknown pretraining exposure; “strict held-out,” “clean checkpoint,” and
+“unseen to the model” are prohibited. The owner decision and alternatives are
+in the [Gate-0 decision dossier](gate0_decision_dossier.md).
+
 ## Planning Ceilings
 
 These are hard proposal ceilings, not statements of available resources or
@@ -82,7 +105,7 @@ measured requirements.
 | Accelerator memory | One local/institutional GPU, at most 48 GB VRAM | At most four approved GPUs, 48 GB each; no multi-node job | Re-plan rather than changing model/interface silently. |
 | Accelerator time | 300 GPU-hours total | 1,500 GPU-hours total | Exceeding either ceiling stops work pending Commander/infrastructure approval. |
 | Trainable parameters | At most 20 million per matched head/adapter; encoders frozen | Same unless a new scientific decision approves backbone tuning | No full-backbone fine-tuning under this candidate. |
-| Clinical time | 400 person-hours through qualification and the balanced 216-block Month-3 construct gate | 1,200 person-hours cumulative through four-control confirmation/target audit | Stop after timing pilot or allocation update if the line-item ceiling is exceeded. |
+| Clinical time | 500 person-hours through qualification and the balanced 216-block Month-3 construct gate | 1,350 person-hours cumulative through four-control confirmation/target audit | Stop after timing pilot or allocation update if the line-item ceiling is exceeded. |
 | Paid/external services | None | None unless separately approved | No remote clinical data/model inference or silent paid compute. |
 
 The cumulative GPU ceiling is a guardrail, not an allocation. A later run
@@ -105,24 +128,34 @@ The proposed workload worksheet is deliberately conservative:
 | Phase | Frozen planning workload | Candidate person-hours |
 | --- | --- | ---: |
 | Qualification/timing | Training/meetings plus 60 screened sources; two image inputs × five, three text variants × three, four cross-modal pairs × three, 15% unimodal repeats, 20% pair adjudication | 80 |
-| Locked reliability | 150 image items × five; 150 text items × up to five (five for natural-ambiguity items, disjoint three-reader panels for polarity siblings); 150 pair-validity items × three; 15% unimodal repeats; 20% adjudication/meetings | 60 |
+| Locked reliability | Disjoint 150-unit set: image items × five, text items × up to five, and pair-validity items × three; 15% unimodal repeats; 20% pair adjudication/meetings | 60 |
+| `MV-1` task-relevance qualification | All 256 ranked candidates (128 per report-screen sampling stratum) receive intact and transformed sibling panels × five so attrition is observed rather than assumed; 15% blinded image repeats, panel balancing, audit, and meetings; independently assigned image polarity must yield at least 108 evaluable blocks per state | 110 |
 | Month-3 construct | 260 original images screened × five; 216 altered `M_v` images × five; 216 × three text variants × three; 216 × four pairs × three; repeats/adjudication/meetings | 217 |
 | Four-control confirmation | 470 original images screened × five; up to two altered images for each of 400 eligible sources × five; 400 × four text variants × three; 400 × six pairs × three; repeats/adjudication/meetings | 605 |
 | Natural-ambiguity veto audit | After a Month-3 pass and before claim promotion: up to 100 recruited candidates; original image × five and text × five ratings, 15% blinded repeats, overlap review, adjudication, and meetings | 45 |
 | Natural-target QA | Separately approved target checks, error labels, calibration/decision QA, and meetings | 145 |
-| Rounding/timing contingency | Unallocated reserve; it cannot substitute for an omitted required phase | 48 |
-| **Total ceiling** | Qualification through target audit | **1,200** |
+| Rounding/timing contingency | Unallocated reserve; it cannot substitute for an omitted required phase | 88 |
+| **Total ceiling** | Qualification through target audit | **1,350** |
 
-The first three rows total 357 and fit under the 400-hour stage ceiling; the
+The first four rows total 467 and fit under the 500-hour stage ceiling; the
 natural-ambiguity audit is expressly deferred until after a Month-3 pass and is
 not charged to the stage ceiling. The pre-target rows including that audit
-total 1,007 hours. It is a veto-only observational audit, not an ambiguity-
+total 1,117 hours. It is a veto-only observational audit, not an ambiguity-
 identification result, and requires its own bounded authorization. A 60-source
 timing/rubric pilot **would require a later bounded authorization** and stops if
 median image time exceeds 2.5 minutes, text time exceeds 45 seconds, cross-
 modal time exceeds two minutes, roster allocation fails, reliability/
 retraining violates the annotation protocol, or the projected stage/
-cumulative total exceeds 400/1,200 hours.
+cumulative total exceeds 500/1,350 hours.
+
+The optional orientation-safe four-probe equivalence route is incompatible
+with these ceilings under the current linear worksheet: its illustrative
+1,047/1,757 evaluable patient requirements imply approximately 1,302 clinical
+hours through Month 3 and 2,657 hours for the scaled confirmation row alone.
+Those are planning extrapolations, not measured workload. The recommended
+current-budget choice is therefore exact construction balance plus a
+diagnostic probe veto, with no global artifact-equivalence claim. A resource
+increase cannot be inferred from this audit.
 
 Reader identities, qualifications, roster sizes, availability, compensation,
 institutional ethics, and these timing assumptions are all unverified. If the
@@ -144,10 +177,12 @@ trainable-parameter ceiling, and tuning budget:
 5. matched point-softmax adapter when covariance or scale is credited;
 6. nuisance-only probes and normalization/artifact controls.
 
-All candidates may be developed in bucket 0--69, but exactly one uncertainty-
-aware candidate must be named primary before Month-3 holdout access; the rest
-are secondary unless the multiplicity and power family is prospectively
-expanded. The matched deterministic route remains its primary comparator.
+Gate 0 must name one exact uncertainty-aware estimator definition/interface
+and its matched deterministic comparator before any implementation. Bucket
+0--69 may fit/tune only within those rules while implementing the frozen
+comparison set; the fitted primary instances and complete configurations lock
+before Month-3 access. Other frozen methods remain secondary comparators and
+cannot become primary because of development or protected-set performance.
 
 Only after one candidate passes may breadth add SigLIP2 and the explicitly
 labelled BioViL-T/Qwen diagnostics. The matched deterministic route must receive
@@ -156,7 +191,7 @@ the same information and at least comparable capacity/tuning opportunity.
 ## Approval Sequence
 
 1. Commander approves the task, statistical margins, and 1-TB/300-to-1,500-
-   GPU-hour/400-to-1,200-clinical-person-hour ceilings.
+   GPU-hour/500-to-1,350-clinical-person-hour ceilings.
 2. Clinical owner approves the ten/six/six minimum rosters, disjoint sibling
    panels, five-reader image evidence, timing pilot, adjudication, and stop
    rules.

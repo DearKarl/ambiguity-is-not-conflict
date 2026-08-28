@@ -154,7 +154,7 @@ def test_primary_specificity_candidate_is_magnitude_safe() -> None:
     assert "0.20" in plan
     assert "not statistically superior" in plan
     assert "d_*^2" in plan
-    assert "exactly one named primary uncertainty-aware candidate" in plan
+    assert "gate 0 must already name exactly one primary uncertainty-aware estimator" in plan
     assert "a_bss" in plan
 
     packet = (
@@ -276,17 +276,19 @@ def test_artifact_equivalence_is_not_assumed_powered() -> None:
         .lower()
         .split()
     )
-    assert "four separately trained" in plan
-    assert "1,293/1,976" in plan
-    assert "inconclusive, not a pass" in plan
-    assert "non-significant" in plan and "absence of artifacts" in plan
+    assert "orientation-safe" in plan
+    assert "r_j=0.50+|ba_j-0.50|" in plan
+    assert "1,047" in plan and "1,757" in plan
+    assert "inconclusive" in plan
+    assert "failure to demonstrate recovery is not an equivalence pass" in plan
+    assert "upper bound strictly below 0.55" in plan
+    assert "non-promotable developmental bounded-recoverability" in plan
 
     normal = NormalDist()
     expected = []
     for alpha_family, power_family in ((0.10, 0.80), (0.025, 0.90)):
-        z_alpha = normal.inv_cdf(1 - alpha_family / 4)
-        z_power = normal.inv_cdf(1 - (1 - power_family) / 4)
-        precision = math.ceil((z_alpha * 0.5 / 0.05) ** 2)
+        z_alpha = normal.inv_cdf(1 - alpha_family)
+        z_power = normal.inv_cdf(1 - (1 - power_family) / 8)
         power = math.ceil(
             (
                 z_alpha * math.sqrt(0.55 * 0.45)
@@ -295,8 +297,43 @@ def test_artifact_equivalence_is_not_assumed_powered() -> None:
             ** 2
             / 0.05**2
         )
-        expected.append((precision, power))
-    assert expected == [(385, 1293), (624, 1976)]
+        expected.append(power)
+    assert expected == [1047, 1757]
+
+
+def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
+    dossier = " ".join(
+        (ROOT / "docs/research/gate0_decision_dossier.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    intervention = " ".join(
+        (ROOT / "docs/research/intervention_option_audit.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "finite blocker/decision inventory" in dossier
+    assert "not yet a complete gate-0 freeze package" in dossier
+    assert "mv-1" in dossier and "mt-1" in dossier
+    assert "r_j = 0.50 + abs(ba_j - 0.50)" in dossier
+    assert "open / not specified" in dossier
+    assert "one exact primary estimator definition/interface" in dossier
+    assert "fitted instance/config" in dossier
+    assert "task-evidence" in dossier and "q_v" in dossier
+    assert "g0-inference" in dossier and "9,999 fixed-seed resamples" in dossier
+    assert "g0-ablations" in dossier and "remove `c_vt`" in dossier
+    assert "ainc/v1/mv1-qualification" in dossier
+    assert "256-screened/216-evaluable" in dossier
+    assert "does not" in dossier and "close gate 0" in dossier
+    assert "224 -> 112 -> 224" in intervention
+    assert "strictly above `0.10`" in intervention
+    assert "108 evaluable independent" in intervention
+    assert "216 total" in intervention
+    assert "sole-polarity-slot redaction" in intervention
+    assert "y_t=undefined" in intervention
+    assert "neither operation is an ambiguity intervention" in intervention
 
 
 def test_backbone_and_natural_ambiguity_resources_are_not_overclaimed() -> None:
@@ -311,3 +348,6 @@ def test_backbone_and_natural_ambiguity_resources_are_not_overclaimed() -> None:
     assert "natural-ambiguity veto audit" in resources
     assert "deferred until after a month-3 pass" in resources
     assert "unallocated reserve" in resources
+    assert "all 256 ranked candidates" in resources
+    assert "locked reliability" in resources
+    assert "1,350" in resources
