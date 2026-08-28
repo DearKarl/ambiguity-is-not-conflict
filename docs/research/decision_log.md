@@ -319,13 +319,17 @@ decisions are separated explicitly.
   balance plus orientation-safe diagnostic recoverability
   `R=max(BA,1-BA)`; and adopt strict-confirmatory, unknown-exposure sensitivity,
   and known-exposure diagnostic model tiers.
-- **Inference decision:** The finite candidate uses at least 9,999 fixed-seed
-  patient-cluster studentized max-`t` resamples, one-sided 90% simultaneous
-  Month-3 bounds (`alpha_F=0.10`, 80% target family power), one-sided 97.5%
-  confirmatory bounds (`alpha_F=0.025`, 90% target family power), a fixed
-  construct-to-advantage-to-downstream-to-decision sequence, and Holm or
-  Romano--Wolf control for secondary families. Commander/statistical approval
-  remains open; Month 3 cannot establish confirmation or equivalence.
+- **Inference decision:** The finite candidate uses a nonparametric,
+  patient-cluster studentized max-`t` bootstrap with exactly 9,999 fixed-seed
+  resamples (seed `20270829`), common within-stratum patient resamples across
+  all method-by-control means, and componentwise simultaneous bounds. The
+  non-smooth `psi_mag` and `A_psi` bounds are derived from those joint component
+  bounds rather than bootstrapped directly. Month 3 uses one-sided 90% bounds
+  (`alpha_F=0.10`, 80% target family power); confirmation uses one-sided 97.5%
+  bounds (`alpha_F=0.025`, 90% target family power), a fixed construct-to-
+  advantage-to-downstream-to-decision sequence, and Holm or Romano--Wolf
+  control for secondary families. Commander/statistical approval remains open;
+  Month 3 cannot establish confirmation or equivalence.
 - **Baseline/ablation decision:** In addition to the finite baseline identities,
   freeze removal of `C_vt`; separate removal of `A_v`, `A_t`, `M_v`, and `M_t`;
   matched point-softmax/point-embedding replacement; fixed-mean scale/covariance
@@ -389,6 +393,60 @@ decisions are separated explicitly.
   authorization, scientific evidence, venue readiness, acceptance, or
   publication.
 
+## DR-0010 — Pointwise Estimator Formalization Kill
+
+- **Date:** 2026-08-29
+- **Status:** Proposed kill recommendation; requires Commander, scientific-
+  supervisor, statistical, and model-owner decision; not executable
+- **Verified source facts:** PCME++'s Gaussian closed-form sampled distance adds
+  mean squared distance and marginal variances; RCML defines projected
+  probability distance times conjunctive certainty; Discounted Belief Fusion
+  supplies conflict-sensitive evidential fusion; and classifier-based
+  density-ratio estimation is established prior art. Exact sources and transfer
+  limits are in the [formalization audit](estimator_formalization_audit.md).
+- **Non-authoritative lead:** CONFER arXiv v1 reports squared scalar predictive
+  disagreement divided by summed modality uncertainty. Its preprint status
+  excludes it from the formal novelty kill and mandatory-baseline decision.
+- **Derivations:** For binary learned model beliefs, self-corrected
+  disagreement is exactly
+  \((\widehat p_v-\widehat p_t)^2\). Independent-Gaussian self-spread correction
+  cancels covariance and leaves mean distance. A conditional
+  conflict/compatibility likelihood ratio is exactly a classifier logit minus
+  the known sampling-prior log-odds. Binary evidential
+  projected-distance-times-certainty is
+  \(|\widehat p_v-\widehat p_t|(1-u_v)(1-u_t)\), the occupied RCML
+  form.
+- **Decision recommendation:** Select none of the three pointwise candidates
+  and kill their new-estimator claim before implementation. Retain
+  \(\widehat\psi_{mag,m}\) as the exact finite-sample plug-in estimator of the
+  controlled-score-specificity population functional, not as an arbitrary-pair
+  conflict score. The outer minimum makes it generally downward biased at
+  finite \(n\).
+- **Finite owner choice:** `G0-METHOD A` prospectively amends the paper identity
+  to an intervention-defined measurement/validation framework and freezes one
+  explicitly non-novel pointwise instrument plus a matched deterministic
+  comparator. `G0-METHOD B` retains a new-estimator identity only if a new
+  bounded pre-data theory brief supplies one non-cosmetic candidate that
+  survives the same equivalence screen. A is recommended; neither is approved.
+- **Link guardrail:** The compatible-reference normalization removes positive
+  affine transformations, not nonlinear monotone links. Every candidate and
+  matched comparator must use the identical square, sigmoid, exponential, or
+  pre-link convention; otherwise `A_psi` can be manufactured by
+  parameterization.
+- **Inference:** The controlled intervention/reader design may remain a
+  substantive evaluation-science contribution, but this audit does not prove
+  that framework novel or sufficient for NeurIPS Main Track. Main Track remains
+  a conditional planning target, not a publication prediction.
+- **Stop boundary:** Gate 0 remains open. No data/model/reader access,
+  implementation, training, inference, or Month-3 execution follows this
+  record. Empirical performance cannot reverse the analytic identity or select
+  among killed formulas.
+- **Permitted claim:** Three finite pointwise candidate classes failed the
+  pre-data novelty/equivalence screen, and the existing population specificity
+  estimator now has an exact interface. This is not owner approval, empirical
+  deterministic subsumption, framework novelty, construct validation, venue
+  readiness, acceptance, or publication.
+
 ## Open Gate 0 Decisions
 
 - approve or reject explicit claim narrowing to determinate-conflict
@@ -400,9 +458,10 @@ decisions are separated explicitly.
   aggregate outputs, screening floors, and derived-artifact terms;
 - five-reader image protocol, text/cross-modal panels, sample, reader model,
   adjudication, reliability thresholds, ethics, and workload;
-- primary conflict estimator, matched backbone/baseline implementations,
-  exact ablation/applicability map, and pre-implementation equivalence screen
-  against the closest published scores;
+- `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
+  theory candidate; then one exact non-outcome-selected pointwise instrument,
+  matched backbone/baseline implementations, exact ablation/applicability map,
+  and implementation/licence freeze;
 - magnitude-safe primary endpoint, compatible-reference scale, 0.20 construct
   threshold, secondary `theta`, the `G0-INFERENCE` max-`t`/multiplicity/fixed-
   sequence package, 0.10 uncertainty-aware material-advantage boundary, and

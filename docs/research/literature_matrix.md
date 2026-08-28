@@ -1,7 +1,8 @@
 # Literature Matrix
 
-**Status:** Primary-source audit snapshot through 2026-08-29; implementation,
-version, and reproduction audits remain open
+**Status:** Peer-reviewed primary-source audit plus explicitly labelled
+preprint leads through 2026-08-29; implementation, version, and reproduction
+audits remain open
 
 The matrix records what a primary source motivates and what it does not
 establish for this project. Inclusion is not endorsement or evidence of
@@ -24,7 +25,7 @@ reproducibility.
 | Medical phrase fact checking | [Mahmood et al., MICCAI 2025](https://papers.miccai.org/miccai-2025/0693-Paper3526.html) | Detects perturbed chest-radiograph finding/location errors at phrase level | Subsumes a generic atomic medical compatibility or synthetic-perturbation identity; requires a matched medical comparator |
 | Medical hallucination risk | [ReXTrust, PMLR 2025](https://proceedings.mlr.press/v281/hardy25a.html) | Predicts finding-level hallucination risk from VLM hidden states on MIMIC-CXR | Failure prediction is not semantic conflict, but the conflict component must add beyond it |
 | Conflict-driven risk | [CoRiM, CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/papers/Zou_CoRiM_Conflict-driven_Risk_Minimization_for_Dynamic_Multimodal_Fusion_CVPR_2026_paper.pdf) | Defines predictive-distribution modality-conflict risk for dynamic fusion | Symmetric divergence or conflict-aware risk weighting is not sufficient novelty |
-| Ambiguity/dissent regime | [CONFER, arXiv v1 2026](https://arxiv.org/abs/2608.07867v1) | Uses modality-specific uncertainty-adjusted compatibility and separates consensus, dissent, and ambiguity regimes for weak-label calibration | Directly threatens “conflict after uncertainty adjustment”; preprint status and lack of controlled semantic intervention limit what it establishes |
+| Non-authoritative ambiguity/dissent lead | [CONFER, arXiv v1 2026](https://arxiv.org/abs/2608.07867v1) | Reports modality-specific uncertainty-adjusted compatibility and separates consensus, dissent, and ambiguity regimes for weak-label calibration | Preprint-only surveillance lead; excluded from formal novelty-kill evidence and mandatory baselines unless authoritative status changes |
 | Conflict versus unimodal difficulty | [When Modalities Conflict, arXiv 2025](https://arxiv.org/abs/2511.02243) | Independently varies image/text reasoning difficulty and relates relative entropy to modality following | Subsumes a first controlled difficulty-adjusted conflict study; model confidence is not independently annotated semantic ambiguity |
 | Paired missing/adversarial controls | [SIGNPOST-Bench, arXiv 2026](https://arxiv.org/abs/2608.04244) | Uses Original, Blank, Similar, Random, and Adversarial paired groups | Subsumes a first paired conflict-versus-missing/unrelated benchmark claim; lacks semantic ambiguity measurement |
 | Conflict versus legibility | [Which Source Wins, arXiv 2026](https://arxiv.org/abs/2608.17205) | Crosses source conflict with graded image/text legibility and measures reliance shifts | Subsumes a first degradation-controlled conflict design; corruption/legibility is not genuine ambiguity |
@@ -33,6 +34,32 @@ reproducibility.
 | Generic failure prediction | [ViLU, ICCV 2025](https://openaccess.thecvf.com/content/ICCV2025/html/Lafon_ViLU_Learning_Vision-Language_Uncertainties_for_Failure_Prediction_ICCV_2025_paper.html) | Supplies a strong learned failure-prediction comparator | The proposed component must add value beyond this class |
 | Bayesian VLM approximation | [BayesVLM, OpenReview](https://openreview.net/forum?id=XLiUcvHfzS) | Candidate approximate-Bayesian baseline | Bayesian naming does not guarantee calibration or identifiability |
 | Distribution-free selection | [Conformal prediction for zero-shot models, CVPR 2025](https://openaccess.thecvf.com/content/CVPR2025/html/Silva-Rodriguez_Conformal_Prediction_for_Zero-Shot_Models_CVPR_2025_paper.html) | Candidate risk-control layer | Guarantees depend on the calibration population and assumptions |
+
+## Formal Equivalence Consequences
+
+The [estimator formalization audit](estimator_formalization_audit.md) records
+three pre-data method-claim kills:
+
+1. binary self-corrected learned-belief disagreement is exactly
+   \((\widehat p_v-\widehat p_t)^2\); its independent-Gaussian analogue cancels
+   both covariance traces after the same self-spread correction and leaves
+   deterministic mean distance;
+2. a conditional conflict-versus-compatibility likelihood ratio is exactly a
+   classifier logit minus the known conditional sampling-prior log-odds; and
+3. binary evidential projected-distance times conjunctive certainty is exactly
+   \(|\widehat p_v-\widehat p_t|(1-u_v)(1-u_t)\), the occupied RCML
+   confident-disagreement structure.
+
+PCME++ explicitly places Gaussian mean distance and marginal variances in its
+closed-form sampled distance. Together with the three derivations, the
+peer-reviewed evidence prevents a new-estimator claim based only on a cosmetic
+link, covariance head, or evidential certainty gate. CONFER reports a close
+scalar squared-disagreement-over-summed-uncertainty form, but its arXiv-v1
+status makes that formula a surveillance lead rather than formal occupancy
+evidence here. A denominator-based candidate remains unadjudicated for novelty
+and still requires a separate semantic-identification argument. None of these
+facts proves empirical deterministic subsumption or establishes that the
+retained intervention-specificity framework is itself novel.
 
 ## Measurement and Statistical Anchors
 

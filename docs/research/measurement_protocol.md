@@ -1,6 +1,7 @@
 # Measurement Protocol
 
-**Status:** Protocol scaffold; not frozen for execution
+**Status:** Gate-0 protocol candidate; pointwise method identity remains blocked
+and no execution is authorized
 
 ## Objective
 
@@ -118,7 +119,18 @@ processing signatures, rebuild the intervention set before promotion.
 
 ## Candidate Estimator Families
 
-The comparison should use a frozen representation backbone wherever feasible:
+The [formalization audit](estimator_formalization_audit.md) selected none of the
+three exact pointwise candidates. The binary learned-belief/Gaussian excess
+discrepancy collapses to a matched mean-distance score after self-spread
+correction; the conditional likelihood ratio is a prior-adjusted deterministic
+classifier logit; and evidential confident disagreement is already occupied by
+RCML/Discounted Belief Fusion. These are formal method-claim kills, not
+empirical equivalence or deterministic-subsumption results.
+
+The families below therefore remain comparison instruments, diagnostics, or
+the inputs to a future pre-data theory brief. None is an approved novel primary
+estimator. Any later comparison should use a frozen representation backbone
+wherever feasible:
 
 1. deterministic similarity and retrieval margin;
 2. learned conditional compatibility likelihood ratio;
@@ -128,34 +140,44 @@ The comparison should use a frozen representation backbone wherever feasible:
 6. Bayesian last-layer or Laplace-style epistemic approximation;
 7. output semantic uncertainty when generation is part of the task.
 
-For independently elicited interpretation distributions \(\pi_v\) and
-\(\pi_t\), a candidate semantic-distribution discrepancy is:
+For learned model-belief distributions \(\widehat\pi_v\) and
+\(\widehat\pi_t\), a candidate pointwise discrepancy is:
 
 ```math
 \kappa_L=
-\mathbb E L(Y_v,Y_t)
--\tfrac12\mathbb E L(Y_v,Y_v')
--\tfrac12\mathbb E L(Y_t,Y_t').
+\mathbb E L(\widehat Y_v,\widehat Y_t)
+-\tfrac12\mathbb E L(\widehat Y_v,\widehat Y_v')
+-\tfrac12\mathbb E L(\widehat Y_t,\widehat Y_t').
 ```
 
 With binary states and disagreement loss this reduces to
-\((p_v-p_t)^2\), an energy-distance-like quantity. It is not binary conflict:
-\(p_v=0.5,p_t=1\) gives a positive discrepancy while \(C^*\) is undefined.
-It may be a diagnostic across all cells but is eligible as a conflict surrogate
-only on determinate cells unless a formal bridge is established. A conditional
-likelihood ratio between conflicting and compatible determinate pairs is a
-second candidate, with a matched deterministic density-ratio estimator as an
-exact competitor. Neither candidate is selected or automatically novel.
+\((\widehat p_v-\widehat p_t)^2\), an energy-distance-like quantity. It is not
+binary conflict: \(\widehat p_v=0.5,\widehat p_t=1\) gives a positive model
+discrepancy even when the independently governed reader construct would make
+\(C^*\) undefined. Applying the same algebra to external reader frequencies
+\(p^R_v,p^R_t\) yields a measurement diagnostic, not a deployable pairwise
+score. A learned score is eligible as a conflict surrogate only on determinate
+cells unless a formal bridge is established. A conditional likelihood ratio
+between conflicting and compatible determinate pairs is a second candidate,
+with a matched deterministic density-ratio estimator as an exact competitor.
+Neither candidate is selected or automatically novel.
 
 Normalized symmetric KL, Wasserstein--Bures distance, overlap, and learned
-density ratios remain candidates, not approved primary metrics. Raw latent
-distance is inadequate unless conditioned on the distribution of compatible
-pairs because legitimate modality-specific content can be far apart.
+density ratios remain occupied comparison choices, not approved primary
+metrics. Raw latent distance is inadequate unless conditioned on the
+distribution of compatible pairs because legitimate modality-specific content
+can be far apart.
 
 Every distributional method must document covariance parameterization,
 positive-definiteness, regularization, latent dimension, scale, normalization,
 sampling, and whether spread represents input ambiguity or parameter
 uncertainty.
+
+The compatible-reference standardization below removes positive affine score
+changes but not nonlinear monotone links. Every candidate and matched
+deterministic comparator must therefore use an identical square, sigmoid,
+exponential, or other pre-/post-link convention. A larger `psi_mag` created
+only by a different link is not a material uncertainty-aware advantage.
 
 ## Construct-Validity Tests
 
@@ -221,6 +243,21 @@ simultaneous patient-cluster bounds, and power grid are in the
 `theta` statistic is secondary unless separately powered. None is approved for
 execution.
 
+For \(n\) complete, equally weighted patient blocks, the exact plug-in
+estimator is:
+
+```math
+\widehat\psi_{\mathrm{mag},m}
+=\min_{j\in\mathcal J_{\mathrm{id}}}
+\left\{\frac1n\sum_{b=1}^n
+\left(D_{C,bm}-|D_{j,bm}|\right)\right\}.
+```
+
+It is the minimum of control-specific sample means, not the mean of a
+within-block minimum. It estimates the controlled population specificity of an
+already frozen pointwise instrument; it is not itself a deployable pair-level
+conflict score.
+
 Genuine natural ambiguity without such a counterfactual uses a separately
 pre-specified matched/weighted contrast \(\gamma_{A_v,m}\) or
 \(\gamma_{A_t,m}\), with the reference population, nuisance set, weights,
@@ -238,9 +275,11 @@ valid governed ambiguity intervention or a separately frozen estimand with
 defensible conditional-exchangeability and transport assumptions. Score
 orientation and normalization use development-compatible cases only.
 
-Promotion out of the kill-test stage requires the single primary uncertainty-
-aware candidate named from development before holdout access to satisfy all of
-the following:
+Promotion out of the kill-test stage requires one exact primary pointwise
+instrument definition/interface to be named and approved at Gate 0. Development
+may fit or tune only inside that frozen identity; its single fitted instance,
+normalizer, link, and configuration must then be locked before holdout access.
+That pre-locked instrument must satisfy all of the following:
 
 1. respond more strongly to controlled incompatibility than to valid
    randomized or counterbalanced information-loss controls;

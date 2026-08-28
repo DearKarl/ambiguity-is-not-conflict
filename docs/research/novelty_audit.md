@@ -2,8 +2,9 @@
 
 **Status:** Literature-audit snapshot; not a novelty claim
 **Audit date:** 2026-08-29
-**Evidence class:** Primary-paper and official-code leads only; no implementation
-was downloaded or reproduced
+**Evidence class:** Peer-reviewed primary papers and official-code leads, with
+preprints explicitly labelled as non-authoritative surveillance leads; no
+implementation was downloaded or reproduced
 
 ## Audit Question and Boundary
 
@@ -27,12 +28,14 @@ The following layers are evaluated separately:
 A paper that covers an earlier layer can invalidate a broad claim at that
 layer even if it does not answer the complete research question.
 
-## Verified Prior-Art Map
+## Prior-Art Map with Evidence Tiers
 
-The `Fact` column is limited to what the linked primary source states. The
-`Boundary` column is this project's inference and must be rechecked against the
-full method, appendices, and released implementation before a paper claim is
-frozen.
+For peer-reviewed sources, the `Fact` column is limited to what the linked
+primary source states. Preprint rows are literature leads only and cannot
+support a formal novelty kill or mandatory baseline until authoritative status
+is established. The `Boundary` column is this project's inference and must be
+rechecked against the full method, appendices, and released implementation
+before a paper claim is frozen.
 
 | Source | Layer already covered (fact) | Boundary for this route (inference) | Threat |
 | --- | --- | --- | --- |
@@ -51,7 +54,7 @@ frozen.
 | [van Sprang et al., CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/html/van_Sprang_Same_Content_Different_Answers_Cross-Modal_Inconsistency_in_MLLMs_CVPR_2026_paper.html) | Measures behavioural inconsistency when equivalent content is presented through different modalities | Distinguishes presentation inconsistency from contradictory paired evidence; both must not be conflated | Strong construct boundary |
 | [Zou and Wei, CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/papers/Zou_CoRiM_Conflict-driven_Risk_Minimization_for_Dynamic_Multimodal_Fusion_CVPR_2026_paper.pdf) | Defines a differentiable modality-conflict risk over predictive distributions and optimizes dynamic fusion under conflict and noise | Directly threatens a symmetric-KL/distribution-disagreement estimator plus decision-risk claim; conditional ambiguity controls and image--text atomic semantics are the possible distinctions | Critical estimator/decision |
 | [Zhang et al., arXiv 2025](https://arxiv.org/abs/2511.02243) | Independently varies visual and textual reasoning difficulty, measures relative unimodal entropy, and studies modality following under conflict | Subsumes a claim to the first controlled study of conflict after varying unimodal difficulty; model confidence and source following are not independently measured semantic ambiguity or incompatibility | Critical controlled study |
-| [Hou et al., CONFER arXiv v1 2026](https://arxiv.org/abs/2608.07867v1) | Uses uncertainty-adjusted modality compatibility and separates consensus, persistent dissent, and ambiguity regimes for weak-label calibration | Directly subsumes the broad phrase “conflict after accounting for modality uncertainty”; its ambiguity is model/decision-boundary uncertainty rather than independently annotated input semantics | Critical estimator/concept |
+| [Hou et al., CONFER arXiv v1 2026](https://arxiv.org/abs/2608.07867v1) | Reports uncertainty-adjusted modality compatibility and consensus, dissent, and ambiguity regimes for weak-label calibration | Close surveillance lead for a scalar uncertainty-denominator form; preprint status prevents treating it as formal occupancy, and its ambiguity is not independently annotated input semantics | Non-authoritative preprint lead |
 | [SIGNPOST-Bench, arXiv 2026](https://arxiv.org/abs/2608.04244) | Uses 5,111 paired Original, Blank, Similar, Random, and Adversarial text-in-image groups to study conflict resolution | Subsumes a first paired conflict-versus-missing/unrelated/adversarial-control benchmark claim; does not measure semantic ambiguity | Strong controlled benchmark |
 | [Ghosh et al., arXiv 2026](https://arxiv.org/abs/2608.17205) | Crosses image/text conflict with four legibility levels, counterbalances sources, and adjusts modality reliance for unimodal accuracy loss | Subsumes a first conflict-versus-degradation design; legibility/corruption is not genuine semantic ambiguity and reliance is not a conflict estimand | Strong controlled study |
 
@@ -63,9 +66,10 @@ an implementation candidate, not a contribution by itself.
 
 ## Highest-Risk Novelty Threats
 
-1. **CONFER, RCML, and Discounted Belief Fusion:** invalidate a broad claim to
-   the first conflict estimator adjusted by modality uncertainty, confidence,
-   reliability, or vacuity.
+1. **RCML and Discounted Belief Fusion:** invalidate a broad claim to the first
+   evidential conflict estimator adjusted by confidence, reliability, or
+   vacuity. CONFER remains a non-authoritative surveillance lead and cannot
+   carry this kill.
 2. **When Modalities Conflict:** invalidates a claim to the first controlled
    conflict study that independently varies unimodal difficulty and relates it
    to source preference.
@@ -81,9 +85,11 @@ an implementation candidate, not a contribution by itself.
    novelty claim based only on atomic finding perturbation and image--text
    verification.
 
-These are kill threats, not ceremonial citations. The method and experiment
-must be designed so that these approaches can falsify the proposed component
-under matched inputs and evaluation budgets.
+The peer-reviewed entries are kill threats, not ceremonial citations. The
+method and experiment must be designed so that those approaches can falsify the
+proposed component under matched inputs and evaluation budgets. Preprint-only
+entries guide surveillance and sensitivity design but cannot independently
+kill novelty.
 
 ## Gap That Provisionally Survives
 
@@ -116,8 +122,8 @@ validity, implementation feasibility, and licence audit:
 - a matched deterministic conditional compatibility classifier/density ratio;
 - subjective-logic vacuity/dissonance and RCML conflict degree or the closest
   task-valid analogues;
-- Discounted Belief Fusion and CONFER uncertainty-adjusted compatibility, or
-  exactly documented task-valid reimplementations;
+- Discounted Belief Fusion or an exactly documented task-valid
+  reimplementation;
 - CoRiM's modality-conflict-risk principle or an exactly documented
   task-valid comparator;
 - relative unimodal entropy/source-following measures from *When Modalities
@@ -162,9 +168,11 @@ remain pre-execution audit fields.
 - Do not claim the first definition, dataset, detector, decomposition, or
   conflict-aware fusion method.
 - Reject before implementation any candidate score that is a monotone
-  transformation or minor parameterization of uncertainty-adjusted
-  disagreement already represented by CONFER, RCML, Discounted Belief Fusion,
-  relative entropy, or deterministic matching.
+  transformation or minor parameterization of disagreement already
+  authoritatively represented by RCML, Discounted Belief Fusion, relative
+  entropy, or deterministic matching. Treat a CONFER-like uncertainty
+  denominator as unadjudicated for formal novelty pending authoritative
+  evidence, while still requiring a separate semantic-identification bridge.
 - Do not equate latent distance, predictive divergence, uncertainty mass, or
   contradiction accuracy with identified conditional conflict.
 - Kill the estimator claim if a matched deterministic conditional predictor

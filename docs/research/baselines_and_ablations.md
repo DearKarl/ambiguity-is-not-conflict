@@ -1,11 +1,19 @@
 # Baselines and Ablations
 
-**Status:** Candidate comparison matrix; exact implementations await Gate 0
+**Status:** Candidate comparison matrix; pointwise method-claim kill is
+recommended, owner decision is open, and exact implementations await Gate 0
 
 The scientific comparison asks whether an explicit conflict component adds
 information beyond simpler predictors under the same backbone, split,
 preprocessing, task output, and calibration budget wherever technically
 possible.
+
+TB-0006 selected no new pointwise estimator. Self-corrected learned-belief/
+Gaussian disagreement collapses to a matched deterministic mean score,
+conditional density ratio is a prior-adjusted deterministic classifier logit,
+and evidential confident disagreement is an occupied RCML/Discounted-Belief-
+Fusion form. These methods can remain instruments or comparators, but none may
+be promoted as a novel estimator from development results.
 
 ## Required Baseline Families
 
@@ -20,7 +28,7 @@ possible.
 | Probabilistic embedding | PCME/PCME++/ProbVLM-style candidate, plus ICPE where task-valid | Does distributional representation improve source separation after a matched point-softmax and modality-gap/embedding-scale audit? |
 | Evidential vacuity/dissonance and reliability | Subjective-logic lack-of-evidence/conflicting-evidence measures and RCML conflict degree/reliability, or exact task-valid analogues on matched categorical heads | Is the claimed ambiguity/conflict split already captured by a known evidential decomposition or reliability-adjusted conflict score? |
 | Conflict-discounted evidence fusion | Discounted Belief Fusion or an exactly documented task-valid reimplementation | Does a published uncertainty-based conflict detector subsume the candidate? |
-| Uncertainty-adjusted compatibility | CONFER's modality-specific uncertainty-adjusted compatibility or an exactly documented task-valid reimplementation | Is conditional conflict already captured by confidence-adjusted modality compatibility? |
+| Uncertainty-adjusted compatibility | Project-native uncertainty-normalized compatibility sensitivity; CONFER is a non-authoritative preprint lead only | Is conditional conflict already captured by confidence-adjusted modality compatibility? |
 | Conflict-risk fusion | CoRiM's predictive-distribution conflict-risk principle or an exactly documented task-valid comparator | Is the score or downstream decision effect already explained by conflict-aware dynamic fusion? |
 | Relative entropy and source following | Relative unimodal entropy and source-reliance diagnostics from *When Modalities Conflict* | Is the proposed signal merely relative confidence or source preference under conflict? |
 | Paired shift diagnostics | SIGNPOST-style Original/Blank/Similar/Random/Adversarial shifts and *Which Source Wins*-style legibility adjustments where task-valid | Can missing, unrelated, adversarial, or degraded inputs explain the claimed specificity? |
@@ -42,17 +50,22 @@ point-softmax adapter whenever learned scale or covariance is credited. The
 closest published conflict methods above must either be represented fairly or
 excluded with a pre-results technical and licence justification.
 
-Before the Month-3 holdout is opened, development evidence must name exactly
-one of the uncertainty-aware candidates as primary and pair it with the matched
-deterministic comparator. The other candidate remains secondary and cannot be
-promoted merely because it performs best on the holdout. Declaring multiple
-primary candidates requires a prospectively expanded method-by-control and
-method-difference multiplicity/power family.
+Before the Month-3 holdout is opened, Gate 0 must already name exactly one
+pointwise instrument and its matched deterministic comparator. Under the
+recommended `G0-METHOD A` amendment, that instrument is explicitly non-novel
+and tests the intervention-defined framework. Under `G0-METHOD B`, a new
+candidate must first survive a separate pre-data theory audit. Development may
+fit only the frozen identity and cannot promote another candidate because it
+performs best. Declaring multiple primary instruments requires a prospectively
+expanded method-by-control and method-difference multiplicity/power family.
 
-The expanded rows are mandatory threats for the confirmatory comparison plan,
-not permission to turn the Month-3 kill test into a method zoo. Method identity,
-official implementation, licence, and task-valid porting must be frozen before
-outcomes are inspected; see the [novelty audit](novelty_audit.md).
+The peer-reviewed expanded rows are mandatory threats for the confirmatory
+comparison plan, not permission to turn the Month-3 kill test into a method
+zoo. Preprint-only rows are surveillance leads and are not formal kill evidence
+or mandatory baselines unless their status changes before the prospective
+freeze. Method identity, official implementation, licence, and task-valid
+porting must be frozen before outcomes are inspected; see the [novelty
+audit](novelty_audit.md).
 
 The current [backbone/resource freeze candidate](execution_budget_and_backbone_audit.md)
 places those Month-3 heads on one conditional dual-encoder candidate with
@@ -63,6 +76,35 @@ candidate; BioViL-T is a known-MIMIC-exposure diagnostic; and a ResNet-50 plus
 BiomedBERT pair is a lower-intent, unknown-overlap non-VLM architectural/
 sensitivity control; it is neither contamination-negative nor strict-
 confirmatory. No checkpoint is approved or presumed clean.
+
+## Finite Implementation and Information-Budget Candidate
+
+The read-only TB-0006 audit reduces the Month-3 implementation roles to the
+following candidate identities. They are not approved or executable:
+
+| ID | Frozen role candidate | Supervision class | Implementation/licence boundary |
+| --- | --- | --- | --- |
+| `RAW-COS` | \(1-\) cosine of normalized frozen post-projection BiomedCLIP features, without logit scale or softmax | No trainables or project labels | Project-native arithmetic; zero-capacity reference |
+| `DET-LR` | Project-native binary-log-loss classifier over \([z_v,z_t,|z_v-z_t|,z_v\odot z_t,W]\), reported as classifier logit plus known sampling-prior correction | Explicit determinate \(C^*\) labels | Privileged supervised ceiling unless every claimed matched method receives the same labels; exact \(W\), architecture, weights, and calibration remain open |
+| `DBF-TASK` | Two task-aligned binary evidential heads and the published DBF fusion/conflict quantities, trained on clear compatible pairs | Shared semantic finding \(Y\) | Official [DBF code](https://github.com/bezirganyan/DBF_uncertainty/commit/79b7d56b0cfa53c98a93f29f9d9c59768177ad17) is GPL-3.0 and credits RCML code; the audited [RCML snapshot](https://github.com/jiajunsi/RCML/tree/c9c5ab41e6fe62a85e5f6441a4dc7b568e1fa421) exposes no explicit licence file. No vendoring. Requires an approved clean-room formula port or separately governed GPL runner subject to licensing/provenance approval |
+| `PROBVLM-2ADAPTER` | Paper-faithful two-adapter symmetric cross-modal generalized-Gaussian candidate at official [ProbVLM commit](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204) | Native compatible-pair correspondence only | MIT, but active code and paper semantics differ and the official Hugging Face path is not the required two-adapter cross-modal route; Gate 0 must freeze paper-faithful versus code-exact behavior |
+| `POINT-INFONCE` | Project-native two-branch point adapter with the same mean-trunk shape and native compatible-pair set; raw paired logit with frozen temperature/reference pool | Same pair correspondence as `PROBVLM-2ADAPTER` | The closest [CLIP-Adapter snapshot](https://github.com/gaopengcuhk/CLIP-Adapter/tree/08d07f8b2ecafc6f1479fe636b26d464d7a5574e) is a different classifier and exposes no explicit licence file at the audited snapshot; exclude its code. Freeze denominator, negative/false-negative policy, optimizer, and tuning budget |
+
+The proposed common feature identity is BiomedCLIP snapshot
+[`9f341de24bfb00180f1b847274256e9b65a3a32e`](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/commit/9f341de24bfb00180f1b847274256e9b65a3a32e)
+through OpenCLIP 2.23.0 commit
+[`f08f25f3f226bdb538de2b4ed48a9213ba6b179e`](https://github.com/mlfoundations/open_clip/commit/f08f25f3f226bdb538de2b4ed48a9213ba6b179e);
+both publish MIT terms. This is an immutable identity lead only and does not
+resolve the documented pretraining-exposure limitation or authorize a
+checkpoint download.
+
+Only `PROBVLM-2ADAPTER` versus `POINT-INFONCE` is presently designed as a
+same-information comparison. `DET-LR` and `DBF-TASK` are distinct privileged
+ceilings, not information-matched competitors. At inference, no method may
+receive intervention identity, construction source, ambiguity/artifact label,
+provenance field, or protected outcome. The exact implementation, calibration,
+software dependency, parameter-count, and supervision ledger must be approved
+before Gate 0 closes.
 
 ## Required Ablations
 
@@ -87,6 +129,9 @@ confirmatory. No checkpoint is approved or presumed clean.
 - same patient partitions and derived-pair inheritance;
 - same access to labels and decision-time information;
 - comparable trainable parameter and tuning budgets, with differences reported;
+- identical pre-link/post-link convention for every matched comparison:
+  compatible-reference standardization is not invariant to squaring, sigmoid,
+  exponential, or another nonlinear monotone transformation;
 - no final-test threshold selection;
 - no use of intervention labels as model inputs unless that is the explicitly
   evaluated supervised baseline;

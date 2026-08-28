@@ -1,6 +1,7 @@
 # Statistical Analysis Plan
 
-**Status:** Gate-0 freeze candidate; no analysis is authorized
+**Status:** Gate-0 freeze candidate; pointwise method identity is blocked and no
+analysis is authorized
 
 **Date:** 2026-08-29
 **Evidence class:** Protocol and design-only power calculation
@@ -23,7 +24,7 @@
   to fit, orient, normalize, tune, and freeze candidates only after the nested
   qualification reserve above is removed.
 - **Month-3 primary-candidate screen:** official-train HMAC bucket 70--84,
-  opened once after the Gate-0-approved exact uncertainty-aware estimator and
+  opened once after the Gate-0-approved exact primary pointwise instrument and
   matched deterministic comparator have been fit/tuned only in development and
   their fitted instances, normalizers, orientations, code, and configurations
   are locked; used only to kill or provisionally advance those already frozen
@@ -64,6 +65,13 @@ patients, weights, location, scale, score version, and orientation are frozen
 before evaluation. Zero or numerically unstable reference variance invalidates
 the score. Raw-scale estimates and a median/MAD normalization are mandatory
 sensitivity reports; neither may replace the primary scale after inspection.
+
+This standardization is invariant to a positive affine transformation of a
+frozen score, but not to a nonlinear monotone link. Squaring, sigmoid,
+exponential, or another link can change paired contrasts and `psi_mag` while
+preserving rank. The candidate and its matched deterministic comparator must
+therefore use the identical pre-link or post-link convention. A difference
+created only by unequal links is not eligible for `A_psi`.
 
 For complete source block `b`:
 
@@ -109,6 +117,21 @@ and intervention-validity rules are approved before scores are inspected;
 otherwise the permitted claim names only the approved `M_v` and `M_t` roles.
 Natural image or text ambiguity remains `gamma_A`, a separate veto-only
 falsification audit.
+
+For \(n\) complete, equally weighted patient blocks, the exact estimator is
+
+```math
+\widehat\psi_{mag,m}
+=\min_{j\in\mathcal J_{id}}
+\left\{\frac1n\sum_{b=1}^n
+\left(D_{C,bm}-|D_{j,bm}|\right)\right\}.
+```
+
+This is the minimum of the control-specific sample means, not the mean of a
+within-block minimum. It has no trainable parameters and estimates specificity
+of an already frozen pointwise score. The [formalization
+audit](estimator_formalization_audit.md) does not promote it into a pair-level
+semantic-conflict score.
 
 ### Model-independent `MV-1` task-relevance qualification
 
@@ -177,6 +200,12 @@ deterministic predictor, define:
 A_\psi=\psi_{mag,uncertainty}-\psi_{mag,deterministic}.
 ```
 
+Write
+\(\mu_{mj}=\mathbb E[D_{C,m}-|D_{j,m}|]\), so
+\(\psi_{mag,m}=\min_j\mu_{mj}\). The point estimate of \(A_\psi\) is the
+difference of the two method-specific minima. It is **not** a minimum of
+same-control method differences.
+
 The proposed material-advantage margin is `0.10` reference SD, with `0.05` and
 `0.15` as sensitivity values.
 
@@ -202,32 +231,102 @@ does not manufacture a deterministic win from an underpowered comparison.
    blocks. Paired variants never increase the independent sample size. Any
    multi-study primary design requires an amended brief, design-effect model,
    and new power table.
-2. Use a studentized patient-cluster max-`t` multiplier/bootstrap with at
-   least 9,999 fixed-seed resamples. Recompute all endpoint components and
-   method differences on the same resamples; do not refit the frozen
-   development normalizer.
-3. Report simultaneous component bounds and take their minimum as the bound
-   for the intersection claim. For signed `psi_id`, report both smooth
-   components `E[D_C-D_j]` and `E[D_C+D_j]` for every control.
-4. Gate 0 must already name exactly one primary uncertainty-aware estimator
+2. Use one selected scheme: a nonparametric, studentized patient-cluster
+   max-`t` bootstrap with exactly 9,999 resamples and seed `20270829`. Resample
+   eligible patient blocks with replacement within the frozen finding-polarity
+   strata, preserve observed stratum sizes, and use the same patient indices in
+   every method-by-control component and downstream endpoint. Do not refit the
+   frozen development normalizer. A zero or undefined component standard error
+   in the observed sample **or any of the 9,999 indexed resamples** makes the
+   endpoint non-estimable and fails the gate; do not discard/redraw the
+   resample or add an outcome-dependent epsilon.
+3. Bootstrap only the smooth component values
+   \(G_{hbmj}=D_{C,hbm}-|D_{j,hbm}|\), where \(h=1,\ldots,H\) is a
+   prospectively frozen finding-polarity stratum, \(b=1,\ldots,n_h\), total
+   \(n=\sum_hn_h\), and fixed weight \(w_h=n_h/n\). Define
+
+   ```math
+   \bar G_{hmj}=\frac1{n_h}\sum_bG_{hbmj},\qquad
+   \widehat\mu_{mj}=\sum_hw_h\bar G_{hmj},
+   ```
+
+   ```math
+   s^2_{hmj}=\frac1{n_h-1}\sum_b(G_{hbmj}-\bar G_{hmj})^2,\qquad
+   \widehat{se}_{mj}
+   =\left(\sum_hw_h^2\frac{s^2_{hmj}}{n_h}\right)^{1/2}.
+   ```
+
+   Each indexed resample draws \(n_h\) whole patients with replacement inside
+   every stratum, uses the same indices for all \(m,j\), and recomputes
+   \(\bar G^*_{hmj},\widehat\mu^*_{mj},s^{*2}_{hmj}\), and
+   \(\widehat{se}^*_{mj}\) by the identical formulas. Require \(n_h\ge2\) and
+   every required observed/resampled standard error to be finite and strictly
+   positive. The studentized deviation is
+
+   ```math
+   T^*_{mj}=
+   \frac{\widehat\mu^*_{mj}-\widehat\mu_{mj}}
+        {\widehat{se}^*_{mj}}.
+   ```
+
+   For a directional family with signs \(q_{mj}\in\{-1,+1\}\), calculate
+   \(M^*_r=\max_{m,j}q_{mj}T^*_{r,mj}\). With \(B=9{,}999\), use
+   \(k=\lceil(B+1)(1-\alpha_F)\rceil\) and
+   \(c_{\alpha_F}=\max\{0,M^*_{(k)}\}\), where \(M^*_{(k)}\) is the
+   one-indexed \(k\)-th smallest value; no interpolation is permitted. A
+   \(q=+1\) component receives
+   \(L_{mj}=\widehat\mu_{mj}-c_{\alpha_F}\widehat{se}_{mj}\); a \(q=-1\)
+   component receives
+   \(U_{mj}=\widehat\mu_{mj}+c_{\alpha_F}\widehat{se}_{mj}\).
+
+   For a one-sided lower `psi_mag` bound, set all \(q=+1\); for an upper bound,
+   set all \(q=-1\). For a one-sided lower `A_psi` decision, the single joint
+   family uses \(q_{Uj}=+1,q_{Dj}=-1\); for an upper decision, reverse both
+   signs. For two-sided equivalence, use
+   \(M^*_r=\max_{m,j}|T^*_{r,mj}|\) and the symmetric component band
+   \([\widehat\mu_{mj}-c\widehat{se}_{mj},
+   \widehat\mu_{mj}+c\widehat{se}_{mj}]\).
+4. If \([L_{mj},U_{mj}]\) are the resulting simultaneous component bounds,
+   derive the non-smooth functionals only after those bounds:
+
+   ```math
+   L_{\psi,m}=\min_jL_{mj},\qquad
+   U_{\psi,m}=\min_jU_{mj},
+   ```
+
+   ```math
+   L_A=\min_jL_{Uj}-\min_jU_{Dj},\qquad
+   U_A=\min_jU_{Uj}-\min_jL_{Dj}.
+   ```
+
+   Do not bootstrap either minimum directly, and do not substitute
+   \(\min_j(\mu_{Uj}-\mu_{Dj})\) for \(A_\psi\). For signed `psi_id`, report both
+   smooth components `E[D_C-D_j]` and `E[D_C+D_j]` for every control.
+5. Gate 0 must already name exactly one primary pointwise instrument
    definition/interface and one matched deterministic comparator definition.
+   TB-0006 selected no pointwise candidate: the audited candidates were exact
+   deterministic reductions or occupied evidential/compatibility forms.
+   Therefore this requirement remains blocked unless the owners prospectively
+   narrow the contribution to the measurement framework and freeze a non-novel
+   primary instrument, or a new mathematical candidate passes a pre-data
+   equivalence audit.
    Before the Month-3 set is opened, development bucket 0--69 may fit/tune only
    within those frozen rules and must lock exactly one fitted instance of each.
    Month 3 can kill or provisionally advance only those instances; every other
    method is secondary and cannot be promoted by being the best observed
-   holdout result. A change of estimator identity reopens Gate 0; an expanded
+   holdout result. A change of instrument identity reopens Gate 0; an expanded
    primary method family requires a prospective contract amendment and revised
    power grid before any protected set is opened.
-5. Month 3 uses one-sided 90% simultaneous screening bounds, family
+6. Month 3 uses one-sided 90% simultaneous screening bounds, family
    `alpha_F=0.10`, and 80% target family power. It cannot establish
    confirmatory evidence, non-inferiority, or equivalence.
-6. Confirmation uses the same frozen estimator identity and prospectively
+7. Confirmation uses the same frozen pointwise-instrument identity and prospectively
    locked fitted instance, untouched patients, one-sided 97.5% simultaneous
    bounds, `alpha_F=0.025`, and 90% target family power.
-7. Claims follow a fixed sequence: construct specificity; material advantage
+8. Claims follow a fixed sequence: construct specificity; material advantage
    over the matched deterministic predictor; downstream proper-score
    increment; fixed-budget decision value. A failed rung stops promotion.
-8. Secondary methods/subgroups use Holm or Romano--Wolf familywise control.
+9. Secondary methods/subgroups use Holm or Romano--Wolf familywise control.
    False-discovery-rate control cannot promote a secondary result to the
    primary claim.
 
@@ -285,10 +384,12 @@ material-advantage margin as:
 d_A=\frac{A_{\psi,true}-0.10}{\sigma_A},
 ```
 
-where `sigma_A` is the patient-block standard deviation/influence scale of the
-paired `A_psi` estimator under the frozen joint resampling procedure. With one
-primary comparison and the fixed-sequence gate, `K=1`; the same normal planning
-formula applies with `d_A`. The CSV reports sensitivity rows. At
+where `sigma_A` is a conservative planning scale induced by the joint
+method-by-control component covariance and the bound formulas above; it is not
+treated as a regular influence-function standard deviation for the non-smooth
+minimum at a tie. With one primary comparison and the fixed-sequence gate,
+`K=1`; the same normal planning formula applies with `d_A` only as a
+sensitivity approximation. The CSV reports sensitivity rows. At
 `d_A=0.15/0.20`, the analytic requirements are 201/113 patients for Month 3
 and 467/263 for confirmation, before loss. The 216/320 operational construct
 floors therefore cover this rung only under explicit standardized-advantage
@@ -474,6 +575,10 @@ Gate 0 cannot be represented as closed.
 - Kill the Main Track estimator claim if the uncertainty-aware method fails
   the `+0.10` material-advantage gate over deterministic; declare deterministic subsumption
   only when its positive conditions are actually met.
+- An analytic identity or occupied-form kill under TB-0006 is not an empirical
+  equivalence or deterministic-subsumption result. It blocks method selection
+  before execution; it does not waive the positive interval rules for any
+  later empirical subsumption statement.
 - Do not reuse Month-3 patients, covariance estimates, thresholds, or
   advance/kill outcomes as untouched confirmatory evidence.
 

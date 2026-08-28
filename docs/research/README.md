@@ -18,13 +18,14 @@ This directory is authoritative for the scientific scope and evidence state of
 13. [Dataset feasibility audit](dataset_feasibility_audit.md)
 14. [Dataset decision candidate](dataset_decision_candidate.md)
 15. [Execution budget and backbone audit](execution_budget_and_backbone_audit.md)
-16. [Baselines and ablations](baselines_and_ablations.md)
-17. [Literature matrix](literature_matrix.md)
-18. [Novelty and prior-art audit](novelty_audit.md)
-19. [Submission strategy](submission_strategy.md)
-20. [Gate-0 decision dossier](gate0_decision_dossier.md)
-21. [Gate-0 closure audit](gate0_closure_audit.md)
-22. [Decision log](decision_log.md)
+16. [Estimator formalization and equivalence audit](estimator_formalization_audit.md)
+17. [Baselines and ablations](baselines_and_ablations.md)
+18. [Literature matrix](literature_matrix.md)
+19. [Novelty and prior-art audit](novelty_audit.md)
+20. [Submission strategy](submission_strategy.md)
+21. [Gate-0 decision dossier](gate0_decision_dossier.md)
+22. [Gate-0 closure audit](gate0_closure_audit.md)
+23. [Decision log](decision_log.md)
 
 The [roadmap](../roadmap.md) turns these documents into evidence gates. A
 planned method or experiment is not a result. Any conflict between a task brief

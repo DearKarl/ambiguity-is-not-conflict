@@ -33,6 +33,7 @@ REQUIRED_PATHS = (
     "docs/research/dataset_feasibility_audit.md",
     "docs/research/dataset_decision_candidate.md",
     "docs/research/execution_budget_and_backbone_audit.md",
+    "docs/research/estimator_formalization_audit.md",
     "docs/research/gate0_decision_dossier.md",
     "docs/research/gate0_closure_audit.md",
     "docs/research/baselines_and_ablations.md",
@@ -42,6 +43,8 @@ REQUIRED_PATHS = (
     "docs/research/task_briefs/TB-0003-gate0-freeze-candidate.md",
     "docs/research/task_briefs/TB-0004-freeze-candidate-review-remediation.md",
     "docs/research/task_briefs/TB-0005-gate0-decision-dossier.md",
+    "docs/research/task_briefs/TB-0006-estimator-formalization-audit.md",
+    "docs/research/task_briefs/TB-0007-confer-evidence-status-reconciliation.md",
     "experiments/research_core/README.md",
     "reports/tables/gate0_power_sensitivity.csv",
 )

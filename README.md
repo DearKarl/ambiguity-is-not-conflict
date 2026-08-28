@@ -33,9 +33,17 @@ methods, ensembles, approximate-Bayesian methods, semantic entropy, generic
 failure predictors, and conformal selection remain candidates to compare under
 matched conditions.
 
+The current [formalization audit](docs/research/estimator_formalization_audit.md)
+selected no pointwise uncertainty-aware estimator: the three exact candidates
+collapsed to deterministic or already published forms. The new pointwise-
+estimator claim is therefore under a formal kill recommendation. The controlled
+specificity estimand remains a possible measurement-framework contribution,
+subject to an explicit owner-approved claim amendment and a separate novelty
+assessment; Gate 0 remains open.
+
 ```text
 controlled image--report interventions
-        -> identifiable uncertainty components
+        -> controlled construct-specificity test
         -> held-out calibrated error risk
         -> selective or human-review value
 ```
@@ -72,6 +80,7 @@ the permitted terminology.
 | Validation domain | **Primary route:** chest radiography at atomic finding level; the exact task and dataset remain Gate 0 decisions |
 | Data route | **Candidate:** coupled MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as a MIMIC-derived synthetic stress test, never independent breadth |
 | Representation | **Open comparison:** no probabilistic or Bayesian method is presumed superior |
+| Pointwise estimator | **Blocked / kill recommended:** no TB-0006 candidate survived analytic equivalence; owners must narrow to the measurement framework or supply a new pre-data candidate |
 | Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
 | Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
@@ -123,13 +132,14 @@ paper/                       manuscript workspace after evidence promotion
 12. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
 13. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
 14. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
-15. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-16. [Literature matrix](docs/research/literature_matrix.md)
-17. [Novelty audit](docs/research/novelty_audit.md)
-18. [Submission strategy](docs/research/submission_strategy.md)
-19. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
-20. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-21. [Decision log](docs/research/decision_log.md)
+15. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
+16. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+17. [Literature matrix](docs/research/literature_matrix.md)
+18. [Novelty audit](docs/research/novelty_audit.md)
+19. [Submission strategy](docs/research/submission_strategy.md)
+20. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+21. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+22. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 

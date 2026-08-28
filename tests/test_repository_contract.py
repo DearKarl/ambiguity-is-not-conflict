@@ -154,7 +154,7 @@ def test_primary_specificity_candidate_is_magnitude_safe() -> None:
     assert "0.20" in plan
     assert "not statistically superior" in plan
     assert "d_*^2" in plan
-    assert "gate 0 must already name exactly one primary uncertainty-aware estimator" in plan
+    assert "gate 0 must already name exactly one primary pointwise instrument" in plan
     assert "a_bss" in plan
 
     packet = (
@@ -318,8 +318,8 @@ def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
     assert "not yet a complete gate-0 freeze package" in dossier
     assert "mv-1" in dossier and "mt-1" in dossier
     assert "r_j = 0.50 + abs(ba_j - 0.50)" in dossier
-    assert "open / not specified" in dossier
-    assert "one exact primary estimator definition/interface" in dossier
+    assert "open / kill recommended" in dossier
+    assert "tb-0006" in dossier and "pointwise method-claim kill" in dossier
     assert "fitted instance/config" in dossier
     assert "task-evidence" in dossier and "q_v" in dossier
     assert "g0-inference" in dossier and "9,999 fixed-seed resamples" in dossier
@@ -351,3 +351,85 @@ def test_backbone_and_natural_ambiguity_resources_are_not_overclaimed() -> None:
     assert "all 256 ranked candidates" in resources
     assert "locked reliability" in resources
     assert "1,350" in resources
+
+
+def test_estimator_formalization_records_exact_kills() -> None:
+    audit = " ".join(
+        (ROOT / "docs/research/estimator_formalization_audit.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "no candidate is promoted" in audit
+    assert "\\kappa_l&=(\\widehat p_v-\\widehat p_t)^2" in audit
+    assert "sampling-prior log-odds" in audit
+    assert "s_{ev}=|\\widehat p_v-\\widehat p_t|(1-u_v)(1-u_t)" in audit
+    assert "minimum of control-specific sample means" in audit
+    assert "finite-sample plug-in estimator as a deployable pair-level score" in audit
+    assert "generally downward biased" in audit
+    assert "non-authoritative literature lead" in audit
+    assert "link-function guardrail" in audit
+    assert "method-claim kill" in audit
+
+
+def test_baseline_supervision_and_licence_roles_are_not_conflated() -> None:
+    baseline = " ".join(
+        (ROOT / "docs/research/baselines_and_ablations.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "raw-cos" in baseline
+    assert "det-lr" in baseline
+    assert "dbf-task" in baseline
+    assert "probvlm-2adapter" in baseline
+    assert "point-infonce" in baseline
+    assert "only `probvlm-2adapter` versus `point-infonce`" in baseline
+    assert "privileged ceilings" in baseline
+    assert "gpl-3.0" in baseline
+    assert "no vendoring" in baseline
+    assert "paper-faithful versus code-exact" in baseline
+    assert "identical pre-link/post-link convention" in baseline
+    assert "c9c5ab41e6fe62a85e5f6441a4dc7b568e1fa421" in baseline
+    assert "08d07f8b2ecafc6f1479fe636b26d464d7a5574e" in baseline
+
+
+def test_nonsmooth_advantage_uses_joint_component_bounds() -> None:
+    plan = " ".join(
+        (ROOT / "docs/research/statistical_analysis_plan.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "exactly 9,999 resamples and seed `20270829`" in plan
+    assert "q_{uj}=+1,q_{dj}=-1" in plan
+    assert "l_a=\\min_jl_{uj}-\\min_ju_{dj}" in plan
+    assert "u_a=\\min_ju_{uj}-\\min_jl_{dj}" in plan
+    assert "do not bootstrap either minimum directly" in plan
+    assert "\\min_j(\\mu_{uj}-\\mu_{dj})" in plan
+
+
+def test_confer_is_only_a_non_authoritative_lead() -> None:
+    novelty = " ".join(
+        (ROOT / "docs/research/novelty_audit.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "non-authoritative preprint lead" in novelty
+    assert "confer remains a non-authoritative surveillance lead" in novelty
+    assert "confer-like uncertainty denominator as unadjudicated" in novelty
+    assert "discounted belief fusion and confer" not in novelty
+    assert "already represented by confer" not in novelty
+
+
+def test_gate_zero_identity_is_not_selected_from_development() -> None:
+    measurement = " ".join(
+        (ROOT / "docs/research/measurement_protocol.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "named and approved at gate 0" in measurement
+    assert "single fitted instance" in measurement
+    assert "named from development" not in measurement
