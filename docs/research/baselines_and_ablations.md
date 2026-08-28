@@ -42,10 +42,27 @@ point-softmax adapter whenever learned scale or covariance is credited. The
 closest published conflict methods above must either be represented fairly or
 excluded with a pre-results technical and licence justification.
 
+Before the Month-3 holdout is opened, development evidence must name exactly
+one of the uncertainty-aware candidates as primary and pair it with the matched
+deterministic comparator. The other candidate remains secondary and cannot be
+promoted merely because it performs best on the holdout. Declaring multiple
+primary candidates requires a prospectively expanded method-by-control and
+method-difference multiplicity/power family.
+
 The expanded rows are mandatory threats for the confirmatory comparison plan,
 not permission to turn the Month-3 kill test into a method zoo. Method identity,
 official implementation, licence, and task-valid porting must be frozen before
 outcomes are inspected; see the [novelty audit](novelty_audit.md).
+
+The current [backbone/resource freeze candidate](execution_budget_and_backbone_audit.md)
+places those Month-3 heads on one conditional dual-encoder candidate with
+frozen encoders, at most 20 million trainable parameters per matched
+head/adapter, and a shared 300-GPU-hour stage ceiling. BiomedCLIP is only a
+conditional primary candidate; SigLIP2 is an unknown-exposure matched breadth
+candidate; BioViL-T is a known-MIMIC-exposure diagnostic; and a ResNet-50 plus
+BiomedBERT pair is a lower-intent, unknown-overlap non-VLM architectural/
+sensitivity control; it is neither contamination-negative nor strict-
+confirmatory. No checkpoint is approved or presumed clean.
 
 ## Required Ablations
 
@@ -95,3 +112,10 @@ augmented risk model: baseline terms + C_vt
 with a separate matched deterministic failure predictor as the strongest
 non-decomposed comparator. Promotion requires more than a favourable AUROC; it
 requires the frozen proper-score or decision endpoint and calibration evidence.
+
+Construct promotion additionally requires the magnitude-safe endpoint and
+0.10 uncertainty-aware material advantage over the deterministic comparator in
+the
+[statistical analysis plan](statistical_analysis_plan.md). Failure to reject
+uncertainty-aware superiority is not equivalence; deterministic subsumption must
+meet the plan's positive absolute, non-inferiority, and downstream conditions.

@@ -14,6 +14,12 @@ from ambiguity within either modality, then test whether the identified
 component adds calibrated and decision-relevant information beyond simpler
 baselines.
 
+The current freeze candidate does not pretend that goal is already identified.
+It permits an initial determinate-conflict specificity claim against valid
+paired controls, with natural ambiguity as a falsification audit. A full
+ambiguity-separation claim remains blocked until a valid governed intervention
+or separately defended observational identification/transport route exists.
+
 Chest radiography is the primary validation domain, not part of the scientific
 construct or title. Any breadth study must replicate the same construct and
 cannot become a second research direction.
@@ -43,8 +49,9 @@ be identifiable.
 
 - an atomic clinical-finding prediction or verification unit;
 - paired radiograph--report evidence under patient-separated evaluation;
-- controlled matched, image-ambiguous, text-ambiguous, conflicting, missing,
-  corrupted, and shifted conditions;
+- controlled matched/conflicting and prospectively frozen `M_v`/`M_t`
+  conditions, plus separately recruited observational image/text ambiguity
+  veto audits and declared shifts;
 - conditional conflict estimands and matched deterministic alternatives;
 - probabilistic embeddings, ensembles, approximate-Bayesian methods, output
   semantic uncertainty, and conformal selection as comparisons;
@@ -71,7 +78,8 @@ be identifiable.
 
 | Gate | Primary outcome | Permitted claim |
 | --- | --- | --- |
-| Construct identification | Specific paired response to compatibility interventions after conditioning on unimodal ambiguity | The score behaves consistently with the operational conflict construct |
+| Determinate construct identification | Magnitude-safe paired response to determinate compatibility interventions against approved `M_v`, `M_t`, and artifact controls | The score behaves consistently with determinate-conflict specificity in the tested intervention population |
+| Full ambiguity separation | The above plus a valid governed ambiguity intervention or approved exchangeability/transport estimand; natural ambiguity is veto-only | Separation from ambiguity only under the frozen identification assumptions |
 | Incremental validity | Held-out improvement beyond frozen confidence and deterministic predictors | Conflict adds predictive information in the tested task |
 | Calibration | Proper scores and calibration diagnostics in-domain and under declared shift | Estimated risk is calibrated in the tested populations |
 | Decision value | Selective risk or expected utility at equal coverage/review budget | The frozen policy improves the tested retrospective decision outcome |

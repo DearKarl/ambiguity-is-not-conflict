@@ -22,7 +22,7 @@ ambiguity score does not repair that identification problem.
 
 | Option | Exact task | Scientific advantage | Fatal risk | Verdict |
 | --- | --- | --- | --- | --- |
-| **A. Image-grounded binary finding prediction** | A frozen model receives one frontal chest radiograph and one atomic text assertion and predicts the image-grounded presence/absence of one finding | Conflict is a controlled auxiliary-evidence perturbation; downstream task error is distinct from the conflict label; supports selective-decision analysis | Requires independent image-only truth and proof that the finding is decidable from the exact image; the task is asymmetric | **Recommended single route** |
+| **A. Image-grounded binary finding prediction** | A frozen model receives one frontal chest radiograph and one atomic text assertion and predicts the image-grounded presence/absence of one finding | Conflict is a controlled auxiliary-evidence perturbation; downstream task error is distinct from the conflict label; supports selective-decision analysis | Requires independent image-only truth for determinate sources and proof that the prescribed field is adequately represented in the exact image; the task is asymmetric | **Recommended single route** |
 | B. Symmetric image--assertion compatibility classification | Predict whether image and text support the same proposition | Clean construct benchmark | Makes conflict the task label; a learned conflict estimator becomes an ordinary compatibility classifier and downstream incremental validity can become circular | Instrument or baseline only |
 | C. Laterality conflict | On definitely positive cases, predict or verify left versus right while holding finding presence fixed | Minimal semantic change avoids positive/negative and negation artifacts | Bilateral disease, markers, mirroring, uncertain laterality, and smaller support threaten validity | Secondary falsification test only |
 | D. Open-ended report generation | Generate a report from image and auxiliary text | High apparent realism | Entangles task accuracy, hallucination, output uncertainty, style, omissions, and conflict; ground truth is non-unique | Rejected for the first study |
@@ -50,10 +50,12 @@ ambiguity score does not repair that identification problem.
 **Provisional singleton finding:** pleural effusion presence versus absence.
 This is an assumption, not a frozen decision. Before any estimator outcome is
 viewed, clinical review and a post-freeze, authorized metadata-only feasibility
-count must establish that it is judgeable from the exact single-frontal-image
-input with adequate
-positive, negative, and ambiguous support. If not, the finding must change
-through a decision record before method evaluation.
+count must establish that the prescribed exact single-frontal input is
+clinically assessable, with adequate determinate positive/negative support and
+a separately recruited intact natural-ambiguity pool. “Assessable” does not
+mean that every eligible natural item has a unique binary state. If the task
+unit fails this requirement, the finding must change through a decision record
+before method evaluation.
 
 ## Observed Variables
 
@@ -66,7 +68,7 @@ For each authorized analysis unit, the schema should contain:
 | \(Z\) | Randomized or counterbalanced intervention assignment | Generated before evaluation; concealed where feasible |
 | \(\pi_v,\pi_t\) | Distributions of image-only and text-only interpretations | Independent blinded readers/raters; not candidate-model posteriors |
 | \(A_v,A_t\) | Image and text ambiguity | Frozen functions of independent annotations and disagreement model |
-| \(M_v,M_t\) | Missing information or corruption | Recorded separately from ambiguity and contradiction |
+| \(M_v,M_t\) | Information-loss/corruption exposure and severity | Recorded separately from semantic assessability, ambiguity, and contradiction; an interpretable loss need not force `Y` undefined |
 | \(X\) | Projection, acquisition, source, template, length, negation, prevalence, and provenance nuisances | Used for matching, blocking, and artifact audits |
 | \(S_m\) | Candidate conflict score from method \(m\) | Orientation and normalization frozen on development-compatible cases |
 | \(\hat Y,H\) | Frozen task prediction and independently labelled task error | Evaluated only in the declared target sample |
@@ -199,14 +201,24 @@ For any valid randomized or counterbalanced within-source control
 
 The reference must be a semantics-checked clear, non-conflicting variant from
 the same source block; the eligible block population and aggregation weights
-must be frozen. \(\mathcal J_{\mathrm{id}}\) initially contains only valid
-information-loss controls \(M_v,M_t\). It may include image or text ambiguity
-only if a separately governed intervention creates the ambiguous variant while
-preserving the declared proposition and supplies a valid within-source
-reference. \(M_v,M_t\) already include missingness, truncation, corruption,
-and quality loss, so corruption is not duplicated as a separate symbol.
+must be frozen. The proposed \(\mathcal J_{\mathrm{id}}\) cardinality is two:
+one valid image-information-loss role \(M_v\) and one valid text-information-
+loss role \(M_t\). It may include image or text ambiguity only if a separately
+governed intervention creates the ambiguous variant while preserving the
+declared proposition and supplies a valid within-source reference.
 
-The identified clear-source specificity margin is:
+`M_v` and `M_t` are umbrella measurement variables that can record
+interpretable degradation, task-critical loss, or missingness; those states
+cannot be pooled. The exact Month-3 operation, severity, acceptance rule, and
+within-source reference for each modality are **not yet frozen** because they
+require clinical/statistical approval. Until a dated decision supplies those
+identities, `J_id` is not executable and its two-control power rows are
+conditional design calculations only. Full-modality missingness, alternative
+corruptions, and quality-loss probes remain diagnostics unless prospectively
+selected as the single modality-specific identity.
+
+The signed clear-source specificity margin is retained as a secondary
+cancellation diagnostic:
 
 ```math
 \psi_{\mathrm{id},m}=
@@ -214,11 +226,33 @@ The identified clear-source specificity margin is:
 (\tau_{C,m}-|\tau_{j,m}|).
 ```
 
+Because positive and negative within-control responses can cancel inside
+`abs(E[D_j])`, the magnitude-safe primary endpoint is defined on complete
+source blocks as:
+
+```math
+\psi_{\mathrm{mag},m}=
+\min_{j\in\mathcal J_{\mathrm{id}}}
+\mathbb E[D_{C,m}-|D_{j,m}|].
+```
+
+Here `D_C` is the within-source conflict-minus-compatible standardized score
+contrast and `D_j` is the corresponding control-minus-reference contrast. The
+proposed Month-3 roles are the one approved `M_v` and one approved `M_t`
+identity described above. Surface-form, unselected missingness, and unrelated-
+finding probes remain diagnostics and cannot replace either identity. A four-
+control family is eligible only after the two added control identities and
+interventions are approved before any score is inspected.
+
 The score orientation and normalization must be frozen using development
-compatible cases only. Promotion of this determinate-source claim requires the
-simultaneous lower confidence bound for \(\psi_{\mathrm{id},m}\) to exceed a
-pre-declared \(\delta_{\mathrm{specificity}}>0\), not merely a significant
-conflict coefficient.
+compatible cases only. Promotion of the determinate-source claim requires the
+simultaneous lower confidence bound for `psi_mag` to exceed the pre-declared
+specificity SESOI, currently proposed as `0.20` compatible-reference SD. The
+signed `psi_id` and the scale-free dominance probability `theta` remain
+secondary unless separately powered; neither can rescue a failed primary
+endpoint. The complete scale, interval, multiplicity, power, and deterministic-
+subsumption rules are frozen in the
+[statistical analysis plan](statistical_analysis_plan.md).
 
 A natural ambiguous image or text usually lacks a valid clear within-source
 counterfactual. Unless a governed ambiguity intervention is proven valid,
@@ -243,8 +277,8 @@ audit:
 (\tau_{C,m}-|\gamma_{A_q,m}|).
 ```
 
-Because \(\gamma_{A_q,m}\) is observational, it does not enter
-\(\psi_{\mathrm{id},m}\). A non-positive \(\phi_{A,m}\), failed overlap, or
+Because \(\gamma_{A_q,m}\) is observational, it does not enter either
+`psi_mag` or `psi_id`. A non-positive \(\phi_{A,m}\), failed overlap, or
 strong sensitivity to the weighting rule can kill or redesign the candidate;
 a positive \(\phi_{A,m}\) cannot identify causal separation from ambiguity.
 The full ambiguity-separation claim requires either a valid governed ambiguity
@@ -256,20 +290,31 @@ arms.
 
 ### E4 — Downstream incremental-validity estimand
 
-On a separate natural target-distribution cohort:
+On a separate natural target-distribution cohort, the proposed primary proper-
+score scale is normalized Brier-skill improvement for method `m`:
 
 ```math
-\Delta_m=
-\mathbb E[\ell(H,r_{\mathrm{base}})
-          -\ell(H,r_{\mathrm{base}+\hat\kappa_m})],
+\Delta_{BSS,m}=\frac{BS_{base}-BS_{augmented,m}}{BS_{null}},
+\qquad
+A_{BSS}=\Delta_{BSS,uncertainty}-\Delta_{BSS,deterministic}.
 ```
 
-where \(\ell\) is a frozen proper score for the probability of task error \(H\).
+`BS_null` is the weighted target-test Brier score of a constant event
+probability estimated and frozen on the approved development/calibration
+population. Positive `A_BSS` favours the single primary uncertainty-aware
+method named before holdout. The proposed own-effect SESOI `0.02` applies only
+to normalized `Delta_BSS`, never raw Brier-loss units; the proposed matched-
+method margin is `0.01`. Advancement requires both the uncertainty-aware
+method's confirmatory lower bound for `Delta_BSS` above `0.02` and its lower
+bound for `A_BSS` above `+0.01`. Deterministic subsumption and equivalence use
+the positive conditions in the statistical plan.
+
 This is not estimable until \(H\), the eligible cohort, baseline terms,
-calibration protocol, proper score, calibration budget, multiplicity rule, and
-smallest useful \(\Delta\) are frozen. “Overconfident error” should be a
-diagnostic subgroup or pre-specified secondary outcome; a post-hoc confidence
-threshold must not define the primary target.
+calibration protocol, target weighting, `BS_null`, calibration budget,
+multiplicity, paired loss variance/covariance, and power are frozen. A different
+proper score requires a new scale and decision record. “Overconfident error”
+is a diagnostic subgroup or pre-specified secondary outcome; a post-hoc
+confidence threshold must not define the primary target.
 
 ## Minimum Month-3 Comparison Set
 
@@ -310,11 +355,13 @@ Kill or redesign construct estimation if any of these occurs:
 
 - independent reviewers cannot reliably separate determinate truth,
   ambiguity, missingness, and corruption;
-- the singleton finding is not judgeable from the frozen image input;
+- technical integrity/input coverage cannot be assessed reliably, or the
+  determinate-source pool cannot support a unique image-only state; intact
+  natural-ambiguity items may remain `Y_v=undefined`;
 - either modality alone or nuisance metadata predicts the conflict cell beyond
   a pre-specified chance-equivalence tolerance;
-- the simultaneous lower bound for \(\psi_{\mathrm{id},m}\) does not exceed
-  the frozen smallest effect;
+- the simultaneous lower bound for `psi_mag` does not exceed the frozen
+  smallest effect;
 - no valid governed ambiguity intervention or defensible exchangeability/
   transport estimand can support the intended ambiguity-separation claim;
 - the binary effect has the wrong direction, is label-dependent,
@@ -323,14 +370,15 @@ Kill or redesign construct estimation if any of these occurs:
   a non-monotone response is an additional failure.
 
 Kill the **Main Track estimator claim**, while retaining and reporting the null
-result, if the matched deterministic predictor subsumes the best
-uncertainty-aware candidate at the frozen equivalence/non-inferiority margin,
+result, if the matched deterministic predictor subsumes the single primary
+uncertainty-aware candidate named before holdout access at the frozen
+equivalence/non-inferiority margin,
 or if the chosen estimand is already substantively covered by known
 distance/decomposition work.
 
-Do not proceed to calibration or selective review until \(\Delta_m\) is defined
-non-circularly and the natural-cohort effect exceeds its separately frozen
-smallest useful value.
+Do not proceed to calibration or selective review until `Delta_BSS` and
+`A_BSS` are defined non-circularly, powered, and pass their frozen natural-
+cohort gates.
 
 ## Proposed Decision
 
@@ -343,11 +391,14 @@ relevant clinical/governance owner approve:
 2. image-only and text-only rubrics plus reliability threshold;
 3. governed ambiguity intervention or an explicit observational
    identification/claim-narrowing rule;
-4. downstream \(H\) and proper score;
-5. numerical \(\delta_{\mathrm{specificity}}\), deterministic-subsumption
-   margin, and smallest useful \(\Delta\);
-6. power/sample plan, compute ceiling, and annotation budget;
-7. dataset access, storage, processing, and permitted-output boundary.
+4. exact one-per-modality `M_v/M_t` operations, severities, acceptance rules,
+   and within-source references;
+5. downstream \(H\), normalized `Delta_BSS`, `A_BSS`, and `BS_null`;
+6. numerical \(\delta_{\mathrm{specificity}}\), 0.10 construct material-
+   advantage margin, 0.02 normalized Brier-skill SESOI, and 0.01 `A_BSS`
+   margin;
+7. power/sample plan, compute ceiling, and annotation budget;
+8. dataset access, storage, processing, and permitted-output boundary.
 
 Passing the Month-3 scientific gate remains necessary but is never sufficient
 for NeurIPS Main Track readiness, acceptance, publication, or clinical value.

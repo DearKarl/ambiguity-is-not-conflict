@@ -10,14 +10,19 @@ This directory is authoritative for the scientific scope and evidence state of
 5. [Atomic task and estimand decision packet](task_estimand_options.md)
 6. [Supervisor alignment](supervisor_alignment.md)
 7. [Measurement protocol](measurement_protocol.md)
-8. [Evaluation protocol](evaluation_protocol.md)
-9. [Data and clinical governance](data_governance.md)
-10. [Dataset feasibility audit](dataset_feasibility_audit.md)
-11. [Baselines and ablations](baselines_and_ablations.md)
-12. [Literature matrix](literature_matrix.md)
-13. [Novelty and prior-art audit](novelty_audit.md)
-14. [Submission strategy](submission_strategy.md)
-15. [Decision log](decision_log.md)
+8. [Annotation and intervention protocol](annotation_and_intervention_protocol.md)
+9. [Statistical analysis plan](statistical_analysis_plan.md)
+10. [Evaluation protocol](evaluation_protocol.md)
+11. [Data and clinical governance](data_governance.md)
+12. [Dataset feasibility audit](dataset_feasibility_audit.md)
+13. [Dataset decision candidate](dataset_decision_candidate.md)
+14. [Execution budget and backbone audit](execution_budget_and_backbone_audit.md)
+15. [Baselines and ablations](baselines_and_ablations.md)
+16. [Literature matrix](literature_matrix.md)
+17. [Novelty and prior-art audit](novelty_audit.md)
+18. [Submission strategy](submission_strategy.md)
+19. [Gate-0 closure audit](gate0_closure_audit.md)
+20. [Decision log](decision_log.md)
 
 The [roadmap](../roadmap.md) turns these documents into evidence gates. A
 planned method or experiment is not a result. Any conflict between a task brief
@@ -40,3 +45,7 @@ not supersede the canonical contract or decision log.
   pre-specified validity, robustness, and reporting gates.
 
 The repository currently contains **protocol only**.
+
+The Gate-0 freeze candidate is intentionally not executable. Its current
+blockers are listed in the [closure audit](gate0_closure_audit.md); only an
+approved dated decision record can change that status.

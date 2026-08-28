@@ -70,11 +70,17 @@ the permitted terminology.
 | Project identity | **Decided:** `Ambiguity Is Not Conflict` |
 | Primary route | **Decided in principle:** controlled identification of image--report conflict before calibration or decision claims |
 | Validation domain | **Primary route:** chest radiography at atomic finding level; the exact task and dataset remain Gate 0 decisions |
-| Data route | **Candidate:** MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as an external stress test |
+| Data route | **Candidate:** coupled MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as a MIMIC-derived synthetic stress test, never independent breadth |
 | Representation | **Open comparison:** no probabilistic or Bayesian method is presumed superior |
 | Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
 | Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
+
+The current [Gate-0 closure audit](docs/research/gate0_closure_audit.md) supplies
+a freeze candidate, not approval. It recommends narrowing the first identified
+claim to determinate-conflict specificity while natural ambiguity remains a
+falsification audit. A valid ambiguity-identification route and an
+exposure-audited confirmatory VLM remain unresolved blockers.
 
 See the [research contract](docs/research/research_contract.md),
 [roadmap](docs/roadmap.md), and [decision log](docs/research/decision_log.md)
@@ -103,13 +109,21 @@ paper/                       manuscript workspace after evidence promotion
 2. [Scope charter](docs/research/scope_charter.md)
 3. [Problem taxonomy](docs/research/problem_taxonomy.md)
 4. [Research question and hypotheses](docs/research/research_question.md)
-5. [Measurement protocol](docs/research/measurement_protocol.md)
-6. [Evaluation protocol](docs/research/evaluation_protocol.md)
-7. [Data and clinical governance](docs/research/data_governance.md)
-8. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-9. [Literature matrix](docs/research/literature_matrix.md)
-10. [Submission strategy](docs/research/submission_strategy.md)
-11. [Decision log](docs/research/decision_log.md)
+5. [Atomic task and estimand packet](docs/research/task_estimand_options.md)
+6. [Measurement protocol](docs/research/measurement_protocol.md)
+7. [Annotation and intervention protocol](docs/research/annotation_and_intervention_protocol.md)
+8. [Statistical analysis plan](docs/research/statistical_analysis_plan.md)
+9. [Evaluation protocol](docs/research/evaluation_protocol.md)
+10. [Data and clinical governance](docs/research/data_governance.md)
+11. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
+12. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
+13. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
+14. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+15. [Literature matrix](docs/research/literature_matrix.md)
+16. [Novelty audit](docs/research/novelty_audit.md)
+17. [Submission strategy](docs/research/submission_strategy.md)
+18. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+19. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 

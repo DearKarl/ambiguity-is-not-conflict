@@ -1,15 +1,27 @@
 # DATASET_DECISION_RECORD
 
-- **Dataset, version, release/access dates:**
-- **Official source and licence/data-use agreement:**
-- **Credentialing, ethics, and storage boundary:**
-- **Task, prediction unit, and finding ontology:**
-- **Cohort inclusion/exclusion and flow:**
-- **Patient split and linked-observation rules:**
-- **Duplicate, leakage, and pretraining-overlap audit:**
-- **Labels, provenance, uncertainty, and adjudication:**
+- **Identifier, owner, status, and decision date:**
+- **Dataset, exact version, DOI, release date, and planned access window:**
+- **Actual access date:** `not applicable before authorized access`
+- **Official source, licence/data-use agreement, and required training:**
+- **Authorized credential holder and access-control list:**
+- **Ethics determination, secure processing path, network/API boundary:**
+- **Task, exact prediction unit, image input, and finding ontology:**
+- **Stage-A pre-access fields frozen:**
+- **Stage-B permitted files/fields and forbidden fields:**
+- **Query repository revision, code hash, schema-fixture tests, and reviewer:**
+- **Cohort inclusion/exclusion and derived flags:**
+- **Minimum aggregate counts, attrition assumptions, and stop rules:**
+- **Patient partition algorithm, secret-key custody/digest, and linked-observation rules:**
+- **One-source-block-per-patient selection rule:**
+- **Duplicate, mapping, near-duplicate, leakage, and pretraining-overlap audit:**
+- **Screening-label provenance and explicit non-truth boundary:**
+- **Independent labels, ambiguity, missingness, reader model, and adjudication:**
 - **Intervention provenance and artifact controls:**
-- **Subgroups and minimum reporting sizes:**
-- **Permitted derived artifacts and sharing:**
-- **Retention and deletion rules:**
-- **Approval, review date, and stop conditions:**
+- **Construct versus natural-target versus stress sampling:**
+- **Subgroups, minimum reporting sizes, and small-cell suppression:**
+- **Permitted aggregate and derived artifacts; prohibited exports:**
+- **Retention, backup, deletion, incident, and disclosure-review rules:**
+- **Model/checkpoint access status:**
+- **Clinical-work status and authorization:**
+- **Approvers, review date, reopening condition, and next bounded brief:**

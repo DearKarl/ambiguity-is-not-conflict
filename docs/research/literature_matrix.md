@@ -34,6 +34,26 @@ reproducibility.
 | Bayesian VLM approximation | [BayesVLM, OpenReview](https://openreview.net/forum?id=XLiUcvHfzS) | Candidate approximate-Bayesian baseline | Bayesian naming does not guarantee calibration or identifiability |
 | Distribution-free selection | [Conformal prediction for zero-shot models, CVPR 2025](https://openaccess.thecvf.com/content/CVPR2025/html/Silva-Rodriguez_Conformal_Prediction_for_Zero-Shot_Models_CVPR_2025_paper.html) | Candidate risk-control layer | Guarantees depend on the calibration population and assumptions |
 
+## Measurement and Statistical Anchors
+
+| Topic | Primary source | Use | Boundary |
+| --- | --- | --- | --- |
+| Proper scores | [Gneiting and Raftery, JASA 2007](https://doi.org/10.1198/016214506000001437) | Supports Brier/NLL as proper predictive-score families | Does not choose this project's SESOI or target population |
+| Reliability reporting | [GRRAS](https://www.equator-network.org/reporting-guidelines/guidelines-for-reporting-reliability-and-agreement-studies-grras-were-proposed/) | Requires explicit samples, readers, design, inter/intra-reader analysis, and reporting | A reporting guideline does not validate the proposed construct or cutoff |
+| Multi-reader CXR precedent | [VinDr-CXR, Scientific Data 2022](https://www.nature.com/articles/s41597-022-01498-w) | Demonstrates independent multi-radiologist chest-radiograph annotation at scale | Its reader counts and labels do not transfer automatically to this instrument |
+| Observer-error aggregation | [Dawid and Skene, JRSS C 1979](https://doi.org/10.2307/2346806) | Motivates explicit reader-error modelling | A single latent-truth model can collapse genuine item ambiguity into reader error |
+| Equivalence | [Schuirmann, J Pharmacokinet Biopharm 1987](https://pubmed.ncbi.nlm.nih.gov/3450848/) | Supports two one-sided equivalence logic | Failure to show superiority is not equivalence or deterministic subsumption |
+| Simultaneous inference | [Romano and Wolf, JASA 2005](https://doi.org/10.1198/016214504000000539) | Motivates resampling-based familywise simultaneous bounds | Exact patient-cluster implementation and covariance remain to be frozen |
+
+## Official Model Candidates
+
+| Model | Official fact used for planning | Eligibility boundary |
+| --- | --- | --- |
+| [BiomedCLIP](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224) | Biomedical dual encoder trained on PMC-15M; MIT licence | Conditional candidate only; no patient-level MIMIC exclusion manifest |
+| [SigLIP2 base 224](https://huggingface.co/google/siglip2-base-patch16-224) | General-domain image-text encoder trained with WebLI-family data; Apache-2.0 | Unknown-exposure matched breadth/sensitivity only pending overlap audit |
+| [BioViL-T](https://huggingface.co/microsoft/BiomedVLP-BioViL-T) | Official card states PubMed plus MIMIC/MIMIC-CXR training; MIT licence | Known-exposure diagnostic, not primary/confirmatory MIMIC evidence |
+| [Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) | Generative vision-language interface; Apache-2.0 | Unknown exposure and unmatched interface; stress/breadth only |
+
 ## Candidate Medical Resources
 
 | Resource | Candidate role | Required decision |
@@ -90,6 +110,12 @@ already occupied. The narrower unresolved question is:
 The gap admits a useful null result. If a matched deterministic predictor
 subsumes conflict, the project must narrow its claim rather than hide the
 comparison.
+
+At the current Gate-0 state, the identified part of this gap is narrower than
+the quoted aspiration: determinate-conflict specificity can be tested against
+valid paired information-loss/surface controls, while natural ambiguity can
+only falsify unless a valid intervention or observational identification route
+is separately approved.
 
 The detailed kill-threat analysis and claim boundary are maintained in the
 [novelty audit](novelty_audit.md). Dataset facts and unresolved access rights

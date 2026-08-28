@@ -30,8 +30,11 @@ A recommended candidate unit is:
 The faithful native MIMIC pairing unit remains a study-level image set because
 one report may cover multiple views. The proposed single-frontal-image
 restriction is valid only if independent review confirms that the singleton
-finding is decidable from that exact image. Pleural-effusion presence/absence
-is a provisional finding assumption, not an approved ontology.
+finding is assessable under the frozen exact-image rubric, the prescribed field
+is adequately represented, and determinate source cases can receive independent
+positive/negative states. Natural ambiguous cases need not have a unique state.
+Pleural-effusion presence/absence is a provisional finding assumption, not an
+approved ontology.
 
 All variants from one source patient inherit the same split; when a constructed
 pair uses multiple patients, every contributing patient must share a
@@ -98,9 +101,14 @@ variants:
 2. vetted positive and negative atomic assertions for the same singleton
    finding, counterbalanced across positive and negative sources;
 3. a semantics-preserving rewrite control for every assertion family;
-4. separately labelled image-ambiguity and text-ambiguity controls;
-5. one missingness or corruption control at matched severity where possible;
-6. an unrelated-finding change as a semantic negative control.
+4. one independently validated image-information-loss `M_v` role and one text-
+   information-loss `M_t` role for the proposed primary `J_id` family, with
+   exact operations still requiring approval;
+5. missingness, surface-form, and unrelated-finding diagnostics that cannot
+   substitute for either primary control identity;
+6. separately recruited and labelled natural image/text ambiguity pools used
+   only for observational veto audits, never generated as source-block siblings
+   or inserted into the identified control family.
 
 Natural, rule-edited, model-generated, and clinician-edited variants must be
 tagged separately. Surface cues must be audited with a condition classifier
@@ -190,7 +198,7 @@ Any control \(j\in\mathcal J_{\mathrm{id}}\) enters through a paired contrast
 \(\tau_{j,m}\) only when it has a valid randomized or counterbalanced,
 semantics-checked within-source reference. The set initially contains valid
 \(M_v,M_t\) controls and includes ambiguity only after a separately governed
-ambiguity intervention is shown valid. The identified margin is:
+ambiguity intervention is shown valid. The signed diagnostic margin is:
 
 ```math
 \psi_{\mathrm{id},m}=
@@ -198,28 +206,46 @@ ambiguity intervention is shown valid. The identified margin is:
 (\tau_{C,m}-|\tau_{j,m}|).
 ```
 
+Because signed control responses can cancel, the recommended primary candidate
+is the magnitude-safe margin:
+
+```math
+\psi_{\mathrm{mag},m}=
+\min_{j\in\mathcal J_{\mathrm{id}}}
+\mathbb E[D_{C,m}-|D_{j,m}|].
+```
+
+The frozen compatible-reference score scale, candidate 0.20 smallest effect,
+simultaneous patient-cluster bounds, and power grid are in the
+[statistical analysis plan](statistical_analysis_plan.md). Its scale-free
+`theta` statistic is secondary unless separately powered. None is approved for
+execution.
+
 Genuine natural ambiguity without such a counterfactual uses a separately
 pre-specified matched/weighted contrast \(\gamma_{A_v,m}\) or
 \(\gamma_{A_t,m}\), with the reference population, nuisance set, weights,
 overlap, and sensitivity analysis frozen before outcomes are inspected. These
-observational contrasts do not enter \(\psi_{\mathrm{id},m}\). A large or
+observational contrasts do not enter \(\psi_{\mathrm{mag},m}\) or
+\(\psi_{\mathrm{id},m}\). A large or
 unstable ambiguity response may falsify the candidate, but a small response
 cannot identify causal separation from ambiguity.
 
 Promotion of the determinate-source claim requires the simultaneous lower
-confidence bound for \(\psi_{\mathrm{id},m}\) to exceed a pre-declared positive
-smallest effect. A full ambiguity-separation claim additionally requires a
+confidence bound for the approved magnitude-safe endpoint to exceed its
+pre-declared positive smallest effect. A full ambiguity-separation claim
+additionally requires a
 valid governed ambiguity intervention or a separately frozen estimand with
 defensible conditional-exchangeability and transport assumptions. Score
 orientation and normalization use development-compatible cases only.
 
-Promotion out of the kill-test stage requires at least one pre-specified
-candidate to satisfy all of the following:
+Promotion out of the kill-test stage requires the single primary uncertainty-
+aware candidate named from development before holdout access to satisfy all of
+the following:
 
 1. respond more strongly to controlled incompatibility than to valid
    randomized or counterbalanced information-loss controls;
-2. retain the pre-specified positive \(\psi_{\mathrm{id},m}\) margin, and either
-   include a valid governed ambiguity intervention in that margin or explicitly
+2. retain the pre-specified positive magnitude-safe specificity margin, and
+   either include a valid governed ambiguity intervention in that margin or explicitly
    narrow the claim; observational ambiguity comparisons can falsify but cannot
    confirm separation;
 3. exceed deterministic similarity by a pre-specified non-trivial margin and

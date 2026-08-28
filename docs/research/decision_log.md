@@ -140,8 +140,9 @@ decisions are separated explicitly.
   labels cannot independently define image truth or image ambiguity, and ReXErr
   cannot supply independent breadth. The narrowest defensible first route is
   an asymmetric, image-grounded, single-finding task requiring independent
-  verification that the finding is decidable from the exact frontal image,
-  with a counterbalanced atomic text assertion. Pleural-effusion
+  verification that the prescribed exact frontal input is complete and that
+  determinate source cases can receive an image-only state, with a
+  counterbalanced atomic text assertion. Pleural-effusion
   presence/absence is provisional. Conflict is defined only for determinate
   image and text states; genuine ambiguity, missingness, and corruption form
   separate controls in a declared fractional design.
@@ -184,21 +185,128 @@ decisions are separated explicitly.
   closure, novelty proof, research evidence, data authorization, publication
   prediction, or clinical-value evidence.
 
+## DR-0008 — Gate-0 Freeze Candidate and Explicit Claim-Narrowing Choice
+
+- **Date:** 2026-08-29
+- **Status:** Proposed; requires Commander, clinical, governance, statistical,
+  and resource approval; not executable
+- **Verified facts:** MIMIC report-derived labels cannot independently define
+  exact-image truth or ambiguity. Explicit model documentation places BioViL-T
+  in MIMIC/MIMIC-CXR pretraining, while BiomedCLIP and SigLIP2 do not provide a
+  patient-level MIMIC exclusion manifest. Signed nuisance responses can cancel
+  in `abs(E[D_j])`. Multi-reader disagreement can reflect reader error rather
+  than genuine item ambiguity. The evidence and boundaries are recorded in the
+  [dataset decision candidate](dataset_decision_candidate.md),
+  [backbone audit](execution_budget_and_backbone_audit.md),
+  [annotation protocol](annotation_and_intervention_protocol.md), and
+  [statistical plan](statistical_analysis_plan.md).
+- **Inference:** The strongest currently defensible first claim is controlled
+  determinate-conflict specificity against valid paired information-loss and
+  surface controls, with natural ambiguity retained as an independently
+  measured falsification audit. Blur, crop, compression, truncation, evidence
+  removal, and an explicit hedge cannot be relabelled as genuine ambiguity.
+  Full H2 ambiguity-separation identification remains unresolved unless a
+  valid governed intervention or separately justified exchangeability/
+  transport estimand is approved.
+- **Proposed task/data decision:** Use pleural-effusion presence/absence as the
+  provisional single finding and a strict one-image, one-frontal-view MIMIC
+  study as the candidate unit. Before any record access, freeze coupled
+  MIMIC-CXR/JPG v2.1.0, a secure environment, exact restricted metadata fields,
+  keyed patient partitions, aggregate-only outputs, and screening floors. A
+  later Stage-B brief may authorize only the frozen metadata feasibility query;
+  it does not authorize images, reports, annotation, model use, or experiments.
+- **Proposed measurement decision:** Use five-reader image evidence per locked
+  item with disjoint sibling panels where required, a total image roster of at
+  least ten for two image siblings, and total text/cross-modal rosters of at
+  least six for disjoint unanimous three-reader polarity panels. Preserve raw independent
+  distributions and label `C*` undefined whenever either modality is
+  ambiguous, missing, task-critically corrupted/lost, or semantically
+  indeterminate. A prospectively frozen interpretable/recoverable loss may
+  retain its determinate semantic state; `M_v/M_t` exposure is recorded
+  separately and cannot be relabelled ambiguity. Candidate
+  reliability gates are primary coefficient at least 0.80, lower 95% bound at
+  least 0.67, observed agreement at least 0.85, and class-specific positive
+  agreement at least 0.75 on every gating axis.
+- **Proposed statistical decision:** Make
+  `psi_mag = min_j E[D_C - abs(D_j)]` the primary construct endpoint on the
+  frozen compatible-reference SD scale; retain signed `psi_id` as a diagnostic.
+  Candidate specificity SESOI is 0.20 and material advantage over the matched
+  deterministic predictor is 0.10; scale-free `theta` is secondary unless
+  separately powered. The proposed two-control cardinality requires one exact
+  clinically approved `M_v` and one exact `M_t` operation, severity,
+  acceptance rule, and reference; none is yet frozen. Exactly one primary
+  uncertainty-aware method must be named from development before Month 3, with
+  every other candidate secondary. Month 3 uses one-sided 90% simultaneous development
+  bounds and an operational floor of 216 balanced evaluable independent
+  patients under the stated assumptions; confirmation
+  uses one-sided 97.5% bounds and approximately 320 patients for two controls
+  or 400 for four. These are planning assumptions, not power facts.
+- **Proposed downstream decision:** Use Brier-skill increment for independently
+  labelled image-grounded task error, with candidate SESOI 0.02; require an
+  uncertainty-minus-deterministic `A_BSS` margin of 0.01; require an
+  equivalence-based calibration gate; and use risk at 90% answer coverage as
+  the candidate decision endpoint with 0.01 absolute-risk SESOI. This portion
+  is not power-ready until target prevalence, paired loss variance/covariance,
+  model complexity, calibration sample, loss, and review cost are frozen.
+- **Proposed model/resource decision:** Treat BiomedCLIP as a conditional
+  primary candidate, SigLIP2 as unknown-exposure matched breadth, a ResNet-50
+  plus BiomedBERT pair as a lower-intent unknown-overlap non-VLM architectural
+  control, BioViL-T as a known-
+  exposure diagnostic, and Qwen2.5-VL as an interface stress candidate. No
+  pretrained VLM is yet unconditionally confirmatory on MIMIC. Candidate
+  ceilings are 1 TB restricted storage, 300 GPU-hours through Month 3, 1,500
+  cumulative GPU-hours, 400 clinical person-hours through Month 3, and 1,200
+  cumulative clinical person-hours. The cumulative worksheet explicitly
+  reserves 45 hours for a veto-only natural-ambiguity audit after a Month-3
+  pass; that audit is not part of the Month-3 stage ceiling and is not an
+  ambiguity-identification result.
+- **Assumptions:** Qualified readers can distinguish ambiguity from their own
+  uncertainty; strict single-frontal MIMIC pools meet the screening floors;
+  secure storage, clinical effort, and compute are actually available; and an
+  exposure-audited backbone or explicitly narrowed evidence route can be
+  obtained. None is verified.
+- **Approval questions:** Approve or reject (1) explicit determinate-claim
+  narrowing, (2) finding and exact-image unit, (3) reader roles/rubric/gates,
+  (4) magnitude-safe endpoint and all numerical margins, (5) data query,
+  partitions, floors, and secure/derived-artifact boundary, (6) checkpoint
+  roles and exposure rule, (7) resource ceilings, and (8) downstream target,
+  calibration, and decision specifications.
+- **Stop boundary:** If explicit claim narrowing is rejected and no valid
+  ambiguity route exists, Gate 0 cannot close. If data, reader, artifact,
+  exposure, power, or uncertainty-aware material-advantage gates fail, stop or narrow the
+  paper; do not manufacture a Main Track method claim.
+- **Permitted claim:** A high-rigor Gate-0 freeze candidate now exists. This is
+  not approval, Gate-0 closure, data/model/clinical authorization, novelty or
+  identifiability proof, empirical evidence, venue readiness, clinical value,
+  acceptance, or publication.
+
 ## Open Gate 0 Decisions
 
-- singleton finding, study-level versus verified single-frontal-image input,
-  and exact prediction unit;
-- MIMIC resource/version and approved access route;
-- determinate compatibility cells, fractional ambiguity/missingness controls,
-  and natural versus edited intervention mixture;
-- clinician rubric, sample, adjudication, and reliability threshold;
+- approve or reject explicit claim narrowing to determinate-conflict
+  specificity while H2 remains unresolved;
+- provisional pleural-effusion finding, strict single-frontal-image unit, and
+  exact visibility/eligibility rule;
+- two-stage MIMIC resource/query record, HMAC partitions, secure access route,
+  aggregate outputs, screening floors, and derived-artifact terms;
+- five-reader image protocol, text/cross-modal panels, sample, reader model,
+  adjudication, reliability thresholds, ethics, and workload;
 - primary conflict estimator, matched backbone, and pre-implementation
   equivalence screen against the closest published scores;
-- exact primary estimand, numerical specificity margin, simultaneous interval,
-  deterministic-subsumption boundary, and power target;
-- final risk outcome and calibration tolerance;
+- magnitude-safe primary endpoint, compatible-reference scale, 0.20 construct
+  threshold, secondary `theta`, simultaneous interval, 0.10 uncertainty-aware
+  material-advantage boundary, and 216/320-or-400 operational floors;
+- exact one-per-modality `M_v/M_t` operations, severities, acceptance rules,
+  and within-source references, plus the single primary method identity before
+  Month 3;
+- four-probe artifact family, exact probe implementations, `chance + 0.05`
+  equivalence margin, and the unresolved 385/624 precision or 1,293/1,976
+  family-power burden;
+- final task-error outcome, 0.02 Brier-skill increment, 0.01 `A_BSS` method-
+  difference margin, calibration tolerances, target prevalence/covariance/
+  power, 90% coverage budget, and 0.01 risk margin;
 - target-distribution cohort and any prevalence weighting;
-- compute ceiling and reproducibility budget;
+- conditional checkpoint shortlist/exposure audit and proposed 1-TB,
+  300/1,500-GPU-hour, and 400/1,200-clinical-person-hour ceilings;
 - pre-specified distribution shift and subgroup set;
 - cross-backbone breadth and the governed choice of a second medical dataset
   or small controlled general-domain benchmark;

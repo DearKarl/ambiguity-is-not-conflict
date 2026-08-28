@@ -85,10 +85,11 @@ all-rights-reserved notice before release.
   or more images. The default pairing unit is therefore the study-level image
   set.
 - **Proposed kill-stage restriction:** one exact frontal image only if
-  independent visibility review confirms that the singleton proposition is
-  decidable from that image. Attaching a multi-view study report to one image
-  without this check can manufacture apparent conflict from evidence visible
-  only on another view.
+  independent input-coverage review confirms that the prescribed field is
+  adequately represented and determinate source cases can receive an image-
+  only state. Attaching a multi-view study report to one image without this
+  check can manufacture apparent conflict from evidence visible only on
+  another view; natural ambiguous cases need not have a unique state.
 - **Analysis unit:** one atomic finding proposition paired with one selected
   image and one controlled text proposition.
 - All rewrites, counterfactual propositions, crops, corruptions, paraphrases,
@@ -125,7 +126,7 @@ different datasets even when drawn from the same source release:
 
 | Sample | Sampling | Allowed claim |
 | --- | --- | --- |
-| Construct sample | Deliberately matched positive/negative source blocks and controlled propositions; ambiguity/missingness/corruption negative controls | Identification and failure of a conflict score under the intervention distribution |
+| Construct sample | Deliberately matched positive/negative source blocks and controlled propositions; valid paired `M_v`/`M_t` controls; separately matched natural-ambiguity veto pools | Determinate-conflict specificity under the intervention distribution; natural ambiguity may falsify but cannot identify causal separation |
 | Target sample | Natural patient-separated cohort with frozen inclusion and prevalence | Proper-score calibration and retrospective equal-budget selection in that declared population |
 | Stress sample | ReXErr, inheriting the MIMIC patient/source split, or a separately governed independent source mapped to the same atomic unit | Robustness to the specified synthetic or institutional shift only; ReXErr is not independent breadth |
 

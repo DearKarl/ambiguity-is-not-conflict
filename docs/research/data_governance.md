@@ -55,6 +55,17 @@ conditions fail, data work stops and Gate 0 reopens. No record inspection,
 clinical annotation, model execution, or intervention generation may proceed
 until the feasibility record is reviewed and the dataset decision is amended.
 
+The current [dataset decision candidate](dataset_decision_candidate.md)
+restricts that first query to patient/study/image linkage, view/geometry, the
+official split, and the pleural-effusion columns from the two report labelers.
+It forbids reports, images, dates, demographics, other findings, and manual
+test labels; permits only disclosure-reviewed aggregate counts with cells below
+20 and complementary cells suppressed so no subtotal, marginal, percentage,
+or repeated release can reconstruct a protected cell; and proposes explicit
+260/380/470-patient Month-3/two-control/four-control screening floors. These
+are unapproved protocol assumptions, not observed cohort facts or access
+authority.
+
 ## Split and Leakage Rules
 
 - Patients must not cross training, calibration, development, or final-test
@@ -73,9 +84,11 @@ until the feasibility record is reviewed and the dataset decision is amended.
 
 The native MIMIC source unit is a study-level image set because one report may
 describe multiple views. A single-frontal-image restriction is permitted only
-after independent visibility review confirms that the singleton finding is
-decidable from that exact image; otherwise it can manufacture apparent
-conflict from evidence visible only on another view.
+after independent input-coverage review confirms that the prescribed field is
+adequately represented and determinate source cases can receive an image-only
+state; otherwise it can manufacture apparent conflict from evidence visible
+only on another view. This gate does not require natural ambiguous cases to
+have a unique binary state.
 
 ## Label-Independence Rule
 
@@ -136,6 +149,10 @@ Before requesting expert work, document:
 - which labels are construct validation and which are outcome evaluation.
 
 Clinical-expert availability reported in planning does not replace this gate.
+Every reader or adjudicator who can view restricted MIMIC source or derived
+content must have the institutionally approved access basis, training/DUA
+status where applicable, and named ACL entry; one account holder cannot share
+credentials or serve as an access proxy.
 
 ## Repository Boundary
 
@@ -169,6 +186,11 @@ checkpoint from confirmatory evaluation on those units. Unknown overlap is
 reported as unknown and supports sensitivity evidence only, not a strict
 held-out claim. A checkpoint fine-tuned on a public benchmark cannot provide
 independent evaluation on that benchmark.
+
+The [backbone and resource audit](execution_budget_and_backbone_audit.md)
+records the current conditional shortlist, exposure roles, immutable-checkpoint
+requirements, and proposed storage/compute/clinical ceilings. No model card or
+absence of stated MIMIC training proves patient-level non-exposure.
 
 ## Stop Conditions
 

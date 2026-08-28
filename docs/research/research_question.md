@@ -1,6 +1,6 @@
 # Research Question and Falsifiable Hypotheses
 
-**Status:** Title-level direction selected; exact estimands remain Gate 0 items
+**Status:** Gate-0 freeze candidate; exact task and estimands remain unapproved
 
 ## Narrow Research Question
 
@@ -33,9 +33,11 @@ contribution and cannot substitute for failed construct identification.
 **Hypothesis.** When a task-relevant atomic assertion is counterbalanced to
 oppose rather than match a determinate, independently judged image state, the
 pre-specified conflict estimator changes in the expected direction and more
-strongly than under valid randomized or counterbalanced information-loss and
-surface-form controls. Natural-ambiguity comparisons are governed separately
-by H2's identification boundary.
+strongly than under the valid randomized or counterbalanced `M_v` and `M_t`
+information-loss controls. Semantic-preserving form variants are prospectively
+counterbalanced and evaluated as artifact diagnostics, not inserted into the
+primary `J_id` family. Natural-ambiguity comparisons are governed separately by
+H2's identification boundary.
 
 **Null interpretation.** If the response is equally explained by image
 quality, text length, source identity, prevalence, embedding norm, or generic
@@ -101,8 +103,8 @@ value although \(C^*\) is undefined. Outside determinate cells it is only a
 distribution-discrepancy diagnostic, and its interpretation depends on whether
 blinded reader distributions validly measure task-relevant semantics.
 
-For candidate score \(S_m\), the identified kill-stage validation target uses
-only valid randomized or counterbalanced within-source controls:
+For candidate score \(S_m\), the signed kill-stage diagnostic uses only valid
+randomized or counterbalanced within-source controls:
 
 ```math
 \tau_{C,m}=\mathbb E[S_m^{conflict}-S_m^{compatible}],
@@ -112,11 +114,20 @@ only valid randomized or counterbalanced within-source controls:
 (\tau_{C,m}-|\tau_{j,m}|),
 ```
 
+but this signed form can conceal bidirectional nuisance responses. The
+recommended primary freeze candidate is:
+
+```math
+\psi_{\mathrm{mag},m}=
+\min_{j\in\mathcal J_{\mathrm{id}}}
+\mathbb E[D_{C,m}-|D_{j,m}|].
+```
+
 where \(\mathcal J_{\mathrm{id}}\) initially contains valid paired
 information-loss controls \(M_v,M_t\) and includes ambiguity only if its
 intervention and reference are governed and valid. A pre-specified
 matched/weighted natural-ambiguity difference \(\gamma_{A_q,m}\) is reported
-separately and does not enter \(\psi_{\mathrm{id},m}\). The reference
+separately and does not enter either specificity endpoint. The reference
 populations, overlap rule, weights, score, scale, aggregation, simultaneous
 interval, positive smallest effect, and multiplicity rule must be frozen before
 outcomes are inspected.
@@ -124,7 +135,8 @@ outcomes are inspected.
 Compatibility is defined only when both independently judged modality states
 are determinate. Ambiguous or missing cases are controls, not silently coded
 compatible examples. The full definition, assumptions, alternatives, and kill
-rules are recorded in the [task and estimand packet](task_estimand_options.md).
+rules are recorded in the [task and estimand packet](task_estimand_options.md)
+and [statistical analysis plan](statistical_analysis_plan.md).
 
 ## Claim Ladder
 

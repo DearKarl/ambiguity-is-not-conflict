@@ -93,10 +93,14 @@ conditions:
 2. **Estimator or general framework:** a substantive estimation method that
    can be implemented and challenged by probabilistic, deterministic,
    evidential, ensemble, Bayesian, and output-uncertainty competitors.
-3. **Controlled identification:** compatibility interventions change the
-   score specifically while image ambiguity, text ambiguity, missingness,
-   corruption, length, prevalence, source, and representation scale are held,
-   balanced, conditioned on, or tested as negative controls.
+3. **Controlled identification:** for the determinate claim, compatibility
+   interventions change the score specifically against the prospectively
+   frozen `M_v`/`M_t` controls while surface form, length, prevalence, source,
+   and representation scale are balanced or audited; natural image/text
+   ambiguity is veto-only. Full ambiguity separation additionally requires a
+   valid governed ambiguity intervention or an approved exchangeability/
+   transport estimand with overlap and sensitivity analysis. Conditioning on
+   observational ambiguity alone is never sufficient.
 4. **Incremental validity:** adding the frozen conflict component improves the
    pre-specified held-out proper score by more than the smallest effect of
    interest beyond unimodal measures, ordinary confidence, epistemic/output
@@ -124,16 +128,17 @@ whether the remaining contribution still clears the Main Track bar.
 
 ## Month-3 Main Track Kill Gate
 
-The development-only gate in the measurement protocol is passed only if at
-least one frozen candidate:
+The development-only gate in the measurement protocol is passed only if the
+single primary uncertainty-aware candidate named before holdout access:
 
-- responds more strongly to controlled incompatibility than to matched
-  ambiguity, missingness, and corruption controls;
-- retains a non-negligible effect after conditioning on `A_v`, `A_t`, `M_v`,
-  `M_t`, and source;
-- exceeds deterministic similarity by a pre-specified non-trivial margin and
-  is not fully subsumed by the matched deterministic compatibility/failure
-  predictor;
+- responds more strongly to controlled incompatibility than to the frozen
+  valid paired image- and text-information-loss controls;
+- places the simultaneous lower bound for the magnitude-safe `psi_mag` above
+  its approved specificity SESOI; observational `A_v`/`A_t` adjustment and the
+  natural-ambiguity audit can falsify but cannot identify separation;
+- exceeds the matched deterministic compatibility/failure predictor by the
+  approved material-advantage margin rather than only exceeding raw
+  deterministic similarity;
 - survives artifact, representation-scale/normalization, leakage, repetition,
   and failure-case checks.
 
