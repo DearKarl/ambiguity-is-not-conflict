@@ -1,6 +1,8 @@
 # TASK_BRIEF
 
 - **Identifier:**
+- **Execution Contract ID:**
+- **Handoff Contract ID:**
 - **Date and owner:**
 - **Evidence gate:**
 - **Primary outcome:**

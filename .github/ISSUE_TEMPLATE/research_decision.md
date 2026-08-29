@@ -8,6 +8,8 @@ assignees: ""
 
 ## Decision requested
 
+## Execution Contract and traversal record
+
 ## Confirmed facts and primary evidence
 
 ## Inference

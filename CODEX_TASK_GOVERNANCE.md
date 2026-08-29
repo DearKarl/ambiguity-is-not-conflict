@@ -1,6 +1,6 @@
 # Codex Task Governance
 
-**Version:** 2026.08.27.1
+**Version:** 2026.08.29.2
 
 This file defines the role lanes for the Codex project. The researcher remains
 the decision authority. A lane may recommend or execute only within its stated
@@ -8,6 +8,16 @@ scope and an explicit bounded brief.
 
 ## Shared Rules
 
+- Before every new bounded repository task, update and fully traverse
+  `EXECUTION_CONTRACT.md`; verify its authority, scope, preconditions,
+  promotion/stop rules, irreversible boundary, and evidence requirements.
+  No lane may act while its traversal record is incomplete, except to draft or
+  replace that contract from explicit Commander authority and perform the
+  read-only inspection needed to populate it.
+- Before declaring a task complete, update `HANDOFF_CONTRACT.md` with the
+  delivered boundary and all required evidence. A material mid-task change
+  requires an amended Execution Contract and a new traversal. Use the finite
+  prepared-primary plus completion-only closure lifecycle defined there.
 - Address the researcher as **Commander**.
 - User-facing conversation uses concise English first, followed immediately by
   an equivalent Chinese translation.
@@ -15,7 +25,8 @@ scope and an explicit bounded brief.
 - Transfer compact decision artifacts, not raw conversation transcripts.
 - Separate facts, inferences, assumptions, and decisions.
 - Do not promise publication or acceptance.
-- Read `AGENTS.md` and the relevant canonical protocol before acting.
+- Read `AGENTS.md`, the active Execution Contract, and the relevant canonical
+  protocol before acting.
 - No core experiment may start while Gate 0 remains open.
 
 ## Ultra — `Ultra (5.6 Sol / Ultra)`
@@ -34,9 +45,10 @@ Purpose: the strategic command lane for daily research planning.
 
 Research maintains the literature matrix, protocols, hypotheses, statistical
 design, decision log, and 12-month plan. Before delegating execution, it emits a
-`TASK_BRIEF` containing the primary outcome, authoritative inputs, allowed and
-forbidden actions, required artifacts, promotion criteria, stopping criteria,
-and irreversible boundaries.
+linked `TASK_BRIEF` inside the already active Execution Contract, containing
+the primary outcome, authoritative inputs, allowed and forbidden actions,
+required artifacts, promotion criteria, stopping criteria, and irreversible
+boundaries.
 
 ## Engineering — `Engineering (5.6 Sol / High)`
 
@@ -66,6 +78,22 @@ inventories, and monitor bounded jobs. It may not select methods, tune against
 confirmatory outcomes, reinterpret failures, or alter protocols.
 
 ## Required Handoff Artifacts
+
+### `EXECUTION_CONTRACT`
+
+- one active contract ID, authority, objective, and status;
+- authoritative inputs and completed full traversal;
+- allowed/forbidden actions and exact file/data/model/compute boundary;
+- promotion and stopping criteria;
+- irreversible/external boundary and required evidence.
+
+### `HANDOFF_CONTRACT`
+
+- linked Execution Contract and delivered outcome;
+- changed and deliberately excluded boundary;
+- facts, decisions, assumptions, and unresolved items;
+- checks, review, Git/CI/external evidence, and deviations;
+- residual risks, recovery state, and exact next permitted boundary.
 
 ### `DECISION_RECORD`
 

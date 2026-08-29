@@ -39,6 +39,12 @@ family, permutation, journal, failure, format, and owner-blocked extensions.
 No scientific code or benchmark ran; the final storage upper bound, runtime,
 capacity, and owner decisions remain open.
 
+DR-0015 now records the Commander's selection of `G0-SCOPE A`; scientific-
+supervisor co-approval remains open. It also records that the Commander's local
+workstation cannot hold the approximately 613-GB conditional core-output
+floor. The floor is not the medical dataset size or a final upper bound, and
+`G0-RESOURCES A/B/C` remains open.
+
 The recommended package is:
 
 1. narrow the identified claim to conflict specificity in independently
@@ -113,8 +119,11 @@ The recommended package is:
 
 - Qualified readers can apply the rubric reliably and enough eligible cases
   exist under the exact control rules.
-- The Commander, clinical, statistical, governance, infrastructure, and model
-  owners can supply the stated time, access, and secure capacity.
+- Clinical, statistical, governance, infrastructure, and model owners can
+  supply the stated time, access, and secure capacity. The Commander's local
+  workstation is explicitly unavailable for the 613-GB conditional core-
+  output route; approved external capacity or a proof-preserving alternative
+  remains unverified.
 - The proposed SESOIs and review budget reflect meaningful scientific costs.
 - A clean confirmatory representation or sequestered cohort can be obtained;
   no current model card proves that fact.
@@ -126,7 +135,7 @@ project work.
 
 | ID | Finite choice | Recommendation | Owner | Status | Consequence of rejection or non-verification |
 | --- | --- | --- | --- | --- | --- |
-| `G0-SCOPE` | **A:** identify determinate-conflict specificity and keep natural ambiguity veto-only; **B:** require a causal/transport ambiguity route before any execution | **A** | Commander and scientific supervisor | `OPEN` | Choosing B leaves Gate 0 blocked until a valid ambiguity intervention or exchangeability/transport estimand is approved. No degradation or hedge may substitute. |
+| `G0-SCOPE` | **A:** identify determinate-conflict specificity and keep natural ambiguity veto-only; **B:** require a causal/transport ambiguity route before any execution | **A** | Commander and scientific supervisor | `COMMANDER APPROVED A / SUPERVISOR OPEN` | DR-0015 records the Commander's choice. Gate 0 remains blocked until scientific-supervisor co-approval; no degradation or hedge may substitute for ambiguity identification. |
 | `G0-TASK` | **A:** provisional pleural-effusion presence/absence with one exact frontal image; **B:** reopen finding/unit selection | **A**, conditional on clinical and supervisor/governance confirmation | Commander, clinical owner, and scientific supervisor or governance owner | `OPEN` | Choosing B cancels the current power/workload/task packet; a new atomic-task audit is required before any data query. |
 | `G0-ONTOLOGY` | **A:** approve the existing independent image/text state schema, undefined-conflict precedence, atomic carrier grammar, and no-ambiguity-relabel rule; **B:** reopen the ontology/rubric | **A**, subject to clinical language review | Clinical, scientific-supervisor, and statistical owners | `OPEN` | No clinical item, intervention, reader qualification, or conflict label may be created. |
 | `G0-MV` | **A:** approve exact `224 -> 112 -> 224` attenuation and same-polarity acceptance, conditional on the separate `G0-MV-Q` qualification choice; **B:** call it only fixed resolution attenuation and narrow the claim; **C:** reject and commission one new prospective option | **A**, conditional on `G0-MV-Q A` passing every later gate | Clinical and statistical owners | `OPEN` | Approval does not validate the control. Qualification failure stops `MV-1`, so it cannot complete primary `J_id`. Failure invokes B or C prospectively; JPEG, generic noise, crop, or masking cannot be substituted after scores. |
@@ -146,7 +155,7 @@ project work.
 | `G0-SHIFT` | **A:** freeze AP-versus-PA view position as the one declared acquisition shift and primary subgroup audit, requiring at least 50 independently labelled patients per view; **B:** choose another shift/subgroup set and recalculate | **A** as a low-field metadata candidate | Clinical, statistical, and governance owners | `OPEN / FEASIBILITY` | Insufficient cells yield an inconclusive shift audit; no post-results demographic or acquisition subgroup may be promoted. |
 | `G0-RETENTION` | **A:** keep all restricted inputs and record-level derivatives in the approved environment, export only disclosure-cleared aggregates, and obtain exact DUA/ethics retention/deletion/backup terms before closure; **B:** approve a different written institutional boundary | **A** | Governance/ethics/infrastructure and Commander | `OPEN / EXTERNAL VERIFICATION` | No annotations, counterfactual text, embeddings, checkpoints, weights, or record-level artifacts may be created, retained, or exported. |
 | `G0-CHECKPOINT` | **A:** adopt the three-tier exposure rule and require a clean control/cohort before strict confirmation; **B:** accept only a manifest-cleared pretrained VLM and remain blocked until one exists; **C:** call undocumented exposure clean | **A**; reject C | Model, governance, statistical owners and Commander | `OPEN` | Under A, BiomedCLIP/SigLIP2/Qwen remain sensitivity only and BioViL-T diagnostic only; without a strict component, all confirmation wording is narrowed. B can stop the MIMIC route. C is prohibited. |
-| `G0-RESOURCES` | **A:** retain the proposed storage/GPU/clinical ceilings and resource-qualify the unchanged pre-reader simulation only after approving/amending TB-0011's registry, closing every extension and storage upper-bound term, running an authorized workload-equivalent generic-kernel benchmark, establishing conservative scaling/storage/contingency bounds, and explicitly allocating capacity; **B:** commission a prospective proof-preserving computational redesign and re-enumeration before setting verified ceilings; **C:** reject or narrow the affected reader/`MV-1` route before execution | Close the remaining registry blockers and test A before considering a scientific redesign; this is not approval of A, a benchmark, allocation, or run | Commander, clinical, statistical, resource, governance, and infrastructure owners | `OPEN / SIMULATION- AND FEASIBILITY-BLOCKED` | TB-0009 finds 10,847 reliability and 2,438 pre-calibration `MV-1` candidates, up to 1,594,200,000 outer datasets and 15,940,405,800,000 nested bootstraps. TB-0011 corrects the conditional core floor to 613,093,770,610 bytes but supplies no final upper bound, runtime, or capacity fact. Pre-Gate-0 work may not implement the project RNG/DGP/calibration/bootstrap pipeline; exact scientific implementation remains post-Gate-0. Resource shortage narrows or stops the route; it never lowers 120,000/9,999, deletes hard cells, or weakens scientific gates. |
+| `G0-RESOURCES` | **A:** retain the proposed storage/GPU/clinical ceilings and resource-qualify the unchanged pre-reader simulation only after approving/amending TB-0011's registry, closing every extension and storage upper-bound term, running an authorized workload-equivalent generic-kernel benchmark, establishing conservative scaling/storage/contingency bounds, and explicitly allocating capacity; **B:** commission a prospective proof-preserving computational redesign and re-enumeration before setting verified ceilings; **C:** reject or narrow the affected reader/`MV-1` route before execution | Close the remaining registry blockers and test A before considering a scientific redesign; this is not approval of A, a benchmark, allocation, or run | Commander, clinical, statistical, resource, governance, and infrastructure owners | `OPEN / SIMULATION- AND FEASIBILITY-BLOCKED` | TB-0009 finds 10,847 reliability and 2,438 pre-calibration `MV-1` candidates, up to 1,594,200,000 outer datasets and 15,940,405,800,000 nested bootstraps. TB-0011 corrects the conditional core floor to 613,093,770,610 bytes but supplies no final upper bound, runtime, or capacity fact; DR-0015 rules out the Commander's local workstation for that route. Pre-Gate-0 work may not implement the project RNG/DGP/calibration/bootstrap pipeline; exact scientific implementation remains post-Gate-0. Resource shortage narrows or stops the route; it never lowers 120,000/9,999, deletes hard cells, or weakens scientific gates. |
 | `G0-STAGING` | **A:** follow the canonical contract: freeze the exact pointwise instrument/interface, backbone, baseline/calibration, partitions/sampling, breadth, resources, and governance at Gate 0; lock the fitted instance/config before Month-3 and final power before confirmation; **B:** approve a dated canonical amendment | **A** | Commander, scientific supervisor, statistical, governance, and model owners | `OPEN` | The older “named from development” ambiguity is now reconciled in `measurement_protocol.md`: only the fitted instance of a Gate-0-frozen identity may be locked later. No later brief may override an unfrozen canonical item. |
 | `G0-DOWNSTREAM` | **A:** retain the image-grounded error endpoint, `0.02` Brier-skill SESOI, `0.01` `A_BSS` margin, calibration tolerances, 90% coverage, and `0.01` risk margin as prospective targets; **B:** revise before any natural-target analysis | **A** as a design target, not yet power-ready | Commander, clinical, and statistical owners | `OPEN` | H3/H4 and deterministic downstream subsumption cannot be tested until target prevalence, covariance, model complexity, loss, and review costs support a new calculation. |
 | `G0-BREADTH` | **A:** freeze VisMin as the one governed small general-domain breadth benchmark, with added `MV-1`/`MT-1`-analogue controls and exact snapshot/asset-term audit before Gate-0 closure; **B:** freeze PadChest-GR as the independent medical breadth route | **A**, while execution remains conditional on a primary-instrument pass | Commander, scientific supervisor, governance/licensing, and statistical owners | `OPEN / FEASIBILITY` | The identity must be chosen at Gate 0 even though execution is later. Missing snapshot/rights/construct portability leaves Gate 0 open; breadth is not a parallel project. |
@@ -272,7 +281,9 @@ select replacements silently:
 
 ## Owner Sign-off Record
 
-No box is checked by this dossier.
+DR-0015 records one partial sign-off: the Commander selected `G0-SCOPE A` on
+2026-08-29. No full owner checklist is checked because the Commander's other
+choices and scientific-supervisor co-approval remain open.
 
 - [ ] Commander: `G0-SCOPE`, `G0-TASK`, `G0-ESTIMAND`, `G0-INFERENCE`, `G0-METHOD`,
   `G0-MODEL`, `G0-ARTIFACT`, `G0-DATA`, `G0-RETENTION`, `G0-CHECKPOINT`,

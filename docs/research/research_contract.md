@@ -2,7 +2,8 @@
 
 **Status:** Gate 0 open; protocol design only
 
-**Authority:** DR-0001 through DR-0006
+**Authority:** DR-0001 through DR-0006; DR-0015 only for the Commander's
+partial `G0-SCOPE A` choice and local-storage boundary
 
 **Last reviewed:** 2026-08-29
 
@@ -24,6 +25,11 @@ The initial confirmatory endpoint will be a pre-specified, paired measure of
 conflict specificity. Its exact formula and smallest effect of interest remain
 open Gate 0 decisions. Calibration and selective-review value are downstream
 promotion outcomes, not substitutes for construct validity.
+
+The Commander has selected the narrower `G0-SCOPE A` route: determinate-
+conflict specificity is primary and natural ambiguity is a veto-only audit.
+Scientific-supervisor co-approval remains open, so this partial decision does
+not close Gate 0 or authorize execution. `G0-METHOD` also remains open.
 
 ## Authoritative Inputs
 
@@ -153,4 +159,8 @@ The Commander reports full-time research availability, a strong expectation of
 adequate compute, and expected clinical-expert support through the University
 of Bristol. These are planning assumptions until budget, access, named roles,
 time allocation, and governance approval are documented. No experiment may
-silently convert them into facts.
+silently convert them into facts. The Commander also reports that the local
+workstation cannot hold TB-0011's approximately 613-GB conditional simulation-
+output floor. That floor is not the dataset size or a final upper bound; any
+such exhaustive route therefore requires approved external capacity, a proof-
+preserving redesign, or narrowing under a later resource decision.
