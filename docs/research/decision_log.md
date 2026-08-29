@@ -615,7 +615,7 @@ decisions are separated explicitly.
   pre-calibration `MV-1` candidates with unchanged hashes. A standard-library,
   RNG-free compiler now emits a 259-row metric registry, 244-row operation
   registry, and 1,242,518-row cell/global ledger with complete-file SHA-256
-  `b25e9cdf4e61280de02d1187675023632895060c8c9c40cc60c56921a97fb507`.
+  `d1c15377bed93c297890f82acd4ff94b0e2f311324b0cd05a3ddaec2cb3cff5d`.
   No scientific value, permutation, random stream, simulation, benchmark,
   data, model, or reader output was generated.
 - **Scientific inference:** Binary64 payloads and a NaN sentinel cannot

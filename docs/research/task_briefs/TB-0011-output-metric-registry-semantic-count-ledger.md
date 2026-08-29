@@ -2,7 +2,7 @@
 
 - **Identifier:** TB-0011 — Simulation output/metric registry and semantic-
   count ledger
-- **Status:** In progress; Gate 0 remains open
+- **Status:** Complete; Gate 0 remains open
 - **Date and owner:** 2026-08-29; Ultra scientific challenge with independent
   scientific, statistical, and governance review, under the Commander's
   continuing instruction to advance the single project
@@ -104,4 +104,44 @@
 
 ## Completion Record
 
-Pending independent review and verification.
+- **Completed:** 2026-08-29.
+- **Authority reconciliation:** The canonical reader protocol, unchanged
+  TB-0009/TB-0010 manifests, registry/DR-0014 record, and current standard-
+  library RNG-free compiler agree. The prior tracked snapshots, recorded
+  digests, and test constants came from an earlier compiler state and were
+  stale derived artifacts. They were reconciled to the compiler; no estimand,
+  task, hypothesis, SESOI, intervention, data route, model choice, threshold,
+  `R=120,000`, `B=9,999`, promotion/stop rule, or Gate-0 decision changed.
+- **Reconciled identities:** The metric and operation registries retain 259
+  and 244 ordered data rows with complete-file SHA-256
+  `f37aef5e8a45bb8b913039a27989ed820f78956f4333a46bec4deba10de8ebb1`
+  and
+  `0aa55131f8779b95281ff6a506e9119c5fe2f9faee9b8de3d601c9a723564ac0`.
+  The streamed, untracked semantic ledger retains 1,242,518 data rows with
+  complete-file SHA-256
+  `d1c15377bed93c297890f82acd4ff94b0e2f311324b0cd05a3ddaec2cb3cff5d`.
+  The 13,285-cell combined manifest hash remains
+  `4e914a602b418c7fbbcccb1e98d9f09a3d339009e9c2befcdd098e34604695a0`.
+- **Decision state:** All numerical-domain, truth-reference, repeat,
+  calibration, failure-taxonomy, reference-algorithm, resource, and storage-
+  upper-bound owner blockers remain explicit. The registry remains a static
+  review candidate, not an approved serializer, benchmark, scientific
+  implementation, allocation, or execution authorization; Gate 0 remains
+  open.
+- **Independent review:** Scientific and statistical reviewers returned
+  `PASS`. Final governance re-review also returned `PASS` and found no scope,
+  privacy, restricted-content,
+  hidden-output, or repository-hygiene defect; its sole initial blocker was
+  the stale status and pending completion wording remediated by this record.
+- **Verification:** `pytest -q` passed all 35 tests; `python
+  scripts/check_repository.py` returned `Repository contract: OK`; `git diff
+  --check` passed; all three tracked CSVs matched fresh compiler output byte-
+  for-byte; exact changed-path, sensitive-content, and large-file reviews
+  passed. The ledger identity was recomputed by the compiler's streaming hash
+  sink and was not redirected or retained.
+- **Execution boundary:** No project RNG, DGP, synthetic observation,
+  calibration, bootstrap, statistic, simulation, benchmark, dataset, medical
+  record, reader output, model, checkpoint, download, paid/cloud compute, full
+  ledger, or large audit payload was created, accessed, implemented, or run.
+  Normal non-force synchronization of the reviewed bounded commit is the only
+  remaining permitted external mutation.
