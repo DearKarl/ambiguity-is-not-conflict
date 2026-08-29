@@ -85,6 +85,12 @@ HANDOFF_ID_PATTERN = re.compile(
 HANDOFF_LINK_PATTERN = re.compile(
     r"^- Linked Execution Contract: `([^`]+)`$", re.MULTILINE
 )
+CLOSURE_REMEDIATION_ID_PATTERN = re.compile(
+    r"^- Closure remediation ID: `([^`]+)`$", re.MULTILINE
+)
+HANDOFF_REMEDIATION_LINK_PATTERN = re.compile(
+    r"^- Linked closure remediation: `([^`]+)`$", re.MULTILINE
+)
 STATUS_PATTERN = re.compile(r"^- Status: `([^`]+)`$", re.MULTILINE)
 FINAL_PLACEHOLDER_PATTERN = re.compile(
     r"(?im)^(?:"
@@ -217,6 +223,22 @@ def _git_output(root: Path, *args: str) -> subprocess.CompletedProcess[str]:
     )
 
 
+def _linked_remediation_id(
+    execution: str,
+    handoff: str,
+) -> tuple[str | None, bool]:
+    execution_ids = CLOSURE_REMEDIATION_ID_PATTERN.findall(execution)
+    handoff_ids = HANDOFF_REMEDIATION_LINK_PATTERN.findall(handoff)
+    if not execution_ids and not handoff_ids:
+        return None, True
+    if len(execution_ids) != 1 or len(handoff_ids) != 1:
+        return None, False
+    remediation_id = execution_ids[0]
+    return remediation_id, (
+        remediation_id.startswith("CR-") and handoff_ids[0] == remediation_id
+    )
+
+
 def _contract_freshness_errors(
     root: Path,
     base_ref: str,
@@ -260,6 +282,11 @@ def _contract_freshness_errors(
         current_execution_statuses[0],
         current_handoff_statuses[0],
     )
+    current_remediation_id, current_remediation_valid = (
+        _linked_remediation_id(execution, handoff)
+    )
+    if not current_remediation_valid:
+        return [f"{prefix}current closure-remediation linkage is invalid"]
     primary_statuses = (
         "AUTHORIZED / IN PROGRESS",
         "READY FOR REMOTE FINALIZATION",
@@ -293,6 +320,11 @@ def _contract_freshness_errors(
 
     base_ids = (base_execution_ids[0], base_handoff_ids[0])
     base_statuses = (base_execution_statuses[0], base_handoff_statuses[0])
+    base_remediation_id, base_remediation_valid = _linked_remediation_id(
+        base_execution, base_handoff
+    )
+    if not base_remediation_valid:
+        return [f"{prefix}base closure-remediation linkage is invalid"]
     changed_result = _git_output(root, "diff", "--name-only", base_ref, "--")
     if changed_result.returncode != 0:
         return [f"{prefix}cannot inspect changed paths against {base_ref}"]
@@ -314,10 +346,35 @@ def _contract_freshness_errors(
             "EXECUTION_CONTRACT.md",
             "HANDOFF_CONTRACT.md",
         }
-        if changed_paths != allowed_closure_paths:
+        new_remediation = (
+            current_remediation_id is not None
+            and base_remediation_id is None
+        )
+        if (
+            base_remediation_id is not None
+            and current_remediation_id != base_remediation_id
+        ):
             errors.append(
-                f"{prefix}closure PR may change only both contract files"
+                f"{prefix}a closure remediation is single-use and cannot "
+                "replace a base remediation ID"
             )
+        if new_remediation:
+            allowed_closure_paths.update(
+                {
+                    "scripts/check_repository.py",
+                    "tests/test_repository_contract.py",
+                }
+            )
+        if changed_paths != allowed_closure_paths:
+            if new_remediation:
+                errors.append(
+                    f"{prefix}closure remediation must change exactly the "
+                    "two contracts and named governance files"
+                )
+            else:
+                errors.append(
+                    f"{prefix}closure PR may change only both contract files"
+                )
         return errors
 
     if current_ids[0] == base_ids[0] or current_ids[1] == base_ids[1]:
@@ -380,6 +437,9 @@ def collect_errors(
         execution_ids = EXECUTION_ID_PATTERN.findall(execution)
         handoff_ids = HANDOFF_ID_PATTERN.findall(handoff)
         linked_ids = HANDOFF_LINK_PATTERN.findall(handoff)
+        remediation_id, remediation_valid = _linked_remediation_id(
+            execution, handoff
+        )
         execution_statuses = STATUS_PATTERN.findall(execution)
         handoff_statuses = STATUS_PATTERN.findall(handoff)
         if len(execution_ids) != 1:
@@ -399,6 +459,11 @@ def collect_errors(
                 errors.append(
                     "handoff contract does not link to the active Execution Contract"
                 )
+        if not remediation_valid:
+            errors.append(
+                "closure remediation must have one matching CR-prefixed ID in "
+                "both contracts"
+            )
         if len(execution_statuses) != 1:
             errors.append("execution contract must contain exactly one Status")
         elif execution_statuses[0] not in EXECUTION_STATUSES:

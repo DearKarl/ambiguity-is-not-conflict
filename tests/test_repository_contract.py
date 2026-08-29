@@ -264,10 +264,22 @@ def test_pull_request_freshness_allows_contract_only_closure(
 ) -> None:
     execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
     handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
-    handoff = handoff.replace(
-        "- Status: `IN PROGRESS`",
-        "- Status: `READY FOR REMOTE FINALIZATION`",
+    execution, base_execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `AUTHORIZED / IN PROGRESS`",
+        execution,
+        count=1,
+        flags=re.MULTILINE,
     )
+    handoff, base_handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `READY FOR REMOTE FINALIZATION`",
+        handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert base_execution_status_count == 1
+    assert base_handoff_status_count == 1
     (tmp_path / "EXECUTION_CONTRACT.md").write_text(
         execution, encoding="utf-8"
     )
@@ -279,17 +291,28 @@ def test_pull_request_freshness_allows_contract_only_closure(
     subprocess.run(
         ["git", "commit", "-q", "-m", "ready"], cwd=tmp_path, check=True
     )
+    complete_execution, complete_execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    complete_handoff, complete_handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert complete_execution_status_count == 1
+    assert complete_handoff_status_count == 1
     (tmp_path / "EXECUTION_CONTRACT.md").write_text(
-        execution.replace(
-            "- Status: `AUTHORIZED / IN PROGRESS`", "- Status: `COMPLETE`"
-        ),
+        complete_execution,
         encoding="utf-8",
     )
     (tmp_path / "HANDOFF_CONTRACT.md").write_text(
-        handoff.replace(
-            "- Status: `READY FOR REMOTE FINALIZATION`",
-            "- Status: `COMPLETE`",
-        ),
+        complete_handoff,
         encoding="utf-8",
     )
 
@@ -297,6 +320,199 @@ def test_pull_request_freshness_allows_contract_only_closure(
     assert not [
         error for error in errors if error.startswith("contract freshness:")
     ]
+
+
+def test_pull_request_freshness_allows_one_linked_closure_remediation(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    base_execution, execution_remediation_count = re.subn(
+        r"^- Closure remediation ID:.*\n",
+        "",
+        execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    base_handoff, handoff_remediation_count = re.subn(
+        r"^- Linked closure remediation:.*\n",
+        "",
+        handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    base_execution, base_execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `AUTHORIZED / IN PROGRESS`",
+        base_execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    base_handoff, base_handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `READY FOR REMOTE FINALIZATION`",
+        base_handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert execution_remediation_count == 1
+    assert handoff_remediation_count == 1
+    assert base_execution_status_count == 1
+    assert base_handoff_status_count == 1
+
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "tests").mkdir()
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        base_execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        base_handoff, encoding="utf-8"
+    )
+    (tmp_path / "scripts/check_repository.py").write_text(
+        "base checker\n", encoding="utf-8"
+    )
+    (tmp_path / "tests/test_repository_contract.py").write_text(
+        "base tests\n", encoding="utf-8"
+    )
+    (tmp_path / "README.md").write_text("base\n", encoding="utf-8")
+    _init_contract_test_repository(tmp_path)
+    subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+    subprocess.run(
+        ["git", "commit", "-q", "-m", "ready"], cwd=tmp_path, check=True
+    )
+
+    complete_execution, execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    complete_handoff, handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert execution_status_count == 1
+    assert handoff_status_count == 1
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        complete_execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        complete_handoff, encoding="utf-8"
+    )
+    (tmp_path / "scripts/check_repository.py").write_text(
+        "repaired checker\n", encoding="utf-8"
+    )
+    (tmp_path / "tests/test_repository_contract.py").write_text(
+        "repaired tests\n", encoding="utf-8"
+    )
+
+    errors = collect_errors(tmp_path, base_ref="HEAD")
+    assert not [
+        error for error in errors if error.startswith("contract freshness:")
+    ]
+
+    (tmp_path / "README.md").write_text("scope expansion\n", encoding="utf-8")
+    errors = collect_errors(tmp_path, base_ref="HEAD")
+    assert (
+        "contract freshness: closure remediation must change exactly the two "
+        "contracts and named governance files"
+    ) in errors
+
+
+def test_pull_request_freshness_rejects_second_closure_remediation(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    base_execution = execution.replace(
+        "CR-2026-08-29-001", "CR-BASE-ALREADY-USED"
+    )
+    base_handoff = handoff.replace(
+        "CR-2026-08-29-001", "CR-BASE-ALREADY-USED"
+    )
+    base_execution, base_execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `AUTHORIZED / IN PROGRESS`",
+        base_execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    base_handoff, base_handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `READY FOR REMOTE FINALIZATION`",
+        base_handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert base_execution_status_count == 1
+    assert base_handoff_status_count == 1
+
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "tests").mkdir()
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        base_execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        base_handoff, encoding="utf-8"
+    )
+    (tmp_path / "scripts/check_repository.py").write_text(
+        "base checker\n", encoding="utf-8"
+    )
+    (tmp_path / "tests/test_repository_contract.py").write_text(
+        "base tests\n", encoding="utf-8"
+    )
+    _init_contract_test_repository(tmp_path)
+    subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+    subprocess.run(
+        ["git", "commit", "-q", "-m", "ready with remediation"],
+        cwd=tmp_path,
+        check=True,
+    )
+
+    replay_execution = execution.replace(
+        "CR-2026-08-29-001", "CR-SECOND-NOT-ALLOWED"
+    )
+    replay_handoff = handoff.replace(
+        "CR-2026-08-29-001", "CR-SECOND-NOT-ALLOWED"
+    )
+    replay_execution, replay_execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        replay_execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    replay_handoff, replay_handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        replay_handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert replay_execution_status_count == 1
+    assert replay_handoff_status_count == 1
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        replay_execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        replay_handoff, encoding="utf-8"
+    )
+    (tmp_path / "scripts/check_repository.py").write_text(
+        "second checker repair\n", encoding="utf-8"
+    )
+    (tmp_path / "tests/test_repository_contract.py").write_text(
+        "second test repair\n", encoding="utf-8"
+    )
+
+    errors = collect_errors(tmp_path, base_ref="HEAD")
+    assert (
+        "contract freshness: a closure remediation is single-use and cannot "
+        "replace a base remediation ID"
+    ) in errors
 
 
 def test_commander_scope_and_local_storage_decisions_remain_partial() -> None:
