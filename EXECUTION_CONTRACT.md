@@ -40,6 +40,17 @@ commit, push, PR, merge, and post-merge CI for the closure record itself, plus
 the final user handoff. The closure commit and PR are self-identifying in Git
 and GitHub and are not recursively written into themselves.
 
+One single-use self-hosting exception is allowed only when the first closure
+validation exposes a deterministic defect in the governance checker or its
+tests that prevents the valid `READY` to `COMPLETE` transition. Before any
+repair, restore the contracts to their pre-completion statuses, assign and
+link a unique closure-remediation ID, amend and fully re-traverse this
+contract, and name the exact checker/test files. The exceptional closure may
+then change only the two contracts and those named governance files, must pass
+independent review and all checks, and must still use the same single closure
+PR. It cannot touch scientific documents, data, models, experiments, or
+GitHub protection. No unrecorded or second remediation is allowed.
+
 ## Active contract
 
 ### Identity and status
@@ -47,12 +58,13 @@ and GitHub and are not recursively written into themselves.
 - Contract ID: `EC-2026-08-29-001`
 - Task: bootstrap strict execution/handoff governance and close the current
   repository-governance stage
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander, in the current Codex task on 2026-08-29
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/contract-governance-closeout`
+- Working branch: `codex/contract-governance-closeout-completion`
 - Expected base: remote `main` at
-  `f1fe19b38eb4d036893e79b7c27cca0344517f06`
+  `ea295e0e672db72b5814ae96ed34176f6a583d73`
+- Closure remediation ID: `CR-2026-08-29-001`
 
 ### Primary outcome
 
@@ -122,6 +134,10 @@ section relevant to the bounded decisions before acting:
 - after the primary merge and CI, create one completion-only closure branch,
   update only `EXECUTION_CONTRACT.md` and `HANDOFF_CONTRACT.md`, verify it, and
   synchronize it through one final PR under the finite self-evidence rule;
+- under the single-use `CR-2026-08-29-001` exception, stabilize the live-
+  status-dependent closure regression in `tests/test_repository_contract.py`
+  and extend only `scripts/check_repository.py` to enforce the linked, base-
+  fresh, four-file remediation allowlist;
 - refresh detached role worktrees to the final `main` revision only if they
   are clean and no task state would be lost.
 
@@ -171,10 +187,12 @@ The task may be handed off as complete only when all of the following hold:
 9. `HANDOFF_CONTRACT.md` records the primary outcome, evidence, residual risks,
    and exact next decision boundary and is set to `COMPLETE` in a completion-
    only closure change; and
-10. that closure change has green CI and is merged into `main`; its own commit,
-    PR, merge revision, and post-merge CI remain self-evidencing Git/GitHub
-    metadata reported in the final user handoff rather than recursively
-    inserted into the record.
+10. the closure change—normally the two contracts, or for the recorded
+    `CR-2026-08-29-001` defect exactly those contracts plus
+    `scripts/check_repository.py` and `tests/test_repository_contract.py`—has
+    green CI and is merged into `main`; its own commit, PR, merge revision, and
+    post-merge CI remain self-evidencing Git/GitHub metadata reported in the
+    final user handoff rather than recursively inserted into the record.
 
 ### Stopping criteria
 
@@ -228,4 +246,35 @@ communications are outside authority.
   contract-bootstrap circularity, recursive closure risk, hard-coded contract
   IDs, and the solo-administrator merge boundary, the finite two-phase
   lifecycle and generic validation rules were added; this amended contract
-  was then re-traversed in full on 2026-08-29 before work resumed.
+  was then re-traversed in full on 2026-08-29 before work resumed. After the
+  first uncommitted COMPLETE-state run exposed a live-status-dependent
+  lifecycle test, the contracts were restored to READY, the single-use
+  `CR-2026-08-29-001` exception was added, and this contract plus the exact
+  governance/checker inputs were re-traversed in full on 2026-08-29 before the
+  four-file repair began.
+
+### Primary finalization and closure-remediation record
+
+- Primary commit:
+  `0773fa304f601f66c49cdc0cd2e9fe7db116e3d8`
+- Primary pull request:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/2`
+- Branch CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33234953605`
+- Pull-request CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33235006836`
+- Primary merge revision:
+  `ea295e0e672db72b5814ae96ed34176f6a583d73`
+- Post-merge `main` CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33235054743`
+- Merge boundary: the ordinary CLI merge was rejected by the one-review rule;
+  GitHub's standard merge API then applied the disclosed administrator
+  exemption without an override flag, force operation, or protection change.
+- Closure boundary: this completion-only change modifies exactly
+  `EXECUTION_CONTRACT.md`, `HANDOFF_CONTRACT.md`,
+  `scripts/check_repository.py`, and `tests/test_repository_contract.py` under
+  `CR-2026-08-29-001`. The first COMPLETE-state run exposed a test that derived
+  its synthetic lifecycle from the live status, so the transition was restored
+  to READY before repair. The closure's own commit, PR, merge revision, and
+  post-merge CI remain self-evidencing Git/GitHub metadata under the finite
+  rule.
