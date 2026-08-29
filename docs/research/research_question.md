@@ -1,31 +1,43 @@
 # Research Question and Falsifiable Hypotheses
 
-**Status:** Title-level direction selected; exact estimands remain Gate 0 items
+**Status:** Gate-0 freeze candidate; exact task and estimands remain unapproved
 
 ## Narrow Research Question
 
-At the atomic clinical-finding level, can a conflict component respond
-specifically to controlled image--report incompatibility rather than image
-ambiguity, text ambiguity, missingness, corruption, epistemic uncertainty, or
-output uncertainty, and add held-out prediction of overconfident model errors
-at a fixed review budget?
+For one image-grounded atomic clinical finding, can a conflict component
+respond specifically when a determinate auxiliary text assertion opposes the
+independently judged image state—rather than when either modality is ambiguous,
+missing, or corrupted—and add held-out prediction of a frozen model's task
+error at a fixed review budget?
 
-## Intended Primary Claim
+## Intended Claim Structure
 
-A formally defined, conditionally estimated cross-modal conflict component can
-be separately identified under controlled interventions and provides
-non-redundant, calibrated information for selective review beyond frozen
-unimodal uncertainty, ordinary confidence, output uncertainty, and matched
+**Central claim to test.** An intervention-defined, proposition-level semantic
+incompatibility estimand and estimator or estimation framework can use
+independent modality-specific semantic measurements to distinguish determinate
+conflict from genuine image ambiguity, genuine text ambiguity, and
+modality-specific information loss under controlled interventions. It must not
+reduce to confidence-adjusted output disagreement.
+
+**Downstream support claims to test.** If construct identification passes, the
+frozen conflict component provides non-redundant calibrated information and
+selective-review value beyond unimodal ambiguity measures, ordinary
+confidence, epistemic uncertainty, output uncertainty, and matched
 deterministic failure predictors.
 
-This is the claim to test, not a result.
+These are hypotheses, not results. The downstream claims support the central
+contribution and cannot substitute for failed construct identification.
 
 ## H1 — Conflict Specificity
 
-**Hypothesis.** When a task-relevant proposition is changed to make image and
-text incompatible while ambiguity and surface quality are held or
-counterbalanced, the pre-specified conflict estimator changes monotonically in
-the expected direction and more strongly than under negative controls.
+**Hypothesis.** When a task-relevant atomic assertion is counterbalanced to
+oppose rather than match a determinate, independently judged image state, the
+pre-specified conflict estimator changes in the expected direction and more
+strongly than under the valid randomized or counterbalanced `M_v` and `M_t`
+information-loss controls. Semantic-preserving form variants are prospectively
+counterbalanced and evaluated as artifact diagnostics, not inserted into the
+primary `J_id` family. Natural-ambiguity comparisons are governed separately by
+H2's identification boundary.
 
 **Null interpretation.** If the response is equally explained by image
 quality, text length, source identity, prevalence, embedding norm, or generic
@@ -33,9 +45,17 @@ pair dissimilarity, the estimator does not identify conflict.
 
 ## H2 — Separation from Unimodal Ambiguity
 
-**Hypothesis.** The conflict contrast remains non-negligible after conditioning
-on image-only and text-only ambiguity measurements, while those ambiguity
-interventions retain distinguishable signatures.
+**Hypothesis, identified form.** Under a valid governed ambiguity intervention,
+or a separately justified conditional-exchangeability and transport estimand,
+the determinate conflict contrast exceeds the corresponding image-only and
+text-only ambiguity contrasts by the frozen smallest effect. Ambiguity cases
+retain distinct labels and are not forced into a binary compatibility state
+when that relation is undefined.
+
+**Protocol boundary.** Matched or weighted natural-ambiguity differences are
+conservative falsification audits only. Passing them cannot establish causal
+separation from ambiguity; without a valid identification route, H2 remains
+unresolved and the permitted claim narrows to determinate-conflict specificity.
 
 **Null interpretation.** If a common undifferentiated uncertainty factor
 explains all conditions, the proposed decomposition is not supported even if
@@ -44,8 +64,9 @@ the score detects corrupted or difficult examples.
 ## H3 — Held-Out Incremental Validity and Calibration
 
 **Hypothesis.** Adding the conflict component to a frozen baseline risk model
-improves a pre-specified held-out proper score by more than the smallest effect
-of interest and preserves acceptable calibration under one declared shift.
+for independently labelled image-grounded task error improves a pre-specified
+held-out proper score by more than the smallest effect of interest and
+preserves acceptable calibration under one declared shift.
 
 **Null interpretation.** If the gain disappears with patient-level splitting,
 repeated seeds, recalibration, or a matched deterministic failure predictor,
@@ -55,31 +76,67 @@ the conflict component is redundant for outcome-risk prediction.
 
 **Hypothesis.** At an equal review budget or answer coverage, a policy using
 the calibrated decomposition has lower selective risk or regret than policies
-using ordinary confidence or output uncertainty alone.
+using ordinary confidence, output uncertainty, or the matched deterministic
+failure/risk predictor.
 
 **Null interpretation.** If benefit depends on post-hoc thresholds,
 unrealistic review costs, or information unavailable at decision time, no
 decision-value claim is permitted.
 
-## Candidate Construct Estimand
+## Candidate Construct and Validation Estimands
 
-Let \(S_i(c,a_v,a_t)\) be a standardized candidate conflict score for source
-case \(i\), conflict condition \(c\), image-ambiguity condition \(a_v\), and
-text-ambiguity condition \(a_t\). A candidate paired contrast is:
+For independently elicited image-only and text-only interpretation
+distributions \(\pi_v,\pi_t\), a candidate semantic-distribution discrepancy
+is:
 
 ```math
-\tau_C = \mathbb E_i\left[
-S_i(1,a_v,a_t)-S_i(0,a_v,a_t)
-\right],
+\kappa_L(v,t)=
+\mathbb E L(Y_v,Y_t)
+-\frac12\mathbb E L(Y_v,Y_v')
+-\frac12\mathbb E L(Y_t,Y_t').
 ```
 
-averaged over pre-specified ambiguity strata. A specificity analysis must
-compare \(\tau_C\) with corresponding image-ambiguity, text-ambiguity,
-missingness, and corruption contrasts, then assess whether \(C_{vt}\) retains
-incremental value conditional on \(A_v\), \(A_t\), \(M_v\), and \(M_t\).
+With binary states and disagreement loss this reduces to
+\((p_v-p_t)^2\). It is energy-distance-like and is not automatically novel.
+It is not binary conflict: for example, \(p_v=0.5,p_t=1\) yields a positive
+value although \(C^*\) is undefined. Outside determinate cells it is only a
+distribution-discrepancy diagnostic, and its interpretation depends on whether
+blinded reader distributions validly measure task-relevant semantics.
 
-The score, scale, estimand, aggregation, smallest effect, and multiplicity rule
-must be frozen before confirmatory data are inspected.
+For candidate score \(S_m\), the signed kill-stage diagnostic uses only valid
+randomized or counterbalanced within-source controls:
+
+```math
+\tau_{C,m}=\mathbb E[S_m^{conflict}-S_m^{compatible}],
+\qquad
+\psi_{\mathrm{id},m}=
+\min_{j\in\mathcal J_{\mathrm{id}}}
+(\tau_{C,m}-|\tau_{j,m}|),
+```
+
+but this signed form can conceal bidirectional nuisance responses. The
+recommended primary freeze candidate is:
+
+```math
+\psi_{\mathrm{mag},m}=
+\min_{j\in\mathcal J_{\mathrm{id}}}
+\mathbb E[D_{C,m}-|D_{j,m}|].
+```
+
+where \(\mathcal J_{\mathrm{id}}\) initially contains valid paired
+information-loss controls \(M_v,M_t\) and includes ambiguity only if its
+intervention and reference are governed and valid. A pre-specified
+matched/weighted natural-ambiguity difference \(\gamma_{A_q,m}\) is reported
+separately and does not enter either specificity endpoint. The reference
+populations, overlap rule, weights, score, scale, aggregation, simultaneous
+interval, positive smallest effect, and multiplicity rule must be frozen before
+outcomes are inspected.
+
+Compatibility is defined only when both independently judged modality states
+are determinate. Ambiguous or missing cases are controls, not silently coded
+compatible examples. The full definition, assumptions, alternatives, and kill
+rules are recorded in the [task and estimand packet](task_estimand_options.md)
+and [statistical analysis plan](statistical_analysis_plan.md).
 
 ## Claim Ladder
 

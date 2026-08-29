@@ -2,9 +2,9 @@
 
 **Status:** Gate 0 open; protocol design only
 
-**Authority:** DR-0001 through DR-0005
+**Authority:** DR-0001 through DR-0006
 
-**Last reviewed:** 2026-08-27
+**Last reviewed:** 2026-08-29
 
 ## Primary Outcome
 
@@ -13,6 +13,12 @@ falsifies—the separate identifiability of a conditional cross-modal conflict
 component under controlled image--report interventions. Publication at a top
 venue is the strategic objective, not the scientific endpoint and not a
 guaranteed outcome.
+
+The single intended paper contribution is a formal conditional conflict
+estimand plus an estimator or estimation framework. The controlled benchmark,
+candidate representation families, calibration analysis, and selective review
+are evidence supporting or falsifying that contribution, not independent
+research routes.
 
 The initial confirmatory endpoint will be a pre-specified, paired measure of
 conflict specificity. Its exact formula and smallest effect of interest remain
@@ -69,7 +75,8 @@ All items must be frozen in a dated decision record:
 - construct-sample versus target-distribution sampling and any prevalence
   weighting;
 - compute ceiling, annotation capacity, and clinical-review plan;
-- cross-backbone breadth and independent/natural stress-test boundary;
+- cross-backbone breadth and the governed choice of a second medical dataset or
+  small controlled general-domain benchmark testing the same construct;
 - promotion, kill, stopping, and fallback criteria;
 - permitted artifacts and data-retention boundary.
 
@@ -78,16 +85,27 @@ All items must be frozen in a dated decision record:
 The route advances from measurement to outcome-risk modelling only if a
 pre-specified candidate:
 
-1. changes in the expected direction under compatibility interventions;
-2. is materially less responsive to matched ambiguity and corruption controls;
-3. retains a non-negligible conditional association after accounting for
-   image ambiguity, text ambiguity, and modality-specific information loss;
+1. changes in the expected direction under determinate compatibility
+   interventions;
+2. passes the frozen magnitude-safe specificity margin against at least one
+   independently validated image-information-loss and one text-information-
+   loss control, together with the artifact decision rule;
+3. survives natural image/text ambiguity as a veto-only falsification audit;
+   conditioning or regression adjustment on observational ambiguity cannot
+   establish its causal separation;
 4. is stable across repetitions, normalization choices, and one declared
    shift;
 5. is not fully subsumed by a matched deterministic predictor;
-6. survives the frozen breadth test or explicitly limits its claim to the
-   tested backbone and intervention population;
+6. survives the frozen cross-backbone and approved second-dataset or
+   general-domain breadth tests, or explicitly limits its claim to the tested
+   backbone and intervention population;
 7. has reproducible artifacts and reports null and failure cases.
+
+These criteria permit only a determinate-conflict specificity claim. Full H2
+ambiguity-separation promotion additionally requires a valid governed
+ambiguity intervention or an approved conditional-exchangeability and
+transport estimand with overlap and sensitivity analysis. Natural ambiguity or
+post-hoc conditioning cannot substitute for that route.
 
 It advances to selective-decision evaluation only after held-out error risk is
 adequately calibrated for the tested population.

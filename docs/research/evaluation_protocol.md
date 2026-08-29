@@ -1,6 +1,6 @@
 # Evaluation Protocol
 
-**Status:** Protocol scaffold; primary endpoint awaits Gate 0
+**Status:** Gate-0 freeze candidate; endpoints remain unapproved
 
 ## Evaluation Principle
 
@@ -47,7 +47,7 @@ not an in-sample coefficient alone.
 
 | Property | Required evidence |
 | --- | --- |
-| Construct validity | Paired conflict contrast, specificity against ambiguity/corruption controls, severity trend, artifact audit |
+| Construct validity | Magnitude-safe paired conflict specificity against the prospectively frozen `M_v`/`M_t` controls; counterbalanced surface diagnostics; natural-ambiguity falsification; artifact audit |
 | Task performance | Frozen task loss or accuracy with patient-clustered intervals |
 | Probabilistic quality | NLL or another proper score; Brier score for binary risk |
 | Calibration | Intercept, slope, reliability curve, subgroup calibration; ECE only as secondary evidence |
@@ -61,10 +61,11 @@ not an in-sample coefficient alone.
 - Split by patient before variant creation; all derived pairs inherit the
   source split.
 - Keep development, calibration, and final evaluation roles distinct.
-- Freeze the primary outcome, smallest effect of interest, confidence or
-  credible interval, and multiplicity family before confirmatory evaluation.
-- Use paired bootstrap intervals clustered at patient level or a justified
-  hierarchical model for repeated findings and variants.
+- Freeze the primary outcome, smallest effect, compatible-reference score
+  normalizer, interval, and multiplicity family before evaluation.
+- Use the pre-specified studentized patient-cluster max-`t` bootstrap and one
+  source block per patient where feasible; variants never increase the
+  independent sample size.
 - Repeat stochastic training or inference with pre-specified seeds; report
   per-run results and paired differences.
 - Estimate incremental value by comparing nested frozen predictors on the same
@@ -74,6 +75,12 @@ not an in-sample coefficient alone.
   estimates.
 - Publish null results, failed conditions, missing outcomes, exclusions, and
   protocol deviations.
+
+The [statistical analysis plan](statistical_analysis_plan.md) proposes, but
+does not approve, a 0.20-reference-SD magnitude-safe construct SESOI, a 0.10
+material advantage over the matched deterministic predictor, one-sided 90%
+Month-3 development bounds, one-sided 97.5% confirmatory bounds, and a
+development-versus-confirmatory power grid.
 
 ## Target-Distribution Rule
 
@@ -101,6 +108,14 @@ A conflict score is not a probability of error until a risk mapping is trained
 and evaluated. Calibration under a shifted distribution must be described as
 observed robustness, not as a universal guarantee.
 
+The unapproved downstream freeze candidate uses paired Brier-skill improvement
+with SESOI 0.02, uncertainty-minus-deterministic method-difference margin 0.01,
+absolute calibration-in-the-large error at most 0.02, and calibration slope
+inside `[0.80,1.20]`. These values are planning tolerances, not clinical safety
+limits, and remain blocked until target outcome prevalence, paired loss
+variance/covariance, risk-model complexity, sample size, and the clinical loss
+context are frozen.
+
 ## Selective Decision Design
 
 The first decision comparison should remain narrow:
@@ -121,6 +136,11 @@ Thresholds, action costs, and information available at decision time must be
 frozen before final evaluation. Human review is not perfect, immediate, or
 cost-free. Compare policies at equal review budget, equal answer coverage, or
 under the same loss table.
+
+The current unapproved primary candidate is task-error risk at 90% answer
+coverage (10% review), with a 0.01 absolute-risk SESOI and the full
+risk--coverage curve as supporting evidence. It cannot be powered or approved
+until the target cohort and error rate are frozen.
 
 ## Promotion Rules
 
