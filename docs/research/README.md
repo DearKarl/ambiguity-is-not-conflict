@@ -57,3 +57,11 @@ The Gate-0 freeze candidate is intentionally not executable. Its finite owner
 choices are listed in the [decision dossier](gate0_decision_dossier.md) and its
 current blockers in the [closure audit](gate0_closure_audit.md); only an
 approved dated decision record can change that status.
+
+DR-0015 records one partial decision: the Commander selected `G0-SCOPE A`, so
+the intended identified claim is determinate-conflict specificity and natural
+ambiguity remains veto-only. Scientific-supervisor co-approval, `G0-METHOD`,
+and all other Gate-0 requirements remain open. The same record rules out the
+Commander's local workstation for TB-0011's approximately 613-GB conditional
+simulation-output floor; that number is not the dataset size or a final upper
+bound.

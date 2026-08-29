@@ -143,5 +143,6 @@
   calibration, bootstrap, statistic, simulation, benchmark, dataset, medical
   record, reader output, model, checkpoint, download, paid/cloud compute, full
   ledger, or large audit payload was created, accessed, implemented, or run.
-  Normal non-force synchronization of the reviewed bounded commit is the only
-  remaining permitted external mutation.
+  The reviewed bounded commit was synchronized normally through PR #1 and
+  merged to `main` at `f1fe19b38eb4d036893e79b7c27cca0344517f06`; post-merge
+  repository CI passed. No force operation or history rewrite occurred.

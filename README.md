@@ -105,10 +105,12 @@ the permitted terminology.
 | --- | --- |
 | Project identity | **Decided:** `Ambiguity Is Not Conflict` |
 | Primary route | **Decided in principle:** controlled identification of image--report conflict before calibration or decision claims |
+| Scope boundary | **Commander approved `G0-SCOPE A`:** determinate-conflict specificity is primary; natural ambiguity is veto-only. Scientific-supervisor co-approval remains open. |
 | Validation domain | **Primary route:** chest radiography at atomic finding level; the exact task and dataset remain Gate 0 decisions |
 | Data route | **Candidate:** coupled MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as a MIMIC-derived synthetic stress test, never independent breadth |
 | Representation | **Open comparison:** no probabilistic or Bayesian method is presumed superior |
 | Pointwise estimator | **Blocked / kill recommended:** no TB-0006 candidate survived analytic equivalence; owners must narrow to the measurement framework or supply a new pre-data candidate |
+| Local storage | **Binding constraint:** the approximately 613-GB conditional simulation-output floor cannot run locally; this is not the medical dataset size, and `G0-RESOURCES` remains open |
 | Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
 | Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
@@ -184,7 +186,9 @@ python scripts/check_repository.py
 ```
 
 These checks verify structure and internal documentation links. They do not
-validate a scientific claim.
+validate a scientific claim. Before opening a pull request, the stricter
+`python scripts/check_repository.py --final` command additionally requires a
+placeholder-free Handoff Contract in a publishable lifecycle state.
 
 ## Data, Privacy, and Clinical Boundary
 

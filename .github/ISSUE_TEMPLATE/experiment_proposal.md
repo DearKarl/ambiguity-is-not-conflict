@@ -8,6 +8,8 @@ assignees: ""
 
 ## Hypothesis and evidence gate
 
+## Execution Contract, Handoff Contract, and traversal record
+
 ## Primary outcome and smallest effect
 
 ## Authoritative protocol and data decision

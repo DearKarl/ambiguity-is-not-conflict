@@ -668,10 +668,47 @@ decisions are separated explicitly.
   implementation correctness, runtime, capacity, feasibility, operating
   performance, Gate-0 closure, acceptance, or publication.
 
+## DR-0015 — Commander Scope Choice and Local Storage Boundary
+
+- **Date:** 2026-08-29
+- **Status:** Commander-approved partial Gate-0 decision; supervisor and other
+  owner approvals remain open; not executable
+- **Fact:** The Commander explicitly selected `G0-SCOPE A`: the primary
+  identified claim is determinate-conflict specificity, while natural image
+  and text ambiguity remain veto-only falsification audits. This records the
+  Commander's part of the joint decision; it does not imply scientific-
+  supervisor approval.
+- **Fact:** The Commander reports that the local workstation cannot hold the
+  approximately 613-GB conditional core-output floor from TB-0011. That number
+  describes a lower bound for one exhaustive simulation-output design, not the
+  MIMIC dataset, the repository, a final storage upper bound, or a measured
+  allocation.
+- **Decision:** Adopt `G0-SCOPE A` at the Commander level. Do not make a full
+  causal ambiguity-separation claim unless a later governed identification
+  route is approved. Gate 0 remains open until the scientific supervisor and
+  every other required owner complete their stated approvals.
+- **Resource boundary:** The unchanged TB-0011 all-candidate output route may
+  not be planned against local storage. `G0-RESOURCES A/B/C` remains open and
+  must later choose approved external capacity, a prospectively proof-
+  preserving redesign/re-enumeration, or a narrower route. The shortage does
+  not authorize lower replication/resample counts, dropped cells, data/model
+  downloads, or execution.
+- **Method boundary:** `G0-METHOD A/B` remains open. This record neither accepts
+  the framework-centered amendment nor authorizes another estimator-theory
+  attempt.
+- **Permitted claim:** The Commander has chosen the narrower scope and ruled
+  out local storage for the current exhaustive simulation-output design. This
+  is not supervisor sign-off, resource qualification, Gate-0 closure,
+  implementation authorization, empirical evidence, or a publication claim.
+- **Reopening condition:** Reopen the scope only if a prospective governed
+  ambiguity-identification route is supplied. Reopen the local-storage
+  boundary only with verified capacity evidence and a new bounded contract.
+
 ## Open Gate 0 Decisions
 
-- approve or reject explicit claim narrowing to determinate-conflict
-  specificity while H2 remains unresolved;
+- obtain scientific-supervisor co-approval for the Commander-selected
+  `G0-SCOPE A` determinate-conflict-specificity route while H2 remains
+  unresolved;
 - provisional pleural-effusion finding, strict single-frontal-image unit, and
   exact visibility/eligibility rule;
 - two-stage MIMIC resource/query record, HMAC partitions including the
@@ -686,7 +723,8 @@ decisions are separated explicitly.
   resource-qualify the unchanged 10,847-plus-2,438 candidate contract;
   commission a proof-preserving redesign and complete re-enumeration; or
   reject/narrow the affected route. No benchmark, runtime/capacity fact, or
-  option approval currently exists;
+  option approval currently exists, and the 613-GB conditional core-output
+  floor cannot be assigned to the Commander's local workstation;
 - `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
   theory candidate; then one exact non-outcome-selected pointwise instrument,
   matched backbone/baseline implementations, exact ablation/applicability map,

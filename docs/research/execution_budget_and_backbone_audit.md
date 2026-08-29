@@ -113,6 +113,22 @@ matrix must show why every backbone × method × seed cell is necessary and fit
 inside it. Failed runs count. Hardware, wall time, energy where available,
 peak memory, trainable parameters, and tuning attempts are retained.
 
+## Local Storage Constraint
+
+DR-0015 records the Commander's report that the local workstation cannot hold
+TB-0011's approximately 613-GB conditional core-output floor. This is a
+binding local-execution constraint. The number is neither the MIMIC dataset
+size nor a final simulation-storage upper bound, and the proposed 1-TB
+restricted-storage ceiling above remains an unallocated planning ceiling.
+
+Therefore no later brief may assign the unchanged exhaustive simulation route
+to local storage. `G0-RESOURCES` must prospectively approve either external
+secure capacity with a closed upper bound and contingency, a proof-preserving
+redesign with complete re-enumeration, or a narrower route. This record does
+not select an option, authorize a benchmark, or weaken any scientific count or
+gate. A storage-light Month-2/3 construct kill test remains conceptually
+possible only after the separate Gate-0, data, model, and execution approvals.
+
 ## Pre-Reader Simulation Resource Status
 
 The [simulation resource-feasibility audit](simulation_resource_feasibility_audit.md)

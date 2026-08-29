@@ -1,11 +1,12 @@
 import csv
 import math
+import re
 import subprocess
 import sys
 from pathlib import Path
 from statistics import NormalDist
 
-from scripts.check_repository import collect_errors
+from scripts.check_repository import FINAL_PLACEHOLDER_PATTERN, collect_errors
 from scripts.compile_simulation_semantic_count_ledger import (
     ledger_identity,
     metric_fields,
@@ -23,6 +24,324 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_repository_contract_is_complete() -> None:
     assert collect_errors(ROOT) == []
+
+
+def test_execution_and_handoff_contracts_are_mandatory_and_linked() -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+    governance = (ROOT / "CODEX_TASK_GOVERNANCE.md").read_text(encoding="utf-8")
+
+    assert "## Contract-first rule" in execution
+    assert "- Traversal status: `COMPLETE`" in execution
+    assert "## Contract-last rule" in handoff
+    execution_id = re.search(
+        r"^- Contract ID: `([^`]+)`$", execution, re.MULTILINE
+    )
+    handoff_id = re.search(
+        r"^## Handoff record `([^`]+)`$", handoff, re.MULTILINE
+    )
+    handoff_link = re.search(
+        r"^- Linked Execution Contract: `([^`]+)`$", handoff, re.MULTILINE
+    )
+    assert execution_id is not None
+    assert handoff_id is not None
+    assert handoff_link is not None
+    assert execution_id.group(1).startswith("EC-")
+    assert handoff_id.group(1).startswith("HC-")
+    assert handoff_link.group(1) == execution_id.group(1)
+    assert "## Contract Supremacy" in agents
+    assert "`EXECUTION_CONTRACT.md`" in agents
+    assert "`HANDOFF_CONTRACT.md`" in agents
+    assert "### `EXECUTION_CONTRACT`" in governance
+    assert "### `HANDOFF_CONTRACT`" in governance
+
+
+def test_repository_checker_rejects_missing_contract_controls(tmp_path: Path) -> None:
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        "# Execution Contract\n", encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        "# Handoff Contract\n", encoding="utf-8"
+    )
+
+    errors = collect_errors(tmp_path)
+    assert "missing required file: AGENTS.md" in errors
+    assert any(
+        error.startswith(
+            "missing required control field in EXECUTION_CONTRACT.md:"
+        )
+        for error in errors
+    )
+    assert any(
+        error.startswith(
+            "missing required control field in HANDOFF_CONTRACT.md:"
+        )
+        for error in errors
+    )
+
+
+def test_repository_checker_rejects_empty_active_identity_fields(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    execution = re.sub(
+        r"^- Authorized by:.*$", "- Authorized by:", execution, flags=re.MULTILINE
+    )
+    handoff = re.sub(
+        r"^- Prepared by:.*$", "- Prepared by:", handoff, flags=re.MULTILINE
+    )
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        handoff, encoding="utf-8"
+    )
+
+    errors = collect_errors(tmp_path)
+    assert (
+        "missing, empty, or duplicate active field in EXECUTION_CONTRACT.md: "
+        "authority"
+    ) in errors
+    assert (
+        "missing, empty, or duplicate active field in HANDOFF_CONTRACT.md: "
+        "prepared by"
+    ) in errors
+
+
+def test_final_checker_rejects_unfinished_or_mismatched_handoff(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    execution_id = re.search(
+        r"^- Contract ID: `([^`]+)`$", execution, re.MULTILINE
+    )
+    assert execution_id is not None
+    mismatched_handoff = handoff.replace(
+        f"- Linked Execution Contract: `{execution_id.group(1)}`",
+        "- Linked Execution Contract: `EC-MISMATCH`",
+    )
+    mismatched_handoff = re.sub(
+        r"^- Status: `[^`]+`$",
+        "- Status: `IN PROGRESS`",
+        mismatched_handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    mismatched_handoff = re.sub(
+        r"^- Handoff date:.*$",
+        "- Handoff date: pending.",
+        mismatched_handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        mismatched_handoff, encoding="utf-8"
+    )
+
+    errors = collect_errors(tmp_path, require_final=True)
+    assert "handoff contract does not link to the active Execution Contract" in errors
+    assert "final validation requires a ready or complete handoff" in errors
+    assert "final validation rejects pending handoff placeholders" in errors
+
+
+def test_final_placeholder_detection_is_strict_without_blocking_open_decisions() -> None:
+    placeholders = (
+        "Pending completion of the bounded task.",
+        "- Pending final evidence.",
+        "- Outcome: pending",
+        "- Outcome: TBD",
+        "- Outcome: pending.",
+        "- Outcome: TBD.",
+        "- Outcome: TODO.",
+        "- Outcome: to be recorded.",
+        "- Outcome:",
+    )
+    resolved_open_items = (
+        "- `G0-METHOD` remains pending as a scientific decision.",
+        "- Supervisor approval remains open.",
+        "- Closure metadata is self-evidencing in GitHub.",
+        "- Base revision:\n  `f1fe19b`",
+    )
+
+    assert all(FINAL_PLACEHOLDER_PATTERN.search(item) for item in placeholders)
+    assert not any(
+        FINAL_PLACEHOLDER_PATTERN.search(item) for item in resolved_open_items
+    )
+
+
+def test_final_checker_rejects_empty_required_handoff_section(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = handoff.replace(
+        "- Status: `IN PROGRESS`",
+        "- Status: `READY FOR REMOTE FINALIZATION`",
+    )
+    handoff = re.sub(
+        r"(?ms)^### Outcome\n.*?(?=^### Changed boundary)",
+        "### Outcome\n\n",
+        handoff,
+    )
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        handoff, encoding="utf-8"
+    )
+
+    errors = collect_errors(tmp_path, require_final=True)
+    assert (
+        "final validation requires one non-empty Handoff section: Outcome"
+        in errors
+    )
+
+
+def _init_contract_test_repository(path: Path) -> None:
+    subprocess.run(["git", "init", "-q"], cwd=path, check=True)
+    subprocess.run(
+        ["git", "config", "user.name", "Contract Test"],
+        cwd=path,
+        check=True,
+    )
+    subprocess.run(
+        ["git", "config", "user.email", "contract-test@example.invalid"],
+        cwd=path,
+        check=True,
+    )
+
+
+def test_pull_request_freshness_rejects_stale_complete_contract(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    execution, execution_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    handoff, handoff_status_count = re.subn(
+        r"^- Status: `[^`]+`$",
+        "- Status: `COMPLETE`",
+        handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert execution_status_count == 1
+    assert handoff_status_count == 1
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        handoff, encoding="utf-8"
+    )
+    (tmp_path / "README.md").write_text("base\n", encoding="utf-8")
+    _init_contract_test_repository(tmp_path)
+    subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+    subprocess.run(
+        ["git", "commit", "-q", "-m", "base"], cwd=tmp_path, check=True
+    )
+    (tmp_path / "README.md").write_text("unrelated change\n", encoding="utf-8")
+
+    errors = collect_errors(tmp_path, base_ref="HEAD")
+    assert (
+        "contract freshness: unchanged contract IDs are allowed only for the "
+        "READY-to-COMPLETE closure transition"
+    ) in errors
+
+
+def test_pull_request_freshness_allows_contract_only_closure(
+    tmp_path: Path,
+) -> None:
+    execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
+    handoff = handoff.replace(
+        "- Status: `IN PROGRESS`",
+        "- Status: `READY FOR REMOTE FINALIZATION`",
+    )
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        execution, encoding="utf-8"
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        handoff, encoding="utf-8"
+    )
+    _init_contract_test_repository(tmp_path)
+    subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+    subprocess.run(
+        ["git", "commit", "-q", "-m", "ready"], cwd=tmp_path, check=True
+    )
+    (tmp_path / "EXECUTION_CONTRACT.md").write_text(
+        execution.replace(
+            "- Status: `AUTHORIZED / IN PROGRESS`", "- Status: `COMPLETE`"
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "HANDOFF_CONTRACT.md").write_text(
+        handoff.replace(
+            "- Status: `READY FOR REMOTE FINALIZATION`",
+            "- Status: `COMPLETE`",
+        ),
+        encoding="utf-8",
+    )
+
+    errors = collect_errors(tmp_path, base_ref="HEAD")
+    assert not [
+        error for error in errors if error.startswith("contract freshness:")
+    ]
+
+
+def test_commander_scope_and_local_storage_decisions_remain_partial() -> None:
+    execution_contract = (
+        ROOT / "EXECUTION_CONTRACT.md"
+    ).read_text(encoding="utf-8")
+    normalized_execution_contract = " ".join(execution_contract.split())
+    decision_log = (
+        ROOT / "docs/research/decision_log.md"
+    ).read_text(encoding="utf-8")
+    dossier = (
+        ROOT / "docs/research/gate0_decision_dossier.md"
+    ).read_text(encoding="utf-8")
+    research_contract = (
+        ROOT / "docs/research/research_contract.md"
+    ).read_text(encoding="utf-8")
+
+    assert (
+        "conditional simulation-output core floor"
+        in normalized_execution_contract
+    )
+    assert "not the medical dataset size" in normalized_execution_contract
+    assert "DR-0015 — Commander Scope Choice and Local Storage Boundary" in decision_log
+    assert "Commander-approved partial Gate-0 decision" in decision_log
+    assert "`G0-METHOD A/B` remains open" in decision_log
+    assert "`COMMANDER APPROVED A / SUPERVISOR OPEN`" in dossier
+    assert "cannot hold the approximately 613-GB" in dossier
+    assert "Scientific-supervisor co-approval remains open" in research_contract
+    assert "That floor is not the dataset size" in research_contract
+
+
+def test_ci_dependencies_are_immutable() -> None:
+    workflow = (
+        ROOT / ".github/workflows/quality.yml"
+    ).read_text(encoding="utf-8")
+    requirements = (ROOT / "requirements-dev.txt").read_text(encoding="utf-8")
+
+    assert "actions/checkout@11d5960a326750d5838078e36cf38b85af677262" in workflow
+    assert "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065" in workflow
+    assert "actions/checkout@v4" not in workflow
+    assert "actions/setup-python@v5" not in workflow
+    assert "python scripts/check_repository.py --final" in workflow
+    assert "fetch-depth: 0" in workflow
+    assert "--base-ref \"$BASE_REF\"" in workflow
+    assert requirements.strip() == "pytest==8.4.2"
 
 
 def test_readme_declares_protocol_status() -> None:

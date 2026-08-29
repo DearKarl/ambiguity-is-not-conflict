@@ -4,6 +4,8 @@ Describe the single bounded outcome.
 
 ## Authority and scope
 
+- Execution Contract:
+- Handoff Contract:
 - Decision record or task brief:
 - Authoritative inputs:
 - Files deliberately excluded:
@@ -18,8 +20,10 @@ Describe the single bounded outcome.
 
 ## Validation
 
+- [ ] Execution Contract was updated and fully traversed before work
+- [ ] Handoff Contract records the delivered result and residual boundary
 - [ ] `pytest -q`
-- [ ] `python scripts/check_repository.py`
+- [ ] `python scripts/check_repository.py --final`
 - [ ] Data/model/configuration versions recorded when applicable
 - [ ] No restricted data, identifiers, credentials, or private correspondence
 - [ ] Generated tables/figures link to an evidence card and exact command
