@@ -131,14 +131,21 @@ available allocation. Consequently `G0-READERS`, `G0-MV-Q`, and
 The [non-core computational design](noncore_simulation_computational_design.md)
 now supplies a static stage graph, proposed audit schema, restart rules,
 proof-obligation register, workload crosswalk, and future benchmark acceptance
-equations. Its proposed minimum successful-path audit payload is approximately
-572.5 decimal GB before unresolved permutation/output extensions, overhead,
-scratch, redundancy, or backups. This is schema arithmetic, not measured
-storage or an allocation, and the exact output registry remains open.
+equations. TB-0011's
+[output/operation registry](simulation_output_and_operation_registry.md)
+supersedes its 56-byte prefix and 312/568-byte record arithmetic. The corrected
+conditional all-candidate catalogue/lock/bitmap/core-record floor is exactly
+613,093,770,610 bytes before unresolved typed static/aggregate/family,
+permutation, journal, failure-detail, format, retry, overhead, scratch,
+redundancy, or backup terms. This is schema arithmetic, not measured storage,
+a final upper bound, or an allocation. The logical registry is a complete
+static candidate, but its named owner choices and physical extension bounds
+remain open.
 
-The recommended next resource action is to close that registry and semantic-
-count ledger, then issue a separately bounded workload-equivalent generic-
-kernel benchmark brief. It may not implement or call the project RNG, DGP,
+The recommended next resource action is to approve or amend that registry,
+close every extension and the final storage upper bound, then issue a
+separately bounded workload-equivalent generic-kernel benchmark brief. It may
+not implement or call the project RNG, DGP,
 calibration equations, bootstrap statistic, or scientific pipeline while Gate
 0 is open; exact scientific implementation remains a post-Gate-0 action.
 Streaming, exact sufficient statistics, canonical deduplication, and

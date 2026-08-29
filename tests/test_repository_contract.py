@@ -6,6 +6,11 @@ from pathlib import Path
 from statistics import NormalDist
 
 from scripts.check_repository import collect_errors
+from scripts.compile_simulation_semantic_count_ledger import (
+    ledger_identity,
+    metric_fields,
+    operation_registry,
+)
 from scripts.enumerate_simulation_resource_manifest import (
     build_mv_manifest,
     build_reliability_manifest,
@@ -577,7 +582,8 @@ def test_noncore_simulation_design_preserves_gate_and_proof_boundaries() -> None
     assert "static proof-obligation candidate" in design
     assert "no benchmark" in design
     assert "k_plan=4,416" in design
-    assert "572.5 decimal gb" in design
+    assert "613,093,770,610" in design
+    assert "40,601,280,000" in design
     assert "p0-manifest" in design and "p11-resource" in design
     assert "counters alone fail" in design
     assert "1-0.99^{299}>0.95" in design
@@ -594,3 +600,477 @@ def test_noncore_simulation_design_preserves_gate_and_proof_boundaries() -> None
     assert "g0-resources" in design and "remain open" in design
     assert "fewer than 120,000/9,999" in brief
     assert "no external action is authorized except the final" in brief
+
+
+def test_simulation_output_registry_is_typed_complete_and_reproducible() -> None:
+    metrics = metric_fields()
+    operations = operation_registry()
+    assert len(metrics) == 259
+    assert len({field.metric_code for field in metrics}) == len(metrics)
+    assert len(operations) == 244
+    assert len({operation.operation_code for operation in operations}) == len(
+        operations
+    )
+
+    metric_by_code = {field.metric_code: field for field in metrics}
+    operation_by_code = {
+        operation.operation_code: operation for operation in operations
+    }
+    assert metric_by_code["common.cell.bootstrap_resamples"].logical_type == "U32"
+    assert all(
+        "N=R=120000" in field.aggregate_rule
+        for field in metrics
+        if field.record_scope == "cell_aggregate_event"
+    )
+    assert all(
+        "I_complete" in field.applicability
+        and "I_complete=1_iff_completion_bitmap_has_all_R_bits" in (
+            field.failure_semantics
+        )
+        for field in metrics
+        if field.kind == "reliability"
+        and field.record_scope == "cell_aggregate_event"
+    )
+    assert all(
+        "I_complete" in field.applicability
+        and "I_complete=1_iff_completion_bitmap_has_all_R_bits" in (
+            field.failure_semantics
+        )
+        for field in metrics
+        if field.kind == "mv1"
+        and field.record_scope == "cell_aggregate_event"
+    )
+    assert "I_R3=1_and_I_complete=0=>state_NOT_REACHED" in metric_by_code[
+        "rel.aggregate.coverage"
+    ].aggregate_rule
+    assert "outer_eligibility=ELIGIBLE_and_I_complete=0=>state_NOT_REACHED" in (
+        metric_by_code["mv.aggregate.coverage_bal"].aggregate_rule
+    )
+    rel_undefined = metric_by_code["rel.aggregate.undefined_bootstrap_fraction"]
+    assert "I_R3=0_or_I_complete=0=>state_NOT_REACHED_denominator=0" in (
+        rel_undefined.aggregate_rule
+    )
+    assert metric_by_code[
+        "rel.exclusion.observed_reader_sensitivities"
+    ].occurrence_formula == "0_simulated_occurrences_exact"
+    assert "independent_of_SE" in metric_by_code["mv.outer.qhat_bal"].applicability
+    assert "VALUE_independent_of_outer_estimability" in metric_by_code[
+        "mv.outer.truth_bal"
+    ].applicability
+    null_false = metric_by_code["mv.aggregate.null_false_qualification"]
+    assert "immutable_manifest_null_boundary_member" in null_false.applicability
+    assert "I_complete=1" in null_false.applicability
+    assert "manifest_target_q_bal" in null_false.aggregate_rule
+    assert "membership_independent_of_selected_calibrated_truth" in (
+        null_false.aggregate_rule
+    )
+    false_promotion = metric_by_code["rel.aggregate.false_promotion"]
+    assert "alpha<=0.67" in false_promotion.aggregate_rule
+    assert "macro<=0.80" in false_promotion.aggregate_rule
+    assert "positive<=0.70" in false_promotion.aggregate_rule
+    assert "INAPPLICABLE_only_if_resolved_strict_alternative" in (
+        false_promotion.applicability
+    )
+
+    rel_truth = metric_by_code["rel.cell.truth_positive_41"]
+    assert rel_truth.logical_type == "F64[4]"
+    assert rel_truth.width_bytes.startswith("33_including_32_payload")
+    assert "class_c>=K_g_is_INAPPLICABLE" in rel_truth.state_semantics
+    assert "one_independent_2bit_state_per_named_scalar_or_fixed_class_element" in (
+        rel_truth.state_semantics
+    )
+    mv_control = metric_by_code["mv.cell.calibration_control_counts_present"]
+    assert mv_control.logical_type.startswith("PACKED40{")
+    assert mv_control.width_bytes.startswith("41_including_40_payload")
+    assert "discarded_retry_partial_counts_never_enter_this_field" in (
+        mv_control.state_semantics
+    )
+    mv_truth = metric_by_code["mv.cell.truth_bal_present_absent"]
+    assert "under_target_truth_choice" in mv_truth.state_semantics
+    assert "under_validated_truth_choice" in mv_truth.state_semantics
+    assert "inner_alpha_and_final_outer_solution_selection_rules_owner_blocked" in metric_by_code[
+        "mv.cell.mu_y"
+    ].applicability
+    assert metric_by_code["mv.cell.admissible_mean_lower"].status == (
+        "owner_blocked"
+    )
+    assert "signed_yield_residual=estimated_P(E=1_given_Y)-rho_Y" in (
+        metric_by_code["mv.cell.candidate_yield_q_residuals"].state_semantics
+    )
+
+    required_operations = {
+        "common.identifier_dictionary_serializations",
+        "common.permutation_dictionary_serializations",
+        "common.completion_bitmap_serializations",
+        "common.completion_bitmap_bytes",
+        "rel.missing_endpoint_residual_evaluations",
+        "rel.missing_bracket_checks",
+        "rel.missing_residual_evaluations",
+        "rel.reader_effect_vector_normalizations",
+        "mv.static_reader_vector_normalizations",
+        "mv.outer_evaluability_block_reductions",
+        "mv.outer_four_of_five_panel_reductions",
+        "mv.calibration_open_unit_conversions_replay",
+        "mv.calibration_open_unit_conversions_materialize_reconvert",
+        "mv.calibration_open_unit_conversions_materialize_cache",
+        "mv.calibration_open_unit_cache_bytes",
+        "global.cp95_conformance_interval_calls",
+        "global.cp95_conformance_beta_quantile_calls",
+        "global.cp95_half_width_evaluations",
+        "global.cp95_max_argmax_comparisons",
+        "global.cp95_threshold_comparisons",
+        "rel.outer_point_descriptive_reductions",
+        "mv.outer_screen_assignment_tallies",
+        "rel.aggregate_proportion_evaluations",
+        "rel.aggregate_undefined_bootstrap_fraction_divisions",
+        "mv.aggregate_proportion_evaluations",
+        "mv.calibration_domain_bound_constructions",
+        "mv.calibration_inner_alpha_final_selections",
+        "mv.calibration_final_solution_selections",
+        "mv.calibration_final_distribution_parameter_constructions",
+        "mv.calibration_control_record_assemblies",
+        "global.family_execution_attempt_records",
+        "global.cp95_execution_attempt_records",
+        "global.registry_dictionary_serializations",
+        "global.registry_dictionary_bytes",
+        "common.chunk_journal_bytes",
+        "common.failure_detail_bytes",
+        "rel.missing_final_candidate_selection_events",
+    }
+    assert required_operations <= operation_by_code.keys()
+    assert operation_by_code["rel.outer_records"].count_formula == "I_R3*(M_c)"
+    assert operation_by_code["mv.outer_records"].count_formula == "M_c"
+    assert operation_by_code[
+        "rel.outer_point_descriptive_reductions"
+    ].count_formula == "I_R3*(M_c)"
+    assert operation_by_code["mv.outer_screen_assignment_tallies"].count_formula == (
+        "M_c"
+    )
+    assert operation_by_code["rel.dgp_words_lower"].count_formula.startswith(
+        "I_R3*(R*"
+    )
+    assert operation_by_code["rel.bootstrap_index_words"].count_formula == (
+        "I_R3*(R*B*N)"
+    )
+    assert operation_by_code["mv.dgp_words"].count_formula.startswith("R*")
+    for code in (
+        "rel.outer_payload_hashes",
+        "rel.outer_record_serializations",
+        "rel.completion_bitmap_updates",
+        "rel.outer_classification_assemblies",
+    ):
+        assert "M_c" in operation_by_code[code].count_formula
+    for code in (
+        "mv.outer_payload_hashes",
+        "mv.outer_record_serializations",
+        "mv.outer_record_bytes",
+        "mv.completion_bitmap_updates",
+        "mv.outer_classification_assemblies",
+    ):
+        assert "M_c" in operation_by_code[code].count_formula
+    assert operation_by_code["rel.percentile_selections"].bound_type == (
+        "conditional_upper_bound"
+    )
+    assert operation_by_code[
+        "rel.missing_endpoint_residual_evaluations"
+    ].accounting_role == (
+        "diagnostic_component_of_total_residual_evaluations_do_not_add"
+    )
+    assert operation_by_code["rel.dgp_words_lower"].accounting_role.startswith(
+        "envelope_lower_do_not_sum"
+    )
+    assert operation_by_code[
+        "mv.calibration_materialized_words"
+    ].accounting_role == "exclusive_calibration_raw_alternative"
+    assert operation_by_code[
+        "mv.calibration_candidate_vector_evaluations"
+    ].count_formula == "2*(1001+80)*(80+2)*2^20"
+    assert operation_by_code[
+        "mv.calibration_validation_vector_evaluations"
+    ].count_formula == "2*2^22"
+    assert operation_by_code[
+        "mv.calibration_domain_bound_constructions"
+    ].count_formula == "I_domain*2"
+    assert operation_by_code[
+        "mv.calibration_inner_alpha_final_selections"
+    ].count_formula == "2*(1001+80)"
+    assert "inner_bracket_sign_orientation" in operation_by_code[
+        "mv.calibration_inner_alpha_final_selections"
+    ].assumption_or_blocker
+    assert operation_by_code[
+        "mv.calibration_final_solution_selections"
+    ].bound_type == "upper_bound"
+    assert "zero_based_preceding_index_argmax" in operation_by_code[
+        "mv.calibration_monotonicity_comparisons"
+    ].assumption_or_blocker
+    assert operation_by_code[
+        "rel.aggregate_proportion_evaluations"
+    ].count_formula == "I_R3*(I_complete*(11+K))"
+    assert operation_by_code[
+        "rel.aggregate_undefined_bootstrap_fraction_divisions"
+    ].count_formula == "I_R3*(I_complete)"
+    assert operation_by_code[
+        "mv.aggregate_proportion_evaluations"
+    ].count_formula == "I_outer*I_complete*17"
+
+    cp95_counts = {
+        "global.cp95_conformance_interval_calls": "120001",
+        "global.cp95_conformance_beta_quantile_calls": "240000",
+        "global.cp95_half_width_evaluations": "120001",
+        "global.cp95_max_argmax_comparisons": "120000",
+        "global.cp95_threshold_comparisons": "1",
+    }
+    assert {
+        code: operation_by_code[code].count_formula for code in cp95_counts
+    } == cp95_counts
+    assert "strictly_less_than_0.003" in operation_by_code[
+        "global.cp95_threshold_comparisons"
+    ].assumption_or_blocker
+    assert operation_by_code["rel.family_union_failure_complements"].count_formula == (
+        "15"
+    )
+    assert operation_by_code["rel.family_union_failure_additions"].count_formula == (
+        "14"
+    )
+    assert operation_by_code[
+        "rel.family_union_threshold_comparisons"
+    ].count_formula == "1"
+    assert operation_by_code[
+        "global.registry_dictionary_serializations"
+    ].count_formula == "4"
+    assert operation_by_code["common.chunk_journal_bytes"].bound_type == (
+        "unresolved"
+    )
+    assert "100_midpoint_updates" in operation_by_code[
+        "rel.missing_final_candidate_selection_events"
+    ].assumption_or_blocker
+    assert metric_by_code["rel.cell.missing_bracket_state"].status == (
+        "owner_blocked"
+    )
+    assert metric_by_code[
+        "rel.cell.missing_endpoint_lower_residual"
+    ].status == "owner_blocked"
+    assert "abs_residual_above_1e-10_causes_static_missingness_failure" in (
+        metric_by_code["rel.cell.missing_residual"].state_semantics
+    )
+    assert "VALUE_ENUM8_ALTERNATIVE_iff_final_alpha>0.67" in (
+        metric_by_code["rel.cell.null_boundary_class"].state_semantics
+    )
+    assert "VALUE_ENUM8_BOUNDARY_iff_no_required_component_is_below" in (
+        metric_by_code["rel.cell.null_boundary_class"].state_semantics
+    )
+    assert "VALUE_true_iff_final_alpha>0.80" in metric_by_code[
+        "rel.cell.planning_truth_eligibility"
+    ].state_semantics
+    assert "abs_selected_signed_residual_less_than_or_equal_to_1e-10" in (
+        operation_by_code["rel.static_classification_assemblies"].assumption_or_blocker
+    )
+    assert "inclusive_endpoint_zero_predicate" in operation_by_code[
+        "rel.missing_bracket_checks"
+    ].assumption_or_blocker
+    assert "midpoint_residual_zero_equality" in operation_by_code[
+        "rel.missing_midpoint_controls"
+    ].assumption_or_blocker
+    assert "last_node_emits" in operation_by_code[
+        "rel.quadrature_node_reductions"
+    ].assumption_or_blocker
+    assert "three_lower_bound_assemblies" in operation_by_code[
+        "mv.max_t_selections"
+    ].semantic_unit
+    outer_eligibility = metric_by_code["mv.cell.outer_eligibility"]
+    assert "ELIGIBLE=1_NOT_ELIGIBLE=0_INFRASTRUCTURE_INCOMPLETE=2" in (
+        outer_eligibility.state_semantics
+    )
+    assert "I_outer=1_iff_ELIGIBLE_else_0" in outer_eligibility.state_semantics
+    assert "outer_eligibility=NOT_ELIGIBLE=>state_NOT_REACHED" in (
+        metric_by_code["mv.aggregate.coverage_bal"].aggregate_rule
+    )
+    assert "outer_eligibility=INFRASTRUCTURE_INCOMPLETE=>state_NOT_REACHED" in (
+        metric_by_code["mv.aggregate.coverage_bal"].aggregate_rule
+    )
+    assert "n_present>=1_and_present_mean_is_finite" in metric_by_code[
+        "mv.outer.qhat_present"
+    ].failure_semantics
+    assert "zero_VALUE_makes_max_t_nonestimable" in metric_by_code[
+        "mv.outer.se_present"
+    ].failure_semantics
+    assert "NOT_REACHED_if_any_prerequisite_is_nonVALUE" in metric_by_code[
+        "mv.outer.lower_bal"
+    ].failure_semantics
+    assert "rank_deficiency" in metric_by_code[
+        "mv.outer.fe_present"
+    ].failure_semantics
+    assert "one_reader_or_component_failure_does_not_erase" in metric_by_code[
+        "mv.outer.loo_reader_00_present"
+    ].failure_semantics
+    axis_argmin = metric_by_code["rel.family.axis_argmin"]
+    assert "array_axis_order=image_technical,image_coverage" in (
+        axis_argmin.applicability
+    )
+    assert "smallest_tied_combined_catalogue_index" in axis_argmin.applicability
+    assert "never_update_on_exact_binary64_equality" in operation_by_code[
+        "rel.family_axis_min_argmin_comparisons"
+    ].assumption_or_blocker
+
+    for kind, expected in (("reliability", 32), ("mv1", 64)):
+        slots = [
+            int(field.slot)
+            for field in metrics
+            if field.kind == kind and field.record_scope == "outer_core"
+        ]
+        assert slots == list(range(expected))
+        assert all(
+            "VALUE|INAPPLICABLE|SCIENTIFIC_UNDEFINED|NOT_REACHED"
+            in field.state_semantics
+            for field in metrics
+            if field.kind == kind and field.record_scope == "outer_core"
+        )
+
+    common_codes = {
+        field.metric_code
+        for field in metrics
+        if field.record_scope == "outer_header"
+    }
+    assert "common.header.failure_component_mask" in common_codes
+    assert "common.header.event_mask" in common_codes
+    assert "common.header.execution_provenance_key" in common_codes
+    assert "common.header.retry_count" not in common_codes
+    assert "common.header.attempt_count" not in common_codes
+    assert "common.header.infrastructure_failure_ref" not in common_codes
+    assert "mutable_attempt_retry_and_infrastructure_provenance_lives_only" in (
+        metric_by_code["common.header.execution_provenance_key"].failure_semantics
+    )
+    assert "digest_slot_canonical_zero" in metric_by_code[
+        "common.header.payload_digest"
+    ].failure_semantics
+    sidecar = metric_by_code["common.execution.attempt"]
+    assert sidecar.logical_type.startswith("FIXED32{")
+    assert sidecar.width_bytes == "32"
+    for rule in (
+        "outer_range_join_requires_same_global_cell_index",
+        "identity_count_positive",
+        "identity_count=1",
+        "attempt_ordinal_is_contiguous_zero_based_U16",
+        "positive_refs_are_partition_local",
+    ):
+        assert rule in sidecar.aggregate_rule
+    assert "whole_polarity_is_atomic_calibration_retry_unit" in operation_by_code[
+        "mv.execution_attempt_records"
+    ].assumption_or_blocker
+    assert "mutable_execution_sidecar_excluded" in operation_by_code[
+        "mv.outer_payload_hashes"
+    ].assumption_or_blocker
+    assert "digest_slot_canonical_zero" in metric_by_code[
+        "common.file.content_digest"
+    ].failure_semantics
+    assert "combined_manifest_sha256" in metric_by_code[
+        "common.cell.catalogue_index"
+    ].aggregate_rule
+    assert metric_by_code["common.aggregate.record"].logical_type.startswith(
+        "FIXED16{"
+    )
+
+    for code in ("rel.family.family_decision", "mv.family.family_decision"):
+        assert "precedence_FAIL" in metric_by_code[code].aggregate_rule
+        assert "else_INCOMPLETE" in metric_by_code[code].aggregate_rule
+        assert "else_PASS" in metric_by_code[code].aggregate_rule
+    assert "disjoint_from_failed_inventory" in metric_by_code[
+        "rel.family.infrastructure_missing_member_inventory"
+    ].aggregate_rule
+    assert "disjoint_from_both_failure_inventories" in metric_by_code[
+        "mv.family.infrastructure_missing_member_inventory"
+    ].aggregate_rule
+    assert any(
+        field.status == "owner_blocked"
+        and "never_assume_zero" in field.storage_action
+        for field in metrics
+    )
+
+    commands = {
+        "simulation_metric_registry.csv": ["--registry", "metrics"],
+        "simulation_operation_registry.csv": ["--registry", "operations"],
+        "simulation_semantic_count_ledger_summary.csv": [],
+    }
+    for filename, arguments in commands.items():
+        generated = subprocess.run(
+            [
+                sys.executable,
+                "scripts/compile_simulation_semantic_count_ledger.py",
+                *arguments,
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+        assert generated == (ROOT / "reports/tables" / filename).read_text(
+            encoding="utf-8"
+        )
+
+
+def test_simulation_semantic_ledger_identity_and_storage_correction() -> None:
+    row_count, digest = ledger_identity()
+    assert row_count == 1_242_518
+    assert digest == (
+        "b25e9cdf4e61280de02d1187675023632895060c8c9c40cc60c56921a97fb507"
+    )
+
+    table_path = (
+        ROOT / "reports/tables/simulation_semantic_count_ledger_summary.csv"
+    )
+    with table_path.open(encoding="utf-8", newline="") as handle:
+        rows = {
+            (row["scope"], row["metric"]): row for row in csv.DictReader(handle)
+        }
+    assert rows[("schema", "common_outer_prefix_bytes")]["value"] == "72"
+    assert rows[("schema", "reliability_outer_record_bytes")]["value"] == "336"
+    assert rows[("schema", "mv1_outer_record_bytes")]["value"] == "600"
+    assert rows[("schema", "full_candidate_success_core_floor_bytes")][
+        "value"
+    ] == "613093770610"
+    assert rows[("schema", "core_floor_increase_bytes")]["value"] == (
+        "40601280000"
+    )
+    assert rows[("schema", "final_persistent_output_upper_bytes")][
+        "value"
+    ] == "not_identifiable"
+    assert rows[("manifest", "combined_manifest_sha256")]["value"] == (
+        "4e914a602b418c7fbbcccb1e98d9f09a3d339009e9c2befcdd098e34604695a0"
+    )
+    assert rows[("registry", "metric_row_count")]["value"] == "259"
+    assert rows[("registry", "operation_row_count")]["value"] == "244"
+    assert rows[("registry", "metric_registry_sha256")]["value"] == (
+        "a8c9c1a035d595ad22d3c1d77b6f789d5f25cd61f92f23551315ec83b867baf1"
+    )
+    assert rows[("registry", "operation_registry_sha256")]["value"] == (
+        "d1a85128cb5ab94ec64074dac21d6c53b1bcd6cd7256bf3e68a94ad8d2e347ff"
+    )
+    assert rows[("ledger", "per_cell_row_count")]["value"] == "1242518"
+    assert rows[("ledger", "per_cell_ledger_sha256")]["value"] == (
+        "b25e9cdf4e61280de02d1187675023632895060c8c9c40cc60c56921a97fb507"
+    )
+    assert rows[("blocker", "reliability_missingness_bisection_rule")][
+        "value"
+    ] == "owner_decision_required"
+    assert rows[
+        (
+            "blocker",
+            "mv1_numerical_domain_inner_and_outer_solution_truth_and_trace",
+        )
+    ]["value"] == "owner_decision_required"
+
+    registry = " ".join(
+        (ROOT / "docs/research/simulation_output_and_operation_registry.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "complete static freeze candidate" in registry
+    assert "gate outcomes are events" in registry
+    assert "nan never encodes state" in registry
+    assert "observed-reader only" in registry
+    assert "not a final output upper bound" in registry
+    assert "gate 0 remain open" in registry
+    assert "i_complete=1" in registry
+    assert "whole-polarity replay" in registry
+    assert "state/event and retry-join semantics" in registry

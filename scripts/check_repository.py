@@ -37,6 +37,7 @@ REQUIRED_PATHS = (
     "docs/research/reader_measurement_and_mv1_qualification_audit.md",
     "docs/research/simulation_resource_feasibility_audit.md",
     "docs/research/noncore_simulation_computational_design.md",
+    "docs/research/simulation_output_and_operation_registry.md",
     "docs/research/gate0_decision_dossier.md",
     "docs/research/gate0_closure_audit.md",
     "docs/research/baselines_and_ablations.md",
@@ -51,12 +52,17 @@ REQUIRED_PATHS = (
     "docs/research/task_briefs/TB-0008-reader-measurement-mv1-qualification.md",
     "docs/research/task_briefs/TB-0009-simulation-resource-feasibility.md",
     "docs/research/task_briefs/TB-0010-noncore-simulation-resource-design.md",
+    "docs/research/task_briefs/TB-0011-output-metric-registry-semantic-count-ledger.md",
     "experiments/research_core/README.md",
     "reports/tables/gate0_power_sensitivity.csv",
     "reports/tables/mv1_qualification_yield_sensitivity.csv",
     "reports/tables/simulation_resource_manifest_summary.csv",
+    "reports/tables/simulation_metric_registry.csv",
+    "reports/tables/simulation_operation_registry.csv",
+    "reports/tables/simulation_semantic_count_ledger_summary.csv",
     "scripts/calculate_mv1_qualification_design.py",
     "scripts/enumerate_simulation_resource_manifest.py",
+    "scripts/compile_simulation_semantic_count_ledger.py",
 )
 
 FORBIDDEN_BASENAMES = {

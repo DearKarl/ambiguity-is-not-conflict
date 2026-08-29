@@ -192,14 +192,19 @@ output storage.
 | `MV-1` bootstrap index words | 874,688,522,400,000 | 829,357,056,000,000 | All-candidates-evaluable upper bound |
 | Combined bootstrap index words | 2,723,199,652,800,000 | 1,576,546,329,600,000 | Upper bound |
 | `MV-1` calibration raw words | 818,057,052,160 | 773,094,113,280 | All candidates reach validation |
-| `MV-1` calibration vector evaluations | 453,234,284,036,096 | 428,323,129,786,368 | Full pass-path upper bound |
+| `MV-1` candidate/solve-vector evaluations | 453,213,832,609,792 | 428,303,802,433,536 | Full pass-path upper bound; excludes validation vectors |
+| `MV-1` validation-vector evaluations | 20,451,426,304 | 19,327,352,832 | One independent validation stream per polarity |
+| `MV-1` total vector evaluations | 453,234,284,036,096 | 428,323,129,786,368 | Sum of the two preceding disjoint rows |
 
 The byte-reproducible aggregate table is canonical for every detailed logical
 count. Per `MV-1` pass cell, the exact vector-evaluation expression is
 
 ```math
-2\left[(1001+80)(80+2)(2^{20})+2^{22}\right]
-=185{,}904{,}136{,}192.
+V_{cal}=2(1001+80)(80+2)(2^{20})=185{,}895{,}747{,}584,
+\qquad
+V_{val}=2(2^{22})=8{,}388{,}608,
+\qquad
+V_{cal}+V_{val}=185{,}904{,}136{,}192.
 ```
 
 Reliability DGP generation is bounded between 1,801,581,600,000 and
@@ -210,13 +215,19 @@ streams.
 
 No persistent-output byte count follows from TB-0009 alone. TB-0010's
 [non-core computational design](noncore_simulation_computational_design.md)
-now proposes a normalized uncompressed audit schema and derives a minimum
-successful-path payload of approximately 572.5 decimal GB before permutation
-payloads, output-registry extensions, aggregate/failure records, container
-overhead, scratch, redundancy, or backups. That arithmetic is neither a final
-storage upper bound nor an allocation. The exact output registry, CPU-core-
-hours, RAM, scratch, wall time, energy, cost, and capacity remain unidentified
-without the later locks and separately authorized generic-kernel benchmark.
+proposed a normalized uncompressed audit schema. TB-0011's
+[output/operation registry](simulation_output_and_operation_registry.md)
+then rejected its 56-byte prefix and 312/568-byte records because they omitted
+typed slot state, distinct event/failure masks, and a deterministic join to a
+separately content-digested execution-attempt/retry stream. The
+corrected conditional all-candidate catalogue/lock/bitmap/core-record floor is
+613,093,770,610 bytes, exactly 40,601,280,000 above the superseded TB-0010
+value. It still excludes typed static/aggregate/family, permutation, journal,
+failure-detail, owner-blocked extension, container, scratch, redundancy, and
+backup terms. This is neither a final storage upper bound nor an allocation.
+CPU-core-hours, RAM, scratch, wall time, energy, cost, capacity, and runtime
+remain unidentified without the later locks and separately authorized
+generic-kernel benchmark.
 
 ## Required Later Resource Evidence and Post-Gate-0 Implementation
 
@@ -249,9 +260,10 @@ conservatively bound:
   deadline treatment, independent-stream preservation, exact kernel
   numerators, and the permitted non-project RNG/surrogate boundary.
 
-The output/metric registry and semantic-count ledger must close before timing;
-their compiler/harness work, if any, requires the benchmark brief's exact
-authorization. The non-core microbenchmark requires statistical, resource,
+TB-0011 has compiled the output/metric and semantic-count registries without
+scientific execution, but their owner-blocked choices and final storage upper
+bound must close before timing. Any benchmark harness or execution requires a
+new exact brief. The non-core microbenchmark requires statistical, resource,
 infrastructure, security, and governance pre-review. Its **outputs** must then
 include measured generic-kernel throughput and failures, familywise timing/
 tail evidence, a conservative mapping to CPU/RAM/scratch/storage/wall time,

@@ -588,7 +588,10 @@ decisions are separated explicitly.
 - **Proof boundary:** Later optimized paths must preserve canonical cells and
   hashes, every seed/tag/raw word and bootstrap index, reference-order statistic
   bits, strict inequalities, failure classifications, multiplicity families,
-  reconstructible audit outputs, and byte-identical atomic restart. Failure
+  reconstructible audit outputs, byte-identical canonical scientific records
+  under atomic restart, and execution-history-sensitive sidecar accounting.
+  Mutable retry/journal/failure streams are audited separately and are not in
+  the cross-schedule byte-equality domain. Failure
   retains the reference path or stops; approximate agreement is insufficient.
 - **Kill boundary:** No project RNG, DGP, calibration, bootstrap statistic,
   reliability statistic, FE/LOO analysis, simulation, benchmark, model, data,
@@ -601,6 +604,69 @@ decisions are separated explicitly.
   for the unchanged pre-reader simulation. This is not correctness,
   calibration admissibility, feasibility, operating performance, Gate-0
   closure, acceptance, or publication.
+
+## DR-0014 — Typed Simulation Output and Semantic-Count Registry
+
+- **Date:** 2026-08-29
+- **Status:** Complete static freeze candidate under TB-0011; requires
+  scientific, statistical, resource, infrastructure, governance, and Commander
+  approval or amendment; not executable
+- **Facts:** The frozen TB-0009 manifests remain 10,847 reliability and 2,438
+  pre-calibration `MV-1` candidates with unchanged hashes. A standard-library,
+  RNG-free compiler now emits a 259-row metric registry, 244-row operation
+  registry, and 1,242,518-row cell/global ledger with complete-file SHA-256
+  `b25e9cdf4e61280de02d1187675023632895060c8c9c40cc60c56921a97fb507`.
+  No scientific value, permutation, random stream, simulation, benchmark,
+  data, model, or reader output was generated.
+- **Scientific inference:** Binary64 payloads and a NaN sentinel cannot
+  identify structural inapplicability, reached scientific undefinedness, and
+  not-reached state. Gate outcomes are also distinct from scientific and
+  infrastructure failures. The TB-0010 prefix/record proposal was therefore
+  insufficient for unbiased operating-characteristic accounting.
+- **Registry decision:** Recommend a 72-byte canonical scientific prefix with
+  separate failure-component and event masks, a deterministic key into a
+  separately content-digested execution-attempt stream,
+  two-bit `VALUE/INAPPLICABLE/SCIENTIFIC_UNDEFINED/NOT_REACHED` state per core
+  slot, canonical-zero non-value payload, 32 reliability slots, and 64 `MV-1`
+  slots. Persist static truths/calibration locks, outer core/state/events/
+  failures, aggregate numerators/denominators, family decisions, identity, and
+  digests. Reconstruct raw words, synthetic ratings, bootstrap indices, and
+  bootstrap replicate values only after later bitwise conformance.
+- **Storage correction:** Reliability and `MV-1` outer records become 336 and
+  600 bytes. Under the same conditional all-candidate path, catalogue, locks,
+  completion bitmaps, and core outer records total 613,093,770,610 bytes,
+  exactly 40,601,280,000 above DR-0013's superseded floor. This is still a
+  lower bound because typed static/aggregate/family, permutation, journal,
+  failure-detail, owner-blocked extension, format, retry, redundancy, and
+  retention terms lack a final upper bound.
+- **Scope decision:** FE and all 30 leave-one-reader `MV-1` values remain in
+  the core because they are part of the qualification veto. Hierarchical,
+  Gwet, ordinal, adjudication, and complete reader-by-category diagnostics are
+  observed-reader-only under the current simulation mandate. Adding them to
+  every simulation replication requires a prospective canonical amendment and
+  re-enumeration. Exact reliability/`MV-1` repeat outputs remain owner-blocked,
+  never zero-cost.
+- **Owner blockers:** Freeze the reliability truth-reference rule, missingness
+  residual/bracket/update/final-selection rule, and repeat/ambiguity/item/
+  permutation domains; `MV-1` numerical domain, inner-alpha and outer final-
+  solution rules, target-versus-validated truth, and retained trace depth;
+  primary-failure/component taxonomy; exact inverse-CDF, exact-binomial,
+  FE/LOO, rounding, and any added sensitivity algorithms and software. Then
+  close every extension/storage upper-bound term before a new generic
+  artificial-buffer benchmark brief.
+- **Kill boundary:** No benchmark or `G0-RESOURCES` choice may use the
+  613.094-GB core floor as a capacity requirement or assume unresolved bytes
+  are zero. No project RNG, DGP, calibration, bootstrap, statistic,
+  scientific serializer, simulation, data/model/reader access, or external
+  resource action is authorized. Resource shortage narrows, redesigns, or
+  stops; it never reduces fixed replications/resamples, deletes cells, or
+  weakens scientific gates.
+- **Permitted claim:** The repository contains complete static freeze
+  candidates for the simulation output registry and hardware-neutral semantic-
+  operation ledger, with unresolved choices explicitly blocking any later
+  benchmark or resource qualification. This is not owner approval,
+  implementation correctness, runtime, capacity, feasibility, operating
+  performance, Gate-0 closure, acceptance, or publication.
 
 ## Open Gate 0 Decisions
 
@@ -615,10 +681,11 @@ decisions are separated explicitly.
 - `G0-READERS A/B` and `G0-MV-Q A/B/C`: exact reader coefficient/allocation,
   finite-roster claim, text/cross-modal panels, adjudication, simulation,
   ethics, governance, yield, panel schedule, workload, and kill rules;
-- `G0-RESOURCES A/B/C`: close TB-0010's output/count registry and later
-  resource-qualify the unchanged 10,847-plus-2,438 candidate contract,
-  commission a proof-preserving redesign and complete re-enumeration, or
-  reject/narrow the affected route; no benchmark, runtime/capacity fact, or
+- `G0-RESOURCES A/B/C`: approve or amend TB-0011's registry recommendations,
+  close its owner-blocked extensions and final storage upper bound, and later
+  resource-qualify the unchanged 10,847-plus-2,438 candidate contract;
+  commission a proof-preserving redesign and complete re-enumeration; or
+  reject/narrow the affected route. No benchmark, runtime/capacity fact, or
   option approval currently exists;
 - `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
   theory candidate; then one exact non-outcome-selected pointwise instrument,

@@ -1,7 +1,8 @@
 # Non-Core Simulation Computational Design
 
-**Status:** Static proof-obligation candidate under TB-0010; no benchmark,
-implementation, simulation, resource allocation, or Gate-0 approval
+**Status:** Static proof-obligation candidate under TB-0010; outer-record and
+registry details corrected by TB-0011; no benchmark, implementation,
+simulation, resource allocation, or Gate-0 approval
 
 **Design date:** 2026-08-29
 
@@ -18,22 +19,29 @@ multiplicity families, failure rules, and no-early-stop rule remain unchanged.
 
 The recommended architecture has one immutable cell catalogue, independent
 cell/outer-replication work units, fixed-order within-replication execution,
-normalized result dictionaries, an audit record for every attempted outer
-replication, and atomic chunk commits. Streaming, sufficient statistics,
+normalized result dictionaries, one canonical scientific audit record for
+every successfully committed outer identity, separate attempt/journal/failure
+records for scheduled or retried work, and atomic chunk commits. Streaming, sufficient statistics,
 calibration caching, batching, and independent-cell parallelism are admissible
 only after the proof obligations below establish identical scientific inputs,
 streams, statistics, decisions, and audit outputs. Approximate or merely
 highly correlated outputs do not qualify.
 
-The proposed minimum uncompressed audit payload is already approximately
-572.5 decimal GB before permutation payloads, aggregate records, calibration
-traces, output-registry extensions, filesystem/container overhead, scratch,
-redundancy, or backups. This is arithmetic under a proposed schema, not a
-storage requirement or evidence that any current 1-TB line is available or
-sufficient. Exact capacity remains blocked until the output registry is
-closed, a separate generic-kernel benchmark is authorized and run, conservative
-scaling is reviewed, and named owners allocate CPU, RAM, scratch, persistent
-storage, wall time, and any cost/energy budget.
+TB-0011 found that the prior 56-byte prefix and 312/568-byte records omitted
+required per-slot state, a distinct event mask, failure-component retention,
+and a deterministic join to separately audited execution history. Its
+corrected 72-byte canonical scientific prefix, external 32-byte
+execution-attempt sidecar, and 336/600-byte records
+raise the conditional all-candidate catalogue/lock/bitmap/core-record floor
+from a superseded 572,492,490,610 bytes to **613,093,770,610 bytes**. The new
+number still excludes typed static/aggregate/family fields, permutation
+payloads, journals, failure detail, owner-blocked extensions, system overhead,
+scratch, redundancy, and backups. It is static arithmetic, not a storage
+requirement or evidence that any current 1-TB line is available or sufficient.
+Exact capacity remains blocked until the owner choices and final storage upper
+bound close, a separate generic-kernel benchmark is authorized and run,
+conservative scaling is reviewed, and named owners allocate CPU, RAM, scratch,
+persistent storage, wall time, and any cost/energy budget.
 
 `G0-READERS`, `G0-MV-Q`, `G0-RESOURCES`, and Gate 0 remain open. `G0-METHOD`
 is scientifically prior but owner-blocked: this resource design does not choose
@@ -59,8 +67,10 @@ a pointwise instrument or change the paper's method-claim kill.
 - The protocol already fixes seed derivation, random-word conversion,
   canonical traversal order, calibration evaluation order, bootstrap order,
   percentile/max-`t` order statistics, exact-binomial rules, and failure
-  semantics. It does not freeze implementation software, result field
-  registry, file format, batch size, checkpoint size, hardware, or capacity.
+  semantics. TB-0011 adds a complete static logical field/operation registry
+  candidate, but it does not freeze its owner-blocked extensions,
+  implementation software, file format, batch size, checkpoint size,
+  hardware, or capacity.
 - No CPU-core-hour, peak-RAM, scratch, simulation-storage, wall-time, energy,
   or cost allocation is verified. The repository's GPU and restricted-data
   storage ceilings are not simulation allocations.
@@ -104,9 +114,10 @@ a pointwise instrument or change the paper's method-claim kill.
 
 1. Adopt the stage graph, record identities, restart semantics, and proof
    register below as the static candidate for later review.
-2. Close the exact numeric/output registry before authorizing any benchmark;
-   unresolved extension rows may not be replaced by an assumed compression
-   ratio or a guessed bytes-per-replication value.
+2. Review and approve or amend TB-0011's exact numeric/output registry; close
+   every unresolved extension and finite byte upper bound before authorizing
+   any benchmark. An assumed compression ratio or guessed bytes per
+   replication cannot replace an unresolved row.
 3. Use a later, separately authorized artificial-buffer benchmark to measure
    only generic kernels. Do not create the project RNG, DGP, calibration,
    bootstrap statistic, reliability statistic, or promotion logic while Gate
@@ -205,27 +216,31 @@ immutable protocol + TB-0009 manifests
 Let `C_R` and `C_M` denote the frozen reliability and `MV-1` manifests,
 `R=120,000`, and `B=9,999`. For cell `c`, let `N_c` be its included cluster or
 candidate count, `K_c` its class count where applicable, `A_c` its assigned
-rating count, `D_c` its repeat count, `I_c` its bootstrap selections, and
-`V_c` its already enumerated calibration vector evaluations. A later count-only
+rating count, `D_c` its repeat count, `I_c` its bootstrap selections,
+`V_cal,c` its candidate/solve-vector evaluations, and `V_val,c` its independent
+validation-vector evaluations. A later count-only
 compiler must emit every symbol per canonical cell and reconcile its sums with
 the TB-0009 aggregate table before a benchmark may run.
+The manifest symbol `C_R` is never a completion flag: per-cell exact-`R`
+completion is denoted `I_complete,c`, after bitmap, unique-record, and integrity
+checks.
 
 | Kernel class | Exact semantic workload | Future artificial-buffer shape; no project values |
 | --- | --- | --- |
 | Catalogue/HMAC | Every cell hash, required seed identity, permutation tag, and final record hash; the exact call count must be compiled. | Artificial ASCII messages at the observed minimum/median/maximum canonical byte lengths; ordinal lists with the same lengths as the frozen roster/item lists. |
-| Raw-word production | TB-0009's DGP lower/upper counts; 2,723,199,652,800,000 combined bootstrap words (upper bound); and alternative-specific calibration counts. Materialization produces 818,057,052,160 calibration words once; full replay produces `32 sum_c V_c = 14,503,497,089,155,072` words. | The current generic-only boundary does not authorize PCG64DXSM timing. A later brief must either authorize library-level engine timing on unrelated seeds/artificial outputs or supply a proved conservative non-project surrogate. Otherwise runtime remains unresolved and `G0-RESOURCES` stops. |
+| Raw-word production | TB-0009's DGP lower/upper counts; 2,723,199,652,800,000 combined bootstrap words (upper bound); and alternative-specific calibration counts. Materialization produces 818,057,052,160 calibration words once; full replay produces `32 sum_c(V_cal,c+V_val,c) = 14,503,497,089,155,072` words. | The current generic-only boundary does not authorize PCG64DXSM timing. A later brief must either authorize library-level engine timing on unrelated seeds/artificial outputs or supply a proved conservative non-project surrogate. Otherwise runtime remains unresolved and `G0-RESOURCES` stops. |
 | Raw word to open-unit/index formation | One raw-to-open-unit conversion per consumed DGP/calibration/bootstrap word and one `floor(n_h U)` formation per bootstrap word. Counts must remain separate when calibration materializes raw words but reconverts or caches open-unit values. | Pre-filled counter-pattern `uint64` buffers and artificial stratum sizes; fixed shift/add/scale/floor operations only. No project seed, stream, DGP, or statistic. |
 | Generic inverse-CDF/special function | Normal/beta transform events and exact-binomial quantile calls from the later static ledger. The reference lock must enumerate finite extrema for every open-unit input, beta/normal parameter, `(x,N,alpha)` class, and multiplicity-adjusted alpha, including `alpha=0.05/4,416`; a beta shape that can approach zero without a frozen positive bound leaves this row unresolved. | Artificial inputs spanning the complete reviewed numerical domain: open-unit tails, smallest/largest positive beta shapes, extreme/central `(x,N)`, adjusted-alpha tails, boundary/nonconvergence cases, and their enforced failure/deadline cost. A convenient interior grid is insufficient. No DGP or gate calculation. |
 | Probability construction | The static ledger must count separately every `log`, `exp`, `expit`, normalization, and 2/3/4-class softmax evaluation: reliability first/repeat ratings; every assignment-weighted point in each 100-iteration missingness solve; every 41/61-node quadrature probability evaluation; all ten sibling/reader coverage and state probabilities in every `MV-1` candidate/validation vector evaluation; and every outer/repeat `MV-1` rating. | Generic artificial logit arrays at the actual scalar/vector lengths and `K in {2,3,4}`; separately timed stable log/exp/expit/log-sum-exp/softmax kernels. Inputs are unrelated bounded patterns, never project factors or equations. |
 | Root/quadrature control | Exact counts of reliability bracket checks and 100 midpoint iterations, 41/61-node passes, and `MV-1` scan/endpoint/midpoint/validation control events, compiled without evaluating them. | Artificial bounded scalar residual arrays and fixed iteration/node counts; control-flow/reduction only, with no project residual, calibration, or truth calculation. |
 | Categorical lookup | One cumulative lookup for every first/repeat category, coverage, state, and other declared categorical/Bernoulli DGP event after its probability vector is constructed; count supplied by the static ledger. | Artificial cumulative-probability matrices with `K in {2,3,4}` and generic rows matching the declared rating dimensions. Preformed probabilities time lookup only and cannot substitute for the probability-construction row. |
-| Calibration-shaped transform/reduce | `sum_c V_c`; TB-0009 gives the successful-path candidate total. Probability construction, inverse transforms, and raw-word costs remain in their separate rows. | Thirty-two-channel artificial arrays with `2^20` rows and a separate `2^22` validation shape; fixed affine/clip/reduce operations unrelated to the calibration equations. |
-| Reliability indexed reduction | `|C_R| R (B+1)` statistic recomputation events, with `B N_c` bootstrap selections per outer replication. | Artificial cluster tables with actual frozen `N_c` values in the range 90--150, `K in {2,3,4}`, and generic 3/5/10-rating layouts; pre-filled indices only. |
+| Calibration-shaped transform/reduce | `sum_c(V_cal,c+V_val,c)`; TB-0009 gives the successful-path candidate and validation totals separately. Probability construction, inverse transforms, and raw-word costs remain in their separate rows. | Thirty-two-channel artificial arrays with `2^20` rows and a separate `2^22` validation shape; fixed affine/clip/reduce operations unrelated to the calibration equations. |
+| Reliability indexed reduction | `|C_R| R (B+1)` alpha recomputation events, with `B N_c` bootstrap selections per outer replication, plus one disjoint point-descriptive assembly per committed record for macro/class agreement, prevalence, and missingness summaries. | Artificial cluster tables with actual frozen `N_c` values in the range 90--150, `K in {2,3,4}`, and generic 3/5/10-rating layouts; pre-filled indices only. |
 | `MV-1` indexed reduction | At most `|C_M| R (B+1)` q/studentizer recomputation events and the TB-0009 upper-bound selection count. | Artificial two-stratum tables at boundary sizes `0, 107, 108, 128, 150, 300`; pre-filled indices; one- and three-component fixed-order reductions. |
 | Fixed-effect/LOO-shaped work | At most `|C_M|R` FE fits and `10|C_M|R` leave-one-reader reductions on the complete path. | Generic matrices up to 3,000 rows and 320 columns at declared condition-number strata; ten generic delete-one vector reductions. No project design matrix or veto. |
 | Order selection | One 9,999-value percentile selection per reliability interval and one 9,999-row, three-component maximum/critical-value selection per `MV-1` outer analysis, plus any registry-approved diagnostics. | Artificial binary64 arrays of length 9,999 with fixed duplicate/non-finite stress cases. |
-| Exact-binomial-shaped scalar work | One approved interval call per final Monte-Carlo event probability; the exact metric registry must determine this count. | Artificial integer `(x,N)` pairs including `0`, `N`, threshold-adjacent, and central cases; no project event labels. |
-| Serialization/checkpoint | One catalogue, one static cell record per cell, one audit record per attempted outer replication, aggregate/extension records, chunk journals, and replay checks. | Artificial records of the exact proposed widths and chunk candidates; temporary-write, checksum, and readback only. |
+| Exact-binomial-shaped scalar work | One approved interval call per final Monte-Carlo event probability; distinct `x/R` proportion divisions and the reliability `sum(undefined)/(RB)` division remain separate exact-once units. The exact metric registry determines all counts. | Artificial integer `(x,N)` pairs including `0`, `N`, threshold-adjacent, and central cases; no project event labels. |
+| Serialization/checkpoint | One catalogue, one static cell record per cell, one canonical scientific record per successfully committed outer identity, separately unresolved execution-attempt/journal/failure records for scheduled and retried work, aggregate/extension records, and replay checks. | Artificial records of the exact proposed widths and chunk candidates; temporary-write, checksum, and readback only. |
 
 The crosswalk separates **semantic units** from processor instructions. A
 reduction event cannot be counted again as every internal arithmetic operation;
@@ -267,21 +282,26 @@ identical raw-word transcripts and bitwise reference results, then a valid
 later benchmark/capacity decision may choose among complete alternatives
 rather than mixing their cheapest terms.
 
-The only admissible calibration checkpoint boundary is after a complete named
-mean/endpoint/midpoint evaluation with its fixed-order reduction and digest.
-The retained bisection endpoint may be cached exactly as prescribed; no
-cross-cell, cross-polarity, approximate, interpolation, or outcome-selected
-reuse is permitted. An incomplete evaluation is replayed from its beginning
-unless a later reviewed accumulator-state format proves exact continuation.
+Every complete named calibration mean/endpoint/midpoint evaluation has a
+fixed-order reduction and integrity digest, but these are trace/conformance
+boundaries, not durable restart checkpoints. Under this candidate the atomic
+restart unit is one complete polarity: interruption replays the polarity from
+its beginning. The retained bisection endpoint may be cached only within that
+live polarity attempt exactly as prescribed; no cross-attempt, cross-cell,
+cross-polarity, approximate, interpolation, or outcome-selected reuse is
+permitted. A future smaller restart unit requires a separately reviewed,
+typed accumulator/checkpoint schema and new semantic/storage counts before it
+can amend this rule.
 
 ## Proposed Result and Checkpoint Schema
 
 ### Encoding rules
 
 - Multibyte fixed-width fields use one declared byte order; the proposal uses
-  little-endian. Binary64 values retain their exact bit patterns. One canonical
-  quiet-NaN pattern denotes an inapplicable reserved slot and must never stand
-  for a scientific undefined result.
+  little-endian. Binary64 values retain their exact bit patterns. TB-0011
+  supersedes the earlier NaN-sentinel proposal: every core slot has an
+  independent two-bit state, every non-`VALUE` payload is canonical zero, and
+  NaN never encodes inapplicability, scientific undefinedness, or reachability.
 - Dictionaries normalize repeated cell JSON, permutations, software strings,
   algorithm identities, and metric names. Every outer record points to those
   immutable dictionaries. This satisfies “write to the result” without
@@ -299,34 +319,37 @@ unless a later reviewed accumulator-state format proves exact continuation.
 | Record | Packed payload | Required content |
 | --- | ---: | --- |
 | Cell catalogue | `42 + L_i` bytes per cell | `uint32` index, `uint8` kind, `uint8` family mask, 32-byte cell hash, `uint32 L_i`, and exact canonical JSON bytes. |
-| Cell-static lock | 112 bytes per cell | Cell index; status/failure codes; `R`; `B`; software, permutation-payload, and algorithm-lock SHA-256 values. |
+| Cell-static lock | 112 bytes per cell | `uint32` cell index; two `uint16` status/failure codes; `uint32 R`; `uint32 B`; and software, permutation-payload, and algorithm-lock SHA-256 values. |
 | Identifier dictionary | `10 + sum_q(2 + L_q)` bytes per dictionary | `uint16` dictionary ID, `uint32` entry count, `uint32` payload-byte count, then `uint16` byte length and exact UTF-8 bytes for every identifier. An identifier exceeding 65,535 bytes fails this schema. |
 | Permutation dictionary | `12 + T_p + 2L_p` bytes per permutation | `uint32` cell index, `uint16` tag byte length, `uint32` list length, `uint16` identifier-dictionary ID, exact UTF-8 tag bytes, and ordered `uint16` indices into that dictionary. Lists exceeding 65,535 elements fail this schema. |
-| Reliability outer audit | 312 bytes | 56-byte common prefix plus 32 typed binary64 payload slots. |
-| `MV-1` outer audit | 568 bytes | 56-byte common prefix plus 64 typed binary64 payload slots. |
+| Reliability outer audit | 336 bytes | 72-byte common prefix, eight-byte two-bit state mask, and 32 typed eight-byte payload slots. |
+| `MV-1` outer audit | 600 bytes | 72-byte common prefix, 16-byte two-bit state mask, and 64 typed eight-byte payload slots. |
 | Extension scalar | 20 bytes | Cell index, outer index, metric code, type/state codes, and one 64-bit payload. |
-| Completion bitmap | 15,000 bytes per executable cell | One bit for each of exactly 120,000 outer identities. |
+| Completion bitmap | 15,000 bytes per manifest candidate cell | One bit for each of exactly 120,000 outer identities; the bitmap is all zero with a separately persisted static/calibration failure when outer work never begins. |
 | Chunk journal | 52 bytes per committed chunk | Cell index, first outer index, count, record count, state/reserved bytes, and 32-byte payload digest. |
 | Failure detail | `28 + L_f` bytes | Cell/outer identity; stage/reason/severity/state/reserved codes; `uint32` software- and algorithm-lock dictionary references; `uint32` message byte count; and canonical UTF-8 detail. |
-| Cell aggregate | `16 + 8G_c` bytes | Cell index, registry version, status, event-count field count `G_c`, followed by typed 64-bit count/interval payload slots fixed by the aggregate registry. |
+| Execution attempt | 32 bytes per scheduled atomic attempt | First deterministic join key, scheduled identity count, work-unit kind, attempt ordinal, infrastructure outcome, registry version, failure/journal references, and canonical zero reserved word; stored in a separately content-digested logical stream. |
+| Cell aggregate | `16 + ceil(2F_c/8) + P_c` bytes | `U32` cell index, `U16` registry version, `ENUM16` status, `U32` aggregate-field count `F_c`, and `U32` payload-byte count `P_c`, followed by one two-bit state per registry field and the exact ordered typed payload. `F_c`/`P_c` remain registry-format blockers. |
 
-The 56-byte outer prefix contains cell index, zero-based outer index, status,
-failure stage, a 64-bit event mask, undefined-bootstrap count, numeric-registry
-version, and a 32-byte payload digest. The reliability slot registry must at
-minimum cover observed/interval/integrated alpha, macro and every class-specific
-agreement, missingness spans, gate/coverage state, repeat diagnostics, and all
-reported failure components. The `MV-1` registry must at minimum cover both
-yield counts, all q estimates/SEs/lower bounds/truths, max-`t` critical value,
-FE estimates, all 30 polarity-specific/combined leave-one-reader estimates,
-joint coverage/gate/veto state, and every reported failure component.
+The corrected 72-byte outer prefix contains cell and zero-based outer indices,
+scientific status and primary failure, distinct 64-bit failure-component and
+event masks, undefined-bootstrap count, numeric-registry version, a
+deterministic 64-bit key joining the external execution-attempt stream, and a
+32-byte payload digest. Mutable attempt/retry/infrastructure fields are not
+part of the canonical scientific record. Every core slot separately carries
+`VALUE/INAPPLICABLE/SCIENTIFIC_UNDEFINED/NOT_REACHED`; a non-value payload is
+canonical zero and NaN never encodes state. The complete fixed slot,
+cell-static, aggregate, family, and owner-blocked extension definitions live in
+the [TB-0011 registry](simulation_output_and_operation_registry.md).
 
-Thirty-two and 64 slots are proposed minimum cores, not permission to omit a
-required result. Before a benchmark, the statistical owner must freeze every
-slot and any extension row. If the complete reliability, hierarchical, or
-`MV-1` audit cannot fit or be losslessly represented, enlarge the schema and
-recompute storage; do not drop a diagnostic. `N_ext`, the exact permutation
-payload, aggregate registry, failure-message bound, and software/container
-overhead are therefore explicit remaining blockers.
+Thirty-two and 64 slots are proposed fixed cores, not permission to omit a
+required result. Before a benchmark, the statistical/scientific owners must
+approve or amend every slot and close every extension occurrence. Under the
+current contract, observed-reader hierarchical/Gwet/ordinal/adjudication
+sensitivities are not multiplied across simulated outer records; adding them
+requires a prospective canonical amendment. Exact repeat outputs,
+permutations, aggregate/family widths, failure-detail/journal bounds, and
+software/container overhead remain explicit blockers.
 
 ### Static byte arithmetic
 
@@ -337,12 +360,13 @@ The sum of canonical JSON lengths without their 13,285 newline delimiters is
 S_{catalogue}=5{,}409{,}720+42(13{,}285)=5{,}967{,}690\ \text{bytes}.
 ```
 
-The successful-path core audit payload before the completion bitmap is
+The corrected conditional all-candidate core audit payload before the
+completion bitmap is
 
 ```math
 S_{core}=S_{catalogue}+112(13{,}285)
- +312(1{,}301{,}640{,}000)+568(292{,}560{,}000)
- =572{,}293{,}215{,}610\ \text{bytes}.
+ +336(1{,}301{,}640{,}000)+600(292{,}560{,}000)
+ =612{,}894{,}495{,}610\ \text{bytes}.
 ```
 
 The all-cells completion bitmap adds 199,275,000 bytes. If `b` outer records
@@ -352,19 +376,25 @@ form a chunk, the journal adds
 S_{journal}(b)=52(13{,}285)\left\lceil\frac{120{,}000}{b}\right\rceil.
 ```
 
-Thus the minimum proposed payload is
+Thus the conditional core floor is
 
 ```math
-S_{minimum}(b)=572{,}492{,}490{,}610+S_{journal}(b)
- +S_{perm}+20N_{ext}+S_{aggregate}+S_{failure}+S_{format}.
+S_{floor}(b)=613{,}093{,}770{,}610+S_{journal}(b)
+ +S_{perm}+S_{static}+S_{aggregate}+S_{family}
+ +S_{attempt}+S_{failure}+S_{extension}+S_{format}.
 ```
 
-This formula is intentionally not collapsed to a capacity claim. Every final
-term must receive a finite reviewed upper bound; `S_perm` includes every
-identifier dictionary and permutation row. Redundancy, backup, and two
-simultaneously live atomic chunk copies are additional. The existing 1-TB
-restricted-working-storage proposal is neither assigned to this simulation nor
-silently shared with it.
+The prior 572,492,490,610-byte value is superseded; its exact correction is
+40,601,280,000 bytes under the same conditional path. This formula is
+intentionally not collapsed to a capacity claim. Every final term must receive
+a finite reviewed upper bound; `S_perm` includes every identifier dictionary
+and permutation row, and `S_attempt` contains every mandatory 32-byte initial
+or retry work-unit sidecar record. Any retained calibration evaluation digest,
+whole-trace transcript, or raw-buffer verification metadata is included in
+`S_extension`; none may be silently folded into the core floor or assigned
+zero. Redundancy, backup, and two simultaneously live atomic
+chunk copies are additional. The existing 1-TB restricted-working-storage
+proposal is neither assigned to this simulation nor silently shared with it.
 
 ## Streaming, Batching, and Sufficient-Statistic Obligations
 
@@ -456,8 +486,9 @@ assumed. A later environment audit must measure system and per-process peak
 RSS, anonymous memory, mapped files, allocator high-water mark, scratch high-
 water mark, write queue, and final bytes separately.
 
-Restart occurs only at an atomic chunk boundary or a complete calibration
-evaluation. On recovery:
+Restart occurs only at an atomic outer-chunk boundary or an entire completed
+calibration-polarity boundary; internal named evaluation digests are not
+durable restart points. On recovery:
 
 1. verify catalogue, software, algorithm, and permutation digests;
 2. verify every committed chunk's identity, byte count, record count, and
@@ -465,11 +496,28 @@ evaluation. On recovery:
 3. reconcile the completion bitmap exactly with canonical outer indices;
 4. delete or quarantine only an incomplete temporary chunk, then replay its
    full identity range; and
-5. stop on a completed-identity hash mismatch or duplicate with unequal bytes.
+5. stop on a completed-identity canonical-record hash mismatch or duplicate
+   with unequal canonical bytes; and
+6. reconcile the separately content-digested execution-attempt stream against
+   scheduled work-unit ranges, contiguous attempt ordinals, failure details,
+   journals, and completion bits.
 
-Replayed records must be byte-identical. A retry count and cause are retained.
-Retries count toward resource use. No checkpoint/restart rule may reclassify a
-scientific failure as an infrastructure failure or vice versa.
+Replayed canonical scientific records—header, state mask, event/failure masks,
+and typed payload—must be byte-identical to the no-interruption reference. The
+execution-attempt sidecar, journal, failure detail, and their file digests are
+expected to differ across retry schedules and are excluded from that equality
+domain; they must instead exactly match the injected execution history. The
+sidecar uses the combined-manifest global cell index, range-aware join keys,
+frozen work-unit/outcome enums, zero-based contiguous `U16` attempt ordinals,
+and explicit reference partition rules in TB-0011. Retries count toward
+resource use. No checkpoint/restart rule may reclassify a scientific failure
+as an infrastructure failure or vice versa.
+Range reconciliation uses same-cell containment
+`first_join_key <= outer_join_key < first_join_key + identity_count`, never
+key equality alone. P9 also requires atomic sidecar recovery: every scheduled
+attempt has exactly one terminal outcome and no committed range lacks its
+sidecar/journal. Whole-polarity replay is the only `MV-1` calibration restart
+unit in this candidate; internal evaluation digests are integrity evidence.
 
 ## Proof-Obligation Register
 
@@ -486,7 +534,7 @@ No obligation is discharged by this static record.
 | `P6-FE-LOO` | FE/LOO design identity | Matrix, constraints, `1e-12` cutoff, coefficients, rank/failure state, and all ten omissions match the frozen reference. | No optimized FE/LOO path; unresolved failure blocks `MV-1`. |
 | `P7-REDUCE` | Floating-point order | Every parallel/vector path has a declared exact representation or merge order and bitwise conformance evidence. | Single-thread/fixed-order reference or stop. |
 | `P8-SCHEMA` | Lossless reconstruction | Every reported statistic, event, gate, failure, seed, permutation, and software identity reconstructs and round-trips from the uncompressed records. | Enlarge schema and recalculate capacity. Counters alone fail. |
-| `P9-RESTART` | Atomic restart | Forced interruption at every checkpoint class produces byte-identical final output, no missing/duplicate identity, and exact retry accounting. | Reduce checkpoint scope or stop. |
+| `P9-RESTART` | Atomic restart | Forced interruption at every checkpoint class produces byte-identical canonical scientific records and record digests, no missing/duplicate identity, and an execution-history-sensitive sidecar/journal/failure stream exactly matching the injected retries. Whole output files are not expected to match across retry schedules. | Reduce checkpoint scope or stop. |
 | `P10-FAMILY` | Complete family aggregation | All cells and fixed replications contribute once; CP limits, minima, union rule, and strict inequalities match independent reference calculations. | No operating-characteristic claim. |
 | `P11-RESOURCE` | Bound completeness | Every kernel—including raw-word/index formation and every log/exp/expit/softmax/root/quadrature event—plus byte, RAM, scratch, I/O, restart, scheduler, and contingency term maps exactly once to an allocation. | `G0-RESOURCES` remains open. |
 
@@ -597,8 +645,9 @@ hard cells, thresholds, output registry, or failure records to fit.
 
 ### Still unknown
 
-- the exact reliability/hierarchical and `MV-1` numeric output registry;
-- exact permutation/identifier payload, aggregate fields, failure-detail
+- owner approval of TB-0011's logical registry, reliability truth reference,
+  repeat/ambiguity domains, `MV-1` truth/trace depth, and failure precedence;
+- exact permutation/identifier payload, typed static/aggregate/family fields, failure-detail
   bound, container overhead, redundancy, retention, and backup policy;
 - the reference scientific algorithms, software versions, inverse-CDF and
   linear-algebra implementations, numerical conformance, and proof results;
@@ -611,11 +660,13 @@ hard cells, thresholds, output registry, or failure records to fit.
 
 ### Finite sequence
 
-1. Statistical and scientific owners close the output/metric registry and
-   static semantic-count ledger without changing the contract.
-2. A later bounded pre-Gate-0 brief implements only a count/schema compiler and
-   generic artificial-buffer benchmark harness, then obtains infrastructure,
-   security, statistical, and governance review before any benchmark run.
+1. Statistical and scientific owners approve or amend TB-0011's output/metric
+   registry recommendations and close every extension/count/storage blocker
+   without changing the scientific contract.
+2. A later bounded pre-Gate-0 brief may implement only a generic artificial-
+   buffer benchmark harness after the complete static ledger and storage upper
+   bound close, then obtains infrastructure, security, statistical, and
+   governance review before any benchmark run.
 3. A distinct execution brief runs that benchmark on an approved resource and
    records conservative bounds and allocations.
 4. Owners choose `G0-RESOURCES A/B/C`; this document makes no selection.
