@@ -50,7 +50,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 - Task: adopt and formalize `G0-METHOD A`, freeze its Commander-level primary
   instrument and matched deterministic comparator interfaces, and keep Gate 0
   scientifically honest
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Codex, Ultra scientific-decision task
 - Handoff date: 2026-09-01 (Asia/Shanghai)
 
@@ -58,9 +58,9 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 The Commander approved Method A as the sole project route and resolved the
 instrument/comparator design decision. The bounded repository reconciliation,
-independent reviews, and local deterministic validation are complete. The exact
-change set is ready for the authorized protected GitHub lifecycle. No
-scientific execution is included.
+independent reviews, local validation, protected pull request, primary merge,
+and post-merge `main` verification are complete. No scientific execution is
+included.
 
 ### Changed boundary
 
@@ -91,6 +91,8 @@ scientific execution is included.
 - Deliberately excluded are personal correspondence, data, models, code for the
   scientific method, simulations, annotations, experiments, results, and
   GitHub-setting changes.
+- The completion-only closure changes exactly `EXECUTION_CONTRACT.md` and this
+  `HANDOFF_CONTRACT.md`; it makes no scientific-document change.
 
 ### Facts
 
@@ -161,6 +163,8 @@ scientific execution is included.
 - Tracked/untracked size and sensitive-content review: PASS; no path above 5 MB,
   restricted record, credential, personal correspondence, or private screenshot
   is present.
+- Primary branch CI, pull-request CI, and post-merge `main` CI all passed; their
+  immutable run links are recorded below.
 
 ### Git and external evidence
 
@@ -171,9 +175,20 @@ scientific execution is included.
 - Read-only fetches reconfirmed the exact remote and `0/0` divergence before
   substantive edits and again after final review; no remote branch of this name
   existed at the final local check.
-- No GitHub write has occurred in this phase. Commit, pull request, CI, merge,
-  and post-merge evidence belong to the authorized remote-finalization phase
-  and are recorded in the finite completion-only closure after primary merge.
+- Primary commit:
+  `0eb8652139c9b4e13e3c245425518e3ff6900742`.
+- Remote primary branch: `origin/codex/g0-method-a-formalization`, verified at
+  the exact primary commit with `0/0` divergence after push.
+- Primary pull request: [#4](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/4).
+- Branch-push CI: [green run 33467376261](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33467376261).
+- Pull-request CI: [green run 33467410010](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33467410010).
+- Merge revision:
+  `fa730efef8cd2bcf416d34282bbd97ee2bb4461b`.
+- Post-merge `main` CI: [green run 33467488625](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33467488625).
+- GitHub required one review, but the repository had no eligible independent
+  collaborator. The disclosed standard administrator exemption was used
+  without changing branch protection, passing an explicit override flag, force
+  pushing, or deleting the branch.
 
 ### Deviations and negative results
 
@@ -205,12 +220,15 @@ scientific execution is included.
   causal mechanism.
 - All repository changes remain recoverable through ordinary Git operations;
   no destructive or force operation is authorized.
+- GitHub Actions emitted a non-blocking Node.js-20 deprecation annotation for
+  the pinned checkout/setup actions while running them on Node.js 24. Every
+  required job still passed; dependency-pin maintenance is a separate future
+  governance task, not part of this scientific closure.
 
 ### Next permitted boundary
 
-Stage only the exact 23-path set, create one descriptive primary commit, push
-only `codex/g0-method-a-formalization`, complete the standard protected pull-
-request/CI/merge lifecycle, verify post-merge `main`, and then make the finite
-two-contract completion-only closure. After closure, the next scientific task
-is owner reconciliation of the remaining Gate-0 decisions; no experiment
-follows automatically.
+This bounded task is closed. The next scientific task requires a new execution
+contract and is owner reconciliation of the remaining Gate-0 decisions,
+starting with scientific-supervisor/statistical/model-owner review of the
+Method-A package and the still-open task, data, reader, model, resource, and
+governance choices. No experiment follows automatically.

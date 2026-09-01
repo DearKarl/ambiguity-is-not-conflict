@@ -58,7 +58,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 - Contract ID: `EC-2026-09-01-001`
 - Task: adopt and formalize `G0-METHOD A`, specify its primary instrument and
   same-information comparator, and prepare a private supervisor email draft
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander, in the current Codex task on 2026-09-01
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/g0-method-a-formalization`
@@ -361,3 +361,28 @@ releases, and publication are outside authority.
   The Commander had approved the ensuing bounded reconciliation; both files and
   this amended contract were read in full before those repairs. No scientific
   quantity, stop rule, or owner status changed.
+
+### Completion evidence
+
+- Primary commit:
+  `0eb8652139c9b4e13e3c245425518e3ff6900742` on
+  `codex/g0-method-a-formalization`.
+- Primary pull request: [#4](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/4),
+  merged through the standard solo-administrator exemption without changing
+  protection settings, using an explicit override flag, or deleting a branch.
+- Primary branch and pull-request checks passed:
+  [run 33467376261](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33467376261)
+  and [run 33467410010](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33467410010).
+- Primary merge revision:
+  `fa730efef8cd2bcf416d34282bbd97ee2bb4461b`.
+- Post-merge `main` verification passed in
+  [run 33467488625](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33467488625).
+- The final local primary boundary passed 51 tests, final repository-contract
+  validation against the then-current `origin/main`, diff validation,
+  independent scientific/instrument/governance review, sensitive-content
+  review, and size review.
+- This completion-only closure changes exactly `EXECUTION_CONTRACT.md` and
+  `HANDOFF_CONTRACT.md`. Its commit, pull request, merge revision, and final
+  post-merge check identify themselves through immutable Git/GitHub history.
+- No data, model, simulation, annotation, implementation, experiment, private
+  correspondence, or large artifact was created or accessed under this task.
