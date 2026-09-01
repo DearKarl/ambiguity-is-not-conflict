@@ -2,24 +2,26 @@
 
 **Status:** Gate 0 open; protocol design only
 
-**Authority:** DR-0001 through DR-0006; DR-0015 only for the Commander's
-partial `G0-SCOPE A` choice and local-storage boundary
+**Authority:** DR-0001 through DR-0006; DR-0015 for the Commander's partial
+`G0-SCOPE A` choice and local-storage boundary; DR-0016 for the Commander's
+partial `G0-METHOD A` and scientific-interface choices
 
-**Last reviewed:** 2026-08-29
+**Last reviewed:** 2026-09-01
 
 ## Primary Outcome
 
 The first paper succeeds scientifically if it establishes—or cleanly
-falsifies—the separate identifiability of a conditional cross-modal conflict
-component under controlled image--report interventions. Publication at a top
-venue is the strategic objective, not the scientific endpoint and not a
-guaranteed outcome.
+falsifies—an intervention-relative population response of a frozen cross-modal
+score that is specific to determinate incompatibility against approved paired
+controls. It does not claim that model outputs identify semantic conflict for
+an arbitrary pair. Publication at a top venue is the strategic objective, not
+the scientific endpoint and not a guaranteed outcome.
 
-The single intended paper contribution is a formal conditional conflict
-estimand plus an estimator or estimation framework. The controlled benchmark,
-candidate representation families, calibration analysis, and selective review
-are evidence supporting or falsifying that contribution, not independent
-research routes.
+The single intended paper contribution is the partial-construct,
+intervention-identified measurement and inference framework in
+[Method A](method_a_identification_framework.md). The controlled benchmark,
+candidate instruments, calibration analysis, and selective review are evidence
+supporting or falsifying that contribution, not independent research routes.
 
 The initial confirmatory endpoint will be a pre-specified, paired measure of
 conflict specificity. Its exact formula and smallest effect of interest remain
@@ -29,7 +31,11 @@ promotion outcomes, not substitutes for construct validity.
 The Commander has selected the narrower `G0-SCOPE A` route: determinate-
 conflict specificity is primary and natural ambiguity is a veto-only audit.
 Scientific-supervisor co-approval remains open, so this partial decision does
-not close Gate 0 or authorize execution. `G0-METHOD` also remains open.
+not close Gate 0 or authorize execution. The Commander has separately selected
+`G0-METHOD A` as the sole route and the
+`PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON` scientific interfaces. Scientific-
+supervisor, statistical-owner, and model-owner co-approval and all executable
+details remain open.
 
 ## Authoritative Inputs
 

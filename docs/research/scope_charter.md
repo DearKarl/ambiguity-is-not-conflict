@@ -2,17 +2,17 @@
 
 **Status:** Canonical one-paper boundary
 
-**Decision:** DR-0002 and DR-0006
+**Decision:** DR-0002, DR-0006, and DR-0016
 
 ## Title-Level Direction
 
-**Working paper title:** *Ambiguity Is Not Conflict: Identifiable Cross-Modal
-Conflict Estimation for Calibrated Selective Decisions*
+**Working paper title:** *Ambiguity Is Not Conflict: Intervention-Identified
+Measurement of Cross-Modal Conflict Specificity*
 
-The paper will study whether cross-modal conflict can be identified separately
-from ambiguity within either modality, then test whether the identified
-component adds calibrated and decision-relevant information beyond simpler
-baselines.
+The paper will test whether a frozen cross-modal score has an
+intervention-relative population response specific to determinate semantic
+incompatibility, then whether that measured response adds calibrated and
+decision-relevant information beyond simpler baselines.
 
 The current freeze candidate does not pretend that goal is already identified.
 It permits an initial determinate-conflict specificity claim against valid
@@ -87,18 +87,25 @@ be identifiable.
 
 ## Primary Contribution Boundary
 
-The single intended primary contribution is a formal conditional conflict
-estimand together with an estimator or general estimation framework whose
-interpretation can be falsified. The benchmark alone is insufficient for a
-Main Track method paper, and a new embedding alone is insufficient for a
-source-identification paper.
+The single intended primary contribution is a partial-construct,
+intervention-identified measurement and inference framework whose
+interpretation can be falsified. It evaluates a prospectively frozen,
+explicitly non-novel instrument and matched deterministic comparator; it does
+not claim a new pair-level estimator. The benchmark alone and a new embedding
+alone are each insufficient for the intended Main Track framing.
 
 Controlled interventions provide identification evidence; matched held-out
 comparisons provide incremental-validity evidence; calibration and selective
 review provide downstream decision evidence. These are supports for the one
-central contribution, not separate contribution claims. The exact estimator
-remains open, and deterministic, evidential, probabilistic, Bayesian, ensemble,
-and semantic-entropy methods remain candidate comparison families, with
-conformal methods as candidate risk-control layers. Gate 0 must freeze the
-smallest matched set capable of falsifying the claim. A negative comparison is
-valid and may force a narrower evaluation-paper claim.
+central contribution, not separate contribution claims. Method A fixes
+`PROBVLM-2ADAPTER` as the non-novel primary instrument and
+`POINT-2ADAPTER-RECON` as its mean-only deterministic full-route comparator at
+the Commander scientific-interface level. They share independently verified
+determinate-compatible selection information, the GGD score family, and target
+topology; removing probabilistic heads changes capacity and gradient paths, so
+no capacity-isolated mechanism claim is permitted. Other method families remain
+secondary challenges, with conformal methods as candidate risk-control layers.
+Required owners must still approve the executable specification before Gate 0
+closes. Failure of the frozen deterministic-advantage gate kills the current
+Main Track route; a qualified null or later venue decision must be recorded
+without post-hoc repackaging.

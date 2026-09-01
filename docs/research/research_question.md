@@ -1,27 +1,30 @@
 # Research Question and Falsifiable Hypotheses
 
-**Status:** Gate-0 freeze candidate; exact task and estimands remain unapproved
+**Status:** Method-A Commander-level framework freeze; exact task, estimand
+package, and required owner approvals remain open
 
 ## Narrow Research Question
 
-For one image-grounded atomic clinical finding, can a conflict component
-respond specifically when a determinate auxiliary text assertion opposes the
-independently judged image state—rather than when either modality is ambiguous,
-missing, or corrupted—and add held-out prediction of a frozen model's task
-error at a fixed review budget?
+For one image-grounded atomic clinical finding, can a prospectively frozen
+cross-modal score respond specifically when a determinate auxiliary assertion
+opposes the independently judged image state rather than under the approved
+image/text information-loss controls, survive a separate natural-ambiguity
+veto audit, and add held-out prediction of a frozen model's task error at a
+fixed review budget?
 
 ## Intended Claim Structure
 
-**Central claim to test.** An intervention-defined, proposition-level semantic
-incompatibility estimand and estimator or estimation framework can use
-independent modality-specific semantic measurements to distinguish determinate
-conflict from genuine image ambiguity, genuine text ambiguity, and
-modality-specific information loss under controlled interventions. It must not
-reduce to confidence-adjusted output disagreement.
+**Central claim to test.** The Method-A partial-construct, intervention-
+identified measurement and inference framework can use independent modality-
+specific semantic measurements to test whether a frozen score is specifically
+responsive to determinate incompatibility rather than approved modality-
+specific information-loss controls. Natural ambiguity remains a separate
+veto-only audit. The framework must not be represented as an output-only,
+pair-level conflict identifier.
 
-**Downstream support claims to test.** If construct identification passes, the
-frozen conflict component provides non-redundant calibrated information and
-selective-review value beyond unimodal ambiguity measures, ordinary
+**Downstream support claims to test.** If the intervention-relative specificity
+gate passes, the frozen instrument score provides non-redundant calibrated
+information and selective-review value beyond unimodal ambiguity measures, ordinary
 confidence, epistemic uncertainty, output uncertainty, and matched
 deterministic failure predictors.
 
@@ -32,7 +35,7 @@ contribution and cannot substitute for failed construct identification.
 
 **Hypothesis.** When a task-relevant atomic assertion is counterbalanced to
 oppose rather than match a determinate, independently judged image state, the
-pre-specified conflict estimator changes in the expected direction and more
+pre-specified frozen score changes in the expected direction and more
 strongly than under the valid randomized or counterbalanced `M_v` and `M_t`
 information-loss controls. Semantic-preserving form variants are prospectively
 counterbalanced and evaluated as artifact diagnostics, not inserted into the
@@ -41,7 +44,7 @@ H2's identification boundary.
 
 **Null interpretation.** If the response is equally explained by image
 quality, text length, source identity, prevalence, embedding norm, or generic
-pair dissimilarity, the estimator does not identify conflict.
+pair dissimilarity, the intervention-relative specificity interpretation fails.
 
 ## H2 — Separation from Unimodal Ambiguity
 
@@ -63,14 +66,14 @@ the score detects corrupted or difficult examples.
 
 ## H3 — Held-Out Incremental Validity and Calibration
 
-**Hypothesis.** Adding the conflict component to a frozen baseline risk model
+**Hypothesis.** Adding the frozen instrument score to a baseline risk model
 for independently labelled image-grounded task error improves a pre-specified
 held-out proper score by more than the smallest effect of interest and
 preserves acceptable calibration under one declared shift.
 
 **Null interpretation.** If the gain disappears with patient-level splitting,
 repeated seeds, recalibration, or a matched deterministic failure predictor,
-the conflict component is redundant for outcome-risk prediction.
+the frozen score is redundant for outcome-risk prediction.
 
 ## H4 — Fixed-Budget Decision Value
 
@@ -141,7 +144,7 @@ and [statistical analysis plan](statistical_analysis_plan.md).
 ## Claim Ladder
 
 1. association;
-2. construct validity under controlled intervention;
+2. intervention-relative measurement validity;
 3. held-out incremental validity;
 4. probabilistic calibration in the tested population;
 5. retrospective decision value;

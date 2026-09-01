@@ -1,7 +1,7 @@
 # Novelty and Prior-Art Audit
 
-**Status:** Literature-audit snapshot; not a novelty claim
-**Audit date:** 2026-08-29
+**Status:** Method-A focused literature-audit snapshot; not a novelty claim
+**Audit date:** 2026-09-01
 **Evidence class:** Peer-reviewed primary papers and official-code leads, with
 preprints explicitly labelled as non-authoritative surveillance leads; no
 implementation was downloaded or reproduced
@@ -93,22 +93,31 @@ kill novelty.
 
 ## Gap That Provisionally Survives
 
+DR-0016 accepts that no new pointwise-estimator gap survived TB-0006. The
+paper-faithful `PROBVLM-2ADAPTER` score is therefore an explicitly non-novel
+instrument, and `POINT-2ADAPTER-RECON` is a project-native matched ablation—not
+a second novelty claim.
+
 **Inference, not fact:** the broad claim “estimate cross-modal conflict after
 accounting for modality ambiguity/uncertainty” is occupied. The audited sources
-do not yet establish the narrower complete combination below:
+do not yet establish the narrower complete Method-A combination below:
 
 > an intervention-defined, proposition-level semantic incompatibility
-> estimand that uses independent semantic measurements, holds genuine image
-> ambiguity, genuine text ambiguity, modality-specific information loss, and
-> surface artifacts fixed or explicitly controlled, is not reducible to
+> estimand that uses independent semantic measurements, compares approved
+> modality-specific information-loss controls under fixed construction rules,
+> treats natural image/text ambiguity as a separately specified observational
+> veto unless a governed identification route is added, audits surface
+> artifacts, and is not reducible to
 > output disagreement adjusted by confidence, and adds held-out proper-score
 > and equal-budget selective value beyond matched deterministic, evidential,
 > probabilistic, and generic failure predictors.
 
 The conjunction is not automatically a contribution. It survives only if the
-conditional target is mathematically non-circular, estimable under stated
-assumptions, and not subsumed empirically by the closest methods above. Chest
-radiography is validation evidence, not the source of domain-generality.
+partial construct is mathematically non-circular, the intervention-relative
+population target is identified under defensible assumptions, the complete
+combination remains unoccupied after continued audit, and the result is not
+subsumed empirically by the closest methods above. Chest radiography is
+validation evidence, not the source of domain-generality.
 
 ## Mandatory Comparison Consequences
 
@@ -179,8 +188,12 @@ remain pre-execution audit fields.
   reaches the pre-specified equivalence/non-inferiority boundary.
 - Kill the identifiability claim if ambiguity, missingness, corruption,
   provenance, or surface artifacts explain the controlled contrast.
-- Narrow to evaluation science if the enduring contribution is the controlled
-  test framework rather than a general estimator; this is a same-route venue
-  decision, not authorization for a second project.
+- Kill the claimed framework novelty if a primary source establishes the same
+  partial-construct support, independent modality-only measurement,
+  intervention/control target, joint inference, and matched deterministic
+  challenge. Do not compensate by reviving a killed pointwise estimator.
+- Narrow the venue claim if the enduring contribution is controlled evaluation
+  science rather than a sufficiently substantive general framework; this is a
+  same-route venue decision, not authorization for a second project.
 - Continue the audit before every promotion gate and again after the official
   NeurIPS 2027 call. Publication is never presumed.

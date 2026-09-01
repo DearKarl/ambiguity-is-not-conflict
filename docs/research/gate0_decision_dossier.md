@@ -2,7 +2,7 @@
 
 **Status:** Finite blocker/decision inventory; Gate 0 remains open
 
-**Date:** 2026-08-29
+**Date:** 2026-09-01
 **Evidence class:** Protocol and decision support under TB-0005--TB-0011
 
 ## Outcome
@@ -11,10 +11,11 @@ The repository now has one recommended direction and a finite inventory of
 the remaining Gate-0 decisions rather than an unbounded menu. It preserves the
 single determinate-conflict route and makes each unresolved owner or external
 verification explicit. It is **not yet a complete Gate-0 freeze package**.
-TB-0006 selected no pointwise uncertainty-aware estimator: all three exact
-candidates collapsed to deterministic or occupied forms. The owners must now
-choose between a measurement-framework claim amendment and a new pre-data
-theory candidate. Exact instrument/comparator implementations and licences,
+TB-0006 selected no novel pointwise estimator: all three exact candidates
+collapsed to deterministic or occupied forms. DR-0016 records the Commander's
+selection of Method A, paper-faithful `PROBVLM-2ADAPTER`, and matched
+`POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary. Scientific-supervisor,
+statistical-owner, and model-owner approval, exact implementations and licences,
 immutable backbone revision, calibration, exact baseline/ablation and
 artifact-probe implementations, owner approval, pre-reader simulation, and
 later reader-based task-relevance qualification for `MV-1`, target/shift
@@ -60,10 +61,10 @@ The recommended package is:
 5. treat unknown-exposure pretrained VLMs as sensitivity evidence and
    known-exposure models as diagnostics; require a separately cleared
    representation/cohort for strict confirmation or narrow the claim;
-6. accept the formal pointwise method-claim kill and prospectively narrow to the
-   intervention-defined measurement framework, or require a genuinely distinct
-   new mathematical candidate before any development;
-7. keep Gate 0 open until the chosen exact pointwise instrument and comparator,
+6. implement Method A as the sole route: accept the pointwise method-claim kill
+   and use the intervention-identified measurement framework with the
+   Commander-selected non-novel instrument and matched comparator;
+7. keep Gate 0 open until the exact executable pointwise instrument and comparator,
    minimum matched baseline set, frozen backbone identity/revision, calibration
    method, partitions/sampling, governed breadth snapshot, resources, and
    permitted-artifact boundary are approved; after Gate 0, lock the fitted
@@ -105,9 +106,9 @@ The recommended package is:
 - None of the three audited pointwise candidates supplies a non-cosmetic new
   estimator. The exact `psi_mag` plug-in estimator remains a population
   specificity estimator for an already frozen score, not a deployable
-  pair-level conflict score. Gate 0 must therefore record either a prospective
-  framework-centered claim amendment with one non-novel primary instrument, or
-  a new theory candidate that survives equivalence review. Development may fit
+  pair-level conflict score. DR-0016 therefore records the prospective
+  framework-centered claim amendment and one non-novel primary instrument.
+  Development may fit
   and tune only within the resulting frozen rules; the fitted instance,
   normalization, link, and complete configuration lock before the one-time
   Month-3 set.
@@ -142,11 +143,11 @@ project work.
 | `G0-MV-Q` | **A:** reserve 150 metadata candidates per report-screen stratum (300 total), require at least 108 evaluable blocks per independent image polarity, and approve the selected/evaluable finite-roster estimand, cyclic ten-reader panel schedule, 9,999-resample one-sided max-`t` family `L_bal > 0.10`, `L_present > 0`, `L_absent > 0`, sensitivity veto, and pre-reader simulation contract; **B:** retain 128 per stratum only if the same complete simulation meets the operating criteria and resource owners accept its fragility; **C:** reject `MV-1` | **A**; deterministic ideal-yield arithmetic gives only `0.404356` joint probability at 85% yield under the prior 128-per-stratum plan, but this is not feasibility evidence | Clinical, statistical, ethics, governance, and resource owners | `OPEN / SIMULATION- AND FEASIBILITY-BLOCKED` | No reader contact or clinical item. Lowering 108, weakening `0.10`, reusing sibling readers, outcome-based top-up, or claiming reader-population generalization from the finite roster is prohibited. Failure invokes `G0-MV B/C`; no post-score replacement control. |
 | `G0-MT` | **A:** approve `MT-1`, exact redaction of the sole polarity slot with `Y_t=undefined`; **B:** reject and commission one new prospective option | **A**, with explicit task-critical/missing-state wording | Clinical and statistical owners | `OPEN` | Rejection leaves `J_id` incomplete. Hedge, negation deletion, full dropout, or character noise cannot be silently promoted. |
 | `G0-READERS` | **A:** approve the axis-specific nominal Krippendorff-alpha package, exact 150-cluster marginal allocations, patient/source-cluster percentile intervals, missingness and class-agreement rules, 15% repeats, mutually exclusive ten-reader image/six-reader text/six-reader pair rosters, five-reader reliability image/text items, three-reader reliability pair items, later disjoint three-reader text-sibling/pair panels, hierarchical sensitivities, timing pilot, and pre-reader simulation contract; **B:** require a prospectively powered alternative reader design | **A** | Clinical, statistical, ethics, governance, and resource owners | `OPEN / SIMULATION-BLOCKED` | No clinical contact or annotation. A smaller/overlapping roster or different coefficient requires a new dependence, blinding, precision, and workload model; two readers plus adjudication is not an automatic substitute. |
-| `G0-ESTIMAND` | **A:** approve primary `psi_mag`, compatible-reference SD scale, `0.20` specificity SESOI, `0.10` `A_psi` margin, and signed/scale-free diagnostics; **B:** replace them prospectively with a fully justified and recalculated package | **A** | Statistical owner and Commander | `OPEN` | No holdout or confirmation may run. Non-superiority cannot be relabelled equivalence or deterministic subsumption. |
+| `G0-ESTIMAND` | **A:** approve primary `psi_mag`, each method's own compatible-reference SD scale, `0.20` specificity SESOI, `0.10` `A_psi` margin on the difference of method-specifically standardized dimensionless effects, and signed/raw-scale/median-MAD diagnostics; **B:** replace them prospectively with a fully justified and recalculated package | **A** | Statistical owner and Commander | `OPEN` | `A_psi` is not expressed in one common reference-SD unit. No holdout or confirmation may run. Non-superiority cannot be relabelled equivalence or deterministic subsumption. |
 | `G0-INFERENCE` | **A:** approve the nonparametric patient-cluster studentized max-`t` bootstrap with exactly 9,999 fixed-seed resamples (seed `20270829`), common within-stratum patient indices, joint method-by-control component bounds, and derived—not directly bootstrapped—`psi_mag`/`A_psi` bounds; use one-sided 90% simultaneous Month-3 bounds (`alpha_F=0.10`, 80% target family power), one-sided 97.5% simultaneous confirmatory bounds (`alpha_F=0.025`, 90% target family power), the construct-to-advantage-to-downstream-to-decision fixed sequence, and Holm/Romano--Wolf control for secondary families; **B:** replace the complete package prospectively and recalculate every affected floor | **A** | Commander and statistical owner | `OPEN` | No protected population may open. Month 3 cannot establish confirmation, non-inferiority, or equivalence; changing the family after results is prohibited. |
-| `G0-METHOD` | **A:** accept TB-0006's pointwise method-claim kill, amend the central claim prospectively to the intervention-defined measurement/validation framework, and freeze one explicitly non-novel primary pointwise instrument plus its matched deterministic comparator; **B:** retain a new-estimator identity only after a new bounded pre-data theory brief supplies one exact non-cosmetic candidate that survives the same analytic screen | **A** | Commander, scientific supervisor, statistical owner, and model owner | `OPEN / KILL RECOMMENDED` | No core implementation. A requires a dated canonical amendment and exact instrument/comparator freeze; B leaves Gate 0 blocked. Development may not select among the killed candidates, and `psi_mag` may not be relabelled a pair-level score. |
-| `G0-BASELINES` | **A:** freeze the five roles as `RAW-COS`, project-native `DET-LR`, clean-room/separate-runner `DBF-TASK`, paper-faithful `PROBVLM-2ADAPTER`, and project-native `POINT-INFONCE` under the exact identities and supervision ledger in `baselines_and_ablations.md`; **B:** replace the set prospectively | **A**, conditional on approving every remaining implementation/licence/task-port choice | Scientific, statistical, model, and governance/licensing owners | `OPEN / PARTIALLY SPECIFIED` | Only ProbVLM versus POINT is same-information. DET-LR and DBF are privileged ceilings. DBF official GPL/RCML-provenance code and CLIP-Adapter code from the audited snapshot, which exposes no explicit licence file, may not be vendored; ProbVLM paper-versus-code semantics and POINT denominator/negative policy remain open. No method zoo may be selected on holdout. |
-| `G0-ABLATIONS` | **A:** freeze the minimum ablations as (i) remove `C_vt` from the downstream risk model; (ii) remove `A_v`, `A_t`, `M_v`, and `M_t` one at a time; (iii) replace the uncertainty-aware representation with its matched point-softmax/point-embedding adapter; (iv) hold mean embeddings fixed while removing learned scale/covariance where applicable; (v) report raw-SD versus median/MAD normalization; and (vi) run image-only, text-only, structured-nuisance-only, and provenance/process-only recovery views; **B:** replace this exact set prospectively with a claim-by-claim rationale | **A**, conditional on exact implementation and applicability mapping before closure | Scientific, statistical, and model owners | `OPEN / SPECIFICATION` | An inapplicable ablation requires a pre-results structural rationale and an exact matched substitute or narrower claim. No ablation may be dropped because it weakens the result. |
+| `G0-METHOD` | **A:** accept TB-0006's pointwise method-claim kill and use the Method-A partial-construct, intervention-identified measurement/inference framework; **B:** inactive unless a later dated Commander decision reopens the route before data | **A** | Commander, scientific supervisor, statistical owner, and model owner | `COMMANDER APPROVED A / SUPERVISOR, STATISTICAL, AND MODEL OWNERS OPEN` | DR-0016 supplies the dated Commander amendment. No core implementation, no development-first replacement, and no relabelling `psi_mag` as a pair-level score. |
+| `G0-BASELINES` | **A:** primary pair `PROBVLM-2ADAPTER` plus `POINT-2ADAPTER-RECON`; secondary `POINT-INFONCE`, `RAW-COS`, project-native `DET-LR`, and clean-room/separate-runner `DBF-TASK`, under the supervision ledger in `baselines_and_ablations.md`; **B:** replace prospectively before execution | **A**, conditional on approving every remaining implementation/licence/task-port choice | Scientific, statistical, model, and governance/licensing owners | `COMMANDER INTERFACE SELECTED / OTHER OWNERS AND EXECUTABLE SPEC OPEN` | Only the reconstruction pair is the primary same-selection-information/same-GGD-score-family/same-target-topology full-route comparison. Both use independently verified determinate-compatible fit membership, disclosed as semantic selection supervision; labels are not inputs or targets. The point route's global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen; unit constants are sensitivity only. Removing heads changes active capacity and gradient paths, which must be reported. POINT-INFONCE adds contrastive-negative assumptions; DET-LR and DBF are privileged ceilings. Direct DBF and CLIP-Adapter vendoring remain excluded. No method zoo may be selected on holdout. |
+| `G0-ABLATIONS` | **A:** freeze the minimum ablations as (i) remove `C_vt` from the downstream risk model; (ii) remove `A_v`, `A_t`, `M_v`, and `M_t` one at a time; (iii) replace `PROBVLM-2ADAPTER` with `POINT-2ADAPTER-RECON` under the information/score-family/topology/capacity-disclosure ledger; (iv) hold fitted ProbVLM means fixed while replacing input-dependent scale/shape with the point route's frozen global constants; (v) report raw-SD versus median/MAD normalization; and (vi) run image-only, text-only, structured-nuisance-only, and provenance/process-only recovery views; **B:** replace this exact set prospectively with a claim-by-claim rationale | **A**, conditional on exact implementation and applicability mapping before closure | Scientific, statistical, and model owners | `OPEN / SPECIFICATION` | Ablation (iv) diagnoses only a direct score-path contribution conditional on jointly trained means; it cannot establish a training-path or causal mechanism. An inapplicable row requires a pre-results structural rationale and an exact matched substitute or narrower claim. No ablation may be dropped because it weakens the result. |
 | `G0-MODEL` | **A:** freeze BiomedCLIP snapshot `9f341de24bfb00180f1b847274256e9b65a3a32e` through OpenCLIP 2.23.0 commit `f08f25f3f226bdb538de2b4ed48a9213ba6b179e` as the unknown-exposure primary development feature route, plus the source/type/time-auditable ResNet-50/original-BERT pair as a strict non-VLM control lead; **B:** require a manifest-cleared pretrained VLM and remain blocked | **A**, while lineage/exposure and strict-route feasibility remain unresolved | Commander, model, governance, and statistical owners | `OPEN / FEASIBILITY` | The named components publish MIT terms, but no checkpoint download or model execution is authorized and the snapshot does not prove MIMIC exclusion. Without a strict component, Gate 0 stays open or every model/generalization claim narrows. |
 | `G0-CALIBRATION` | **A:** freeze logistic recalibration (intercept and slope) on official-validation patients, with identical inputs/tuning budget for all methods; **B:** use isotonic calibration with a new complexity/power calculation | **A** as a protocol choice, not an empirical winner | Statistical and clinical owners | `OPEN` | No calibrated-risk, Brier-skill, or decision claim; calibration method cannot be chosen on final results. |
 | `G0-ARTIFACT` | **A:** exact construction balance plus four frozen learned probes as a veto/falsification audit, with no global equivalence claim; **B:** fund and power a bounded four-probe equivalence claim; **C:** widen `+0.05` without a consequence-based justification | **A**; reject C, while exact feature sets, algorithms, tuning grids, and software remain unspecified blockers | Commander, statistical, model, and resource owners | `OPEN / NOT FULLY SPECIFIED` | Under A, demonstrated recovery kills and an interval crossing `0.55` is inconclusive; the paper may claim only design balance and the exact probe results. Under B, materially larger samples and simulation are required. C is not scientifically admissible. |
@@ -270,9 +271,12 @@ select replacements silently:
    alternatives using candidate scores.
 3. If a probe demonstrates condition recovery, or a construction invariant
    fails, kill the instrument before interpreting estimator performance.
-4. If the frozen pointwise instrument fails `psi_mag`, the `+0.10` material-
-   advantage gate, or the downstream `+0.01` gate, kill the Main Track method
-   claim. Record a qualified null or deterministic result when warranted.
+4. If the frozen pointwise instrument fails `psi_mag` or the `+0.10` material-
+   advantage gate, kill the current Main Track route and prohibit post-hoc
+   repackaging; retain and report the qualified null or deterministic result.
+   Failure of the frozen-means diagnostic separately kills any direct score-path
+   scale/shape attribution, and failure of the downstream `+0.01` gate blocks
+   downstream promotion. None may be softened into the failed Main Track claim.
 5. If no strict checkpoint/cohort route exists, narrow the model/generalization
    evidence; if that leaves the central claim unsupported, stop the submission
    route rather than relabel sensitivity as confirmation.
@@ -281,9 +285,16 @@ select replacements silently:
 
 ## Owner Sign-off Record
 
-DR-0015 records one partial sign-off: the Commander selected `G0-SCOPE A` on
-2026-08-29. No full owner checklist is checked because the Commander's other
-choices and scientific-supervisor co-approval remain open.
+DR-0015 and DR-0016 record two partial Commander sign-offs: `G0-SCOPE A` on
+2026-08-29 and `G0-METHOD A` plus its scientific interfaces on 2026-09-01. No
+aggregate owner checklist is checked because every named co-approval and the
+Commander's other Gate-0 choices remain open.
+
+- [x] Commander partial sign-off: `G0-SCOPE A` only; supervisor open.
+- [x] Commander partial sign-off: `G0-METHOD A`, paper-faithful
+  `PROBVLM-2ADAPTER`, `POINT-2ADAPTER-RECON`, and secondary `POINT-INFONCE`
+  role only; supervisor/statistical/model owners and executable specification
+  open.
 
 - [ ] Commander: `G0-SCOPE`, `G0-TASK`, `G0-ESTIMAND`, `G0-INFERENCE`, `G0-METHOD`,
   `G0-MODEL`, `G0-ARTIFACT`, `G0-DATA`, `G0-RETENTION`, `G0-CHECKPOINT`,

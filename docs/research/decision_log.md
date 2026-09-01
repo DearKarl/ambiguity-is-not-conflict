@@ -704,6 +704,101 @@ decisions are separated explicitly.
   ambiguity-identification route is supplied. Reopen the local-storage
   boundary only with verified capacity evidence and a new bounded contract.
 
+## DR-0016 — Commander Method-A and Instrument/Comparator Interface Decision
+
+- **Date:** 2026-09-01
+- **Status:** Commander-approved partial Gate-0 decision; scientific-
+  supervisor, statistical-owner, and model-owner approvals remain open; not
+  executable
+- **Facts:** TB-0006 killed all three proposed new pointwise-estimator claims.
+  The exact `psi_mag` plug-in remains an estimator of a population specificity
+  functional for a frozen score, not a deployable pair-level conflict score.
+  Output-only non-identification permits identical learned outputs under
+  ambiguous, compatible, and incompatible independently measured states.
+- **Primary-source fact:** the audited ProbVLM paper supplies generalized-
+  Gaussian adapter semantics, while the official MIT-licensed source differs
+  materially in its active residual/loss and path behavior. Ordinary InfoNCE
+  additionally treats off-diagonal pair identities as negatives; in a repeated
+  low-cardinality atomic task, some are semantic false negatives.
+- **Inference:** a framework-level contribution may survive in the complete
+  combination of determinate partial-construct support, independent modality-
+  only measurement, controlled compatibility interventions, valid paired
+  information-loss controls, joint population inference, matched deterministic
+  challenge, and downstream decision gates. This remains a novelty hypothesis.
+- **Decision:** adopt `G0-METHOD A` as the project's sole route. The working
+  paper identity becomes *Ambiguity Is Not Conflict: Intervention-Identified
+  Measurement of Cross-Modal Conflict Specificity*. Do not pursue
+  `G0-METHOD B` in parallel and do not claim a new pair-level estimator.
+- **Instrument decision:** freeze, at the Commander scientific-interface level,
+  a project-native `PROBVLM-2ADAPTER` instrument with paper-faithful symmetric
+  cross-modal generalized-Gaussian likelihood semantics. The coordinate
+  reduction and complete objective weights are project choices rather than a
+  paper- or code-exact training claim. The instrument is explicitly non-novel,
+  uses no original ProbVLM checkpoint, and may not fit constructed
+  contradictions as positive pairs.
+- **Comparator decision:** freeze `POINT-2ADAPTER-RECON` as the primary matched
+  deterministic full-route comparator. It shares frozen inputs, independently
+  verified determinate-compatible fit records, mean trunks, intra/cross target
+  topology, optimization, tuning budget, the GGD score family, and compatible-
+  reference standardization while removing input-dependent scale and shape
+  outputs. Global coordinatewise scale/shape constants are fitted on the same
+  compatible fit/development objective and frozen before protected outcomes;
+  unit-scale Laplace is a sensitivity only.
+- **Supervision and capacity boundary:** compatible fitting-set membership is
+  shared semantic selection supervision, although semantic labels are neither
+  model inputs nor loss targets. Removing the probabilistic heads changes active
+  parameters and gradient paths, so the primary comparison tests complete
+  same-selection-information routes rather than a capacity-isolated mechanism;
+  exact parameter and compute differences must be reported.
+- **Secondary-baseline decision:** demote `POINT-INFONCE` to a secondary same-
+  records contrastive baseline. Its denominator, positive multiplicity,
+  patient/source exclusions, semantic false-negative mask, temperature,
+  normalization, optimizer, and tuning rules require a separate pre-execution
+  freeze. No CLIP-Adapter code is inherited.
+- **Attribution boundary:** ProbVLM-versus-point performance alone cannot
+  attribute benefit to learned scale or shape. A frozen-means diagnostic must
+  replace input-dependent scale/shape with the point comparator's frozen global
+  constants. It can isolate only the direct score path conditional on jointly
+  trained means, not a training-path or causal mechanism; failure kills even the
+  narrow direct-score attribution.
+- **Standardization boundary:** `A_psi` subtracts two effects standardized by
+  their respective method-specific compatible-reference distributions. It is a
+  difference of dimensionless standardized effects, not one common reference-
+  SD contrast; raw-score and median/MAD sensitivities remain required.
+- **Assumptions:** independently reliable and score-blind semantic measurement,
+  valid intervention/control construction, stable complete blocks, frozen
+  score/link/normalizer, no leakage, and a defensible selected/evaluable target
+  are required for the intervention-relative interpretation.
+- **Alternatives considered:** retain `POINT-INFONCE` as the primary matched
+  comparator, use the audited ProbVLM code exactly, or authorize a new-estimator
+  theory route. The first two confound the intended comparison; the third
+  contradicts the selected single route.
+- **Consequences:** the scientific interface is no longer selected from
+  development, but Gate 0 remains open. Exact task, data, intervention,
+  backbone, software, numerical architecture, optimization, calibration,
+  readers, resources, governance, and all required co-approvals remain blocked.
+  No implementation or experiment follows from this decision.
+- **Venue boundary:** NeurIPS 2027 Main Track remains the strategic target, not
+  a promised outcome. The 2027 call must be rechecked, and framework novelty,
+  construct validity, deterministic advantage, breadth, calibration, and
+  decision evidence must survive their pre-specified gates.
+- **Hard-kill boundary:** failure of the frozen `psi_mag` specificity gate or
+  the `+0.10` `A_psi` probabilistic-instrument material-advantage gate kills the
+  current Main Track route. Retain and report the qualified null or
+  deterministic result without post-hoc repackaging; deterministic subsumption
+  still requires its separate positive conditions.
+- **Review date:** at scientific-supervisor/statistical/model-owner review and
+  again before Gate-0 closure or after a material primary-literature update.
+- **Reopening condition:** reopen only if a required owner rejects the exact
+  interface, a same-information defect survives correction, a primary source
+  occupies the complete framework claim, or the frozen pair cannot be made
+  executable without changing its scientific meaning. Reopening requires a
+  dated decision; failed results cannot select a replacement.
+- **Permitted claim:** the Commander has selected Method A and its primary
+  scientific interfaces. This is not other-owner approval, framework novelty,
+  empirical identification, probabilistic superiority, clinical value, Gate-0
+  closure, NeurIPS eligibility, acceptance, or publication.
+
 ## Open Gate 0 Decisions
 
 - obtain scientific-supervisor co-approval for the Commander-selected
@@ -725,18 +820,20 @@ decisions are separated explicitly.
   reject/narrow the affected route. No benchmark, runtime/capacity fact, or
   option approval currently exists, and the 613-GB conditional core-output
   floor cannot be assigned to the Commander's local workstation;
-- `G0-METHOD A` framework-centered amendment or `G0-METHOD B` new pre-data
-  theory candidate; then one exact non-outcome-selected pointwise instrument,
-  matched backbone/baseline implementations, exact ablation/applicability map,
-  and implementation/licence freeze;
+- scientific-supervisor, statistical-owner, and model-owner approval of the
+  Commander-selected Method-A framework and
+  `PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON` interfaces; then exact executable
+  backbone/baseline implementations, numerical values, secondary
+  `POINT-INFONCE` policy, ablation/applicability map, and licence freeze;
 - magnitude-safe primary endpoint, compatible-reference scale, 0.20 construct
   threshold, secondary `theta`, the `G0-INFERENCE` max-`t`/multiplicity/fixed-
-  sequence package, 0.10 uncertainty-aware material-advantage boundary, and
-  216/320-or-400 operational floors;
+  sequence package, 0.10 `A_psi` probabilistic-instrument material-advantage
+  boundary on method-specifically standardized effects, and 216/320-or-400
+  operational floors;
 - owner approval of exact `MV-1`/`MT-1` operations, severities/state rules,
   acceptance rules, within-source references, the `MV-1` task-evidence endpoint/
-  threshold/power, and the exact primary estimator/interface at Gate 0; fitted
-  instances and configurations then lock separately before Month 3;
+  threshold/power, and the exact frozen pointwise instrument/interface at Gate
+  0; fitted instances and configurations then lock separately before Month 3;
 - artifact option A (exact balance plus diagnostic veto) or B (powered bounded
   frozen-probe recoverability), orientation-safe `R=max(BA,1-BA)`, exact probe
   implementations, and the unresolved approximate 1,047/1,757 IUT burden for B;

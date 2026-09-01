@@ -55,226 +55,309 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 ### Identity and status
 
-- Contract ID: `EC-2026-08-29-001`
-- Task: bootstrap strict execution/handoff governance and close the current
-  repository-governance stage
-- Status: `COMPLETE`
-- Authorized by: Commander, in the current Codex task on 2026-08-29
+- Contract ID: `EC-2026-09-01-001`
+- Task: adopt and formalize `G0-METHOD A`, specify its primary instrument and
+  same-information comparator, and prepare a private supervisor email draft
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander, in the current Codex task on 2026-09-01
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/contract-governance-closeout-completion`
+- Working branch: `codex/g0-method-a-formalization`
 - Expected base: remote `main` at
-  `ea295e0e672db72b5814ae96ed34176f6a583d73`
-- Closure remediation ID: `CR-2026-08-29-001`
+  `74e6591dfe43d98dad06df2b262f8c4295455421`
 
 ### Primary outcome
 
-Establish a machine-checked contract-first/contract-last workflow, reconcile
-the completed TB-0011 and GitHub integration record, and record the
-Commander's `G0-SCOPE A` decision without closing Gate 0 or selecting a
-`G0-METHOD` route.
+Record the Commander's selection of `G0-METHOD A` as the project's single
+primary method identity; formalize the intervention-identified population
+measurement and inference framework without claiming a new pair-level conflict
+score; and prospectively specify exactly one non-novel primary pointwise
+instrument plus one same-information deterministic comparator. Keep every
+remaining owner approval and Gate-0 execution blocker explicit. Prepare one
+private bilingual-ready supervisor email draft for the Commander, but do not
+send or persist that correspondence in the public repository.
 
 ### Authoritative inputs
 
-Read these sources in full or, for long decision documents, inspect every
-section relevant to the bounded decisions before acting:
+Read these sources in full before substantive work:
 
 - `AGENTS.md`
 - `CODEX_TASK_GOVERNANCE.md`
+- this active `EXECUTION_CONTRACT.md`
+- `HANDOFF_CONTRACT.md`
 - `README.md`
 - `docs/roadmap.md`
 - `docs/research/README.md`
 - `docs/research/research_contract.md`
-- `docs/research/decision_log.md`
+- `docs/research/scope_charter.md`
+- `docs/research/research_question.md`
+- `docs/research/measurement_protocol.md`
+- `docs/research/statistical_analysis_plan.md`
+- `docs/research/estimator_formalization_audit.md`
+- `docs/research/baselines_and_ablations.md`
+- `docs/research/novelty_audit.md`
+- `docs/research/literature_matrix.md`
+- `docs/research/submission_strategy.md`
 - `docs/research/gate0_closure_audit.md`
 - `docs/research/gate0_decision_dossier.md`
-- `docs/research/execution_budget_and_backbone_audit.md`
-- `docs/research/task_briefs/TB-0011-output-metric-registry-semantic-count-ledger.md`
+- `docs/research/decision_log.md`
+- `docs/research/task_briefs/TB-0006-estimator-formalization-audit.md`
 - `scripts/check_repository.py`
 - `tests/test_repository_contract.py`
-- the Commander's current authorization and the verified Git/GitHub state
+- the Commander's current authorization, the verified Git/GitHub state, and
+  the official NeurIPS 2026 contribution-type/review guidance used only as a
+  time-sensitive planning reference while the 2027 call remains unpublished
 
 ### Frozen interpretations for this task
 
-- TB-0011 is technically and reproducibly complete; its generated artifacts
-  remain preserved.
-- The merged PR and green CI complete the prior branch-to-`main` integration.
-- Gate 0 remains open and core implementation remains blocked.
-- `G0-SCOPE A` means determinate-conflict specificity is primary and natural
-  ambiguity is veto-only. The Commander approves this option; any other
-  required owner or supervisor approvals remain pending.
-- `G0-METHOD` is not frozen. Framework-centered validation versus one final,
-  tightly time-boxed estimator-theory attempt remains a dialogue decision.
-- The local machine cannot hold the approximately 613-GB conditional
-  simulation-output core floor; this is a binding execution constraint, not
-  the medical dataset size, a final upper bound, or authorization to download
-  data.
+- The Commander approves `G0-METHOD A`; the scientific supervisor,
+  statistical owner, and model owner have not yet approved it.
+- `G0-SCOPE A` remains unchanged: determinate-conflict specificity is primary
+  and natural ambiguity is veto-only; supervisor co-approval remains open.
+- The three TB-0006 pointwise method claims remain killed. No empirical result
+  may reverse their analytic equivalence or occupied-form findings.
+- `psi_mag` is a population specificity estimand for an already frozen score,
+  not a deployable pair-level conflict score.
+- The central contribution may be a domain-general identification,
+  measurement, and inference framework, but its novelty and NeurIPS Main Track
+  fit remain hypotheses to audit rather than established facts.
+- The Commander has now resolved the instrument/comparator stop condition.
+  The Commander-level scientific-interface choice is a paper-faithful,
+  project-native `PROBVLM-2ADAPTER` instrument scored by symmetric cross-modal
+  generalized-Gaussian negative log-likelihood, paired with a new
+  `POINT-2ADAPTER-RECON` deterministic comparator that shares the frozen
+  inputs, independently verified determinate-compatible fitting records, mean
+  trunks, prediction topology,
+  optimization, and tuning budget while removing scale and shape outputs.
+  Compatibility-set membership is independently measured shared selection
+  supervision for both routes, even though semantic labels are not model
+  inputs. The point comparator uses prospectively fitted, frozen global
+  coordinatewise GGD scale/shape constants; unit constants are sensitivity
+  only.
+  `POINT-INFONCE` is secondary and must receive a separately frozen
+  multi-positive/false-negative policy. Scientific-supervisor, statistical-
+  owner, and model-owner co-approval remains open; this is not an execution-
+  ready implementation freeze. Removing the probabilistic heads also removes
+  active parameters and gradient paths, so this is a same-information full-
+  route comparison, not a capacity-isolated scale/shape mechanism test. Exact
+  parameter counts must be reported rather than described as equal.
+- Gate 0 remains open. This task creates no scientific evidence and authorizes
+  no implementation, model, data, reader, simulation, pilot, or experiment.
+- The Commander's local workstation remains unavailable for TB-0011's
+  approximately 613-GB conditional simulation-output core floor. That floor is
+  not the medical dataset size, a final upper bound, or an execution target for
+  this task.
 
 ### Allowed actions
 
-- create `EXECUTION_CONTRACT.md` and `HANDOFF_CONTRACT.md`;
-- install their mandatory workflow in `AGENTS.md`,
-  `CODEX_TASK_GOVERNANCE.md`, task templates, repository checks, and tests;
-- correct stale completion wording for TB-0011 without changing its results;
-- record the local-storage constraint and the Commander's `G0-SCOPE A`
-  approval in canonical decision/governance documents;
-- clarify that `G0-METHOD` and remaining Gate 0 approvals are pending;
-- create missing GitHub labels `decision` and `protocol`;
-- protect `main` with required pull requests, at least one approval, the
-  repository CI check, no force pushes, and no deletion; because the only
-  current collaborator is the administrator, preserve administrator bypass
-  unless another eligible reviewer is added;
-- make narrowly necessary CI/dependency-integrity hardening changes only when
-  existing behavior is preserved and all checks pass;
-- run read-only audits and the repository's existing verification suite;
-- commit, push the bounded branch, open a PR, wait for green CI, and merge
-  without force or an explicit protection-override command. For this solo-
-  collaborator bootstrap only, a normal administrator-exempt merge is allowed
-  after independent review and green CI; it must be disclosed as an exemption,
-  not represented as a GitHub approval;
-- after the primary merge and CI, create one completion-only closure branch,
-  update only `EXECUTION_CONTRACT.md` and `HANDOFF_CONTRACT.md`, verify it, and
-  synchronize it through one final PR under the finite self-evidence rule;
-- under the single-use `CR-2026-08-29-001` exception, stabilize the live-
-  status-dependent closure regression in `tests/test_repository_contract.py`
-  and extend only `scripts/check_repository.py` to enforce the linked, base-
-  fresh, four-file remediation allowlist;
-- refresh detached role worktrees to the final `main` revision only if they
-  are clean and no task state would be lost.
+- replace this Execution Contract from the Commander's explicit authority,
+  then complete and record the required traversal before any other mutation;
+- create a new linked Handoff Contract for this bounded task;
+- add one canonical English framework-formalization document under
+  `docs/research/` and update only directly implicated status, decision,
+  contribution, method, instrument/comparator, and cross-reference wording in
+  `README.md`, `docs/roadmap.md`, `docs/research/README.md`,
+  `docs/research/research_contract.md`, `docs/research/scope_charter.md`,
+  `docs/research/research_question.md`,
+  `docs/research/measurement_protocol.md`,
+  `docs/research/evaluation_protocol.md`,
+  `docs/research/statistical_analysis_plan.md`,
+  `docs/research/task_estimand_options.md`,
+  `docs/research/estimator_formalization_audit.md`,
+  `docs/research/baselines_and_ablations.md`,
+  `docs/research/novelty_audit.md`,
+  `docs/research/literature_matrix.md`,
+  `docs/research/submission_strategy.md`,
+  `docs/research/gate0_closure_audit.md`,
+  `docs/research/gate0_decision_dossier.md`,
+  `docs/research/decision_log.md`, and the TB-0006 completion record;
+- update only `tests/test_repository_contract.py` where the prior test suite
+  hard-codes the completed contract's single-use remediation ID or stale open-
+  method wording, preserving the generic lifecycle semantics and all
+  scientific-number checks; do not change the repository checker unless an
+  independently reviewed deterministic defect forces a contract amendment;
+- record a new dated Decision Record that separates Commander approval from
+  all still-open supervisor/statistical/model-owner approvals;
+- replace `POINT-INFONCE` as the primary matched comparator with the approved
+  `POINT-2ADAPTER-RECON` interface, retain `POINT-INFONCE` only as a secondary
+  contrastive baseline, and record the exact reason for that demotion;
+- derive propositions, counterexamples, estimands, estimators, assumptions,
+  inference obligations, falsification rules, and permitted claims from the
+  authoritative record without changing saved numerical decisions;
+- conduct targeted read-only verification of already named primary papers,
+  official code pages, licences, and official NeurIPS guidance when required
+  for novelty, semantic-interface, or venue-fit accuracy; do not clone, install,
+  download, execute, or persist third-party code, data, or models;
+- draft a private supervisor email in the final user response only; do not send
+  it, create an email file, or commit personal correspondence;
+- run read-only audits and the existing deterministic repository checks;
+- obtain independent scientific, method-equivalence, and governance review;
+- commit and push the bounded branch, open a pull request, wait for green CI,
+  and merge only through the standard protected-branch path after independent
+  review. If GitHub still has only one collaborator, a normal disclosed
+  administrator-exempt merge without an override flag is allowed; protection
+  may not be weakened;
+- after the primary merge and CI, create one completion-only closure change
+  that modifies only the two contracts, synchronize it through one final PR,
+  and report its self-evidencing GitHub result.
 
 ### Forbidden actions
 
-- no medical-data, model-weight, or large-artifact download;
-- no core experiment, simulation rerun, model training, annotation, or
-  generated-result regeneration;
-- no scientific-method selection, new estimator claim, Gate 0 closure, or
-  promotion of proposed evidence to completed evidence;
-- no claim of clinical value, deployment readiness, publication, or
-  acceptance;
-- no commit of restricted data, credentials, personal correspondence, or
-  identifiers;
-- no force push, history rewrite, disabling or weakening branch protection,
-  explicit protection-override command, deletion of published branches,
-  release, or tag;
-- no unrelated edits and no action outside this repository and its GitHub
-  settings.
+- no medical-data, model-weight, repository-clone, executable-code, or large-
+  artifact download;
+- no core implementation, environment installation, model execution,
+  training, tuning, annotation, simulation, pilot, or experiment;
+- no new pointwise estimator claim, relabelling of `psi_mag`, reversal of the
+  TB-0006 kills, full causal ambiguity-separation claim, or Gate-0 closure;
+- no change to the task, dataset route, intervention, hypotheses, estimand
+  values, SESOIs, bootstrap counts/seeds, sample floors, resource counts,
+  promotion/stop rules, or clinical claim;
+- no representation of Commander approval as scientific-supervisor,
+  statistical-owner, model-owner, governance-owner, or clinical-owner approval;
+- no promise of NeurIPS eligibility, acceptance, publication, clinical value,
+  or deployment readiness;
+- no sending email or other external communication and no commit of personal
+  correspondence, restricted data, credentials, identifiers, or private
+  screenshots;
+- no GitHub settings, label, issue, release, tag, branch-protection, or main-
+  branch change except the normal PR/merge lifecycle explicitly authorized
+  above;
+- no force push, history rewrite, explicit protection override, branch
+  deletion, destructive action, unrelated edit, or scope expansion.
 
 ### Preconditions
 
-- canonical local `main` is clean and synchronized to the expected base;
-- the working branch is dedicated to this contract;
+- the dedicated worktree is clean and based exactly on the expected remote
+  `main` revision;
 - the configured remote is exactly
   `https://github.com/DearKarl/ambiguity-is-not-conflict.git`;
-- no unrelated user changes are present;
-- the active contract traversal is recorded before work continues.
+- remote divergence is zero and no unrelated user changes are present;
+- the working branch is dedicated to this contract;
+- the completed traversal is recorded before any mutation beyond this file;
+- the approved Commander-level interface must remain distinct from the later
+  owner-approved executable specification, which still requires exact
+  software, optimizer values, tuning grid, calibration, and data/model
+  decisions.
 
 ### Promotion criteria
 
-The task may be handed off as complete only when all of the following hold:
+The primary task may enter remote finalization only when all of the following
+hold:
 
-1. both contracts exist and repository policy makes their workflow mandatory;
-2. automated checks fail if either contract or its essential fields are
-   absent;
-3. stale TB-0011 integration wording is reconciled;
-4. the storage constraint, `G0-SCOPE A` Commander approval, remaining
-   approvals, and pending `G0-METHOD` choice are unambiguous;
-5. all pre-existing tests plus new contract tests pass, and
-   `scripts/check_repository.py` passes;
-6. an independent bounded review finds no blocking defect; GitHub approval is
-   not falsely inferred from that review;
-7. GitHub labels and `main` protection match this contract;
-8. the primary bounded branch has green CI and is merged into `main` under the
-   disclosed solo-administrator exemption;
-9. `HANDOFF_CONTRACT.md` records the primary outcome, evidence, residual risks,
-   and exact next decision boundary and is set to `COMPLETE` in a completion-
-   only closure change; and
-10. the closure change—normally the two contracts, or for the recorded
-    `CR-2026-08-29-001` defect exactly those contracts plus
-    `scripts/check_repository.py` and `tests/test_repository_contract.py`—has
-    green CI and is merged into `main`; its own commit, PR, merge revision, and
-    post-merge CI remain self-evidencing Git/GitHub metadata reported in the
-    final user handoff rather than recursively inserted into the record.
+1. the completed traversal is recorded and the new Handoff Contract is linked;
+2. a dated decision record states that the Commander selected `G0-METHOD A`
+   while every other required owner approval remains open;
+3. one canonical document defines the construct support, pointwise instrument,
+   controlled contrasts, `psi_mag` estimand and estimator, identification and
+   non-identification results, assumptions, inference boundary, falsification
+   rules, and permitted claim without mathematical contradiction;
+4. exactly one explicitly non-novel primary instrument and one same-information
+   deterministic comparator are prospectively specified, with score/link,
+   inputs, supervision, information budget, and unresolved implementation or
+   licence boundaries explicit;
+5. the repository makes no new pair-level estimator claim, no full ambiguity-
+   separation claim, no experiment claim, and no publication promise;
+6. directly implicated canonical documents agree on the Method-A paper
+   identity, Gate-0 status, owner status, instrument/comparator role, and exact
+   next boundary;
+7. a focused novelty audit distinguishes source facts from project inferences
+   and either finds a defensible surviving framework-level gap or records the
+   exact kill condition without manufacturing novelty;
+8. independent reviews find no semantic drift, hidden second route,
+   same-information mismatch, unlicensed implementation promise, restricted
+   content, or scope expansion;
+9. `pytest -q`, `python scripts/check_repository.py --final`, and
+   `git diff --check` pass, and the staged-file/sensitive-content review is
+   clean;
+10. the primary PR and post-merge `main` CI are green under the protected-branch
+    lifecycle, after which the two-contract completion-only closure is also
+    verified and synchronized.
 
 ### Stopping criteria
 
 Stop and report rather than expanding scope if any of these occurs:
 
-- the checkout contains inseparable unrelated changes or the remote diverges;
-- a required check fails and cannot be repaired within this bounded task;
-- branch protection cannot be configured with the disclosed administrator
-  exemption or another legitimate merge path;
-- a proposed edit would select `G0-METHOD`, close Gate 0, alter saved numeric
-  results, or require data/model access;
-- GitHub authentication, permissions, or API state is unexpected;
-- the task requires destructive, costly, or otherwise unlisted external
-  action.
+- the checkout is dirty, the expected base or remote changes, remote divergence
+  appears, or unrelated user work cannot be isolated;
+- the framework-level novelty question requires an unbounded literature review
+  or the complete contribution is clearly occupied;
+- the approved `PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON` interface cannot be
+  stated as same-information without disclosing its fit-set supervision,
+  score-family difference, target topology, active-capacity difference, or
+  training-path boundary;
+- a requested specification would reverse an analytic kill, invent a cosmetic
+  estimator distinction, change a frozen scientific quantity, or require data,
+  model, reader, code execution, or experiment access;
+- another required owner decision is scientifically necessary to choose among
+  materially different interfaces; record the exact question instead of
+  choosing;
+- independent review raises an unresolved blocker or any required check fails;
+- GitHub authentication, protection, base freshness, or merge state is
+  unexpected;
+- the task requires destructive, costly, communicative, or otherwise unlisted
+  external action.
 
 ### Irreversible and external boundaries
 
-Commits, a pull request, merge, labels, and branch-protection settings are
-authorized external changes. They must be verified before application and
-must remain auditable and reversible through ordinary Git/GitHub operations.
-Force operations, history rewriting, releases, data acquisition, and external
-communications are outside authority.
+Targeted read-only official-source inspection, ordinary commits, pushing the
+dedicated branch, pull requests, standard protected merges under the disclosed
+solo-administrator residual, and CI are authorized external actions. They must
+remain auditable and reversible through ordinary Git/GitHub operations. Email
+sending, third-party downloads or execution, data/model access, GitHub-setting
+changes, explicit protection overrides, force operations, history rewriting,
+releases, and publication are outside authority.
 
 ### Required evidence
 
-- pre- and post-change Git status, branch, remote, and divergence checks;
-- focused contract/checker tests and full `pytest -q` output;
-- repository checker output;
-- diff/stat and staged-file review;
-- independent review result;
-- GitHub label, protection, PR, merge, and CI evidence;
-- primary finalization revision and clean-worktree evidence inside the Handoff
-  Contract, plus self-evidencing closure revision/CI in GitHub and the final
-  user handoff;
-- completed linked entry in `HANDOFF_CONTRACT.md`.
+- pre- and post-change Git status, branch, remote, base, upstream, and divergence
+  checks;
+- completed traversal record and exact changed-file list;
+- a concise authority decision and scientific root-cause record;
+- formal definitions and derivations with explicit fact/inference/assumption/
+  decision separation;
+- targeted primary-source verification notes where used;
+- independent scientific, method-equivalence, and governance review results;
+- full test, final repository-checker, diff, staged-file, sensitive-content,
+  and tracked-size results;
+- commit, pull-request, CI, merge, post-merge, and completion-only closure
+  evidence;
+- a completed linked `HANDOFF_CONTRACT.md` and the private, unsent supervisor
+  email draft delivered only to the Commander.
 
 ### Pre-task traversal record
 
 - Traversal status: `COMPLETE`
-- Agent: Codex, Ultra research-planning task
-- Started: 2026-08-29 (Asia/Shanghai)
-- Completed: 2026-08-29 (Asia/Shanghai)
-- Preconditions verified: yes; the canonical checkout, working branch, base
-  revision, remote URL, and bounded one-file bootstrap diff were checked.
-- Notes: `EXECUTION_CONTRACT.md`, `AGENTS.md`,
-  `CODEX_TASK_GOVERNANCE.md`, and every listed authoritative input were
-  traversed under the full-or-relevant-section rule. The task may now proceed
-  only within this contract. After independent review identified ambiguous
-  613-GB wording, the contract was corrected and re-traversed in full on
-  2026-08-29 before work resumed. After independent review identified the
-  contract-bootstrap circularity, recursive closure risk, hard-coded contract
-  IDs, and the solo-administrator merge boundary, the finite two-phase
-  lifecycle and generic validation rules were added; this amended contract
-  was then re-traversed in full on 2026-08-29 before work resumed. After the
-  first uncommitted COMPLETE-state run exposed a live-status-dependent
-  lifecycle test, the contracts were restored to READY, the single-use
-  `CR-2026-08-29-001` exception was added, and this contract plus the exact
-  governance/checker inputs were re-traversed in full on 2026-08-29 before the
-  four-file repair began.
-
-### Primary finalization and closure-remediation record
-
-- Primary commit:
-  `0773fa304f601f66c49cdc0cd2e9fe7db116e3d8`
-- Primary pull request:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/2`
-- Branch CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33234953605`
-- Pull-request CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33235006836`
-- Primary merge revision:
-  `ea295e0e672db72b5814ae96ed34176f6a583d73`
-- Post-merge `main` CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33235054743`
-- Merge boundary: the ordinary CLI merge was rejected by the one-review rule;
-  GitHub's standard merge API then applied the disclosed administrator
-  exemption without an override flag, force operation, or protection change.
-- Closure boundary: this completion-only change modifies exactly
-  `EXECUTION_CONTRACT.md`, `HANDOFF_CONTRACT.md`,
-  `scripts/check_repository.py`, and `tests/test_repository_contract.py` under
-  `CR-2026-08-29-001`. The first COMPLETE-state run exposed a test that derived
-  its synthetic lifecycle from the live status, so the transition was restored
-  to READY before repair. The closure's own commit, PR, merge revision, and
-  post-merge CI remain self-evidencing Git/GitHub metadata under the finite
-  rule.
+- Agent: Codex, Ultra scientific-decision task
+- Started: 2026-09-01 (Asia/Shanghai)
+- Completed: 2026-09-01 (Asia/Shanghai), including the Commander-authorized
+  comparator amendment.
+- Preconditions verified: yes; the dedicated worktree is clean at
+  `74e6591dfe43d98dad06df2b262f8c4295455421`, the remote URL is exact, remote
+  divergence is `0/0`, and this one-file replacement is the sole repository
+  mutation before traversal.
+- Amendment authority: on 2026-09-01 the Commander explicitly approved the
+  paper-faithful `PROBVLM-2ADAPTER` instrument, the new matched
+  `POINT-2ADAPTER-RECON` comparator, and the demotion of `POINT-INFONCE` to a
+  secondary baseline while keeping all other-owner approvals and Gate 0 open.
+- Notes: before the amendment, this contract, `AGENTS.md`,
+  `CODEX_TASK_GOVERNANCE.md`, the prior Handoff Contract, every named
+  repository input, and the official NeurIPS 2026 planning guidance were
+  traversed in full. After the Commander's comparator decision, the amended
+  contract was re-read in full together with the governing rules and directly
+  implicated method, baseline, inference, novelty, Gate-0, decision, checker,
+  and test sources. A read-only fetch reconfirmed the exact remote, base, and
+  `0/0` divergence. No file other than this contract was mutated before the
+  amendment traversal returned to `COMPLETE`. Substantive work may now resume
+  only within `EC-2026-09-01-001`. A post-edit equivalence review then required
+  three non-expansive precision corrections: disclose active-capacity and
+  gradient-path differences rather than assert parity, count independently verified compatible-set
+  membership as shared selection supervision, and restrict the fixed-means
+  ablation to the direct score path conditional on jointly trained means. The
+  contract and directly implicated method/baseline/inference sources were
+  re-read after this amendment. The governance cross-document review then
+  required two additional directly implicated wording repairs in
+  `evaluation_protocol.md` and `task_estimand_options.md`: identify only the
+  intervention-relative score-response functional, and preserve the existing
+  hard current-route Main Track kill without the stale estimator-novelty label.
+  The Commander had approved the ensuing bounded reconciliation; both files and
+  this amended contract were read in full before those repairs. No scientific
+  quantity, stop rule, or owner status changed.
