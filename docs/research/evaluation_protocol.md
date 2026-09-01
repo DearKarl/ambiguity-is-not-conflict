@@ -10,7 +10,8 @@ does not establish another.
 
 ## Evaluation Sequence
 
-1. Validate conflict specificity under controlled interventions.
+1. Validate intervention-relative frozen-score specificity under controlled
+   determinate-source interventions.
 2. Test incremental prediction of a frozen task-relevant model error.
 3. Assess calibration in-domain and under one pre-specified shift.
 4. Evaluate selective decisions at an equal review budget or answer coverage.
@@ -47,7 +48,7 @@ not an in-sample coefficient alone.
 
 | Property | Required evidence |
 | --- | --- |
-| Construct validity | Magnitude-safe paired conflict specificity against the prospectively frozen `M_v`/`M_t` controls; counterbalanced surface diagnostics; natural-ambiguity falsification; artifact audit |
+| Intervention-relative measurement validity | Magnitude-safe paired score-response specificity against the prospectively frozen `M_v`/`M_t` controls; counterbalanced surface diagnostics; natural-ambiguity falsification; artifact audit |
 | Task performance | Frozen task loss or accuracy with patient-clustered intervals |
 | Probabilistic quality | NLL or another proper score; Brier score for binary risk |
 | Calibration | Intercept, slope, reliability curve, subgroup calibration; ECE only as secondary evidence |
@@ -77,14 +78,17 @@ not an in-sample coefficient alone.
   protocol deviations.
 
 The [statistical analysis plan](statistical_analysis_plan.md) proposes, but
-does not approve, a 0.20-reference-SD magnitude-safe construct SESOI, a 0.10
-material advantage over the matched deterministic predictor, one-sided 90%
+does not approve, a 0.20-reference-SD magnitude-safe specificity SESOI, a 0.10
+material advantage between method-specifically standardized dimensionless
+effects over the matched deterministic predictor, one-sided 90%
 Month-3 development bounds, one-sided 97.5% confirmatory bounds, and a
 development-versus-confirmatory power grid.
 
 ## Target-Distribution Rule
 
-The balanced controlled-intervention set identifies constructs; it does not
+Under its assumptions, the balanced controlled-intervention set identifies the
+intervention-relative frozen-score response functional, not semantic conflict
+for an arbitrary pair; it does not
 represent the prevalence of conflict, ambiguity, or model error in a target
 population. NLL, Brier score, calibration curves, decision utility, and review
 budgets therefore require a separately defined target-distribution cohort.

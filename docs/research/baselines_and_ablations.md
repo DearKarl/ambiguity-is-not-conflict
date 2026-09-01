@@ -1,11 +1,11 @@
 # Baselines and Ablations
 
-**Status:** Candidate comparison matrix; pointwise method-claim kill is
-recommended, owner decision is open, and exact implementations await Gate 0
+**Status:** Method-A Commander-level primary instrument/comparator interfaces
+selected; other-owner approval and exact implementations await Gate 0
 
-The scientific comparison asks whether an explicit conflict component adds
-information beyond simpler predictors under the same backbone, split,
-preprocessing, task output, and calibration budget wherever technically
+The scientific comparison asks whether a frozen score's intervention-relative
+response adds information beyond simpler predictors under the same backbone,
+split, preprocessing, task output, and calibration budget wherever technically
 possible.
 
 TB-0006 selected no new pointwise estimator. Self-corrected learned-belief/
@@ -50,14 +50,13 @@ point-softmax adapter whenever learned scale or covariance is credited. The
 closest published conflict methods above must either be represented fairly or
 excluded with a pre-results technical and licence justification.
 
-Before the Month-3 holdout is opened, Gate 0 must already name exactly one
-pointwise instrument and its matched deterministic comparator. Under the
-recommended `G0-METHOD A` amendment, that instrument is explicitly non-novel
-and tests the intervention-defined framework. Under `G0-METHOD B`, a new
-candidate must first survive a separate pre-data theory audit. Development may
-fit only the frozen identity and cannot promote another candidate because it
-performs best. Declaring multiple primary instruments requires a prospectively
-expanded method-by-control and method-difference multiplicity/power family.
+Before the Month-3 holdout is opened, every required owner must approve the
+Commander-selected pair: the explicitly non-novel `PROBVLM-2ADAPTER`
+instrument and `POINT-2ADAPTER-RECON` matched deterministic comparator. Method
+A is the sole route; development may fit only those frozen identities and
+cannot promote another candidate because it performs best. Declaring multiple
+primary instruments requires a prospectively expanded method-by-control and
+method-difference multiplicity/power family.
 
 The peer-reviewed expanded rows are mandatory threats for the confirmatory
 comparison plan, not permission to turn the Month-3 kill test into a method
@@ -87,8 +86,9 @@ following candidate identities. They are not approved or executable:
 | `RAW-COS` | \(1-\) cosine of normalized frozen post-projection BiomedCLIP features, without logit scale or softmax | No trainables or project labels | Project-native arithmetic; zero-capacity reference |
 | `DET-LR` | Project-native binary-log-loss classifier over \([z_v,z_t,|z_v-z_t|,z_v\odot z_t,W]\), reported as classifier logit plus known sampling-prior correction | Explicit determinate \(C^*\) labels | Privileged supervised ceiling unless every claimed matched method receives the same labels; exact \(W\), architecture, weights, and calibration remain open |
 | `DBF-TASK` | Two task-aligned binary evidential heads and the published DBF fusion/conflict quantities, trained on clear compatible pairs | Shared semantic finding \(Y\) | Official [DBF code](https://github.com/bezirganyan/DBF_uncertainty/commit/79b7d56b0cfa53c98a93f29f9d9c59768177ad17) is GPL-3.0 and credits RCML code; the audited [RCML snapshot](https://github.com/jiajunsi/RCML/tree/c9c5ab41e6fe62a85e5f6441a4dc7b568e1fa421) exposes no explicit licence file. No vendoring. Requires an approved clean-room formula port or separately governed GPL runner subject to licensing/provenance approval |
-| `PROBVLM-2ADAPTER` | Paper-faithful two-adapter symmetric cross-modal generalized-Gaussian candidate at official [ProbVLM commit](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204) | Native compatible-pair correspondence only | MIT, but active code and paper semantics differ and the official Hugging Face path is not the required two-adapter cross-modal route; Gate 0 must freeze paper-faithful versus code-exact behavior |
-| `POINT-INFONCE` | Project-native two-branch point adapter with the same mean-trunk shape and native compatible-pair set; raw paired logit with frozen temperature/reference pool | Same pair correspondence as `PROBVLM-2ADAPTER` | The closest [CLIP-Adapter snapshot](https://github.com/gaopengcuhk/CLIP-Adapter/tree/08d07f8b2ecafc6f1479fe636b26d464d7a5574e) is a different classifier and exposes no explicit licence file at the audited snapshot; exclude its code. Freeze denominator, negative/false-negative policy, optimizer, and tuning budget |
+| `PROBVLM-2ADAPTER` | Paper-faithful-likelihood, project-native two-adapter symmetric cross-modal generalized-Gaussian negative log-likelihood at official [ProbVLM commit](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204) | Independently verified determinate-compatible fitting-set membership, shared with the point route; this is disclosed semantic selection supervision, while semantic labels are not inputs or loss targets | MIT; Commander selected paper-faithful likelihood rather than code-exact semantics. The coordinate reduction and complete objective are project choices. No original checkpoint or constructed contradiction as a positive fit pair; executable details remain owner-blocked |
+| `POINT-2ADAPTER-RECON` | Project-native two-branch mean-only reconstruction adapter with the same frozen inputs, verified-compatible records, mean trunks, target topology, optimization/tuning budget, and GGD score family; global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen before protected outcomes | Exactly the same fitting-set selection information as `PROBVLM-2ADAPTER`; no semantic label is an input or loss target | Primary deterministic full-route comparator; unit-scale Laplace is a sensitivity only. Removing scale/shape heads changes active capacity and gradient paths, so this is not a capacity-isolated mechanism test. No inherited third-party adapter code; executable architecture and numbers remain owner-blocked |
+| `POINT-INFONCE` | Project-native two-branch point adapter on the same native records; contrastive paired logit | Same records but additional off-diagonal negative assumptions | Secondary baseline only. The closest [CLIP-Adapter snapshot](https://github.com/gaopengcuhk/CLIP-Adapter/tree/08d07f8b2ecafc6f1479fe636b26d464d7a5574e) is a different classifier and exposes no explicit licence file at the audited snapshot; exclude its code and separately freeze denominator, multi-positive/false-negative, temperature, optimizer, and tuning rules |
 
 The proposed common feature identity is BiomedCLIP snapshot
 [`9f341de24bfb00180f1b847274256e9b65a3a32e`](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/commit/9f341de24bfb00180f1b847274256e9b65a3a32e)
@@ -98,9 +98,14 @@ both publish MIT terms. This is an immutable identity lead only and does not
 resolve the documented pretraining-exposure limitation or authorize a
 checkpoint download.
 
-Only `PROBVLM-2ADAPTER` versus `POINT-INFONCE` is presently designed as a
-same-information comparison. `DET-LR` and `DBF-TASK` are distinct privileged
-ceilings, not information-matched competitors. At inference, no method may
+Only `PROBVLM-2ADAPTER` versus `POINT-2ADAPTER-RECON` is the primary
+same-selection-information, same-score-family, and same-target-topology
+comparison. It compares complete routes, not capacity-matched probabilistic
+mechanisms: exact active/trainable parameter counts, training compute, and
+inference cost must be reported. `POINT-INFONCE` is a secondary same-records
+contrastive challenge; `DET-LR` and `DBF-TASK` are distinct privileged ceilings,
+not information-matched competitors. At
+inference, no method may
 receive intervention identity, construction source, ambiguity/artifact label,
 provenance field, or protected outcome. The exact implementation, calibration,
 software dependency, parameter-count, and supervision ledger must be approved
@@ -110,9 +115,12 @@ before Gate 0 closes.
 
 - remove \(C_{vt}\) from the risk model;
 - remove \(A_v\), \(A_t\), \(M_v\), or \(M_t\) separately;
-- replace distributional representations with matched point embeddings;
-- hold mean embeddings fixed while ablating learned scale/covariance where the
-  architecture permits;
+- replace `PROBVLM-2ADAPTER` with `POINT-2ADAPTER-RECON` under the frozen
+  information, score-family, topology, optimization, and capacity-disclosure
+  ledger;
+- hold fitted ProbVLM means fixed while replacing input-dependent scale/shape
+  with the point comparator's frozen global constants; this diagnoses only the
+  direct score path conditional on jointly trained means;
 - alternative valid normalization and latent dimension;
 - alternative conflict quantity chosen before confirmatory evaluation;
 - intervention source: natural, rule-edited, model-generated, clinician-edited;
@@ -128,7 +136,9 @@ before Gate 0 closes.
 
 - same patient partitions and derived-pair inheritance;
 - same access to labels and decision-time information;
-- comparable trainable parameter and tuning budgets, with differences reported;
+- prospectively bounded trainable parameter and tuning budgets, with exact
+  active-parameter, gradient-path, compute, and inference-cost differences
+  reported rather than described as capacity parity;
 - identical pre-link/post-link convention for every matched comparison:
   compatible-reference standardization is not invariant to squaring, sigmoid,
   exponential, or another nonlinear monotone transformation;
@@ -159,8 +169,9 @@ non-decomposed comparator. Promotion requires more than a favourable AUROC; it
 requires the frozen proper-score or decision endpoint and calibration evidence.
 
 Construct promotion additionally requires the magnitude-safe endpoint and
-0.10 uncertainty-aware material advantage over the deterministic comparator in
+0.10 probabilistic-instrument material advantage over the deterministic comparator in
 the
-[statistical analysis plan](statistical_analysis_plan.md). Failure to reject
-uncertainty-aware superiority is not equivalence; deterministic subsumption must
-meet the plan's positive absolute, non-inferiority, and downstream conditions.
+[statistical analysis plan](statistical_analysis_plan.md). Failure to
+demonstrate probabilistic-instrument superiority is not evidence of equivalence;
+deterministic subsumption must meet the plan's positive absolute,
+non-inferiority, and downstream conditions.

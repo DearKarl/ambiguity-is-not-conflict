@@ -84,20 +84,26 @@
   functional for an already frozen score. It is generally downward biased at
   finite sample size and is not a deployable pair-level semantic-conflict
   estimator.
-- **Finite decision:** `G0-METHOD A` recommends a dated framework-centered
-  claim amendment with one explicitly non-novel instrument and matched
-  comparator. `G0-METHOD B` requires a new pre-data theory candidate. Neither
-  option is owner-approved.
+- **Finite decision:** TB-0006 recommended `G0-METHOD A`, and DR-0016 later
+  records the Commander's selection of A as the sole route with one explicitly
+  non-novel instrument and one deterministic full-route comparator. Method B is
+  inactive. Scientific-supervisor, statistical-owner, and model-owner approval
+  remains open, so the choice is not executable.
 - **Implementation audit:** Five finite roles were specified with distinct
-  supervision tags. Only ProbVLM versus POINT is same-information; DET-LR and
+  supervision tags. DR-0016 freezes `PROBVLM-2ADAPTER` versus
+  `POINT-2ADAPTER-RECON` as a same-selection-information, same-GGD-score-family,
+  same-target-topology full-route comparison. Independently verified compatible
+  fitting-set membership is shared semantic selection supervision; removing
+  the probabilistic heads changes active capacity and gradient paths. DET-LR and
   DBF are privileged ceilings. Direct DBF vendoring and CLIP-Adapter code from
   the audited snapshot, which exposes no explicit licence file, are excluded;
   remaining implementation/licence choices are Gate-0 blockers.
 - **Independent reviews:** Final scientific and statistical re-reviews passed
   the three formal kills, reader/model distinction, componentwise max-`t`
   inference, and nonlinear-link guardrail. Governance/licensing review passed
-  this documentation audit. Gate-0 execution remains blocked pending owner
-  decisions on method identity, supervision, provenance, and implementation.
+  this documentation audit. Gate-0 execution remains blocked pending other-owner
+  decisions on supervision, capacity/numerical details, provenance, and
+  implementation.
 - **External/actions boundary:** Only primary/official public pages were read.
   No dataset, record, model, checkpoint, repository clone, download, code
   implementation, experiment, clinical contact, or annotation occurred.

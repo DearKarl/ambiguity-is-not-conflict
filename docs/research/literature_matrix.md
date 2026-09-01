@@ -23,7 +23,7 @@ reproducibility.
 | Input modality conflict | [MMMC, ICML 2025](https://proceedings.mlr.press/v267/zhang25dq.html) | Formally defines input modality conflict, constructs a benchmark, and evaluates mitigation of associated hallucination | Subsumes first-definition/first-conflict-benchmark claims; the surviving question is conditional identification and incremental value |
 | Conflict-aware uncertainty fusion | [Discounted Belief Fusion, AISTATS 2025](https://proceedings.mlr.press/v258/bezirganyan25a.html) | Proposes order-invariant evidential fusion with conflict-based discounting and uncertainty-based conflict detection | Direct estimator threat; crossed ambiguity and artifact controls must distinguish the proposed target |
 | Medical phrase fact checking | [Mahmood et al., MICCAI 2025](https://papers.miccai.org/miccai-2025/0693-Paper3526.html) | Detects perturbed chest-radiograph finding/location errors at phrase level | Subsumes a generic atomic medical compatibility or synthetic-perturbation identity; requires a matched medical comparator |
-| Medical hallucination risk | [ReXTrust, PMLR 2025](https://proceedings.mlr.press/v281/hardy25a.html) | Predicts finding-level hallucination risk from VLM hidden states on MIMIC-CXR | Failure prediction is not semantic conflict, but the conflict component must add beyond it |
+| Medical hallucination risk | [ReXTrust, PMLR 2025](https://proceedings.mlr.press/v281/hardy25a.html) | Predicts finding-level hallucination risk from VLM hidden states on MIMIC-CXR | Failure prediction is not semantic conflict, but the frozen instrument score must add beyond it |
 | Conflict-driven risk | [CoRiM, CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/papers/Zou_CoRiM_Conflict-driven_Risk_Minimization_for_Dynamic_Multimodal_Fusion_CVPR_2026_paper.pdf) | Defines predictive-distribution modality-conflict risk for dynamic fusion | Symmetric divergence or conflict-aware risk weighting is not sufficient novelty |
 | Non-authoritative ambiguity/dissent lead | [CONFER, arXiv v1 2026](https://arxiv.org/abs/2608.07867v1) | Reports modality-specific uncertainty-adjusted compatibility and separates consensus, dissent, and ambiguity regimes for weak-label calibration | Preprint-only surveillance lead; excluded from formal novelty-kill evidence and mandatory baselines unless authoritative status changes |
 | Conflict versus unimodal difficulty | [When Modalities Conflict, arXiv 2025](https://arxiv.org/abs/2511.02243) | Independently varies image/text reasoning difficulty and relates relative entropy to modality following | Subsumes a first controlled difficulty-adjusted conflict study; model confidence is not independently annotated semantic ambiguity |
@@ -132,25 +132,23 @@ no code or assets were copied into this repository.
 ## Defensible Gap
 
 **Inference, not fact:** the broad conflict-after-uncertainty-adjustment claim is
-already occupied. The narrower unresolved question is:
+already occupied. The narrower current unresolved question is:
 
-> Can an intervention-defined, proposition-level measure of semantic
-> incompatibility, built from independent semantic measurements and tested while
-> genuine image ambiguity, genuine text ambiguity, modality-specific information
-> loss, and surface artifacts are fixed or explicitly controlled, add held-out
-> proper-score and equal-budget selective value beyond confidence-adjusted output
-> disagreement and matched deterministic, evidential, probabilistic, and generic
-> failure predictors?
+> Can a prospectively frozen score show an intervention-relative population
+> response specific to assigned determinate incompatibility against approved
+> modality-specific information-loss controls, survive separate observational
+> veto audits for natural ambiguity and artifacts, and add held-out proper-score and equal-
+> budget selective value beyond confidence-adjusted output disagreement and
+> matched deterministic, evidential, probabilistic, and generic failure
+> predictors?
 
-The gap admits a useful null result. If a matched deterministic predictor
-subsumes conflict, the project must narrow its claim rather than hide the
-comparison.
+The gap admits a useful null result. If the matched deterministic predictor
+subsumes the probabilistic instrument, the current Main Track route is killed
+and the comparison must be reported rather than hidden or repackaged.
 
-At the current Gate-0 state, the identified part of this gap is narrower than
-the quoted aspiration: determinate-conflict specificity can be tested against
-valid paired information-loss/surface controls, while natural ambiguity can
-only falsify unless a valid intervention or observational identification route
-is separately approved.
+At the current Gate-0 state, natural ambiguity can only falsify this narrow
+claim. A broader ambiguity-separation claim requires a separately approved
+valid intervention or observational identification route.
 
 The detailed kill-threat analysis and claim boundary are maintained in the
 [novelty audit](novelty_audit.md). Dataset facts and unresolved access rights

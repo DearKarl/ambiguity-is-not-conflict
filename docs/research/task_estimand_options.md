@@ -70,7 +70,7 @@ For each authorized analysis unit, the schema should contain:
 | \(A_v,A_t\) | Image and text ambiguity | Frozen functions of independent annotations and disagreement model |
 | \(M_v,M_t\) | Information-loss/corruption exposure and severity | Recorded separately from semantic assessability, ambiguity, and contradiction; an interpretable loss need not force `Y` undefined |
 | \(X\) | Projection, acquisition, source, template, length, negation, prevalence, and provenance nuisances | Used for matching, blocking, and artifact audits |
-| \(S_m\) | Candidate conflict score from method \(m\) | Orientation and normalization frozen on development-compatible cases |
+| \(S_m\) | Prospectively frozen instrument score from method \(m\) | Orientation and normalization frozen on development-compatible cases; not an identified pair-level conflict label |
 | \(\hat Y,H\) | Frozen task prediction and independently labelled task error | Evaluated only in the declared target sample |
 
 ## Construct Definition
@@ -296,16 +296,16 @@ score scale is normalized Brier-skill improvement for method `m`:
 ```math
 \Delta_{BSS,m}=\frac{BS_{base}-BS_{augmented,m}}{BS_{null}},
 \qquad
-A_{BSS}=\Delta_{BSS,uncertainty}-\Delta_{BSS,deterministic}.
+A_{BSS}=\Delta_{BSS,probabilistic}-\Delta_{BSS,deterministic}.
 ```
 
 `BS_null` is the weighted target-test Brier score of a constant event
 probability estimated and frozen on the approved development/calibration
-population. Positive `A_BSS` favours the single primary uncertainty-aware
-method named before holdout. The proposed own-effect SESOI `0.02` applies only
+population. Positive `A_BSS` favours the single primary probabilistic instrument
+named before holdout. The proposed own-effect SESOI `0.02` applies only
 to normalized `Delta_BSS`, never raw Brier-loss units; the proposed matched-
-method margin is `0.01`. Advancement requires both the uncertainty-aware
-method's confirmatory lower bound for `Delta_BSS` above `0.02` and its lower
+method margin is `0.01`. Advancement requires both the probabilistic
+instrument's confirmatory lower bound for `Delta_BSS` above `0.02` and its lower
 bound for `A_BSS` above `+0.01`. Deterministic subsumption and equivalence use
 the positive conditions in the statistical plan.
 
@@ -369,10 +369,10 @@ Kill or redesign construct estimation if any of these occurs:
   repetition; if at least three ordered conflict-severity levels are frozen,
   a non-monotone response is an additional failure.
 
-Kill the **Main Track estimator claim**, while retaining and reporting the null
-result, if the matched deterministic predictor subsumes the single primary
-uncertainty-aware candidate named before holdout access at the frozen
-equivalence/non-inferiority margin,
+Kill the **current Main Track route**, while retaining and reporting the null
+result without post-hoc repackaging, if the matched deterministic predictor
+subsumes the single primary non-novel instrument named before holdout access at
+the frozen equivalence/non-inferiority margin,
 or if the chosen estimand is already substantively covered by known
 distance/decomposition work.
 

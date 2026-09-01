@@ -1,7 +1,8 @@
 # Submission Strategy
 
-**Status:** Primary venue objective and provisional contribution type selected;
-2027 call not yet available
+**Status:** NeurIPS 2027 Main Track remains the primary objective; Method A is
+Commander-approved, other-owner approval is open, and the 2027 call is not yet
+available
 
 ## Primary Objective
 
@@ -43,36 +44,40 @@ be the 2027 deadlines.
   insight, problem framing, task, metric, method, or a justified combination
   rather than requiring a new architecture; and the call prohibited switching
   between or simultaneously submitting to multiple NeurIPS tracks/types.
-- **Inference:** a domain-general conditional-conflict estimand and substantive
-  estimator, rigorously validated in chest radiography, could fit that
-  contribution logic better than a benchmark-only paper.
+- **Inference:** a domain-general partial-construct, intervention-identified
+  measurement and inference framework, rigorously validated in chest
+  radiography, could fit that contribution logic better than a benchmark-only
+  paper even without a new architecture or pointwise score.
 - **Assumptions:** an applicable contribution type and compatible track rules
   will exist in 2027, and the currently reported time, compute, data-access,
   and clinical-support plans will become documented resources.
-- **Decision:** prepare one Main Track method-and-identification route; recheck
-  the official 2027 call before choosing the final track and contribution type.
+- **Decision:** prepare one Main Track Method-A identification-and-measurement
+  route; recheck the official 2027 call before choosing the final track and
+  contribution type.
 
 ## Main Track Paper Identity
 
-**Working title:** *Ambiguity Is Not Conflict: Identifiable Cross-Modal
-Conflict Estimation for Calibrated Selective Decisions*
+**Working title:** *Ambiguity Is Not Conflict: Intervention-Identified
+Measurement of Cross-Modal Conflict Specificity*
 
-The single intended primary contribution is a formal conditional conflict
-estimand and estimator or general estimation framework that measures
-task-relevant cross-modal incompatibility after accounting for image
-ambiguity, text ambiguity, and modality-specific information loss. The
-controlled medical benchmark, probabilistic embeddings, calibration analysis,
-and selective review support or falsify that contribution; they are not four
-independent contributions.
+The single intended primary contribution is the Method-A partial-construct,
+intervention-identified measurement and inference framework. It tests whether
+a frozen, explicitly non-novel score has a population response specific to
+determinate task-relevant incompatibility against approved modality-specific
+information-loss controls. The controlled medical benchmark, candidate
+instruments, calibration analysis, and selective review support or falsify
+that contribution; they are not four independent contributions.
 
 The Main Track narrative should be:
 
 1. **Problem:** existing uncertainty scores conflate within-modality ambiguity
    and between-modality conflict.
-2. **Formal component:** define a conditional conflict estimand relative to
-   compatible-pair structure and unimodal ambiguity.
-3. **Estimation component:** estimate the object with a tractable framework that
-   is not reducible to a renamed distance.
+2. **Formal component:** define the determinate support, partial semantic
+   construct, output-only non-identification result, and intervention-relative
+   population target.
+3. **Measurement component:** evaluate a prospectively frozen non-novel
+   instrument through a tractable paired framework without relabelling its
+   pointwise score as identified conflict.
 4. **Identification evidence:** controlled factorial interventions and negative
    controls test the intended interpretation.
 5. **Incremental evidence:** matched held-out comparison with deterministic,
@@ -86,13 +91,16 @@ The Main Track narrative should be:
 By the submission decision, the project must satisfy six scientific
 conditions:
 
-1. **Formal contribution and novelty audit:** a defensible
-   conditional-conflict definition, identification assumptions, and estimand,
+1. **Formal contribution and novelty audit:** a defensible partial construct,
+   intervention-identification assumptions, and population estimand,
    plus a verified primary-literature audit establishing the distinction from
    prior work—not a renamed distance between two distributions.
-2. **Estimator or general framework:** a substantive estimation method that
-   can be implemented and challenged by probabilistic, deterministic,
-   evidential, ensemble, Bayesian, and output-uncertainty competitors.
+2. **General framework and matched instrument test:** a substantive,
+   reproducible measurement/inference framework instantiated by the frozen
+   `PROBVLM-2ADAPTER` instrument and challenged first by
+   `POINT-2ADAPTER-RECON`, then by task-valid evidential, contrastive, ensemble,
+   Bayesian, and output-uncertainty competitors. No new pointwise score is
+   claimed.
 3. **Controlled identification:** for the determinate claim, compatibility
    interventions change the score specifically against the prospectively
    frozen `M_v`/`M_t` controls while surface form, length, prevalence, source,
@@ -101,7 +109,7 @@ conditions:
    valid governed ambiguity intervention or an approved exchangeability/
    transport estimand with overlap and sensitivity analysis. Conditioning on
    observational ambiguity alone is never sufficient.
-4. **Incremental validity:** adding the frozen conflict component improves the
+4. **Incremental validity:** adding the frozen instrument score improves the
    pre-specified held-out proper score by more than the smallest effect of
    interest beyond unimodal measures, ordinary confidence, epistemic/output
    uncertainty including semantic entropy, and a matched deterministic failure
@@ -109,7 +117,7 @@ conditions:
 5. **Broader relevance:** the result replicates across at least two materially
    different VLM backbone families and, subject to a separate bounded
    data/scope/governance decision, either a second medical dataset or a small
-   controlled general-domain benchmark testing the same construct.
+   controlled general-domain benchmark testing the same framework claim.
 6. **Decision evidence:** the frozen policy reduces selective risk or regret
    at equal coverage or human-review budget without claiming clinical benefit.
 
@@ -129,7 +137,8 @@ whether the remaining contribution still clears the Main Track bar.
 ## Month-3 Main Track Kill Gate
 
 The development-only gate in the measurement protocol is passed only if the
-single primary uncertainty-aware candidate named before holdout access:
+pre-specified `PROBVLM-2ADAPTER` instrument, compared with the matched
+`POINT-2ADAPTER-RECON` comparator before holdout access:
 
 - responds more strongly to controlled incompatibility than to the frozen
   valid paired image- and text-information-loss controls;
@@ -142,8 +151,10 @@ single primary uncertainty-aware candidate named before holdout access:
 - survives artifact, representation-scale/normalization, leakage, repetition,
   and failure-case checks.
 
-Failure removes the Main Track method claim rather than triggering post-hoc
-repackaging. Passing is necessary but not sufficient: confirmatory,
+Failure kills the current Main Track route; it may still support a qualified
+null or deterministic scientific record, but it cannot be softened or
+post-hoc repackaged as the same Main Track framework claim. Passing is necessary
+but not sufficient: confirmatory,
 calibration, breadth, decision, and reproducibility gates still remain.
 
 ## Track Decision Checkpoint
@@ -152,11 +163,12 @@ NeurIPS 2026 treated Main Track and Evaluations & Datasets as separate tracks
 and prohibited simultaneous submission or later switching between them. When
 the 2027 call appears, a single track must be chosen before submission.
 
-Use **Main Track** if the central result is a new estimand/estimation method
-with broad machine-learning insight. **Evaluations & Datasets is retained only
+Use **Main Track** if the central result is a substantive, generalizable
+identification/measurement/inference framework with broad machine-learning
+insight. **Evaluations & Datasets is retained only
 as a pre-submission contingency** if the enduring contribution becomes the
 controlled benchmark, annotation methodology, or evaluation science and the
-estimator is secondary. This is a fallback framing of the same research route,
+instrument is secondary. This is a fallback framing of the same research route,
 not a second project or a simultaneous submission.
 
 ## Other Venue Families if Timing or Evidence Changes
@@ -175,9 +187,9 @@ policies must be verified at the decision date.
 
 ## Submission Stop Conditions
 
-Do not submit the Main Track version if the conditional conflict object is not
-identifiable, the proposed estimator is subsumed by a matched deterministic
-predictor, confirmatory evaluation leaks patient/source information, the main
-result depends on post-hoc endpoint selection, or clinical claims exceed the
-evidence. A rigorous negative paper may be redirected only through a recorded
-venue-fit decision.
+Do not submit the Main Track version if the intervention-relative population
+functional is not identified under its stated assumptions, the frozen
+instrument fails the matched deterministic advantage gate, confirmatory
+evaluation leaks patient/source information, the main result depends on post-hoc
+endpoint selection, or clinical claims exceed the evidence. A rigorous negative
+paper may be redirected only through a recorded venue-fit decision.

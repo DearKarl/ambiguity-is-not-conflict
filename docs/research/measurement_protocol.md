@@ -1,14 +1,15 @@
 # Measurement Protocol
 
-**Status:** Gate-0 protocol candidate; pointwise method identity remains blocked
-and no execution is authorized
+**Status:** Method-A Commander-level instrument/comparator interface selected;
+required owner approvals and all execution remain blocked by Gate 0
 
 ## Objective
 
-Test whether conditional cross-modal conflict can be measured as a distinct
-construct rather than as a mixture of unimodal ambiguity, information loss,
-synthetic artifacts, representation scale, epistemic uncertainty, and output
-variation.
+Test whether a prospectively frozen cross-modal score has an intervention-
+relative population response specific to determinate incompatibility rather
+than the approved image/text information-loss controls, while separate
+observational ambiguity and nuisance audits retain veto-only status unless a
+governed identification route is later approved.
 
 The first feasibility task should use one image-grounded binary clinical
 finding rather than open-ended report generation. A frozen model receives an
@@ -117,7 +118,7 @@ that cannot inspect clinical semantics. If condition labels are recoverable
 from trivial templates, punctuation, length, source metadata, or image
 processing signatures, rebuild the intervention set before promotion.
 
-## Candidate Estimator Families
+## Method-A Instrument and Comparison Families
 
 The [formalization audit](estimator_formalization_audit.md) selected none of the
 three exact pointwise candidates. The binary learned-belief/Gaussian excess
@@ -127,10 +128,18 @@ classifier logit; and evidential confident disagreement is already occupied by
 RCML/Discounted Belief Fusion. These are formal method-claim kills, not
 empirical equivalence or deterministic-subsumption results.
 
-The families below therefore remain comparison instruments, diagnostics, or
-the inputs to a future pre-data theory brief. None is an approved novel primary
-estimator. Any later comparison should use a frozen representation backbone
-wherever feasible:
+Method A accepts those kills. At the Commander scientific-interface level, the
+explicitly non-novel primary instrument is paper-faithful project-native
+`PROBVLM-2ADAPTER`; its matched mean-only comparator is
+`POINT-2ADAPTER-RECON`. `POINT-INFONCE` is secondary because its contrastive
+negative assumptions prevent it from isolating the probabilistic outputs.
+The exact definitions and remaining owner boundaries are in the
+[Method-A framework](method_a_identification_framework.md).
+
+The families below remain secondary comparisons and diagnostics. None is a
+novel primary estimator, and no future pre-data theory route runs in parallel
+with Method A. Any later comparison should use a frozen representation
+backbone wherever feasible:
 
 1. deterministic similarity and retrieval margin;
 2. learned conditional compatibility likelihood ratio;
@@ -177,7 +186,7 @@ The compatible-reference standardization below removes positive affine score
 changes but not nonlinear monotone links. Every candidate and matched
 deterministic comparator must therefore use an identical square, sigmoid,
 exponential, or other pre-/post-link convention. A larger `psi_mag` created
-only by a different link is not a material uncertainty-aware advantage.
+only by a different link is not a material probabilistic-instrument advantage.
 
 ## Construct-Validity Tests
 
@@ -202,12 +211,21 @@ only by a different link is not a material uncertainty-aware advantage.
 ## Month 2–3 Kill Test
 
 The feasibility study uses a development-only, patient-separated, single-
-finding sample and a small independently reviewed intervention set. It
-compares raw deterministic similarity, one matched deterministic
-compatibility/density-ratio predictor, one evidential categorical candidate,
-and one probabilistic/distributional candidate on the same frozen encoders and
-budget. A matched point-softmax adapter is required whenever learned
-scale/covariance is credited.
+finding sample and a small independently reviewed intervention set. Its primary
+comparison is the frozen paper-faithful-likelihood `PROBVLM-2ADAPTER` instrument
+against `POINT-2ADAPTER-RECON` on the same encoders, independently verified
+determinate-compatible fitting records, mean trunks, GGD score family, target
+topology, optimization, and tuning budget. The point route uses global
+coordinatewise scale/shape constants fitted on the shared compatible
+fit/development objective and frozen before protected outcomes; unit-scale
+Laplace is a sensitivity only. Fitting-set membership is disclosed shared
+semantic selection supervision, while semantic labels are neither inputs nor
+loss targets. Because the point route removes heads and gradient paths, this is
+a complete-route comparison with exact capacity/compute disclosure, not a
+capacity-isolated mechanism test. Raw deterministic similarity,
+`POINT-INFONCE`, and the approved evidential route are secondary threats. A
+frozen-means diagnostic using the point route's same global constants is
+mandatory before any narrow direct score-path attribution.
 
 For score \(S_m\), the proposed primary kill-stage estimand starts with the
 clear-source paired conflict contrast:
@@ -275,11 +293,13 @@ valid governed ambiguity intervention or a separately frozen estimand with
 defensible conditional-exchangeability and transport assumptions. Score
 orientation and normalization use development-compatible cases only.
 
-Promotion out of the kill-test stage requires one exact primary pointwise
-instrument definition/interface to be named and approved at Gate 0. Development
-may fit or tune only inside that frozen identity; its single fitted instance,
-normalizer, link, and configuration must then be locked before holdout access.
-That pre-locked instrument must satisfy all of the following:
+Promotion out of the kill-test stage requires the Commander-selected
+`PROBVLM-2ADAPTER` and `POINT-2ADAPTER-RECON` scientific interfaces to receive
+the remaining owner approvals and an exact executable Gate-0 specification.
+Development may fit or tune only inside those frozen identities; one fitted
+instance, normalizer, link, and configuration for each must then be locked
+before holdout access. The pre-locked instrument must satisfy all of the
+following:
 
 1. respond more strongly to controlled incompatibility than to valid
    randomized or counterbalanced information-loss controls;
@@ -293,10 +313,12 @@ That pre-locked instrument must satisfy all of the following:
 4. survive surface-artifact, representation-scale/normalization,
    patient/source-leakage, repetition, and failure-case checks.
 
-The route is killed or redesigned before scale-up if any required condition
-fails, or if clinical reviewers cannot reliably distinguish conflict from
-ambiguity, intervention cells contain obvious non-semantic artifacts, or
-annotation, data access, or compute cannot support a confirmatory study.
+The current Main Track route is killed before scale-up if any required
+condition fails, or if clinical reviewers cannot reliably distinguish conflict
+from ambiguity, intervention cells contain obvious non-semantic artifacts, or
+annotation, data access, or compute cannot support a confirmatory study. Any
+prospective redesign requires a new dated decision and cannot reuse the failed
+outcomes to preserve the same claim.
 
 This gate is not executable until the singleton finding, exact image input,
 reader-reliability threshold, governed ambiguity intervention or explicit
@@ -304,9 +326,10 @@ identification/claim-narrowing rule, numerical specificity margin,
 deterministic-subsumption margin, downstream error \(H\), sample/power plan,
 and budgets are frozen.
 
-Passing this development-only gate is necessary but not sufficient for a Main
-Track method claim. The kill test cannot be promoted as confirmatory evidence,
-and its outcomes cannot be used to repeatedly redefine the primary endpoint.
+Passing this development-only gate is necessary but not sufficient for the
+intended Main Track framework claim. The kill test cannot be promoted as
+confirmatory evidence, and its outcomes cannot be used to redefine the primary
+endpoint, instrument, or comparator.
 
 ## Required Pre-Execution Artifacts
 

@@ -163,7 +163,7 @@ def test_final_placeholder_detection_is_strict_without_blocking_open_decisions()
         "- Outcome:",
     )
     resolved_open_items = (
-        "- `G0-METHOD` remains pending as a scientific decision.",
+        "- `G0-DATA` remains pending as a scientific decision.",
         "- Supervisor approval remains open.",
         "- Closure metadata is self-evidencing in GitHub.",
         "- Base revision:\n  `f1fe19b`",
@@ -215,6 +215,47 @@ def _init_contract_test_repository(path: Path) -> None:
         cwd=path,
         check=True,
     )
+
+
+def _without_linked_remediation(
+    execution: str, handoff: str
+) -> tuple[str, str]:
+    execution = re.sub(
+        r"^- Closure remediation ID:.*\n",
+        "",
+        execution,
+        flags=re.MULTILINE,
+    )
+    handoff = re.sub(
+        r"^- Linked closure remediation:.*\n",
+        "",
+        handoff,
+        flags=re.MULTILINE,
+    )
+    return execution, handoff
+
+
+def _with_linked_remediation(
+    execution: str, handoff: str, remediation_id: str
+) -> tuple[str, str]:
+    execution, handoff = _without_linked_remediation(execution, handoff)
+    execution, execution_count = re.subn(
+        r"(^- Status: `[^`]+`$)",
+        rf"\1\n- Closure remediation ID: `{remediation_id}`",
+        execution,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    handoff, handoff_count = re.subn(
+        r"(^- Status: `[^`]+`$)",
+        rf"\1\n- Linked closure remediation: `{remediation_id}`",
+        handoff,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    assert execution_count == 1
+    assert handoff_count == 1
+    return execution, handoff
 
 
 def test_pull_request_freshness_rejects_stale_complete_contract(
@@ -327,19 +368,8 @@ def test_pull_request_freshness_allows_one_linked_closure_remediation(
 ) -> None:
     execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
     handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
-    base_execution, execution_remediation_count = re.subn(
-        r"^- Closure remediation ID:.*\n",
-        "",
-        execution,
-        count=1,
-        flags=re.MULTILINE,
-    )
-    base_handoff, handoff_remediation_count = re.subn(
-        r"^- Linked closure remediation:.*\n",
-        "",
-        handoff,
-        count=1,
-        flags=re.MULTILINE,
+    base_execution, base_handoff = _without_linked_remediation(
+        execution, handoff
     )
     base_execution, base_execution_status_count = re.subn(
         r"^- Status: `[^`]+`$",
@@ -355,8 +385,6 @@ def test_pull_request_freshness_allows_one_linked_closure_remediation(
         count=1,
         flags=re.MULTILINE,
     )
-    assert execution_remediation_count == 1
-    assert handoff_remediation_count == 1
     assert base_execution_status_count == 1
     assert base_handoff_status_count == 1
 
@@ -381,17 +409,20 @@ def test_pull_request_freshness_allows_one_linked_closure_remediation(
         ["git", "commit", "-q", "-m", "ready"], cwd=tmp_path, check=True
     )
 
+    complete_execution, complete_handoff = _with_linked_remediation(
+        execution, handoff, "CR-TEST-FIRST"
+    )
     complete_execution, execution_status_count = re.subn(
         r"^- Status: `[^`]+`$",
         "- Status: `COMPLETE`",
-        execution,
+        complete_execution,
         count=1,
         flags=re.MULTILINE,
     )
     complete_handoff, handoff_status_count = re.subn(
         r"^- Status: `[^`]+`$",
         "- Status: `COMPLETE`",
-        handoff,
+        complete_handoff,
         count=1,
         flags=re.MULTILINE,
     )
@@ -428,11 +459,8 @@ def test_pull_request_freshness_rejects_second_closure_remediation(
 ) -> None:
     execution = (ROOT / "EXECUTION_CONTRACT.md").read_text(encoding="utf-8")
     handoff = (ROOT / "HANDOFF_CONTRACT.md").read_text(encoding="utf-8")
-    base_execution = execution.replace(
-        "CR-2026-08-29-001", "CR-BASE-ALREADY-USED"
-    )
-    base_handoff = handoff.replace(
-        "CR-2026-08-29-001", "CR-BASE-ALREADY-USED"
+    base_execution, base_handoff = _with_linked_remediation(
+        execution, handoff, "CR-BASE-ALREADY-USED"
     )
     base_execution, base_execution_status_count = re.subn(
         r"^- Status: `[^`]+`$",
@@ -473,11 +501,8 @@ def test_pull_request_freshness_rejects_second_closure_remediation(
         check=True,
     )
 
-    replay_execution = execution.replace(
-        "CR-2026-08-29-001", "CR-SECOND-NOT-ALLOWED"
-    )
-    replay_handoff = handoff.replace(
-        "CR-2026-08-29-001", "CR-SECOND-NOT-ALLOWED"
+    replay_execution, replay_handoff = _with_linked_remediation(
+        execution, handoff, "CR-SECOND-NOT-ALLOWED"
     )
     replay_execution, replay_execution_status_count = re.subn(
         r"^- Status: `[^`]+`$",
@@ -515,7 +540,7 @@ def test_pull_request_freshness_rejects_second_closure_remediation(
     ) in errors
 
 
-def test_commander_scope_and_local_storage_decisions_remain_partial() -> None:
+def test_commander_scope_method_and_storage_decisions_remain_partial() -> None:
     execution_contract = (
         ROOT / "EXECUTION_CONTRACT.md"
     ).read_text(encoding="utf-8")
@@ -536,11 +561,21 @@ def test_commander_scope_and_local_storage_decisions_remain_partial() -> None:
     )
     assert "not the medical dataset size" in normalized_execution_contract
     assert "DR-0015 — Commander Scope Choice and Local Storage Boundary" in decision_log
+    assert (
+        "DR-0016 — Commander Method-A and Instrument/Comparator Interface Decision"
+        in decision_log
+    )
     assert "Commander-approved partial Gate-0 decision" in decision_log
     assert "`G0-METHOD A/B` remains open" in decision_log
     assert "`COMMANDER APPROVED A / SUPERVISOR OPEN`" in dossier
+    assert (
+        "`COMMANDER APPROVED A / SUPERVISOR, STATISTICAL, AND MODEL OWNERS OPEN`"
+        in dossier
+    )
+    assert "`POINT-2ADAPTER-RECON`" in dossier
     assert "cannot hold the approximately 613-GB" in dossier
     assert "Scientific-supervisor co-approval remains open" in research_contract
+    assert "The Commander has separately selected" in research_contract
     assert "That floor is not the dataset size" in research_contract
 
 
@@ -607,16 +642,19 @@ def test_submission_identity_remains_conditional_and_single_route() -> None:
         .split()
     )
     assert "use-inspired" in strategy
-    assert "2027 call not yet available" in strategy
+    assert "2027 call is not yet available" in strategy
     assert "single intended primary contribution" in strategy
     assert "not a second project or a simultaneous submission" in strategy
     assert "conditioning on observational ambiguity alone is never sufficient" in strategy
 
 
 def test_month_three_gate_is_not_confirmatory_evidence() -> None:
-    measurement = (
-        ROOT / "docs/research/measurement_protocol.md"
-    ).read_text(encoding="utf-8").lower()
+    measurement = " ".join(
+        (ROOT / "docs/research/measurement_protocol.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
     assert "necessary but not sufficient" in measurement
     assert "matched deterministic compatibility/failure" in measurement
     assert "cannot be promoted as confirmatory evidence" in measurement
@@ -701,7 +739,7 @@ def test_primary_specificity_candidate_is_magnitude_safe() -> None:
     assert "0.20" in plan
     assert "not statistically superior" in plan
     assert "d_*^2" in plan
-    assert "gate 0 must already name exactly one primary pointwise instrument" in plan
+    assert "the commander has selected exactly one non-novel primary instrument" in plan
     assert "a_bss" in plan
 
     packet = (
@@ -865,7 +903,10 @@ def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
     assert "not yet a complete gate-0 freeze package" in dossier
     assert "mv-1" in dossier and "mt-1" in dossier
     assert "r_j = 0.50 + abs(ba_j - 0.50)" in dossier
-    assert "open / kill recommended" in dossier
+    assert (
+        "commander approved a / supervisor, statistical, and model owners open"
+        in dossier
+    )
     assert "tb-0006" in dossier and "pointwise method-claim kill" in dossier
     assert "fitted instance/config" in dossier
     assert "reader-based task-relevance" in dossier and "l_bal" in dossier
@@ -935,12 +976,17 @@ def test_baseline_supervision_and_licence_roles_are_not_conflated() -> None:
     assert "det-lr" in baseline
     assert "dbf-task" in baseline
     assert "probvlm-2adapter" in baseline
+    assert "point-2adapter-recon" in baseline
     assert "point-infonce" in baseline
-    assert "only `probvlm-2adapter` versus `point-infonce`" in baseline
+    assert "only `probvlm-2adapter` versus `point-2adapter-recon`" in baseline
     assert "privileged ceilings" in baseline
     assert "gpl-3.0" in baseline
     assert "no vendoring" in baseline
-    assert "paper-faithful versus code-exact" in baseline
+    assert "paper-faithful likelihood rather than code-exact semantics" in baseline
+    assert "semantic selection supervision" in baseline
+    assert "global coordinatewise scale/shape constants" in baseline
+    assert "unit-scale laplace is a sensitivity only" in baseline
+    assert "not a capacity-isolated mechanism test" in baseline
     assert "identical pre-link/post-link convention" in baseline
     assert "c9c5ab41e6fe62a85e5f6441a4dc7b568e1fa421" in baseline
     assert "08d07f8b2ecafc6f1479fe636b26d464d7a5574e" in baseline
@@ -982,9 +1028,117 @@ def test_gate_zero_identity_is_not_selected_from_development() -> None:
         .lower()
         .split()
     )
-    assert "named and approved at gate 0" in measurement
-    assert "single fitted instance" in measurement
+    assert "commander-selected `probvlm-2adapter`" in measurement
+    assert "`point-2adapter-recon`" in measurement
+    assert "receive the remaining owner approvals" in measurement
+    assert "one fitted instance" in measurement
     assert "named from development" not in measurement
+
+
+def test_method_a_framework_preserves_identification_and_execution_boundaries() -> None:
+    framework = " ".join(
+        (ROOT / "docs/research/method_a_identification_framework.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "output-only non-identification" in framework
+    assert "intervention-relative population score-response" in framework
+    assert "not a pair-level score" in framework
+    assert "probvlm-2adapter" in framework
+    assert "point-2adapter-recon" in framework
+    assert "point-infonce" in framework
+    assert "generalized-gaussian negative log-likelihood" in framework
+    assert "s_p(v,t)" in framework
+    assert "9,999 resamples and seed `20270829`" in framework
+    assert "never bootstrap the non-smooth minimum directly" in framework
+    assert "randomization, balance, or counterbalancing alone" in framework
+    assert "method-specifically standardized dimensionless effects" in framework
+    assert "not a capacity-matched isolation" in framework
+    assert "training-path or causal contribution" in framework
+    assert "scientific supervisor" in framework
+    assert "statistical owner" in framework
+    assert "model owner" in framework
+    assert "no experiment begins from this document alone" in framework
+
+
+def test_method_a_hard_kill_rule_is_not_softened() -> None:
+    submission = " ".join(
+        (ROOT / "docs/research/submission_strategy.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    plan = " ".join(
+        (ROOT / "docs/research/statistical_analysis_plan.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    options = " ".join(
+        (ROOT / "docs/research/task_estimand_options.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "failure kills the current main track route" in submission
+    assert "kill the current main track route" in plan
+    assert "kill the **current main track route**" in options
+    assert "without post-hoc repackaging" in plan
+    decision = " ".join(
+        (ROOT / "docs/research/decision_log.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "hard-kill boundary" in decision
+    assert "kills the current main track route" in decision
+
+
+def test_method_a_score_orientation_is_operational_not_semantic() -> None:
+    plan = " ".join(
+        (ROOT / "docs/research/statistical_analysis_plan.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "prospectively declared operational direction" in plan
+    assert "higher means poorer cross-modal fit" in plan
+    assert "does not turn either score into an identified pair-level conflict label" in plan
+    assert "orient higher values toward greater conflict" not in plan
+
+
+def test_method_a_canonical_wording_does_not_overclaim_identification() -> None:
+    closure = " ".join(
+        (ROOT / "docs/research/gate0_closure_audit.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    options = " ".join(
+        (ROOT / "docs/research/task_estimand_options.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    literature = " ".join(
+        (ROOT / "docs/research/literature_matrix.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    decision = " ".join(
+        (ROOT / "docs/research/decision_log.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    assert "effect of the assigned assertion-substitution package" in closure
+    assert "randomization or counterbalancing alone is not enough" in closure
+    assert "prospectively frozen instrument score" in options
+    assert "not an identified pair-level conflict label" in options
+    assert "veto audits for natural ambiguity and artifacts" in literature
+    assert "method-specifically standardized effects" in decision
 
 
 def test_reader_and_mv1_qualification_contract_is_exact_and_non_executable() -> None:

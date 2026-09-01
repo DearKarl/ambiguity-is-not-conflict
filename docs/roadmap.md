@@ -7,7 +7,10 @@ assumed; the schedule will be rebased when the call is published.
 
 The current [Gate-0 closure audit](research/gate0_closure_audit.md) is a freeze
 candidate, not approval. It explicitly leaves image/text ambiguity
-identification and strict checkpoint non-exposure unresolved.
+identification and strict checkpoint non-exposure unresolved. DR-0016 selects
+Method A and its Commander-level instrument/comparator interfaces, but no
+experiment begins until the remaining Gate-0 owners and execution package are
+complete.
 
 ## Month 0–1 — Freeze the Research Contract
 
@@ -31,18 +34,18 @@ ambiguity.
 
 - build only the smallest authorized data/estimator pipeline;
 - clinician-review a small development-only intervention set;
-- compare deterministic similarity, matched deterministic compatibility, and
-  at most two uncertainty-aware candidates in development bucket 0--69, then
-  name exactly one primary uncertainty-aware candidate before Month-3 holdout
-  access;
+- fit only the already named `PROBVLM-2ADAPTER` primary instrument and
+  `POINT-2ADAPTER-RECON` matched comparator in development bucket 0--69;
+  `POINT-INFONCE`, raw similarity, and evidential routes remain secondary and
+  cannot replace the primary pair from results;
 - test magnitude-safe paired conflict specificity, surface artifacts, and
   preliminary conditional value; treat natural ambiguity as a falsification
   audit unless a separately governed identification route is approved;
 - write a failure audit and Month-3 decision record.
 
 **Promote only if:** reviewers can distinguish the constructs, the intervention
-is not trivial, and the single primary uncertainty-aware candidate named before
-holdout access passes every necessary criterion in the measurement protocol:
+is not trivial, and the pre-specified primary instrument passes every necessary
+criterion in the measurement protocol:
 stronger response to controlled incompatibility than
 to the frozen valid `M_v` and `M_t` controls; a simultaneous lower bound above
 the magnitude-safe specificity SESOI; a frozen material advantage over the
@@ -51,8 +54,10 @@ repetition, and failure-case
 checks. Conditioning on observational `A_v` or `A_t` is diagnostic only and
 cannot satisfy H2 or substitute for a valid ambiguity-identification route.
 
-**Kill or redesign if:** the construct, labels, access, compute, or annotation
-route fails the criteria in the measurement protocol.
+**Kill the current route if:** the construct, labels, access, compute, or
+annotation route fails the criteria in the measurement protocol. Any later
+prospective redesign requires a new dated decision and cannot preserve the
+failed Main Track claim.
 
 The candidate development plan seeks 216 balanced evaluable independent
 patient blocks after screening 260, under the unapproved power
@@ -60,7 +65,7 @@ assumptions in the statistical plan. This is a resource-planning bound, not a
 sample-size fact or confirmatory study.
 
 Passing this development-only gate is necessary but not sufficient for the
-Main Track method claim; confirmatory evidence remains required.
+Main Track framework claim; confirmatory evidence remains required.
 
 ## Month 4–5 — Confirmatory Benchmark Construction
 
@@ -78,28 +83,32 @@ cohort audit pass their frozen thresholds.
 
 ## Month 6–7 — Estimator and Decomposition Study
 
-**Outcome:** matched analysis of the frozen primary estimator and its smallest
-sufficient comparator set without replacing the primary method.
+**Outcome:** matched analysis of the frozen non-novel primary instrument and its
+smallest sufficient comparator set without replacing the primary identity.
 
-- train/evaluate the already named primary uncertainty-aware estimator and its
-  matched deterministic comparator; secondary methods remain descriptive under
+- train/evaluate the already named `PROBVLM-2ADAPTER` instrument and
+  `POINT-2ADAPTER-RECON` comparator, including the frozen-means direct-score-
+  path diagnostic using the point route's fitted global constants; secondary
+  methods remain descriptive under
   the frozen multiplicity plan and cannot replace the primary on confirmation
   or target outcomes;
 - run required ablations, repeated seeds, and resource accounting;
 - test construct specificity and stability under the declared shift;
 - run the frozen cross-backbone breadth test and the separately approved second
   medical dataset or small controlled general-domain benchmark testing the same
-  construct;
+  intervention-relative framework claim;
 - retain the same primary candidate for final outcome evaluation without
   inspecting final endpoints; replacing it requires a new prospective method
   family and independent selection/confirmation split.
 
-**Stop or narrow:** if the proposed component is unstable, uninterpretable, or
-subsumed by a simpler baseline.
+**Stop the current route:** if the frozen instrument response is unstable,
+uninterpretable, or subsumed by the matched deterministic baseline. Retain the
+qualified result without post-hoc repackaging.
 
 ## Month 7–8 — Incremental Validity and Calibration
 
-**Outcome:** final held-out evidence for or against the conflict component.
+**Outcome:** final held-out evidence for or against incremental value from the
+frozen instrument score.
 
 - compare nested risk models on the frozen primary proper score;
 - assess calibration intercept/slope, reliability, ranking, shift, and

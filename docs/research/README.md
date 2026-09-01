@@ -23,13 +23,14 @@ This directory is authoritative for the scientific scope and evidence state of
 18. [Dataset decision candidate](dataset_decision_candidate.md)
 19. [Execution budget and backbone audit](execution_budget_and_backbone_audit.md)
 20. [Estimator formalization and equivalence audit](estimator_formalization_audit.md)
-21. [Baselines and ablations](baselines_and_ablations.md)
-22. [Literature matrix](literature_matrix.md)
-23. [Novelty and prior-art audit](novelty_audit.md)
-24. [Submission strategy](submission_strategy.md)
-25. [Gate-0 decision dossier](gate0_decision_dossier.md)
-26. [Gate-0 closure audit](gate0_closure_audit.md)
-27. [Decision log](decision_log.md)
+21. [Method-A identification framework](method_a_identification_framework.md)
+22. [Baselines and ablations](baselines_and_ablations.md)
+23. [Literature matrix](literature_matrix.md)
+24. [Novelty and prior-art audit](novelty_audit.md)
+25. [Submission strategy](submission_strategy.md)
+26. [Gate-0 decision dossier](gate0_decision_dossier.md)
+27. [Gate-0 closure audit](gate0_closure_audit.md)
+28. [Decision log](decision_log.md)
 
 The [roadmap](../roadmap.md) turns these documents into evidence gates. A
 planned method or experiment is not a result. Any conflict between a task brief
@@ -58,10 +59,12 @@ choices are listed in the [decision dossier](gate0_decision_dossier.md) and its
 current blockers in the [closure audit](gate0_closure_audit.md); only an
 approved dated decision record can change that status.
 
-DR-0015 records one partial decision: the Commander selected `G0-SCOPE A`, so
-the intended identified claim is determinate-conflict specificity and natural
-ambiguity remains veto-only. Scientific-supervisor co-approval, `G0-METHOD`,
-and all other Gate-0 requirements remain open. The same record rules out the
-Commander's local workstation for TB-0011's approximately 613-GB conditional
-simulation-output floor; that number is not the dataset size or a final upper
-bound.
+DR-0015 records the Commander's partial `G0-SCOPE A` decision. DR-0016 records
+the Commander's selection of `G0-METHOD A` as the sole route and freezes the
+paper-faithful-likelihood `PROBVLM-2ADAPTER` and fitted-global-constant
+`POINT-2ADAPTER-RECON` scientific interfaces; `POINT-INFONCE` is secondary.
+Scientific-supervisor, statistical-owner, and
+model-owner co-approval and all other Gate-0 requirements remain open. DR-0015
+also rules out the Commander's local workstation for TB-0011's approximately
+613-GB conditional simulation-output floor; that number is not the dataset
+size or a final upper bound.

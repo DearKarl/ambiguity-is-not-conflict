@@ -1,7 +1,7 @@
 # Statistical Analysis Plan
 
-**Status:** Gate-0 freeze candidate; pointwise method identity is blocked and no
-analysis is authorized
+**Status:** Method-A Commander-level instrument/comparator interface selected;
+required owner approvals and all analysis remain blocked by Gate 0
 
 **Date:** 2026-08-29
 **Evidence class:** Protocol and design-only power calculation
@@ -26,8 +26,9 @@ analysis is authorized
   to fit, orient, normalize, tune, and freeze candidates only after the nested
   qualification reserve above is removed.
 - **Month-3 primary-candidate screen:** official-train HMAC bucket 70--84,
-  opened once after the Gate-0-approved exact primary pointwise instrument and
-  matched deterministic comparator have been fit/tuned only in development and
+  opened once after the Commander-selected `PROBVLM-2ADAPTER` and
+  `POINT-2ADAPTER-RECON` interfaces receive all Gate-0 owner approvals and
+  have been fit/tuned only in development and
   their fitted instances, normalizers, orientations, code, and configurations
   are locked; used only to kill or provisionally advance those already frozen
   instances. Nothing is selected or refit there, and it cannot supply
@@ -53,9 +54,12 @@ subtracting effects from unmatched source populations.
 
 ## Frozen Score Orientation and Scale
 
-For method `m`, orient higher values toward greater conflict using the method
-definition, not the observed kill-set direction. On a disjoint,
-patient-weighted development-compatible reference set, freeze:
+For method `m`, orient higher values in the prospectively declared operational
+direction using the method definition—not the observed kill-set direction. For
+the primary GGD instrument and comparator, higher means poorer cross-modal fit;
+this orientation does not turn either score into an identified pair-level
+conflict label. On a disjoint, patient-weighted development-compatible reference
+set, freeze:
 
 ```math
 Z_{ibm}=a_m\frac{S_{ibm}-\mu^{dev}_{0m}}{\sigma^{dev}_{0m}},
@@ -212,11 +216,11 @@ Sensitivity results cannot rescue failure of the approved primary threshold.
 
 ## Deterministic Subsumption Rule
 
-For the strongest capacity-, input-, supervision-, and tuning-matched
-deterministic predictor, define:
+For primary instrument (P=)`PROBVLM-2ADAPTER` and matched deterministic
+comparator (D=)`POINT-2ADAPTER-RECON`, define:
 
 ```math
-A_\psi=\psi_{mag,uncertainty}-\psi_{mag,deterministic}.
+A_\psi=\psi_{mag,P}-\psi_{mag,D}.
 ```
 
 Write
@@ -225,11 +229,17 @@ Write
 difference of the two method-specific minima. It is **not** a minimum of
 same-control method differences.
 
-The proposed material-advantage margin is `0.10` reference SD, with `0.05` and
-`0.15` as sensitivity values.
+Each method is standardized by its own frozen compatible-reference mean and
+standard deviation. `A_psi` is therefore a difference between method-
+specifically standardized dimensionless effects, not a difference in one
+shared reference-SD unit. The proposed material-advantage margin is `0.10` on
+that dimensionless difference, with `0.05` and `0.15` as sensitivity values;
+raw-score and median/MAD sensitivities remain mandatory.
 
-- An uncertainty-aware Main Track estimator candidate advances only if the
-  simultaneous lower bound for `A_psi` exceeds `+0.10`.
+- A probabilistic-instrument advantage claim advances only if the simultaneous
+  lower bound for `A_psi` exceeds `+0.10`. The frozen-means diagnostic can
+  support only a direct score-path attribution conditional on jointly trained
+  means; it cannot establish a training-path or causal mechanism.
 - Deterministic non-inferiority is established only if the simultaneous upper
   bound for `A_psi` is below `+0.10` and the deterministic method itself passes
   the absolute `psi_mag > 0.20` gate.
@@ -321,14 +331,12 @@ does not manufacture a deterministic win from an underpowered comparison.
    Do not bootstrap either minimum directly, and do not substitute
    \(\min_j(\mu_{Uj}-\mu_{Dj})\) for \(A_\psi\). For signed `psi_id`, report both
    smooth components `E[D_C-D_j]` and `E[D_C+D_j]` for every control.
-5. Gate 0 must already name exactly one primary pointwise instrument
-   definition/interface and one matched deterministic comparator definition.
-   TB-0006 selected no pointwise candidate: the audited candidates were exact
-   deterministic reductions or occupied evidential/compatibility forms.
-   Therefore this requirement remains blocked unless the owners prospectively
-   narrow the contribution to the measurement framework and freeze a non-novel
-   primary instrument, or a new mathematical candidate passes a pre-data
-   equivalence audit.
+5. The Commander has selected exactly one non-novel primary instrument
+   interface, `PROBVLM-2ADAPTER`, and one matched deterministic comparator,
+   `POINT-2ADAPTER-RECON`, under Method A. `POINT-INFONCE` is secondary. This
+   resolves the Commander choice but not Gate 0: scientific-supervisor,
+   statistical-owner, and model-owner approval and the exact executable
+   specification remain required.
    Before the Month-3 set is opened, development bucket 0--69 may fit/tune only
    within those frozen rules and must lock exactly one fitted instance of each.
    Month 3 can kill or provisionally advance only those instances; every other
@@ -395,7 +403,7 @@ attrition.
 
 ### Material-advantage power sensitivity
 
-For the one pre-specified uncertainty-aware candidate and its matched
+For the pre-specified primary probabilistic instrument and its matched
 deterministic comparator, define the standardized excess over the `0.10`
 material-advantage margin as:
 
@@ -551,11 +559,11 @@ grid cannot be reused for them.
   transport/weighting rule is fixed before final evaluation.
 - Candidate Brier-skill SESOI: `0.02`, sensitivity values `0.01` and `0.05`;
   candidate method-difference equivalence band `[-0.01,+0.01]`.
-- For the same primary uncertainty-aware method and matched deterministic
+- For the same primary probabilistic instrument and matched deterministic
   comparator, define
   `A_BSS = Delta_BSS_uncertainty - Delta_BSS_deterministic`, so positive values
-  favour the uncertainty-aware component. Its advancement requires both the
-  uncertainty-aware method's lower bound for `Delta_BSS` above `0.02` and the
+  favour the primary probabilistic instrument. Its advancement requires both
+  that instrument's lower bound for `Delta_BSS` above `0.02` and the
   one-sided 97.5% simultaneous lower bound for `A_BSS` above `+0.01`.
   Deterministic downstream
   non-inferiority requires the corresponding upper bound below `+0.01` and the
@@ -587,13 +595,16 @@ Gate 0 cannot be represented as closed.
   replacement follows evaluation inspection.
 - Too few independent patient blocks yields `inconclusive`, not a favourable
   null or equivalence result.
-- Kill or redesign the score if `psi_mag` fails, direction reverses, a nuisance
-  probe demonstrates leakage, or results depend materially on the frozen
-  normalization sensitivity. `theta` is a scale-free sensitivity report and
-  cannot rescue failure; it becomes a gate only after separate power approval.
-- Kill the Main Track estimator claim if the uncertainty-aware method fails
-  the `+0.10` material-advantage gate over deterministic; declare deterministic subsumption
-  only when its positive conditions are actually met.
+- Kill the current Main Track route if `psi_mag` fails, direction reverses, a
+  nuisance probe demonstrates leakage, or results depend materially on the
+  frozen normalization sensitivity. Any prospective score redesign requires a
+  new dated decision and cannot preserve the failed claim. `theta` is a scale-
+  free sensitivity report and cannot rescue failure; it becomes a gate only
+  after separate power approval.
+- Kill the current Main Track route if the primary instrument fails the `+0.10`
+  material-advantage gate over deterministic; retain and report the qualified
+  null or deterministic result without post-hoc repackaging. Declare
+  deterministic subsumption only when its positive conditions are actually met.
 - An analytic identity or occupied-form kill under TB-0006 is not an empirical
   equivalence or deterministic-subsumption result. It blocks method selection
   before execution; it does not waive the positive interval rules for any

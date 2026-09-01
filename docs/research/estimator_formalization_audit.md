@@ -1,7 +1,8 @@
 # Estimator Formalization and Equivalence Audit
 
-**Status:** Formal method-claim kill recommendation; no estimator is approved
-for execution
+**Status:** Three pointwise method claims killed; Method A and its non-novel
+instrument/matched-comparator interfaces are Commander-approved but not
+execution-approved
 
 **Audit date:** 2026-08-29
 **Evidence class:** Gate-0 mathematical and authoritative peer-reviewed/
@@ -30,10 +31,9 @@ development. Preserve the intervention-defined specificity functional
 `psi_mag` and its exact sample estimator as the project's measurement
 framework, but do not misdescribe its finite-sample plug-in estimator as a
 deployable pair-level score. Gate 0 therefore remains open: the owners must
-either approve a claim-narrowing amendment centered on the measurement
-framework or require a new, pre-data mathematical candidate that survives the
-same audit. This result does not establish that the framework itself is novel
-or venue-ready.
+approve a claim-narrowing amendment centered on the measurement framework.
+DR-0016 records that Commander-level Method-A choice; the audit still does not
+establish that the framework itself is novel or venue-ready.
 
 ## Objects That Must Not Be Conflated
 
@@ -496,35 +496,46 @@ unchanged.
 | `RAW-COS` | \(S_{cos}=1-\langle z_v/\|z_v\|,z_t/\|z_t\|\rangle\) on frozen post-projection features, without logit scale or softmax | Project-native arithmetic over the MIT BiomedCLIP/OpenCLIP feature route | No trainables or project labels; include as a zero-capacity compatibility reference, never semantic-conflict truth |
 | `DET-LR` | Project-native \(h=[z_v,z_t,|z_v-z_t|,z_v\odot z_t,W]\), binary-log-loss classifier \(g_\eta\), and \(g_\eta+\log(\pi_0/\pi_1)\) | No official end-to-end task implementation to inherit; exact architecture, \(W\), weights, calibration, and software identity remain unfrozen | Uses explicit development \(C^*\) labels; include only as a privileged supervised ceiling unless every claimed matched method receives identical labels |
 | `DBF-TASK` | [DBF paper](https://proceedings.mlr.press/v258/bezirganyan25a.html) and official commit [`79b7d56b0cfa53c98a93f29f9d9c59768177ad17`](https://github.com/bezirganyan/DBF_uncertainty/commit/79b7d56b0cfa53c98a93f29f9d9c59768177ad17); a task port would use two binary finding-state evidential heads | The immutable [DBF licence](https://github.com/bezirganyan/DBF_uncertainty/blob/79b7d56b0cfa53c98a93f29f9d9c59768177ad17/LICENSE) states GPL-3.0, while its [README](https://github.com/bezirganyan/DBF_uncertainty/blob/79b7d56b0cfa53c98a93f29f9d9c59768177ad17/README.md) credits borrowed RCML code. The audited [RCML snapshot](https://github.com/jiajunsi/RCML/tree/c9c5ab41e6fe62a85e5f6441a4dc7b568e1fa421) exposes no explicit licence file. The exact DBF [loss](https://github.com/bezirganyan/DBF_uncertainty/blob/79b7d56b0cfa53c98a93f29f9d9c59768177ad17/loss_function.py), [data path](https://github.com/bezirganyan/DBF_uncertainty/blob/79b7d56b0cfa53c98a93f29f9d9c59768177ad17/data.py), and [driver](https://github.com/bezirganyan/DBF_uncertainty/blob/79b7d56b0cfa53c98a93f29f9d9c59768177ad17/main.py) are identity evidence only; direct vendoring is not approved. | Uses semantic \(Y\) supervision on clear compatible pairs; retain only as a privileged comparator through an owner-approved clean-room formula port or a separately governed GPL runner subject to licensing/provenance approval |
-| `PROBVLM-2ADAPTER` | [ProbVLM commit `cb69f28b1ab23142a1c671e004b09b5cb5d8a204`](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204), two 512-dimensional image/text adapters, symmetric cross-modal generalized-Gaussian matching candidate | The immutable [licence](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/LICENSE) states MIT. The audited [loss](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/src/losses.py), [network definitions](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/src/networks.py), and [training driver](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/src/train_probVLM.py) do not by themselves freeze the paper-faithful two-adapter estimator: the active loss is not textually identical to the displayed paper residual, and path-specific adapter handling remains a semantic choice. | Conditional paper-faithful project-native port only; Gate 0 must choose paper-faithful versus code-exact semantics, and constructed contradictions must not be trained as positive matches |
-| `POINT-INFONCE` | Project-native two-branch point adapter with the same mean-trunk widths/depth/dropout and identical native compatible-pair development set; frozen raw paired logit \(-\cos(m_v(z_v),m_t(z_t))/\tau\) | ProbVLM supplies no matched point control. The closest [CLIP-Adapter snapshot](https://github.com/gaopengcuhk/CLIP-Adapter/tree/08d07f8b2ecafc6f1479fe636b26d464d7a5574e) is a different few-shot classifier and exposes no explicit licence file at the audited snapshot, so its code is excluded. | This is the genuinely same-information comparator for ProbVLM; freeze denominator/reference pool, negative/false-negative policy, optimizer, and tuning budget |
+| `PROBVLM-2ADAPTER` | [ProbVLM commit `cb69f28b1ab23142a1c671e004b09b5cb5d8a204`](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204), two modality-specific adapters, and paper-faithful symmetric cross-modal generalized-Gaussian likelihood semantics | The immutable [licence](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/LICENSE) states MIT. The audited [loss](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/src/losses.py), [network definitions](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/src/networks.py), and [training driver](https://github.com/ExplainableML/ProbVLM/blob/cb69f28b1ab23142a1c671e004b09b5cb5d8a204/src/train_probVLM.py) differ materially from a single paper-exact executable identity. | Commander selected paper-faithful likelihood semantics in a project-native scientific interface. Coordinate reduction and full objective weights are project choices; there is no original checkpoint, code-exact reproduction claim, or constructed contradiction as a positive fit pair |
+| `POINT-2ADAPTER-RECON` | Project-native two-branch mean-only adapter with identical frozen inputs, independently verified determinate-compatible fitting records, mean trunks, intra/cross target topology, optimization/tuning budget, and GGD score family; global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen before protected outcomes | New project-native arithmetic; it inherits no third-party adapter code | Commander-selected primary deterministic full-route comparator; unit-scale Laplace is a sensitivity only. Removing scale/shape heads changes active capacity and gradient paths, so this is not a capacity-isolated mechanism comparison; exact executable architecture, parameter counts, compute, and numerical values remain owner-blocked |
+| `POINT-INFONCE` | Project-native two-branch point adapter on the same native records, scored by a frozen contrastive pair logit | The closest [CLIP-Adapter snapshot](https://github.com/gaopengcuhk/CLIP-Adapter/tree/08d07f8b2ecafc6f1479fe636b26d464d7a5574e) is a different few-shot classifier and exposes no explicit licence file at the audited snapshot, so its code is excluded. | Secondary same-records contrastive baseline only; its off-diagonal negative assumptions prevent it from being the primary mean-only ablation, and its denominator/multi-positive/false-negative policy remains to be frozen |
 
 The information budget must be explicit:
 
 - `RAW-COS` receives only frozen \(z_v,z_t\).
-- `PROBVLM-2ADAPTER` and `POINT-INFONCE` receive identical native compatible-
-  pair development records and pair correspondence only—no \(C^*\), semantic
-  \(Y\), intervention, ambiguity, provenance, or error labels.
+- `PROBVLM-2ADAPTER` and `POINT-2ADAPTER-RECON` receive identical independently
+  verified determinate-compatible fitting records. Fitting-set membership is
+  shared semantic selection supervision and must be disclosed; the underlying
+  \(C^*\)/semantic states are not model inputs or loss targets. Neither receives
+  constructed intervention/control variants, ambiguity, provenance, model-error,
+  or protected-outcome labels. `POINT-INFONCE` receives the same records but
+  introduces a separately governed contrastive-negative assumption.
 - `DET-LR` receives explicit determinate \(C^*\) and known sampling odds.
 - `DBF-TASK` receives shared semantic finding \(Y\) on clear compatible pairs.
 - At inference, every method receives only its frozen pair features; condition,
   construction, ambiguity, provenance, and protected-outcome fields are
   forbidden.
 
-The finite five-role set is therefore not one fully matched contest. Only
-ProbVLM versus POINT is a same-information comparison. DET-LR and DBF are
-privileged ceilings with different scientific questions. Gate 0 cannot close
-until owners approve the DBF provenance/licence route, ProbVLM paper-versus-
-code semantics, point-control denominator/negative policy, exact software
-identities, and every supervision tag.
+The finite role set is not one fully matched contest. Only
+`PROBVLM-2ADAPTER` versus `POINT-2ADAPTER-RECON` is the primary same-selection-
+information, same-score-family, same-target-topology full-route comparison. It
+is not a capacity-matched isolation of a probabilistic mechanism, and exact
+active parameter/compute differences must be reported. `POINT-INFONCE` is secondary;
+`DET-LR` and `DBF-TASK` are privileged ceilings with different scientific
+questions. Gate 0 cannot close until the remaining owners approve exact
+software identities, numerical specifications, the DBF provenance/licence
+route, the InfoNCE negative policy, and every supervision tag.
 
 ## Baseline and Ablation Consequences
 
 1. The matched deterministic compatibility classifier is mandatory and must
    receive every decision-time feature given to a learned density-ratio route.
-2. Any probabilistic adapter must have an identical mean/point-softmax adapter
-   and a fixed-mean covariance/scale ablation. Self-corrected Gaussian distance
-   must be reported as its deterministic mean-distance collapse.
+2. Any probabilistic adapter must have the frozen deterministic full-route
+   comparator and a frozen-means diagnostic that substitutes the comparator's
+   fitted global scale/shape constants. That diagnostic addresses only the
+   direct score path conditional on jointly trained means. Self-corrected
+   Gaussian distance must be reported as its deterministic mean-distance
+   collapse.
 3. Any evidential route must report projected-probability disagreement,
    uncertainty mass, their product, and matched point-softmax heads separately.
 4. RCML confident disagreement and a task-valid Discounted-Belief-Fusion route
@@ -548,7 +559,7 @@ sigmoid or exponential with that same transformation applied to the comparator.
 Neither rank equivalence nor a larger `psi_mag` created only by link choice is
 an uncertainty-aware material advantage.
 
-## Finite Gate-0 Owner Choice
+## Historical Finite Gate-0 Owner Choice
 
 - **`G0-METHOD A` — recommended:** accept the pointwise method-claim kill;
   amend the central contribution prospectively to the intervention-defined
@@ -562,12 +573,11 @@ an uncertainty-aware material advantage.
   falsifiable advantage that survives analytic equivalence review. No
   development or protected-set inspection occurs first.
 
-Choosing A requires a dated canonical amendment and exact instrument/baseline
-freeze. Choosing B leaves the current method blocker open. Neither choice is
-made by this audit, and neither authorizes implementation or evidence access.
-If no later candidate survives and A is rejected, the present Main Track
-estimator identity is killed; the result must not be softened into a method
-claim.
+This section records the choice presented by TB-0006. DR-0016 subsequently
+selects A at the Commander level, makes B inactive, and freezes the
+`PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON` scientific interfaces. Other-owner
+approval and every executable detail remain open; the decision does not
+authorize implementation or evidence access.
 
 ## Permitted Claim
 

@@ -3,16 +3,14 @@
 [![Protocol status](https://img.shields.io/badge/evidence-protocol%20only-blue)](docs/research/research_contract.md)
 [![Repository checks](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/workflows/quality.yml/badge.svg)](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/workflows/quality.yml)
 
-**Identifiable cross-modal conflict estimation for calibrated selective
-decisions.**
+**Intervention-identified measurement of cross-modal conflict specificity.**
 
 This repository is the standalone research home for a single question:
 
-> At the atomic clinical-finding level, can a cross-modal conflict component
-> respond specifically to controlled image--report incompatibility, rather
-> than image ambiguity, text ambiguity, missingness, corruption, epistemic
-> uncertainty, or output uncertainty, and add held-out decision value at a
-> fixed review budget?
+> At the atomic clinical-finding level, can a frozen cross-modal score respond
+> specifically to controlled image--report incompatibility rather than approved
+> image/text information-loss controls, survive separate ambiguity and nuisance
+> veto audits, and add held-out decision value at a fixed review budget?
 
 The project is currently at **protocol stage**. No core experiment has been
 run, no candidate method has been promoted, and nothing here establishes
@@ -20,12 +18,13 @@ clinical benefit or deployment readiness.
 
 ## Intended Contribution
 
-The single intended primary contribution is a formal conditional conflict
-estimand and an estimator or estimation framework that can be falsified under
-controlled interventions after accounting for ambiguity and information loss
-within each modality. The controlled medical benchmark, probabilistic
-embeddings, calibration analysis, and selective review are supporting evidence
-or candidate implementations—not four parallel contribution claims.
+The single intended primary contribution is a partial-construct,
+intervention-identified measurement and inference framework that can falsify
+whether a frozen cross-modal score is specific to determinate semantic
+incompatibility rather than approved modality-specific information-loss
+controls. The controlled medical benchmark, candidate instruments,
+calibration analysis, and selective review are supporting evidence—not four
+parallel contribution claims.
 
 The paper's identity is **not** “Gaussian embeddings” or any single distance.
 Probabilistic embeddings, deterministic compatibility models, evidential
@@ -33,13 +32,13 @@ methods, ensembles, approximate-Bayesian methods, semantic entropy, generic
 failure predictors, and conformal selection remain candidates to compare under
 matched conditions.
 
-The current [formalization audit](docs/research/estimator_formalization_audit.md)
-selected no pointwise uncertainty-aware estimator: the three exact candidates
-collapsed to deterministic or already published forms. The new pointwise-
-estimator claim is therefore under a formal kill recommendation. The controlled
-specificity estimand remains a possible measurement-framework contribution,
-subject to an explicit owner-approved claim amendment and a separate novelty
-assessment; Gate 0 remains open.
+The [formalization audit](docs/research/estimator_formalization_audit.md)
+selected no novel pointwise estimator: the three exact candidates collapsed to
+deterministic or already published forms. The Commander has therefore selected
+[Method A](docs/research/method_a_identification_framework.md) as the sole
+route. It freezes a non-novel paper-faithful `PROBVLM-2ADAPTER` instrument and
+the mean-only `POINT-2ADAPTER-RECON` comparator at the scientific-interface
+level; required owner approvals and every executable detail remain open.
 
 The [reader and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
 now supplies an exact finite-roster measurement candidate, joint polarity gate,
@@ -104,12 +103,13 @@ the permitted terminology.
 | Item | Current status |
 | --- | --- |
 | Project identity | **Decided:** `Ambiguity Is Not Conflict` |
-| Primary route | **Decided in principle:** controlled identification of image--report conflict before calibration or decision claims |
+| Primary route | **Decided in principle:** identification of an intervention-relative frozen-score response within determinate image--report blocks before calibration or decision claims; not arbitrary-pair conflict identification |
 | Scope boundary | **Commander approved `G0-SCOPE A`:** determinate-conflict specificity is primary; natural ambiguity is veto-only. Scientific-supervisor co-approval remains open. |
 | Validation domain | **Primary route:** chest radiography at atomic finding level; the exact task and dataset remain Gate 0 decisions |
 | Data route | **Candidate:** coupled MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as a MIMIC-derived synthetic stress test, never independent breadth |
-| Representation | **Open comparison:** no probabilistic or Bayesian method is presumed superior |
-| Pointwise estimator | **Blocked / kill recommended:** no TB-0006 candidate survived analytic equivalence; owners must narrow to the measurement framework or supply a new pre-data candidate |
+| Method identity | **Commander approved `G0-METHOD A`:** intervention-identified measurement framework; scientific-supervisor, statistical-owner, and model-owner approvals remain open |
+| Primary instrument | **Commander-level interface:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; no probabilistic advantage is presumed |
+| Matched comparator | **Commander-level interface:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary because its contrastive negatives add a different mechanism |
 | Local storage | **Binding constraint:** the approximately 613-GB conditional simulation-output floor cannot run locally; this is not the medical dataset size, and `G0-RESOURCES` remains open |
 | Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
@@ -167,13 +167,14 @@ paper/                       manuscript workspace after evidence promotion
 17. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
 18. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
 19. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
-20. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-21. [Literature matrix](docs/research/literature_matrix.md)
-22. [Novelty audit](docs/research/novelty_audit.md)
-23. [Submission strategy](docs/research/submission_strategy.md)
-24. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
-25. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-26. [Decision log](docs/research/decision_log.md)
+20. [Method-A identification framework](docs/research/method_a_identification_framework.md)
+21. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+22. [Literature matrix](docs/research/literature_matrix.md)
+23. [Novelty audit](docs/research/novelty_audit.md)
+24. [Submission strategy](docs/research/submission_strategy.md)
+25. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+26. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+27. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 
