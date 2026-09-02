@@ -540,11 +540,11 @@ def test_pull_request_freshness_rejects_second_closure_remediation(
     ) in errors
 
 
-def test_supervisor_alignment_is_bounded_and_gate_zero_remains_open() -> None:
+def test_consolidated_internal_approval_is_bounded_and_gate_zero_remains_open() -> None:
     execution_contract = (
         ROOT / "EXECUTION_CONTRACT.md"
     ).read_text(encoding="utf-8")
-    normalized_execution_contract = " ".join(execution_contract.split())
+    normalized_execution_contract = " ".join(execution_contract.lower().split())
     decision_log = (
         ROOT / "docs/research/decision_log.md"
     ).read_text(encoding="utf-8")
@@ -552,17 +552,24 @@ def test_supervisor_alignment_is_bounded_and_gate_zero_remains_open() -> None:
     dossier = (
         ROOT / "docs/research/gate0_decision_dossier.md"
     ).read_text(encoding="utf-8")
-    normalized_dossier = " ".join(dossier.split())
+    normalized_dossier = " ".join(dossier.lower().split())
     research_contract = (
         ROOT / "docs/research/research_contract.md"
     ).read_text(encoding="utf-8")
-    normalized_research_contract = " ".join(research_contract.split())
+    normalized_research_contract = " ".join(research_contract.lower().split())
+    dataset_record = (
+        ROOT / "docs/research/dataset_decision_record.md"
+    ).read_text(encoding="utf-8")
+    normalized_dataset_record = " ".join(dataset_record.lower().split())
+    task_brief = (
+        ROOT
+        / "docs/research/task_briefs/"
+        "TB-0012-gate0-owner-consolidation-data-readiness.md"
+    ).read_text(encoding="utf-8")
+    normalized_task_brief = " ".join(task_brief.lower().split())
 
-    assert (
-        "conditional simulation-output core floor"
-        in normalized_execution_contract
-    )
-    assert "not the medical dataset size" in normalized_execution_contract
+    assert "no dataset or model download" in normalized_execution_contract
+    assert "no query" in normalized_execution_contract
     assert "DR-0015 — Commander Scope Choice and Local Storage Boundary" in decision_log
     assert (
         "DR-0016 — Commander Method-A and Instrument/Comparator Interface Decision"
@@ -572,36 +579,32 @@ def test_supervisor_alignment_is_bounded_and_gate_zero_remains_open() -> None:
         "DR-0017 — Scientific-Supervisor Alignment on Scope and Method A"
         in decision_log
     )
-    assert "Commander-approved partial Gate-0 decision" in decision_log
-    assert "`G0-METHOD A/B` remains open" in decision_log
-    assert "user-attested scientific-supervisor alignment" in normalized_decision_log
     assert (
-        "`COMMANDER APPROVED A / SUPERVISOR CONCEPTUAL ALIGNMENT / "
-        "FORMAL SUPERVISOR APPROVAL OPEN`"
-        in dossier
+        "DR-0018 — Consolidated Internal Authority and Data-Readiness Boundary"
+        in decision_log
+    )
+    assert "consolidated accountable internal owner" in normalized_decision_log
+    assert "`internally approved a`" in dossier.lower()
+    assert (
+        "`internally approved a / executable specification blocked`"
+        in dossier.lower()
     )
     assert (
-        "`COMMANDER APPROVED A / SUPERVISOR FRAMEWORK AND NAMED-ROLE "
-        "ALIGNMENT / FORMAL SUPERVISOR, STATISTICAL, AND MODEL APPROVALS "
-        "OPEN`"
-        in dossier
+        "`internally approved a / external evidence and feasibility blocked`"
+        in dossier.lower()
     )
-    assert (
-        "did not ask the supervisor to select `g0-scope a` over b"
-        in normalized_decision_log
-    )
-    assert "did not ask whether method a is the sole route" in normalized_decision_log
     assert "`POINT-2ADAPTER-RECON`" in dossier
-    assert "cannot hold the approximately 613-GB" in normalized_dossier
-    assert (
-        "was not asked to approve the sole-route/B-inactive boundary"
-        in normalized_research_contract
-    )
-    assert (
-        "does not close Gate 0 or authorize execution"
-        in normalized_research_contract
-    )
+    assert "cannot hold the approximately 613-gb" in normalized_dossier
+    assert "does not close gate 0 or authorize execution" in normalized_research_contract
     assert "That floor is not the dataset size" in research_contract
+    assert "ddr-2026-09-02-001" in normalized_dataset_record
+    assert "restricted access and gate-0 closure blocked" in normalized_dataset_record
+    assert "no credential" in normalized_dataset_record
+    assert "prospectively fixes the non-executable stage-b" in normalized_dataset_record
+    assert (
+        "gate 0, restricted data, and experiments remain unauthorized"
+        in normalized_task_brief
+    )
 
 
 def test_ci_dependencies_are_immutable() -> None:
@@ -764,7 +767,7 @@ def test_primary_specificity_candidate_is_magnitude_safe() -> None:
     assert "0.20" in plan
     assert "not statistically superior" in plan
     assert "d_*^2" in plan
-    assert "the commander has selected exactly one non-novel primary instrument" in plan
+    assert "dr-0018 records consolidated internal approval of exactly one non-novel" in plan
     assert "a_bss" in plan
 
     packet = (
@@ -787,10 +790,43 @@ def test_metadata_stage_excludes_records_and_images() -> None:
     record = (
         ROOT / "docs/research/dataset_decision_candidate.md"
     ).read_text(encoding="utf-8").lower()
-    assert "metadata-only feasibility query" in record
+    assert "restricted tabular screening query" in record
     assert "do not read dates/times, demographics, reports, images" in record
     assert "report-screen strata" in record and "never" in record
     assert "no access request" in record
+
+
+def test_stage_b_readiness_record_is_minimal_and_non_executable() -> None:
+    record = " ".join(
+        (ROOT / "docs/research/dataset_decision_record.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+    handoff = " ".join(
+        (ROOT / "HANDOFF_CONTRACT.md")
+        .read_text(encoding="utf-8")
+        .lower()
+        .split()
+    )
+
+    assert "prospectively fixes the non-executable stage-b restricted tabular" in record
+    assert "actual access date | not applicable before authorized access" in record
+    for filename in (
+        "mimic-cxr-2.0.0-split.csv.gz",
+        "mimic-cxr-2.0.0-metadata.csv.gz",
+        "mimic-cxr-2.0.0-chexpert.csv.gz",
+        "mimic-cxr-2.0.0-negbio.csv.gz",
+    ):
+        assert filename in record
+    assert "dates/times, demographics, reports, images, dicom pixels" in record
+    assert "other findings, the manual test-label file" in record
+    assert "any record-level export are forbidden in stage b" in record
+    assert "restricted, report-derived clinical screening variables" in record
+    assert "not image truth, model targets, or public metadata" in record
+    assert "metadata contains restricted identifiers" in handoff
+    assert "must never be treated as public or harmless" in handoff
+    assert "no download, query, image/report inspection" in record
 
 
 def test_known_and_unknown_checkpoint_exposure_are_not_clean() -> None:
@@ -928,16 +964,18 @@ def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
     assert "not yet a complete gate-0 freeze package" in dossier
     assert "mv-1" in dossier and "mt-1" in dossier
     assert "r_j = 0.50 + abs(ba_j - 0.50)" in dossier
-    assert "commander approved a" in dossier
-    assert "supervisor framework and named-role alignment" in dossier
-    assert "formal supervisor, statistical, and model approvals open" in dossier
+    assert "internally approved a" in dossier
+    assert "closes all internal co-approval gaps" in dossier
+    assert "canonical protocol/interface package" in dossier
+    assert "executable specification blocked" in dossier
     assert "tb-0006" in dossier and "pointwise method-claim kill" in dossier
     assert "fitted instance/config" in dossier
-    assert "reader-based task-relevance" in dossier and "l_bal" in dossier
+    assert "later reader-based `mv-1` qualification" in dossier and "l_bal" in dossier
     assert "g0-inference" in dossier and "9,999 fixed-seed resamples" in dossier
     assert "g0-ablations" in dossier and "remove `c_vt`" in dossier
     assert "ainc/v1/mv1-qualification" in dossier
-    assert "300-screened/216-evaluable" in dossier
+    assert "150 metadata candidates per report-screen stratum (300 total)" in dossier
+    assert "108 evaluable blocks per independent image polarity" in dossier
     assert "g0-mv-q" in dossier
     assert "does not" in dossier and "close gate 0" in dossier
     assert "224 -> 112 -> 224" in intervention
@@ -949,6 +987,46 @@ def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
     assert "sole-polarity-slot redaction" in intervention
     assert "y_t=undefined" in intervention
     assert "neither operation is an ambiguity intervention" in intervention
+
+
+def test_gate_zero_closure_audit_maps_every_dossier_row_once() -> None:
+    audit = (
+        ROOT / "docs/research/gate0_closure_audit.md"
+    ).read_text(encoding="utf-8")
+    crosswalk = audit.split(
+        "## One-to-One Gate-0 Decision Crosswalk", 1
+    )[1].split("## Requirement-by-Requirement Audit", 1)[0]
+    expected = {
+        "G0-SCOPE",
+        "G0-TASK",
+        "G0-ONTOLOGY",
+        "G0-MV",
+        "G0-MV-Q",
+        "G0-MT",
+        "G0-READERS",
+        "G0-ESTIMAND",
+        "G0-INFERENCE",
+        "G0-METHOD",
+        "G0-BASELINES",
+        "G0-ABLATIONS",
+        "G0-MODEL",
+        "G0-CALIBRATION",
+        "G0-ARTIFACT",
+        "G0-DATA",
+        "G0-SAMPLING",
+        "G0-SHIFT",
+        "G0-RETENTION",
+        "G0-CHECKPOINT",
+        "G0-RESOURCES",
+        "G0-STAGING",
+        "G0-DOWNSTREAM",
+        "G0-BREADTH",
+    }
+    observed = re.findall(r"^\| `(G0-[A-Z-]+)` \|", crosswalk, flags=re.MULTILINE)
+    assert len(observed) == len(expected)
+    assert set(observed) == expected
+    assert "partially internally approved" in crosswalk.lower()
+    assert "restricted-tabular" in crosswalk.lower()
 
 
 def test_backbone_and_natural_ambiguity_resources_are_not_overclaimed() -> None:
@@ -1052,9 +1130,9 @@ def test_gate_zero_identity_is_not_selected_from_development() -> None:
         .lower()
         .split()
     )
-    assert "commander-selected `probvlm-2adapter`" in measurement
+    assert "internally approved `probvlm-2adapter`" in measurement
     assert "`point-2adapter-recon`" in measurement
-    assert "receive the remaining owner approvals" in measurement
+    assert "exact executable gate-0 specification" in measurement
     assert "one fitted instance" in measurement
     assert "named from development" not in measurement
 
@@ -1080,9 +1158,9 @@ def test_method_a_framework_preserves_identification_and_execution_boundaries() 
     assert "method-specifically standardized dimensionless effects" in framework
     assert "not a capacity-matched isolation" in framework
     assert "training-path or causal contribution" in framework
-    assert "scientific supervisor" in framework
-    assert "statistical owner" in framework
-    assert "model owner" in framework
+    assert "internally approved" in framework
+    assert "exact architecture/software/numerics absent" in framework
+    assert "gate 0 blocked" in framework
     assert "no experiment begins from this document alone" in framework
 
 

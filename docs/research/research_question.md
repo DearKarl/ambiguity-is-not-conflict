@@ -1,9 +1,8 @@
 # Research Question and Falsifiable Hypotheses
 
-**Status:** Method A is Commander-approved; the supervisor is aligned with the
-intervention framework and named roles, while formal sole-route co-approval,
-the exact task, estimand package, executable specification, and remaining
-owner approvals remain open
+**Status:** Method A's sole-route and canonical protocol/interface package are
+internally approved; the exact task, independent Gate-0 choices, executable
+specification, and external feasibility evidence remain open
 
 ## Narrow Research Question
 

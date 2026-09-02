@@ -1,6 +1,7 @@
 # Dataset Feasibility and Governance Audit
 
-**Status:** Gate-0 decision support; no dataset selected or accessed
+**Status:** Primary MIMIC route internally selected for readiness; external
+access/governance evidence and Gate-0 closure remain blocked; no data accessed
 **Audit date:** 2026-08-29
 **Evidence class:** Official dataset pages, data-use terms, primary dataset
 papers, and public repository metadata
@@ -30,6 +31,21 @@ because it is derived from MIMIC-CXR.
 
 No dataset files, record-level data, images, reports, models, credentials, or
 restricted content were accessed in this audit.
+
+## 2026-09-02 Official-Source Recheck
+
+The public official pages still classify both exact MIMIC resources as
+credentialed access and require an individual credentialed user, current CITI
+`Data or Specimens Only Research` training, and project DUA acceptance. The
+current PhysioNet Credentialed Health Data License/DUA 1.5.0 prohibits access
+sharing, requires physical/electronic security and current human-subjects/HIPAA
+training, and requires associated code to be contributed to an open research
+repository when results are openly disseminated. PhysioNet's online-service
+guidance requires verified zero retention, no training, and no human review;
+unclear services must not be used. Its derived-resource guidance treats
+MIMIC-derived datasets and models as sensitive. This public recheck verifies
+terms only; it does not verify any person's credentials, training, DUA status,
+ethics determination, secure environment, or access grant.
 
 ## Official-Source Feasibility Matrix
 
@@ -145,10 +161,12 @@ never independent breadth. CLASH or CrossCheck-Bench may be relevant
 alternatives, but their task units, licences, artifact process, and training
 overlap require a separate audit.
 
-**Proposed decision.** Do not freeze the breadth dataset until the atomic
-finding ontology and primary construct instrument pass the development gate.
-Prematurely adding a second dataset would multiply annotation and governance
-burden without establishing that the first measurement is valid.
+**Proposed decision.** Freeze the breadth identity, immutable snapshot, rights,
+construct-portability rule, and stop condition at Gate 0 as required by the
+canonical research contract, but defer every breadth access or execution action
+until the primary construct instrument passes the development gate. This
+reconciles prospective claim planning with the need to avoid premature
+annotation and governance burden.
 
 ## Pretraining-Contamination Rule
 
@@ -176,7 +194,8 @@ of the following are approved:
 
 1. exact MIMIC resource (`DICOM`, `JPG`, or a justified combination), version,
    authorized account holder, storage location, and processing boundary;
-2. a single atomic finding, image/report inclusion schema, exact metadata-only
+2. a single atomic finding, image/report inclusion schema, exact restricted
+   tabular screening
    feasibility query, minimum viable counts, and pre-specified stop rule; no
    observed count is required or claimed before access;
 3. blinded image-only and text-only annotation rubrics, reliability threshold,
@@ -190,7 +209,9 @@ of the following are approved:
    sufficient compatible/conflicting source blocks cannot be obtained.
 
 After Gate 0 freezes, a separate bounded brief may authorize the frozen
-metadata-only feasibility query in the approved environment. It must record the
+restricted tabular screening query in the approved environment. It must record
+the restricted linkage identifiers and report-derived clinical screening
+variables it reads, and
 actual access date, immutable snapshot, observed counts, exclusions, and cohort
 flow. Failure of the pre-specified count or leakage thresholds stops execution
 and reopens Gate 0 before any record inspection, annotation, model use, or

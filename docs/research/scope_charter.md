@@ -2,7 +2,7 @@
 
 **Status:** Canonical one-paper boundary
 
-**Decision:** DR-0002, DR-0006, DR-0016, and DR-0017
+**Decision:** DR-0002, DR-0006, DR-0016, DR-0017, and DR-0018
 
 ## Title-Level Direction
 
@@ -100,13 +100,15 @@ review provide downstream decision evidence. These are supports for the one
 central contribution, not separate contribution claims. Method A fixes
 `PROBVLM-2ADAPTER` as the non-novel primary instrument and
 `POINT-2ADAPTER-RECON` as its mean-only deterministic full-route comparator at
-the Commander interface level; the supervisor agrees with those named roles.
+the canonical protocol/interface level; DR-0018 records consolidated internal
+approval of those roles and the sole-route boundary.
 They share independently verified
 determinate-compatible selection information, the GGD score family, and target
 topology; removing probabilistic heads changes capacity and gradient paths, so
 no capacity-isolated mechanism claim is permitted. Other method families remain
 secondary challenges, with conformal methods as candidate risk-control layers.
-Required owners must still approve the executable specification before Gate 0
-closes. Failure of the frozen deterministic-advantage gate kills the current
+The exact executable specification and every remaining Gate-0 choice/evidence
+must still be frozen before Gate 0 closes. Failure of the frozen deterministic-
+advantage gate kills the current
 Main Track route; a qualified null or later venue decision must be recorded
 without post-hoc repackaging.

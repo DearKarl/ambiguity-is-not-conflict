@@ -863,15 +863,98 @@ decisions are separated explicitly.
   empirical evidence, Gate-0 closure, clinical value, NeurIPS eligibility,
   acceptance, or publication.
 
-## Open Gate 0 Decisions
+## DR-0018 — Consolidated Internal Authority and Data-Readiness Boundary
 
-- retain the Commander-approved `G0-SCOPE A` determinate-conflict-specificity
-  route while H2 remains unresolved; obtain explicit supervisor approval of
-  the exact veto-only boundary, and require a separately governed route for
+- **Date:** 2026-09-02
+- **Status:** Approved internal-boundary reconciliation; external evidence,
+  remaining finite choices, Gate-0 closure, and execution remain open
+- **Evidence provenance:** The Commander states that all approvals required for
+  the two previously identified formal scope/method boundaries and the
+  previously named canonical Method-A protocol/interface package have been
+  obtained, and that the Commander is the
+  consolidated accountable internal owner. The Commander directs the project
+  to proceed toward experiments by preparing the dataset route. No private
+  approval correspondence, credentials, training evidence, DUA, ethics record,
+  or secure-environment evidence was requested, inspected, or stored.
+- **Facts:** `G0-SCOPE A`, Method A as the sole route with B inactive, and the
+  named `PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON`/secondary `POINT-INFONCE`
+  scientific roles were already exact protocol choices. MIMIC-CXR v2.1.0 and
+  MIMIC-CXR-JPG v2.1.0 remain restricted resources requiring an individually
+  credentialed user, current required training, and a signed DUA. Their access
+  and security requirements are objective facts, not project-owner roles.
+- **Inference:** The Commander's statement closes the internal co-approval gap
+  for the exact scope and Method-A scientific/interface boundaries. It does
+  not fill in an executable architecture where numerical software details are
+  still absent, prove an institutional or resource fact, collapse independent
+  reader panels into one owner, or silently select every unrelated Gate-0
+  A/B/C row.
+- **Assumptions:** The Commander's statement accurately represents the internal
+  authority structure and the approvals obtained. Any later qualification or
+  conflict requires a dated amendment before execution.
+- **Decision — scope:** Record `G0-SCOPE A` as internally approved by every
+  required project owner. Natural ambiguity remains veto-only; H2 remains
+  unresolved without a separately governed identification route.
+- **Decision — method:** Record Method A as internally approved as the sole
+  active route with B inactive. The partial construct, intervention-relative
+  population target, explicitly non-novel `PROBVLM-2ADAPTER` instrument,
+  matched `POINT-2ADAPTER-RECON` comparator, secondary `POINT-INFONCE` role,
+  non-smooth component-bound inference semantics, and existing hard-kill
+  boundaries are approved at the canonical protocol/interface level. This is
+  not approval of unstated layer widths, dimensions, optimizer values,
+  software, calibration, tuning grids, checkpoint access, or other executable
+  details.
+- **Decision — data and retention:** The Commander authorizes preparation of
+  the already defined MIMIC-CXR/JPG v2.1.0 route and its no-hosted-service,
+  restricted-environment retention boundary. Record `G0-DATA A` and
+  `G0-RETENTION A` as internally selected, but externally unverified and
+  non-executable. The exact Stage-B metadata fields, aggregate disclosure
+  rules, patient partitions, and stop conditions are preserved in
+  `DDR-2026-09-02-001`; no query or download is authorized. The current term is
+  **restricted tabular screening query**, because the four-file boundary reads
+  restricted linkage identifiers and report-derived clinical screening
+  variables; earlier "metadata-only" wording must not imply public or harmless
+  content.
+- **Decision — remaining rows:** `G0-TASK`, `G0-ONTOLOGY`, `G0-MV`,
+  `G0-MV-Q`, `G0-MT`, `G0-READERS`, `G0-ESTIMAND`, `G0-INFERENCE`, the exact
+  remaining roles and executable portion of `G0-BASELINES`, plus
+  `G0-ABLATIONS`, `G0-MODEL`,
+  `G0-CALIBRATION`, `G0-ARTIFACT`, `G0-SAMPLING`, `G0-SHIFT`,
+  `G0-CHECKPOINT`, `G0-RESOURCES`, `G0-STAGING`, `G0-DOWNSTREAM`, and
+  `G0-BREADTH` remain choice-, specification-, or feasibility-blocked. The
+  blanket owner statement is not used to guess among their independent
+  alternatives or approve conditional prerequisites that have not passed.
+- **External evidence still required:** individual PhysioNet credential and
+  accepted training/DUA status for every accessor; an institutional ethics
+  determination; exact approved secure path, ACL, encryption, network, backup,
+  incident, retention, deletion, and disclosure controls; derivative-use and
+  licensing determination; independent qualified-reader roster and access
+  basis; actual compute/storage capacity; and later cohort-yield evidence.
+- **Consequence:** Gate 0 remains open. TB-0012 may produce only a pre-access
+  readiness packet. A restricted tabular screening query requires Gate-0
+  closure plus a
+  fresh Execution Contract and Stage-B Task Brief naming the exact approved
+  environment and command. Images, reports, annotations, models, and
+  experiments remain later separately governed stages.
+- **Reopening condition:** Reopen if the Commander corrects the authority
+  statement, an external approval is denied or expires, official terms change,
+  the secure environment differs, or any still-open finite choice is changed.
+- **Permitted claim:** The project has consolidated internal approval for its
+  narrow scope, Method-A protocol/interface, and preparation of the restricted
+  MIMIC route under the frozen retention boundary. This is not external access,
+  an executable freeze, Gate-0 closure, empirical evidence, clinical value,
+  NeurIPS eligibility, acceptance, or publication.
+
+## Remaining Gate 0 Decisions and Evidence
+
+- retain the internally approved `G0-SCOPE A` determinate-conflict-specificity
+  route while H2 remains unresolved; require a separately governed route for
   any broader ambiguity-identification claim;
 - provisional pleural-effusion finding, strict single-frontal-image unit, and
   exact visibility/eligibility rule;
-- two-stage MIMIC resource/query record, HMAC partitions including the
+- for the internally selected `G0-DATA A`/`G0-RETENTION A` route, obtain
+  objective credentials, training/DUA, ethics, secure path/ACL, derivative,
+  retention/deletion/backup, capacity, and disclosure evidence; then finalize
+  the two-stage MIMIC resource/query record and HMAC partitions including the
   recommended 300-screened/216-evaluable, equal-polarity `MV-1`
   qualification reserve, secure access route,
   aggregate outputs, screening floors, and derived-artifact terms;
@@ -885,11 +968,8 @@ decisions are separated explicitly.
   reject/narrow the affected route. No benchmark, runtime/capacity fact, or
   option approval currently exists, and the 613-GB conditional core-output
   floor cannot be assigned to the Commander's local workstation;
-- explicit supervisor approval of the Method-A sole-route/B-inactive boundary,
-  plus statistical-owner and model-owner approval of the Commander-frozen
-  Method-A interfaces and supervisor-aligned framework/named roles for
-  `PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON`; then all
-  applicable owners must freeze the exact executable backbone/baseline
+- for the internally approved Method-A sole-route and canonical interface
+  package, freeze the still-missing exact executable backbone/baseline
   implementations, numerical values, secondary `POINT-INFONCE` policy,
   ablation/applicability map, and licences;
 - magnitude-safe primary endpoint, compatible-reference scale, 0.20 construct

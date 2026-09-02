@@ -1,7 +1,7 @@
 # Statistical Analysis Plan
 
-**Status:** Method-A Commander-level instrument/comparator interface selected;
-required owner approvals and all analysis remain blocked by Gate 0
+**Status:** Method-A protocol/interface package internally approved; remaining
+Gate-0 choices, executable specification, and all analysis remain blocked
 
 **Date:** 2026-08-29
 **Evidence class:** Protocol and design-only power calculation
@@ -26,9 +26,10 @@ required owner approvals and all analysis remain blocked by Gate 0
   to fit, orient, normalize, tune, and freeze candidates only after the nested
   qualification reserve above is removed.
 - **Month-3 primary-candidate screen:** official-train HMAC bucket 70--84,
-  opened once after the Commander-selected `PROBVLM-2ADAPTER` and
-  `POINT-2ADAPTER-RECON` interfaces receive all Gate-0 owner approvals and
-  have been fit/tuned only in development and
+  opened once after the internally approved `PROBVLM-2ADAPTER` and
+  `POINT-2ADAPTER-RECON` interfaces receive exact executable specifications,
+  every remaining Gate-0 choice is frozen, and they have been fit/tuned only
+  in development and
   their fitted instances, normalizers, orientations, code, and configurations
   are locked; used only to kill or provisionally advance those already frozen
   instances. Nothing is selected or refit there, and it cannot supply
@@ -331,12 +332,12 @@ does not manufacture a deterministic win from an underpowered comparison.
    Do not bootstrap either minimum directly, and do not substitute
    \(\min_j(\mu_{Uj}-\mu_{Dj})\) for \(A_\psi\). For signed `psi_id`, report both
    smooth components `E[D_C-D_j]` and `E[D_C+D_j]` for every control.
-5. The Commander has selected exactly one non-novel primary instrument
-   interface, `PROBVLM-2ADAPTER`, and one matched deterministic comparator,
-   `POINT-2ADAPTER-RECON`, under Method A. `POINT-INFONCE` is secondary. This
-   resolves the Commander choice but not Gate 0: scientific-supervisor,
-   statistical-owner, and model-owner approval and the exact executable
-   specification remain required.
+5. DR-0018 records consolidated internal approval of exactly one non-novel
+   primary instrument interface, `PROBVLM-2ADAPTER`, and one matched
+   deterministic comparator, `POINT-2ADAPTER-RECON`, under Method A.
+   `POINT-INFONCE` is secondary. This resolves the internal interface and
+   sole-route approvals but not Gate 0: the exact executable specification and
+   remaining independent Gate-0 choices/evidence remain required.
    Before the Month-3 set is opened, development bucket 0--69 may fit/tune only
    within those frozen rules and must lock exactly one fitted instance of each.
    Month 3 can kill or provisionally advance only those instances; every other

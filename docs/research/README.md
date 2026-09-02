@@ -21,16 +21,17 @@ This directory is authoritative for the scientific scope and evidence state of
 16. [Data and clinical governance](data_governance.md)
 17. [Dataset feasibility audit](dataset_feasibility_audit.md)
 18. [Dataset decision candidate](dataset_decision_candidate.md)
-19. [Execution budget and backbone audit](execution_budget_and_backbone_audit.md)
-20. [Estimator formalization and equivalence audit](estimator_formalization_audit.md)
-21. [Method-A identification framework](method_a_identification_framework.md)
-22. [Baselines and ablations](baselines_and_ablations.md)
-23. [Literature matrix](literature_matrix.md)
-24. [Novelty and prior-art audit](novelty_audit.md)
-25. [Submission strategy](submission_strategy.md)
-26. [Gate-0 decision dossier](gate0_decision_dossier.md)
-27. [Gate-0 closure audit](gate0_closure_audit.md)
-28. [Decision log](decision_log.md)
+19. [Dataset decision/readiness record](dataset_decision_record.md)
+20. [Execution budget and backbone audit](execution_budget_and_backbone_audit.md)
+21. [Estimator formalization and equivalence audit](estimator_formalization_audit.md)
+22. [Method-A identification framework](method_a_identification_framework.md)
+23. [Baselines and ablations](baselines_and_ablations.md)
+24. [Literature matrix](literature_matrix.md)
+25. [Novelty and prior-art audit](novelty_audit.md)
+26. [Submission strategy](submission_strategy.md)
+27. [Gate-0 decision dossier](gate0_decision_dossier.md)
+28. [Gate-0 closure audit](gate0_closure_audit.md)
+29. [Decision log](decision_log.md)
 
 The [roadmap](../roadmap.md) turns these documents into evidence gates. A
 planned method or experiment is not a result. Any conflict between a task brief
@@ -54,22 +55,21 @@ not supersede the canonical contract or decision log.
 
 The repository currently contains **protocol only**.
 
-The Gate-0 freeze candidate is intentionally not executable. Its finite owner
-choices are listed in the [decision dossier](gate0_decision_dossier.md) and its
-current blockers in the [closure audit](gate0_closure_audit.md); only an
-approved dated decision record can change that status.
+Gate 0 remains intentionally non-executable. Its row-by-row choices are listed
+in the [decision dossier](gate0_decision_dossier.md), its current blockers in
+the [closure audit](gate0_closure_audit.md), and its restricted-data readiness
+boundary in the [dataset decision record](dataset_decision_record.md).
 
 DR-0015 records the Commander's partial `G0-SCOPE A` decision. DR-0016 records
 the Commander's selection of `G0-METHOD A` as the sole route and freezes the
 paper-faithful-likelihood `PROBVLM-2ADAPTER` and fitted-global-constant
 `POINT-2ADAPTER-RECON` scientific interfaces; `POINT-INFONCE` is secondary.
-DR-0017 records the Commander's report that the scientific supervisor aligned
-with the ambiguity/conflict distinction, Method-A intervention framing and
-named method roles, chest-radiography validation domain, and conditional
-NeurIPS 2027 strategy. The email did not ask the supervisor to choose
-`G0-SCOPE A` over B or approve Method A as the sole route with B inactive;
-those formal co-approvals, statistical-owner, model-owner, executable-
-specification, and all other applicable Gate-0 requirements remain open.
+DR-0017 preserves the earlier bounded supervisor-alignment history. DR-0018
+records consolidated internal approval of `G0-SCOPE A`, Method A's sole-route
+boundary, its canonical protocol/interface package, and readiness-only
+`G0-DATA A`/`G0-RETENTION A`. Exact executable specifications, independent
+Gate-0 choices, and objective access, ethics, security, reader, licence,
+capacity, and feasibility evidence remain open.
 DR-0015 also rules out the
 Commander's local workstation for TB-0011's approximately 613-GB conditional
 simulation-output floor; that number is not the dataset size or a final upper

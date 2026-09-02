@@ -1,7 +1,7 @@
 # Measurement Protocol
 
-**Status:** Method-A Commander-level instrument/comparator interface selected;
-required owner approvals and all execution remain blocked by Gate 0
+**Status:** Method-A protocol/interface package internally approved; exact
+executable specification and all execution remain blocked by Gate 0
 
 ## Objective
 
@@ -223,7 +223,7 @@ semantic selection supervision, while semantic labels are neither inputs nor
 loss targets. Because the point route removes heads and gradient paths, this is
 a complete-route comparison with exact capacity/compute disclosure, not a
 capacity-isolated mechanism test. Raw deterministic similarity,
-`POINT-INFONCE`, and the approved evidential route are secondary threats. A
+`POINT-INFONCE`, and the candidate evidential route are secondary threats. A
 frozen-means diagnostic using the point route's same global constants is
 mandatory before any narrow direct score-path attribution.
 
@@ -293,9 +293,9 @@ valid governed ambiguity intervention or a separately frozen estimand with
 defensible conditional-exchangeability and transport assumptions. Score
 orientation and normalization use development-compatible cases only.
 
-Promotion out of the kill-test stage requires the Commander-selected
+Promotion out of the kill-test stage requires the internally approved
 `PROBVLM-2ADAPTER` and `POINT-2ADAPTER-RECON` scientific interfaces to receive
-the remaining owner approvals and an exact executable Gate-0 specification.
+an exact executable Gate-0 specification.
 Development may fit or tune only inside those frozen identities; one fitted
 instance, normalizer, link, and configuration for each must then be locked
 before holdout access. The pre-locked instrument must satisfy all of the
