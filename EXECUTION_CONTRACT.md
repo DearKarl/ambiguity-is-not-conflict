@@ -59,7 +59,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 - Task: record the scientific supervisor's five-point Method-A agreement as
   reported by the Commander and reconcile only directly implicated Gate-0
   owner statuses
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander, in the current Codex task on 2026-09-02
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/record-supervisor-method-a-approval`
@@ -292,3 +292,31 @@ branch deletion is authorized.
   remote/base/branch checks remain valid at `0/0`, and this contract remains
   the only changed repository file. Substantive status reconciliation may now
   proceed only within this contract.
+
+### Completion record
+
+- Primary commit: `e2ba73390b3943f3c8c0c293adb87d217a811294`.
+- Primary branch: `codex/record-supervisor-method-a-approval`; remote/local
+  divergence was `0/0` after push.
+- Primary branch CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584111243`
+  (`SUCCESS`).
+- Primary pull request:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/6`; its PR CI was
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584181575`
+  (`SUCCESS`).
+- Primary merge revision: `8fccd5a016a2924ff42db337013d8e0c43f7ab56`.
+- Post-merge `main` CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584248727`
+  (`SUCCESS`).
+- GitHub reported the known single-collaborator review requirement. The merge
+  used the disclosed normal SHA-guarded API path without an explicit override
+  flag, force operation, branch deletion, or protection change.
+- Completion-only branch:
+  `codex/record-supervisor-method-a-approval-completion`, based exactly on the
+  primary merge revision. Its closure commit, PR, merge revision, and post-
+  merge CI are self-identifying external evidence and are not recursively
+  written into this file.
+- This contract authorizes no further substantive work. After completion-state
+  verification, only ordinary synchronization of this two-contract closure
+  and the final user handoff may follow.
