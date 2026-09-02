@@ -8,9 +8,13 @@ assumed; the schedule will be rebased when the call is published.
 The current [Gate-0 closure audit](research/gate0_closure_audit.md) is a freeze
 candidate, not approval. It explicitly leaves image/text ambiguity
 identification and strict checkpoint non-exposure unresolved. DR-0016 selects
-Method A and its Commander-level instrument/comparator interfaces, but no
-experiment begins until the remaining Gate-0 owners and execution package are
-complete.
+Method A and its Commander-level instrument/comparator interfaces; DR-0017
+records user-attested scientific-supervisor agreement with that framing, the
+ambiguity/conflict distinction, named method roles, chest-radiography
+validation, and conditional venue strategy. The exact `G0-SCOPE A` veto-only
+and Method-A sole-route/B-inactive choices were not asked and still require
+formal supervisor approval. No experiment begins until the remaining Gate-0
+owners and execution package are complete.
 
 ## Month 0–1 — Freeze the Research Contract
 

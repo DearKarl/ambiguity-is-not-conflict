@@ -799,11 +799,76 @@ decisions are separated explicitly.
   empirical identification, probabilistic superiority, clinical value, Gate-0
   closure, NeurIPS eligibility, acceptance, or publication.
 
+## DR-0017 — Scientific-Supervisor Alignment on Scope and Method A
+
+- **Date:** 2026-09-02
+- **Status:** User-attested scientific-supervisor alignment at the conceptual-
+  framing and named-method-role level; formal scope/sole-route co-approvals,
+  remaining owners, and executable details are open; not executable
+- **Evidence provenance:** The Commander reports that the scientific
+  supervisor agreed after receiving a private email that asked exactly five
+  questions. Codex did not inspect, request, quote, or store the correspondence.
+- **Facts conveyed for approval:** The email asked whether the supervisor
+  agreed with (1) ambiguity within a modality being distinct from cross-modal
+  conflict; (2) Method A's intervention-based identification framework as the
+  primary contribution; (3) the scientific roles of the explicitly non-novel
+  `PROBVLM-2ADAPTER` instrument, matched `POINT-2ADAPTER-RECON` comparator, and
+  secondary `POINT-INFONCE`; (4) chest radiography as the primary validation
+  domain; and (5) NeurIPS 2027 Main Track as a conditional strategic target.
+- **Inference:** The reported agreement supports scientific-supervisor
+  alignment with the ambiguity/conflict distinction and with the intervention-
+  based framework as the primary contribution. It also supports the named
+  primary instrument/comparator roles, the chest-radiography validation-domain
+  choice, and the conditional venue strategy. The first question did not ask
+  the supervisor to select `G0-SCOPE A` over B or approve its veto-only
+  observational boundary; the second did not ask whether Method A is the sole
+  route with B inactive. Those formal co-approvals cannot be inferred.
+- **Assumption:** The Commander's report accurately represents an unqualified
+  agreement to the five questions. Any additional condition communicated by
+  the supervisor would require a dated amendment.
+- **Decision:** Keep `G0-SCOPE A` and Method A's sole-route/B-inactive boundary
+  Commander-approved only. Record supervisor alignment with the ambiguity/
+  conflict distinction, the intervention-based framework as the primary
+  contribution, and the named roles of `PROBVLM-2ADAPTER`,
+  `POINT-2ADAPTER-RECON`, and secondary `POINT-INFONCE`. Formal supervisor
+  approval of those two exact boundaries, the exact interface, statistical/
+  inference package, model-owner, implementation, licence, calibration, and
+  other applicable approvals remain open.
+- **Boundary:** This approval does not freeze the provisional pleural-effusion
+  task, ontology, `MV-1`/`MT-1`, readers, estimand, inference, ablation suite,
+  exact architecture/software/hyperparameters, checkpoint, data access,
+  governance, resources, breadth benchmark, or any experiment. Chest
+  radiography approval is a validation-domain choice, not dataset, task, or
+  clinical-benefit approval. Venue alignment is not eligibility, acceptance,
+  or publication evidence.
+- **Alternatives considered:** Requesting or committing the private email was
+  rejected as unnecessary and inconsistent with the correspondence boundary.
+  Treating the response as full Gate-0 approval was rejected as approval
+  inflation.
+- **Consequences:** Scientific-supervisor conceptual alignment is recorded, but
+  the formal supervisor blockers remain for the exact `G0-SCOPE A` veto-only
+  and Method-A sole-route/B-inactive choices. Gate 0 remains open. The next
+  decision work is explicit supervisor confirmation of those boundaries,
+  statistical- and model-owner review of the Method-A package, and the still-
+  open clinical, data, governance, resource, staging, and breadth choices.
+- **Review date:** At statistical/model-owner review, before Gate-0 closure, or
+  immediately if the supervisor communicates a qualification or rejection.
+- **Reopening condition:** Reopen only if the Commander corrects the report,
+  the supervisor adds a condition, a required owner rejects the interface, or
+  new primary evidence changes the scientific framing. Results cannot be used
+  to reinterpret the scope of this approval.
+- **Permitted claim:** The Commander reports scientific-supervisor agreement
+  with the five stated scientific-framing questions. This is not raw
+  correspondence evidence, full owner sign-off, an executable freeze,
+  empirical evidence, Gate-0 closure, clinical value, NeurIPS eligibility,
+  acceptance, or publication.
+
 ## Open Gate 0 Decisions
 
-- obtain scientific-supervisor co-approval for the Commander-selected
-  `G0-SCOPE A` determinate-conflict-specificity route while H2 remains
-  unresolved;
+- retain the Commander-approved `G0-SCOPE A` determinate-conflict-specificity
+  route while H2 remains unresolved; obtain explicit supervisor approval of
+  the exact veto-only boundary, and require a separately governed route for
+  any broader ambiguity-identification claim;
 - provisional pleural-effusion finding, strict single-frontal-image unit, and
   exact visibility/eligibility rule;
 - two-stage MIMIC resource/query record, HMAC partitions including the
@@ -820,11 +885,13 @@ decisions are separated explicitly.
   reject/narrow the affected route. No benchmark, runtime/capacity fact, or
   option approval currently exists, and the 613-GB conditional core-output
   floor cannot be assigned to the Commander's local workstation;
-- scientific-supervisor, statistical-owner, and model-owner approval of the
-  Commander-selected Method-A framework and
-  `PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON` interfaces; then exact executable
-  backbone/baseline implementations, numerical values, secondary
-  `POINT-INFONCE` policy, ablation/applicability map, and licence freeze;
+- explicit supervisor approval of the Method-A sole-route/B-inactive boundary,
+  plus statistical-owner and model-owner approval of the Commander-frozen
+  Method-A interfaces and supervisor-aligned framework/named roles for
+  `PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON`; then all
+  applicable owners must freeze the exact executable backbone/baseline
+  implementations, numerical values, secondary `POINT-INFONCE` policy,
+  ablation/applicability map, and licences;
 - magnitude-safe primary endpoint, compatible-reference scale, 0.20 construct
   threshold, secondary `theta`, the `G0-INFERENCE` max-`t`/multiplicity/fixed-
   sequence package, 0.10 `A_psi` probabilistic-instrument material-advantage

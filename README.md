@@ -36,9 +36,13 @@ The [formalization audit](docs/research/estimator_formalization_audit.md)
 selected no novel pointwise estimator: the three exact candidates collapsed to
 deterministic or already published forms. The Commander has therefore selected
 [Method A](docs/research/method_a_identification_framework.md) as the sole
-route. It freezes a non-novel paper-faithful `PROBVLM-2ADAPTER` instrument and
-the mean-only `POINT-2ADAPTER-RECON` comparator at the scientific-interface
-level; required owner approvals and every executable detail remain open.
+route. As reported by the Commander, the scientific supervisor agrees with the
+intervention-based framework as the primary contribution and with the named
+method roles, but the five-question email did not ask for formal approval of
+the sole-route/B-inactive boundary. DR-0016 freezes a non-novel paper-faithful
+`PROBVLM-2ADAPTER` instrument and the mean-only `POINT-2ADAPTER-RECON`
+comparator at the Commander interface level. Formal supervisor boundary,
+statistical/model, and all executable approvals remain open.
 
 The [reader and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
 now supplies an exact finite-roster measurement candidate, joint polarity gate,
@@ -104,14 +108,14 @@ the permitted terminology.
 | --- | --- |
 | Project identity | **Decided:** `Ambiguity Is Not Conflict` |
 | Primary route | **Decided in principle:** identification of an intervention-relative frozen-score response within determinate image--report blocks before calibration or decision claims; not arbitrary-pair conflict identification |
-| Scope boundary | **Commander approved `G0-SCOPE A`:** determinate-conflict specificity is primary; natural ambiguity is veto-only. Scientific-supervisor co-approval remains open. |
-| Validation domain | **Primary route:** chest radiography at atomic finding level; the exact task and dataset remain Gate 0 decisions |
+| Scope boundary | **Commander approved `G0-SCOPE A`; supervisor aligned with the ambiguity/conflict distinction:** determinate-conflict specificity is primary and natural ambiguity is veto-only under the Commander decision. Formal supervisor approval of A over B remains open. |
+| Validation domain | **Commander and supervisor aligned:** chest radiography is primary; the exact task and dataset remain Gate 0 decisions |
 | Data route | **Candidate:** coupled MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as a MIMIC-derived synthetic stress test, never independent breadth |
-| Method identity | **Commander approved `G0-METHOD A`:** intervention-identified measurement framework; scientific-supervisor, statistical-owner, and model-owner approvals remain open |
-| Primary instrument | **Commander-level interface:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; no probabilistic advantage is presumed |
-| Matched comparator | **Commander-level interface:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary because its contrastive negatives add a different mechanism |
+| Method identity | **Commander approved `G0-METHOD A`; supervisor aligned with its intervention framework and named roles:** formal supervisor approval of the sole-route/B-inactive boundary and exact statistical, model, inference, and executable approvals remain open |
+| Primary instrument | **Named role agreed:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; its exact technical interface remains owner-blocked and no probabilistic advantage is presumed |
+| Matched comparator | **Named role agreed:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary, while exact technical and negative-policy approvals remain open |
 | Local storage | **Binding constraint:** the approximately 613-GB conditional simulation-output floor cannot run locally; this is not the medical dataset size, and `G0-RESOURCES` remains open |
-| Submission target | **Planning decision:** NeurIPS 2027 Main Track; acceptance is not assumed |
+| Submission target | **Commander/supervisor-aligned planning decision:** NeurIPS 2027 Main Track, conditional on evidence and the official call; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
 | Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
 

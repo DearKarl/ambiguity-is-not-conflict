@@ -1,7 +1,8 @@
 # Baselines and Ablations
 
-**Status:** Method-A Commander-level primary instrument/comparator interfaces
-selected; other-owner approval and exact implementations await Gate 0
+**Status:** Method-A Commander-level interfaces frozen; supervisor agrees with
+the named primary/secondary roles; statistical/model, full baseline/ablation,
+and exact implementation approvals await Gate 0
 
 The scientific comparison asks whether a frozen score's intervention-relative
 response adds information beyond simpler predictors under the same backbone,
@@ -50,8 +51,9 @@ point-softmax adapter whenever learned scale or covariance is credited. The
 closest published conflict methods above must either be represented fairly or
 excluded with a pre-results technical and licence justification.
 
-Before the Month-3 holdout is opened, every required owner must approve the
-Commander-selected pair: the explicitly non-novel `PROBVLM-2ADAPTER`
+Before the Month-3 holdout is opened, every remaining required owner must
+approve the Commander-frozen, supervisor-role-aligned pair: the explicitly
+non-novel `PROBVLM-2ADAPTER`
 instrument and `POINT-2ADAPTER-RECON` matched deterministic comparator. Method
 A is the sole route; development may fit only those frozen identities and
 cannot promote another candidate because it performs best. Declaring multiple

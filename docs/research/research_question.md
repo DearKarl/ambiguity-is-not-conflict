@@ -1,7 +1,9 @@
 # Research Question and Falsifiable Hypotheses
 
-**Status:** Method-A Commander-level framework freeze; exact task, estimand
-package, and required owner approvals remain open
+**Status:** Method A is Commander-approved; the supervisor is aligned with the
+intervention framework and named roles, while formal sole-route co-approval,
+the exact task, estimand package, executable specification, and remaining
+owner approvals remain open
 
 ## Narrow Research Question
 

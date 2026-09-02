@@ -1,8 +1,8 @@
 # Submission Strategy
 
-**Status:** NeurIPS 2027 Main Track remains the primary objective; Method A is
-Commander-approved, other-owner approval is open, and the 2027 call is not yet
-available
+**Status:** NeurIPS 2027 Main Track remains the Commander-and-supervisor-
+aligned conditional objective; remaining owners are open and the 2027 call is
+not yet available
 
 ## Primary Objective
 
@@ -52,8 +52,9 @@ be the 2027 deadlines.
   will exist in 2027, and the currently reported time, compute, data-access,
   and clinical-support plans will become documented resources.
 - **Decision:** prepare one Main Track Method-A identification-and-measurement
-  route; recheck the official 2027 call before choosing the final track and
-  contribution type.
+  route; DR-0017 records user-attested scientific-supervisor agreement with
+  that conditional strategy. Recheck the official 2027 call before choosing
+  the final track and contribution type.
 
 ## Main Track Paper Identity
 
