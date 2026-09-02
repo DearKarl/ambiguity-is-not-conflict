@@ -58,7 +58,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 - Contract ID: `EC-2026-09-02-002`
 - Task: reconcile the Commander's consolidated internal-owner approval, audit
   Gate-0 closure, and prepare the restricted-data readiness packet
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander, in the current Codex task on 2026-09-02
 - Linked Handoff Contract: `HC-2026-09-02-002`
 - Linked Task Brief: `TB-0012`
@@ -349,3 +349,30 @@ Stage-B Task Brief naming the approved environment and exact commands.
   had already been read in full during the same pre-edit traversal. Authority,
   forbidden actions, stopping criteria, external boundaries, and evidence
   requirements remain understood and unchanged.
+
+### Completion record
+
+- Primary commit: `ddb1f018627ca060ed3f252f8b733bfeb9860038`.
+- Primary branch: `codex/gate0-data-preparation`; local/remote divergence was
+  `0/0` after push.
+- Primary branch CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590692077`
+  (`SUCCESS`).
+- Primary pull request:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/8`; its PR CI was
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590757092`
+  (`SUCCESS`).
+- Primary merge revision: `b01c103b522b5e4c384d5d5942d8eb955f9c23d6`.
+- Post-merge `main` CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590838380`
+  (`SUCCESS`).
+- GitHub reported the known single-collaborator review requirement. The merge
+  used the disclosed normal SHA-guarded API path without an explicit override
+  flag, force operation, branch deletion, or protection change.
+- Completion-only branch: `codex/gate0-data-preparation-completion`, based
+  exactly on the primary merge revision. Its closure commit, PR, merge
+  revision, and post-merge CI are self-identifying external evidence and are
+  not recursively written into this file.
+- This contract authorizes no further substantive work. After completion-state
+  verification, only ordinary synchronization of this two-contract closure
+  and the final user handoff may follow.
