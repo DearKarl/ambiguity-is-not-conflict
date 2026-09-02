@@ -49,7 +49,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 - Linked Execution Contract: `EC-2026-09-02-001`
 - Task: record the scientific supervisor's five-point Method-A agreement as
   reported by the Commander and reconcile directly implicated Gate-0 statuses
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Codex, Ultra scientific-governance task
 - Handoff date: 2026-09-02 (Asia/Shanghai)
 
@@ -67,7 +67,7 @@ included.
 
 ### Changed boundary
 
-- The planned primary boundary contains exactly 15 paths:
+- The delivered primary boundary contains exactly 15 paths:
   `EXECUTION_CONTRACT.md`, `HANDOFF_CONTRACT.md`, `README.md`,
   `docs/roadmap.md`, `docs/research/README.md`,
   `docs/research/research_contract.md`, `docs/research/scope_charter.md`,
@@ -139,6 +139,9 @@ included.
   `python scripts/check_repository.py` passed; `git diff --check` passed; the
   changed set is exactly the 15 authorized paths; sensitive-content, binary,
   untracked-file, and greater-than-5-MB artifact scans are clean.
+- Primary branch CI, PR CI, and post-merge `main` CI all passed. The completion-
+  state two-contract diff must independently pass the same repository, scope,
+  sensitive-content, size, and diff checks before its closure commit.
 
 ### Git and external evidence
 
@@ -146,7 +149,25 @@ included.
 - Working branch: `codex/record-supervisor-method-a-approval`.
 - Remote: `https://github.com/DearKarl/ambiguity-is-not-conflict.git`.
 - Initial divergence: `0/0`; no remote branch of the same name existed.
-- No external mutation has occurred under this task at this in-progress stage.
+- Primary commit: `e2ba73390b3943f3c8c0c293adb87d217a811294`.
+- Primary branch CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584111243`
+  (`SUCCESS`).
+- Primary PR: `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/6`;
+  PR CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584181575`
+  (`SUCCESS`).
+- Primary merge revision: `8fccd5a016a2924ff42db337013d8e0c43f7ab56`;
+  post-merge `main` CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584248727`
+  (`SUCCESS`).
+- The merge used the disclosed normal SHA-guarded API path under the known
+  single-collaborator review residual, without an explicit override flag,
+  force operation, branch deletion, or protection change.
+- Completion branch:
+  `codex/record-supervisor-method-a-approval-completion`, based exactly on the
+  primary merge revision. The closure commit and PR self-identify in Git and
+  GitHub and are not recursively inserted here.
 
 ### Deviations and negative results
 
@@ -172,9 +193,9 @@ included.
 
 ### Next permitted boundary
 
-Complete independent post-edit review and local checks, then use the authorized
-primary and finite closure GitHub lifecycle. After this task closes, the next
-scientific boundary is explicit supervisor confirmation of the exact scope and
+No further work is authorized under this completed contract. A new explicit
+Commander authorization and fresh linked contracts are required for the next
+scientific boundary: explicit supervisor confirmation of the exact scope and
 sole-route choices, plus statistical-owner and model-owner review of the exact
 Method-A package, followed by the remaining clinical/data/governance/resource
 Gate-0 decisions. No experiment follows automatically.
