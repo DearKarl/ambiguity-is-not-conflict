@@ -2,7 +2,7 @@
 
 **Status:** Canonical one-paper boundary
 
-**Decision:** DR-0002, DR-0006, and DR-0016
+**Decision:** DR-0002, DR-0006, DR-0016, and DR-0017
 
 ## Title-Level Direction
 
@@ -20,9 +20,9 @@ paired controls, with natural ambiguity as a falsification audit. A full
 ambiguity-separation claim remains blocked until a valid governed intervention
 or separately defended observational identification/transport route exists.
 
-Chest radiography is the primary validation domain, not part of the scientific
-construct or title. Any breadth study must replicate the same construct and
-cannot become a second research direction.
+Chest radiography is the Commander-and-supervisor-aligned primary validation
+domain, not part of the scientific construct or title. Any breadth study must
+replicate the same construct and cannot become a second research direction.
 
 ## Canonical Research Object
 
@@ -100,7 +100,8 @@ review provide downstream decision evidence. These are supports for the one
 central contribution, not separate contribution claims. Method A fixes
 `PROBVLM-2ADAPTER` as the non-novel primary instrument and
 `POINT-2ADAPTER-RECON` as its mean-only deterministic full-route comparator at
-the Commander scientific-interface level. They share independently verified
+the Commander interface level; the supervisor agrees with those named roles.
+They share independently verified
 determinate-compatible selection information, the GGD score family, and target
 topology; removing probabilistic heads changes capacity and gradient paths, so
 no capacity-isolated mechanism claim is permitted. Other method families remain

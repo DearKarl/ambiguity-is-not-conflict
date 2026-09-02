@@ -4,9 +4,12 @@
 
 **Authority:** DR-0001 through DR-0006; DR-0015 for the Commander's partial
 `G0-SCOPE A` choice and local-storage boundary; DR-0016 for the Commander's
-partial `G0-METHOD A` and scientific-interface choices
+partial `G0-METHOD A` and scientific-interface choices; DR-0017 for the
+Commander's report of scientific-supervisor agreement with the five bounded
+scope, Method-A framing/named-role, validation-domain, and venue-strategy
+questions
 
-**Last reviewed:** 2026-09-01
+**Last reviewed:** 2026-09-02
 
 ## Primary Outcome
 
@@ -30,12 +33,19 @@ promotion outcomes, not substitutes for construct validity.
 
 The Commander has selected the narrower `G0-SCOPE A` route: determinate-
 conflict specificity is primary and natural ambiguity is a veto-only audit.
-Scientific-supervisor co-approval remains open, so this partial decision does
-not close Gate 0 or authorize execution. The Commander has separately selected
-`G0-METHOD A` as the sole route and the
-`PROBVLM-2ADAPTER`/`POINT-2ADAPTER-RECON` scientific interfaces. Scientific-
-supervisor, statistical-owner, and model-owner co-approval and all executable
-details remain open.
+DR-0017 records the Commander's report that the scientific supervisor aligned
+with the ambiguity/conflict distinction, but the email did not ask the
+supervisor to approve this exact A-over-B, veto-only boundary. The Commander
+has also selected `G0-METHOD A` as the sole route; the supervisor aligned with
+its intervention-based framing as the primary contribution and with the
+scientific roles of the explicitly non-novel `PROBVLM-2ADAPTER` instrument,
+`POINT-2ADAPTER-RECON` comparator, and secondary `POINT-INFONCE`, but was not
+asked to approve the sole-route/B-inactive boundary. Chest radiography as the
+primary validation domain and NeurIPS 2027 Main Track as a conditional
+strategic target are also aligned. Formal supervisor boundary, statistical-
+owner, model-owner, exact executable, clinical, data, governance, resource,
+and other applicable approvals remain open. This bounded alignment does not
+close Gate 0 or authorize execution.
 
 ## Authoritative Inputs
 

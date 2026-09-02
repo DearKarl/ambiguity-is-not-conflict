@@ -63,8 +63,14 @@ DR-0015 records the Commander's partial `G0-SCOPE A` decision. DR-0016 records
 the Commander's selection of `G0-METHOD A` as the sole route and freezes the
 paper-faithful-likelihood `PROBVLM-2ADAPTER` and fitted-global-constant
 `POINT-2ADAPTER-RECON` scientific interfaces; `POINT-INFONCE` is secondary.
-Scientific-supervisor, statistical-owner, and
-model-owner co-approval and all other Gate-0 requirements remain open. DR-0015
-also rules out the Commander's local workstation for TB-0011's approximately
-613-GB conditional simulation-output floor; that number is not the dataset
-size or a final upper bound.
+DR-0017 records the Commander's report that the scientific supervisor aligned
+with the ambiguity/conflict distinction, Method-A intervention framing and
+named method roles, chest-radiography validation domain, and conditional
+NeurIPS 2027 strategy. The email did not ask the supervisor to choose
+`G0-SCOPE A` over B or approve Method A as the sole route with B inactive;
+those formal co-approvals, statistical-owner, model-owner, executable-
+specification, and all other applicable Gate-0 requirements remain open.
+DR-0015 also rules out the
+Commander's local workstation for TB-0011's approximately 613-GB conditional
+simulation-output floor; that number is not the dataset size or a final upper
+bound.

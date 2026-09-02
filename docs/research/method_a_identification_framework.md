@@ -1,11 +1,13 @@
 # Method-A Identification and Measurement Framework
 
-**Status:** Commander-approved scientific-interface freeze; scientific-
-supervisor, statistical-owner, and model-owner co-approval open; protocol only
+**Status:** Commander-approved interface freeze with user-attested supervisor
+alignment on the intervention framing and named method roles; formal
+supervisor approval of the sole-route/B-inactive boundary and exact
+statistical, model, inference, and executable approvals open; protocol only
 
-**Authority:** DR-0016 and EC-2026-09-01-001
+**Authority:** DR-0016 and DR-0017
 
-**Date:** 2026-09-01
+**Date:** 2026-09-02
 
 ## Decision Boundary
 
@@ -16,11 +18,16 @@ prospectively frozen score responds specifically to determinate semantic
 incompatibility rather than to approved modality-specific information-loss
 controls.
 
-This document freezes the scientific interface at the Commander level. It does
-not close Gate 0, approve an executable implementation, establish novelty,
-authorize data or model access, or create scientific evidence. Exact software,
-backbone, data, numerical, calibration, reader, and resource choices remain
-owner-blocked.
+This document retains the Commander-level scientific-interface freeze from
+DR-0016. Based on the Commander's report, DR-0017 adds supervisor agreement
+with Method A's scientific framing and the named method roles, not the exact
+score, inference, architecture, or executable package. The email asked whether
+the intervention framework should be the primary contribution, not whether
+Method A must be the sole route with B inactive; formal supervisor approval of
+that exact boundary remains open. This does not close Gate 0, approve
+implementation, establish novelty, authorize data/model access, or create
+scientific evidence. Exact software, backbone, data, numerical, calibration,
+reader, and resource choices remain owner-blocked.
 
 ## Fact, Inference, Assumption, and Decision Ledger
 
@@ -399,14 +406,15 @@ that did or did not falsify the narrow specificity interpretation.
 
 | Boundary | Commander | Other required owners | Execution status |
 | --- | --- | --- | --- |
-| Method A as sole route | Approved | Scientific supervisor, statistical owner, and model owner open | Not executable |
-| Partial-construct and intervention framework | Approved | Scientific supervisor and statistical owner open | Not executable |
-| `PROBVLM-2ADAPTER` scientific interface | Approved | Scientific supervisor and model owner open | Not executable |
-| `POINT-2ADAPTER-RECON` matched interface | Approved | Statistical owner and model owner open | Not executable |
-| `POINT-INFONCE` secondary role | Approved | Statistical owner and model owner open; negative policy unresolved | Not executable |
+| Method A as sole route | Approved | Scientific-supervisor approval of the sole-route/B-inactive boundary open; statistical and model owners open | Not executable |
+| Partial-construct and intervention framework | Approved | Scientific supervisor aligned with primary-contribution framing; statistical owner open | Not executable |
+| `PROBVLM-2ADAPTER` scientific interface | Approved | Scientific supervisor aligned with named role, not exact interface; model owner open | Not executable |
+| `POINT-2ADAPTER-RECON` matched interface | Approved | Scientific supervisor aligned with named role, not exact interface; statistical and model owners open | Not executable |
+| `POINT-INFONCE` secondary role | Approved | Scientific supervisor aligned with named role; statistical and model owners open; negative policy unresolved | Not executable |
 | Task, data, readers, backbone, software, calibration, and resources | Open | Named owners open | Gate 0 blocked |
 
-The next permitted action is owner reconciliation of this interface together
-with the remaining Gate-0 task, data, intervention, inference, model, reader,
-resource, and governance choices. A later bounded brief is required even after
-Gate 0 closes; no experiment begins from this document alone.
+The next permitted action is explicit supervisor confirmation of the exact
+scope and sole-route boundaries, plus owner reconciliation of this interface
+together with the remaining Gate-0 task, data, intervention, inference, model,
+reader, resource, and governance choices. A later bounded brief is required
+even after Gate 0 closes; no experiment begins from this document alone.

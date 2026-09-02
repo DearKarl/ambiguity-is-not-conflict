@@ -540,7 +540,7 @@ def test_pull_request_freshness_rejects_second_closure_remediation(
     ) in errors
 
 
-def test_commander_scope_method_and_storage_decisions_remain_partial() -> None:
+def test_supervisor_alignment_is_bounded_and_gate_zero_remains_open() -> None:
     execution_contract = (
         ROOT / "EXECUTION_CONTRACT.md"
     ).read_text(encoding="utf-8")
@@ -548,12 +548,15 @@ def test_commander_scope_method_and_storage_decisions_remain_partial() -> None:
     decision_log = (
         ROOT / "docs/research/decision_log.md"
     ).read_text(encoding="utf-8")
+    normalized_decision_log = " ".join(decision_log.lower().split())
     dossier = (
         ROOT / "docs/research/gate0_decision_dossier.md"
     ).read_text(encoding="utf-8")
+    normalized_dossier = " ".join(dossier.split())
     research_contract = (
         ROOT / "docs/research/research_contract.md"
     ).read_text(encoding="utf-8")
+    normalized_research_contract = " ".join(research_contract.split())
 
     assert (
         "conditional simulation-output core floor"
@@ -565,17 +568,39 @@ def test_commander_scope_method_and_storage_decisions_remain_partial() -> None:
         "DR-0016 — Commander Method-A and Instrument/Comparator Interface Decision"
         in decision_log
     )
+    assert (
+        "DR-0017 — Scientific-Supervisor Alignment on Scope and Method A"
+        in decision_log
+    )
     assert "Commander-approved partial Gate-0 decision" in decision_log
     assert "`G0-METHOD A/B` remains open" in decision_log
-    assert "`COMMANDER APPROVED A / SUPERVISOR OPEN`" in dossier
+    assert "user-attested scientific-supervisor alignment" in normalized_decision_log
     assert (
-        "`COMMANDER APPROVED A / SUPERVISOR, STATISTICAL, AND MODEL OWNERS OPEN`"
+        "`COMMANDER APPROVED A / SUPERVISOR CONCEPTUAL ALIGNMENT / "
+        "FORMAL SUPERVISOR APPROVAL OPEN`"
         in dossier
     )
+    assert (
+        "`COMMANDER APPROVED A / SUPERVISOR FRAMEWORK AND NAMED-ROLE "
+        "ALIGNMENT / FORMAL SUPERVISOR, STATISTICAL, AND MODEL APPROVALS "
+        "OPEN`"
+        in dossier
+    )
+    assert (
+        "did not ask the supervisor to select `g0-scope a` over b"
+        in normalized_decision_log
+    )
+    assert "did not ask whether method a is the sole route" in normalized_decision_log
     assert "`POINT-2ADAPTER-RECON`" in dossier
-    assert "cannot hold the approximately 613-GB" in dossier
-    assert "Scientific-supervisor co-approval remains open" in research_contract
-    assert "The Commander has separately selected" in research_contract
+    assert "cannot hold the approximately 613-GB" in normalized_dossier
+    assert (
+        "was not asked to approve the sole-route/B-inactive boundary"
+        in normalized_research_contract
+    )
+    assert (
+        "does not close Gate 0 or authorize execution"
+        in normalized_research_contract
+    )
     assert "That floor is not the dataset size" in research_contract
 
 
@@ -903,10 +928,9 @@ def test_gate_zero_dossier_is_finite_and_non_executable() -> None:
     assert "not yet a complete gate-0 freeze package" in dossier
     assert "mv-1" in dossier and "mt-1" in dossier
     assert "r_j = 0.50 + abs(ba_j - 0.50)" in dossier
-    assert (
-        "commander approved a / supervisor, statistical, and model owners open"
-        in dossier
-    )
+    assert "commander approved a" in dossier
+    assert "supervisor framework and named-role alignment" in dossier
+    assert "formal supervisor, statistical, and model approvals open" in dossier
     assert "tb-0006" in dossier and "pointwise method-claim kill" in dossier
     assert "fitted instance/config" in dossier
     assert "reader-based task-relevance" in dossier and "l_bal" in dossier
