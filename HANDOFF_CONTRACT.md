@@ -49,7 +49,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 - Linked Execution Contract: `EC-2026-09-02-002`
 - Task: reconcile consolidated internal approvals, audit Gate-0 closure, and
   prepare the restricted-data readiness record
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Codex, Ultra scientific-governance task
 - Handoff date: 2026-09-02 (Asia/Shanghai)
 
@@ -84,6 +84,8 @@ download, annotation, model execution, or experiment is included.
   `docs/research/submission_strategy.md`,
   `docs/research/task_briefs/TB-0012-gate0-owner-consolidation-data-readiness.md`,
   and `tests/test_repository_contract.py`.
+- The completion-only change is limited to `EXECUTION_CONTRACT.md` and
+  `HANDOFF_CONTRACT.md`, based exactly on the primary merge revision.
 - Scientific hypotheses, estimands, thresholds, sample floors, interventions,
   method roles, bootstrap counts/seeds, hard-kill rules, and venue boundaries
   are unchanged.
@@ -147,6 +149,8 @@ download, annotation, model execution, or experiment is included.
 - Deterministic local validation passed: `pytest -q` reports 53 passed;
   `python scripts/check_repository.py --final --base-ref origin/main` reports
   `Repository contract: OK`; and `git diff --check` reports no error.
+- Completion-state validation on the two-contract diff passed the same 53-test,
+  final-checker, and diff-check commands before the closure commit.
 - The changed-path scan contains exactly the 23 authorized paths. Sensitive-
   content, binary-diff, untracked-file, and greater-than-1-MB scans found only
   the two intended new Markdown records and no restricted, credential, model,
@@ -162,10 +166,24 @@ download, annotation, model execution, or experiment is included.
   resource pages, License/DUA 1.5.0, CITI instructions, online-service notice,
   and derived-resource guidance. No login or restricted page/file access
   occurred.
-- Primary commit, PR, CI, merge, and post-merge identifiers do not exist at the
-  READY state. The finite completion-only update to the two contracts is the
-  sole authorized record location for that self-evidence after the primary
-  merge; the closure commit and PR remain self-identifying in GitHub history.
+- Primary commit: `ddb1f018627ca060ed3f252f8b733bfeb9860038`.
+- Primary branch CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590692077`
+  (`SUCCESS`).
+- Primary PR: `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/8`;
+  PR CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590757092`
+  (`SUCCESS`).
+- Primary merge revision: `b01c103b522b5e4c384d5d5942d8eb955f9c23d6`;
+  post-merge `main` CI:
+  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590838380`
+  (`SUCCESS`).
+- The merge used the disclosed normal SHA-guarded API path under the verified
+  single-collaborator residual, without an explicit override flag, force
+  operation, branch deletion, or protection change.
+- Completion branch: `codex/gate0-data-preparation-completion`, based exactly
+  on the primary merge revision. The closure commit and PR self-identify in Git
+  and GitHub and are not recursively inserted here.
 
 ### Deviations and negative results
 
@@ -192,10 +210,10 @@ download, annotation, model execution, or experiment is included.
 
 ### Next permitted boundary
 
-After this task is remotely finalized, the next bounded action is evidence
-collection for Gate-0 closure: provide or verify the exact access/training/DUA,
-ethics, secure-environment, reader, derivative/licence, and resource facts;
-select the still-open finite Gate-0 rows; and freeze the exact executable
-package. Only after a dated Gate-0 closure may a fresh Stage-B contract
-authorize the four-file restricted tabular screening query. No experiment
-follows from this handoff.
+No further substantive work is authorized under this completed contract. A
+new explicit Commander authorization and fresh linked contracts are required
+for evidence collection and the remaining Gate-0 choices: exact access/
+training/DUA, ethics, secure environment, readers, derivative/licence and
+resource facts, plus the executable package. Only after dated Gate-0 closure
+may a fresh Stage-B contract authorize the four-file restricted tabular
+screening query. No experiment follows from this handoff.
