@@ -42,160 +42,160 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-02-001`
+## Handoff record `HC-2026-09-02-002`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-02-001`
-- Task: record the scientific supervisor's five-point Method-A agreement as
-  reported by the Commander and reconcile directly implicated Gate-0 statuses
-- Status: `COMPLETE`
+- Linked Execution Contract: `EC-2026-09-02-002`
+- Task: reconcile consolidated internal approvals, audit Gate-0 closure, and
+  prepare the restricted-data readiness record
+- Status: `READY FOR REMOTE FINALIZATION`
 - Prepared by: Codex, Ultra scientific-governance task
 - Handoff date: 2026-09-02 (Asia/Shanghai)
 
 ### Outcome
 
-The canonical reconciliation records user-attested scientific-supervisor
-alignment with the ambiguity/conflict distinction, Method A's intervention-
-based scientific framing and named method roles, chest radiography as primary
-validation domain, and NeurIPS 2027 Main Track as a conditional target. The
-email did not ask the supervisor to select `G0-SCOPE A` over B or approve Method
-A as the sole route with B inactive. Those formal co-approvals and all exact
-technical, statistical, model, clinical, data, governance, resource, breadth,
-and execution decisions remain open. No experiment or implementation is
-included.
+The bounded reconciliation records consolidated internal approval of
+`G0-SCOPE A`, Method A's sole-route/B-inactive boundary, and the previously
+named canonical Method-A protocol/interface package. It internally selects
+`G0-DATA A` and `G0-RETENTION A` for readiness while preserving their external
+and feasibility blockers. `DDR-2026-09-02-001` and TB-0012 define the exact
+non-executable pre-access boundary. Gate 0 remains open; no restricted query,
+download, annotation, model execution, or experiment is included.
 
 ### Changed boundary
 
-- The delivered primary boundary contains exactly 15 paths:
+- The task is limited to the exact paths named in `EC-2026-09-02-002`.
+- The observed 23-path change set is exactly:
   `EXECUTION_CONTRACT.md`, `HANDOFF_CONTRACT.md`, `README.md`,
-  `docs/roadmap.md`, `docs/research/README.md`,
-  `docs/research/research_contract.md`, `docs/research/scope_charter.md`,
-  `docs/research/research_question.md`,
-  `docs/research/method_a_identification_framework.md`,
+  `data/README.md`, `docs/roadmap.md`, `docs/research/README.md`,
   `docs/research/baselines_and_ablations.md`,
-  `docs/research/gate0_closure_audit.md`,
+  `docs/research/data_governance.md`,
+  `docs/research/dataset_decision_candidate.md`,
+  `docs/research/dataset_decision_record.md`,
+  `docs/research/dataset_feasibility_audit.md`,
+  `docs/research/decision_log.md`, `docs/research/gate0_closure_audit.md`,
   `docs/research/gate0_decision_dossier.md`,
-  `docs/research/decision_log.md`,
-  `docs/research/submission_strategy.md`, and
-  `tests/test_repository_contract.py`.
-- The scientific formulas, thresholds, estimands, hypotheses, tasks,
-  interventions, model/data routes, resources, and kill rules are unchanged.
-- Personal correspondence, raw email, data, models, implementation,
-  simulation, annotation, experiment, and GitHub settings are excluded.
+  `docs/research/measurement_protocol.md`,
+  `docs/research/method_a_identification_framework.md`,
+  `docs/research/research_contract.md`,
+  `docs/research/research_question.md`, `docs/research/scope_charter.md`,
+  `docs/research/statistical_analysis_plan.md`,
+  `docs/research/submission_strategy.md`,
+  `docs/research/task_briefs/TB-0012-gate0-owner-consolidation-data-readiness.md`,
+  and `tests/test_repository_contract.py`.
+- Scientific hypotheses, estimands, thresholds, sample floors, interventions,
+  method roles, bootstrap counts/seeds, hard-kill rules, and venue boundaries
+  are unchanged.
+- Restricted data, credentials, identifiers, private approvals, certificates,
+  DUA/ethics files, models, code environments, simulations, clinical work, and
+  large artifacts are excluded.
 
 ### Facts
 
-- The Commander stated on 2026-09-02 that the supervisor agreed after receiving
-  the five-question email draft.
-- Codex did not inspect, request, quote, or store the private correspondence.
-- The five questions cover the ambiguity/conflict distinction, Method-A
-  framing, named method roles, chest-radiography validation domain, and the
-  conditional NeurIPS 2027 strategy.
-- Gate 0 was open before this task and remains open.
+- The Commander states that the prior formal scope/method approvals have been
+  obtained and that the Commander is the consolidated internal owner.
+- Current official public PhysioNet pages classify both MIMIC resources as
+  credentialed access and require individual credentials, current CITI
+  training, and DUA acceptance.
+- The current License/DUA 1.5.0 prohibits access sharing and requires physical/
+  electronic security and current human-subjects/HIPAA training.
+- PhysioNet's online-service guidance requires verifiable zero retention, no
+  training, and no human review; unclear online services must not be used.
+- No external access, institutional, reader, or capacity evidence was provided
+  or independently verified in this task.
 
 ### Decisions recorded
 
-- DR-0017 records user-attested supervisor alignment with the ambiguity-versus-
-  conflict distinction, Method-A intervention framing, and the named roles of
-  `PROBVLM-2ADAPTER`, `POINT-2ADAPTER-RECON`, and secondary `POINT-INFONCE`.
-- `G0-SCOPE A` and Method A's sole-route/B-inactive boundary remain Commander-
-  approved; formal scientific-supervisor approval of those exact choices is
-  still open because neither was asked in the five-question draft.
-- Chest radiography remains the primary validation domain without freezing the
-  clinical finding, dataset, or access route.
-- NeurIPS 2027 Main Track remains a conditional strategic target, not a
-  publication prediction.
-- The full scientific-supervisor checklist remains open for every unasked
-  technical, task, baseline/ablation, staging, and breadth decision.
+- DR-0018 closes the internal `G0-SCOPE A` and Method-A sole-route co-approval
+  gaps without reopening Method B or claiming a new pair-level estimator.
+- The canonical Method-A protocol/interface roles are internally approved, but
+  unstated executable details remain specification-blocked.
+- `G0-DATA A` and `G0-RETENTION A` are internally selected for readiness only.
+- Every other Gate-0 row retains its exact decision, specification, external,
+  simulation, or feasibility blocker in the dossier and closure audit.
+- The Stage-B metadata schema is a prospectively fixed non-executable candidate;
+  it requires Gate-0 closure plus a fresh linked contract and brief.
 
 ### Assumptions and unresolved items
 
-- The record relies on the Commander's accurate report of an unqualified
-  supervisor agreement to the five questions.
-- Formal scientific-supervisor confirmation of the exact `G0-SCOPE A` veto-
-  only boundary and Method-A sole-route/B-inactive boundary remains open.
-- Statistical-owner and model-owner review of the exact Method-A interface,
-  inference package, architecture, software, hyperparameters, and calibration
-  remains open.
-- The exact task, ontology, interventions, readers, data/access, governance,
-  licensing, checkpoints, resources, staging, and breadth benchmark remain
-  open.
-- Official NeurIPS 2027 eligibility and the final single-track decision remain
-  unknown until the call is published and the evidence gates are evaluated.
+- The Commander's attestation accurately represents the internal authority
+  structure and the approvals obtained.
+- PhysioNet credential/training/DUA status, institutional ethics, secure path,
+  ACL, encryption, network, backup, incident, retention/deletion, derivative
+  permissions, reader qualifications/independence, licences, storage/compute,
+  and cohort yield remain objective unknowns.
+- `G0-RESOURCES A/B/C` remains a genuine unselected choice.
+- Exact task, ontology, controls, reader package, estimand/inference freeze,
+  executable model/baseline/probe/calibration details, target/shift, checkpoint
+  tier, staging, downstream power, and breadth snapshot remain open as recorded.
 
 ### Validation and review evidence
 
-- Contract traversal: complete before substantive edits.
-- Independent pre-edit governance review: PASS with the guardrail that approval
-  is limited to scientific framing and named roles, not the exact interface or
-  executable package.
-- Final independent governance review: PASS after narrowing the record to
-  conceptual/framework/named-role/domain/venue alignment and leaving formal
-  `G0-SCOPE A` and sole-route/B-inactive supervisor approvals open.
-- Final independent scientific-scope review: PASS; no construct, estimand,
-  inference, comparator-role, hard-kill, or Gate-0 drift was found.
-- Deterministic local validation: `pytest -q` passed all 51 tests;
-  `python scripts/check_repository.py` passed; `git diff --check` passed; the
-  changed set is exactly the 15 authorized paths; sensitive-content, binary,
-  untracked-file, and greater-than-5-MB artifact scans are clean.
-- Primary branch CI, PR CI, and post-merge `main` CI all passed. The completion-
-  state two-contract diff must independently pass the same repository, scope,
-  sensitive-content, size, and diff checks before its closure commit.
+- Contract traversal and post-amendment re-traversal are complete.
+- Independent scientific review first returned NO-GO on eight status and
+  finite-blocker inconsistencies. After reconciliation, its final focused
+  review passed: all 24 Gate-0 rows map one-to-one; the baseline, `MV-1`, exact
+  ablation, partition, authority, licence, and staging boundaries are
+  consistent; no scientific drift or execution authority remains.
+- Independent data-governance review passed. It concludes that no restricted
+  tabular screening query is authorized, every Stage-B field is restricted,
+  and the CheXpert/NegBio values are report-derived clinical screening
+  variables rather than image truth, model targets, or public metadata.
+- Independent repository-governance review passed subject to the now-completed
+  TB status, Handoff readiness evidence, and two specification-language fixes.
+- Deterministic local validation passed: `pytest -q` reports 53 passed;
+  `python scripts/check_repository.py --final --base-ref origin/main` reports
+  `Repository contract: OK`; and `git diff --check` reports no error.
+- The changed-path scan contains exactly the 23 authorized paths. Sensitive-
+  content, binary-diff, untracked-file, and greater-than-1-MB scans found only
+  the two intended new Markdown records and no restricted, credential, model,
+  medical-data, or large artifact.
 
 ### Git and external evidence
 
-- Base revision: `34b80e4b86fa0f281fe7252ec38a46d2bed327d0`.
-- Working branch: `codex/record-supervisor-method-a-approval`.
+- Base revision: `d4ba3fa586be4881a74bee2ab5aa2493544a3414`.
+- Working branch: `codex/gate0-data-preparation`.
 - Remote: `https://github.com/DearKarl/ambiguity-is-not-conflict.git`.
-- Initial divergence: `0/0`; no remote branch of the same name existed.
-- Primary commit: `e2ba73390b3943f3c8c0c293adb87d217a811294`.
-- Primary branch CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584111243`
-  (`SUCCESS`).
-- Primary PR: `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/6`;
-  PR CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584181575`
-  (`SUCCESS`).
-- Primary merge revision: `8fccd5a016a2924ff42db337013d8e0c43f7ab56`;
-  post-merge `main` CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33584248727`
-  (`SUCCESS`).
-- The merge used the disclosed normal SHA-guarded API path under the known
-  single-collaborator review residual, without an explicit override flag,
-  force operation, branch deletion, or protection change.
-- Completion branch:
-  `codex/record-supervisor-method-a-approval-completion`, based exactly on the
-  primary merge revision. The closure commit and PR self-identify in Git and
-  GitHub and are not recursively inserted here.
+- Initial remote branch: absent; initial divergence: `0/0`.
+- Public official-source verification was limited to the MIMIC-CXR/JPG v2.1.0
+  resource pages, License/DUA 1.5.0, CITI instructions, online-service notice,
+  and derived-resource guidance. No login or restricted page/file access
+  occurred.
+- Primary commit, PR, CI, merge, and post-merge identifiers do not exist at the
+  READY state. The finite completion-only update to the two contracts is the
+  sole authorized record location for that self-evidence after the primary
+  merge; the closure commit and PR remain self-identifying in GitHub history.
 
 ### Deviations and negative results
 
-- The attached `codex/sync-neurips-2027-strategy` worktree was clean but nine
-  commits behind `origin/main`; it was not reused. A dedicated worktree was
-  created from the exact current base.
-- A governance review rejected any wording that could imply supervisor approval
-  of the exact score, inference, technical interface, or executable package;
-  the canonical wording is restricted to framing and named roles.
-- An independent scientific review identified that the five-question draft did
-  not ask the exact `G0-SCOPE A` or sole-route/B-inactive choices. The record was
-  narrowed accordingly rather than inferring those formal approvals.
+- Gate 0 did not close because consolidated internal approval cannot establish
+  external access/security/ethics/reader/licence/capacity facts or supply
+  missing executable specifications.
+- The active Execution Contract initially used a singular heading where the
+  repository checker requires the plural control phrase; it was corrected
+  before validation and did not alter scope.
+- An independent review identified stale breadth wording that deferred the
+  identity decision beyond Gate 0; it was reconciled to freeze identity/rights/
+  portability prospectively while deferring execution until promotion.
 - No scientific hypothesis was tested and no empirical result was produced.
 
 ### Residual risks and recovery
 
-- If the Commander or supervisor later reports a qualification, DR-0017 must be
-  amended prospectively and affected status rows reopened.
-- User-attested approval is a durable decision input but is not independently
-  verified correspondence evidence.
-- Every repository change is recoverable through ordinary Git; no destructive,
-  forced, or protection-changing operation is authorized.
+- User-attested internal approval is a dated decision input, not independent
+  correspondence or institutional evidence.
+- Metadata contains restricted identifiers and must never be treated as public
+  or harmless; logs, screenshots, exceptions, and aggregate marginals can leak
+  information.
+- Every documentation change is recoverable through ordinary Git. No force,
+  protection change, destructive operation, or restricted artifact is allowed.
 
 ### Next permitted boundary
 
-No further work is authorized under this completed contract. A new explicit
-Commander authorization and fresh linked contracts are required for the next
-scientific boundary: explicit supervisor confirmation of the exact scope and
-sole-route choices, plus statistical-owner and model-owner review of the exact
-Method-A package, followed by the remaining clinical/data/governance/resource
-Gate-0 decisions. No experiment follows automatically.
+After this task is remotely finalized, the next bounded action is evidence
+collection for Gate-0 closure: provide or verify the exact access/training/DUA,
+ethics, secure-environment, reader, derivative/licence, and resource facts;
+select the still-open finite Gate-0 rows; and freeze the exact executable
+package. Only after a dated Gate-0 closure may a fresh Stage-B contract
+authorize the four-file restricted tabular screening query. No experiment
+follows from this handoff.

@@ -1,8 +1,8 @@
 # Baselines and Ablations
 
-**Status:** Method-A Commander-level interfaces frozen; supervisor agrees with
-the named primary/secondary roles; statistical/model, full baseline/ablation,
-and exact implementation approvals await Gate 0
+**Status:** Method-A primary/secondary protocol roles internally approved;
+exact implementation, licence, baseline/ablation applicability, and remaining
+Gate-0 specifications remain open
 
 The scientific comparison asks whether a frozen score's intervention-relative
 response adds information beyond simpler predictors under the same backbone,
@@ -26,7 +26,7 @@ be promoted as a novel estimator from development results.
 | Image-only uncertainty | Frozen image-only predictor or ambiguity model | Is the signal driven by visual difficulty? |
 | Text-only uncertainty | Frozen text-only predictor or ambiguity model | Is the signal driven by wording difficulty? |
 | Output semantic uncertainty | Semantic entropy or related meaning-level dispersion when generation is used | Is input conflict redundant with output variation? |
-| Probabilistic embedding | PCME/PCME++/ProbVLM-style candidate, plus ICPE where task-valid | Does distributional representation improve source separation after a matched point-softmax and modality-gap/embedding-scale audit? |
+| Probabilistic embedding | PCME/PCME++/ProbVLM-style candidate, plus ICPE where task-valid | Does distributional representation improve source separation beyond the selected matched deterministic reconstruction route and modality-gap/embedding-scale audits? |
 | Evidential vacuity/dissonance and reliability | Subjective-logic lack-of-evidence/conflicting-evidence measures and RCML conflict degree/reliability, or exact task-valid analogues on matched categorical heads | Is the claimed ambiguity/conflict split already captured by a known evidential decomposition or reliability-adjusted conflict score? |
 | Conflict-discounted evidence fusion | Discounted Belief Fusion or an exactly documented task-valid reimplementation | Does a published uncertainty-based conflict detector subsume the candidate? |
 | Uncertainty-adjusted compatibility | Project-native uncertainty-normalized compatibility sensitivity; CONFER is a non-authoritative preprint lead only | Is conditional conflict already captured by confidence-adjusted modality compatibility? |
@@ -44,17 +44,19 @@ The exact list should be reduced to the smallest matched set that can falsify
 the primary claim. A broad method zoo with mismatched backbones is not a strong
 comparison.
 
-For the Month-3 gate, freeze only raw deterministic similarity, one matched
-learned deterministic compatibility/density-ratio predictor, one evidential
-candidate, and one probabilistic/distributional candidate. Require a matched
-point-softmax adapter whenever learned scale or covariance is credited. The
-closest published conflict methods above must either be represented fairly or
-excluded with a pre-results technical and licence justification.
+For the Month-3 gate, the primary finite comparison is the internally approved
+`PROBVLM-2ADAPTER` instrument against `POINT-2ADAPTER-RECON`. Selection of
+`RAW-COS`, `DET-LR`, and `DBF-TASK` remains choice-blocked under
+`G0-BASELINES`; no additional point-softmax comparator is mandatory. Any such
+comparator is optional and secondary and requires a separate pre-results
+decision plus multiplicity/power treatment. The closest published conflict
+methods above must either be represented fairly or excluded with a pre-results
+technical and licence justification.
 
-Before the Month-3 holdout is opened, every remaining required owner must
-approve the Commander-frozen, supervisor-role-aligned pair: the explicitly
-non-novel `PROBVLM-2ADAPTER`
-instrument and `POINT-2ADAPTER-RECON` matched deterministic comparator. Method
+Before the Month-3 holdout is opened, the internally approved pair—the
+explicitly non-novel `PROBVLM-2ADAPTER` instrument and
+`POINT-2ADAPTER-RECON` matched deterministic comparator—must receive a complete
+executable specification and pass every remaining Gate-0 prerequisite. Method
 A is the sole route; development may fit only those frozen identities and
 cannot promote another candidate because it performs best. Declaring multiple
 primary instruments requires a prospectively expanded method-by-control and
@@ -81,15 +83,19 @@ confirmatory. No checkpoint is approved or presumed clean.
 ## Finite Implementation and Information-Budget Candidate
 
 The read-only TB-0006 audit reduces the Month-3 implementation roles to the
-following candidate identities. They are not approved or executable:
+following finite identities. DR-0018 internally approves only the scientific
+roles of `PROBVLM-2ADAPTER`, `POINT-2ADAPTER-RECON`, and secondary
+`POINT-INFONCE`; `RAW-COS`, `DET-LR`, and `DBF-TASK` remain candidate roles.
+None is executable until its exact specification and every applicable Gate-0
+condition are frozen:
 
 | ID | Frozen role candidate | Supervision class | Implementation/licence boundary |
 | --- | --- | --- | --- |
 | `RAW-COS` | \(1-\) cosine of normalized frozen post-projection BiomedCLIP features, without logit scale or softmax | No trainables or project labels | Project-native arithmetic; zero-capacity reference |
 | `DET-LR` | Project-native binary-log-loss classifier over \([z_v,z_t,|z_v-z_t|,z_v\odot z_t,W]\), reported as classifier logit plus known sampling-prior correction | Explicit determinate \(C^*\) labels | Privileged supervised ceiling unless every claimed matched method receives the same labels; exact \(W\), architecture, weights, and calibration remain open |
 | `DBF-TASK` | Two task-aligned binary evidential heads and the published DBF fusion/conflict quantities, trained on clear compatible pairs | Shared semantic finding \(Y\) | Official [DBF code](https://github.com/bezirganyan/DBF_uncertainty/commit/79b7d56b0cfa53c98a93f29f9d9c59768177ad17) is GPL-3.0 and credits RCML code; the audited [RCML snapshot](https://github.com/jiajunsi/RCML/tree/c9c5ab41e6fe62a85e5f6441a4dc7b568e1fa421) exposes no explicit licence file. No vendoring. Requires an approved clean-room formula port or separately governed GPL runner subject to licensing/provenance approval |
-| `PROBVLM-2ADAPTER` | Paper-faithful-likelihood, project-native two-adapter symmetric cross-modal generalized-Gaussian negative log-likelihood at official [ProbVLM commit](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204) | Independently verified determinate-compatible fitting-set membership, shared with the point route; this is disclosed semantic selection supervision, while semantic labels are not inputs or loss targets | MIT; Commander selected paper-faithful likelihood rather than code-exact semantics. The coordinate reduction and complete objective are project choices. No original checkpoint or constructed contradiction as a positive fit pair; executable details remain owner-blocked |
-| `POINT-2ADAPTER-RECON` | Project-native two-branch mean-only reconstruction adapter with the same frozen inputs, verified-compatible records, mean trunks, target topology, optimization/tuning budget, and GGD score family; global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen before protected outcomes | Exactly the same fitting-set selection information as `PROBVLM-2ADAPTER`; no semantic label is an input or loss target | Primary deterministic full-route comparator; unit-scale Laplace is a sensitivity only. Removing scale/shape heads changes active capacity and gradient paths, so this is not a capacity-isolated mechanism test. No inherited third-party adapter code; executable architecture and numbers remain owner-blocked |
+| `PROBVLM-2ADAPTER` | Paper-faithful-likelihood, project-native two-adapter symmetric cross-modal generalized-Gaussian negative log-likelihood at official [ProbVLM commit](https://github.com/ExplainableML/ProbVLM/commit/cb69f28b1ab23142a1c671e004b09b5cb5d8a204) | Independently verified determinate-compatible fitting-set membership, shared with the point route; this is disclosed semantic selection supervision, while semantic labels are not inputs or loss targets | MIT; Commander selected paper-faithful likelihood rather than code-exact semantics. The coordinate reduction and complete objective are project choices. No original checkpoint or constructed contradiction as a positive fit pair; executable details remain specification-blocked |
+| `POINT-2ADAPTER-RECON` | Project-native two-branch mean-only reconstruction adapter with the same frozen inputs, verified-compatible records, mean trunks, target topology, optimization/tuning budget, and GGD score family; global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen before protected outcomes | Exactly the same fitting-set selection information as `PROBVLM-2ADAPTER`; no semantic label is an input or loss target | Primary deterministic full-route comparator; unit-scale Laplace is a sensitivity only. Removing scale/shape heads changes active capacity and gradient paths, so this is not a capacity-isolated mechanism test. No inherited third-party adapter code; executable architecture and numbers remain specification-blocked |
 | `POINT-INFONCE` | Project-native two-branch point adapter on the same native records; contrastive paired logit | Same records but additional off-diagonal negative assumptions | Secondary baseline only. The closest [CLIP-Adapter snapshot](https://github.com/gaopengcuhk/CLIP-Adapter/tree/08d07f8b2ecafc6f1479fe636b26d464d7a5574e) is a different classifier and exposes no explicit licence file at the audited snapshot; exclude its code and separately freeze denominator, multi-positive/false-negative, temperature, optimizer, and tuning rules |
 
 The proposed common feature identity is BiomedCLIP snapshot
@@ -113,7 +119,7 @@ provenance field, or protected outcome. The exact implementation, calibration,
 software dependency, parameter-count, and supervision ledger must be approved
 before Gate 0 closes.
 
-## Required Ablations
+## Gate-0 Mandatory Ablations
 
 - remove \(C_{vt}\) from the risk model;
 - remove \(A_v\), \(A_t\), \(M_v\), or \(M_t\) separately;
@@ -123,16 +129,33 @@ before Gate 0 closes.
 - hold fitted ProbVLM means fixed while replacing input-dependent scale/shape
   with the point comparator's frozen global constants; this diagnoses only the
   direct score path conditional on jointly trained means;
+- compare the frozen compatible-reference raw-SD normalization with the
+  prospectively defined median/MAD sensitivity; and
+- run the four frozen recovery views: image-only, text-only, structured-
+  nuisance-only, and provenance/process-only.
+
+These six families are the exact minimum in `G0-ABLATIONS A`. An inapplicable
+row requires a pre-results structural rationale plus an exact matched
+substitute or a narrower claim; it cannot be dropped because it weakens the
+result.
+
+## Secondary Diagnostics and Sensitivities
+
+The following remain candidate secondary diagnostics, not mandatory Gate-0
+ablations and not alternative primary score-selection routes:
+
 - alternative valid normalization and latent dimension;
-- alternative conflict quantity chosen before confirmatory evaluation;
 - intervention source: natural, rule-edited, model-generated, clinician-edited;
 - no-corruption versus matched-corruption controls;
-- image-only, text-only, and nuisance-only probes for conflict-cell recovery;
 - unrelated-finding change and semantics-preserving rewrite controls;
 - missing assertion versus contradictory assertion;
 - label-permutation and template/provenance probes;
-- calibration-set size and calibration method;
+- calibration-set size and calibration method; and
 - seed, backbone, finding type, and declared shift robustness.
+
+Any secondary conflict quantity must be named and frozen before Month 3, remain
+secondary, and never replace the primary quantity because of Month-3 or
+confirmatory performance.
 
 ## Fairness Rules
 

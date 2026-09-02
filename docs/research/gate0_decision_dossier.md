@@ -3,7 +3,7 @@
 **Status:** Finite blocker/decision inventory; Gate 0 remains open
 
 **Date:** 2026-09-02
-**Evidence class:** Protocol and decision support under TB-0005--TB-0011
+**Evidence class:** Protocol and decision support under TB-0005--TB-0012
 
 ## Outcome
 
@@ -12,19 +12,19 @@ the remaining Gate-0 decisions rather than an unbounded menu. It preserves the
 single determinate-conflict route and makes each unresolved owner or external
 verification explicit. It is **not yet a complete Gate-0 freeze package**.
 TB-0006 selected no novel pointwise estimator: all three exact candidates
-collapsed to deterministic or occupied forms. DR-0016 records the Commander's
-selection of Method A, paper-faithful `PROBVLM-2ADAPTER`, and matched
-`POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary. DR-0017 records user-
-attested scientific-supervisor alignment with Method A's intervention framing
-and those named method roles, not approval of its sole-route/B-inactive
-boundary or exact technical interface. Formal supervisor boundary,
-statistical-owner and model-owner approval, exact implementations and licences, immutable backbone
-revision, calibration, exact baseline/ablation and
-artifact-probe implementations, owner approval, pre-reader simulation, and
-later reader-based task-relevance qualification for `MV-1`, target/shift
-details, breadth snapshot, and institutional retention terms remain open. It
-does not authorize
-access or turn a later development result into evidence.
+collapsed to deterministic or occupied forms. DR-0016 selected Method A,
+paper-faithful `PROBVLM-2ADAPTER`, and matched
+`POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary. DR-0017 records the
+earlier user-attested supervisor alignment. DR-0018 now records the Commander's
+consolidated internal authority and closes the formal `G0-SCOPE A` and Method-A
+sole-route/B-inactive co-approval gaps at the canonical protocol/interface
+level. It also internally selects `G0-DATA A` and `G0-RETENTION A` for
+readiness, while leaving access and execution blocked. Exact executable
+implementations, licences, immutable backbone revision, calibration,
+baseline/ablation and artifact-probe implementations, pre-reader simulation,
+later reader-based `MV-1` qualification, target/shift details, breadth
+snapshot, institutional terms, and capacity remain open. This does not
+authorize access or turn a later development result into evidence.
 
 TB-0009 has now compiled the pre-reader simulation into 10,847 reliability
 candidates and 2,438 pre-calibration `MV-1` candidates. The successful full
@@ -43,16 +43,14 @@ family, permutation, journal, failure, format, and owner-blocked extensions.
 No scientific code or benchmark ran; the final storage upper bound, runtime,
 capacity, and owner decisions remain open.
 
-DR-0015 records the Commander's selection of `G0-SCOPE A`; DR-0017 records the
-Commander's report of scientific-supervisor alignment with the ambiguity/
-conflict distinction, Method-A intervention framing and named method roles,
-chest-radiography validation domain, and conditional venue strategy. The email
-did not ask the supervisor to choose `G0-SCOPE A` over B or approve Method A's
-sole-route/B-inactive boundary. It also does not approve the exact task,
-technical interface, inference, data, or execution package. DR-0015
-records that the Commander's local workstation cannot hold the approximately
-613-GB conditional core-output floor. The floor is not the medical dataset
-size or a final upper bound, and `G0-RESOURCES A/B/C` remains open.
+DR-0018 supersedes only the earlier internal signatory gaps: `G0-SCOPE A` and
+Method A's sole-route/B-inactive boundary now have consolidated internal owner
+approval, and the named Method-A protocol/interfaces retain their frozen
+roles. The statement does not approve unstated executable values or silently
+select the remaining independent Gate-0 alternatives. DR-0015 records that the
+Commander's local workstation cannot hold the approximately 613-GB conditional
+core-output floor. The floor is not the medical dataset size or a final upper
+bound, and `G0-RESOURCES A/B/C` remains open.
 
 The recommended package is:
 
@@ -128,8 +126,9 @@ The recommended package is:
 
 - Qualified readers can apply the rubric reliably and enough eligible cases
   exist under the exact control rules.
-- Clinical, statistical, governance, infrastructure, and model owners can
-  supply the stated time, access, and secure capacity. The Commander's local
+- Internal owner roles are consolidated, but external institutions, qualified
+  independent readers, and infrastructure can supply the stated access, time,
+  and secure capacity. The Commander's local
   workstation is explicitly unavailable for the 613-GB conditional core-
   output route; approved external capacity or a proof-preserving alternative
   remains unverified.
@@ -139,30 +138,32 @@ The recommended package is:
 
 ## Finite Owner Decisions
 
-`OPEN` means no approval can be inferred from this file or from continued
-project work.
+`OPEN` means no decision can be inferred from repository presence or continued
+work. `INTERNALLY APPROVED / EXTERNALLY BLOCKED` records a project choice but
+not the objective access, institutional, security, licence, reader, yield, or
+capacity evidence needed for execution.
 
 | ID | Finite choice | Recommendation | Owner | Status | Consequence of rejection or non-verification |
 | --- | --- | --- | --- | --- | --- |
-| `G0-SCOPE` | **A:** identify determinate-conflict specificity and keep natural ambiguity veto-only; **B:** require a causal/transport ambiguity route before any execution | **A** | Commander and scientific supervisor | `COMMANDER APPROVED A / SUPERVISOR CONCEPTUAL ALIGNMENT / FORMAL SUPERVISOR APPROVAL OPEN` | DR-0015 records the Commander's choice. DR-0017 records user-attested supervisor alignment with the ambiguity/conflict distinction, but the email did not ask the exact A-over-B, veto-only choice. H2 remains unresolved; no degradation or hedge may substitute for ambiguity identification. |
+| `G0-SCOPE` | **A:** identify determinate-conflict specificity and keep natural ambiguity veto-only; **B:** require a causal/transport ambiguity route before any execution | **A** | Commander and scientific supervisor | `INTERNALLY APPROVED A` | DR-0018 closes the formal internal co-approval gap. H2 remains unresolved; no degradation or hedge may substitute for ambiguity identification. This approval does not validate an ambiguity intervention. |
 | `G0-TASK` | **A:** provisional pleural-effusion presence/absence with one exact frontal image; **B:** reopen finding/unit selection | **A**, conditional on clinical and supervisor/governance confirmation | Commander, clinical owner, and scientific supervisor or governance owner | `OPEN` | Choosing B cancels the current power/workload/task packet; a new atomic-task audit is required before any data query. |
 | `G0-ONTOLOGY` | **A:** approve the existing independent image/text state schema, undefined-conflict precedence, atomic carrier grammar, and no-ambiguity-relabel rule; **B:** reopen the ontology/rubric | **A**, subject to clinical language review | Clinical, scientific-supervisor, and statistical owners | `OPEN` | No clinical item, intervention, reader qualification, or conflict label may be created. |
-| `G0-MV` | **A:** approve exact `224 -> 112 -> 224` attenuation and same-polarity acceptance, conditional on the separate `G0-MV-Q` qualification choice; **B:** call it only fixed resolution attenuation and narrow the claim; **C:** reject and commission one new prospective option | **A**, conditional on `G0-MV-Q A` passing every later gate | Clinical and statistical owners | `OPEN` | Approval does not validate the control. Qualification failure stops `MV-1`, so it cannot complete primary `J_id`. Failure invokes B or C prospectively; JPEG, generic noise, crop, or masking cannot be substituted after scores. |
+| `G0-MV` | **A:** approve exact `224 -> 112 -> 224` attenuation and same-polarity acceptance, conditional on the separate `G0-MV-Q` qualification choice; **B:** call it only fixed resolution attenuation and narrow the claim; **C:** reject and commission one new prospective option | **A**, conditional on either `G0-MV-Q A` or B satisfying the same later qualification gates; A is preferred because B retains the fragile 128-per-stratum reserve | Clinical and statistical owners | `OPEN` | Approval does not validate the control. Qualification failure under either reserve stops `MV-1`, so it cannot complete primary `J_id`. Failure invokes B or C prospectively; JPEG, generic noise, crop, or masking cannot be substituted after scores. |
 | `G0-MV-Q` | **A:** reserve 150 metadata candidates per report-screen stratum (300 total), require at least 108 evaluable blocks per independent image polarity, and approve the selected/evaluable finite-roster estimand, cyclic ten-reader panel schedule, 9,999-resample one-sided max-`t` family `L_bal > 0.10`, `L_present > 0`, `L_absent > 0`, sensitivity veto, and pre-reader simulation contract; **B:** retain 128 per stratum only if the same complete simulation meets the operating criteria and resource owners accept its fragility; **C:** reject `MV-1` | **A**; deterministic ideal-yield arithmetic gives only `0.404356` joint probability at 85% yield under the prior 128-per-stratum plan, but this is not feasibility evidence | Clinical, statistical, ethics, governance, and resource owners | `OPEN / SIMULATION- AND FEASIBILITY-BLOCKED` | No reader contact or clinical item. Lowering 108, weakening `0.10`, reusing sibling readers, outcome-based top-up, or claiming reader-population generalization from the finite roster is prohibited. Failure invokes `G0-MV B/C`; no post-score replacement control. |
 | `G0-MT` | **A:** approve `MT-1`, exact redaction of the sole polarity slot with `Y_t=undefined`; **B:** reject and commission one new prospective option | **A**, with explicit task-critical/missing-state wording | Clinical and statistical owners | `OPEN` | Rejection leaves `J_id` incomplete. Hedge, negation deletion, full dropout, or character noise cannot be silently promoted. |
 | `G0-READERS` | **A:** approve the axis-specific nominal Krippendorff-alpha package, exact 150-cluster marginal allocations, patient/source-cluster percentile intervals, missingness and class-agreement rules, 15% repeats, mutually exclusive ten-reader image/six-reader text/six-reader pair rosters, five-reader reliability image/text items, three-reader reliability pair items, later disjoint three-reader text-sibling/pair panels, hierarchical sensitivities, timing pilot, and pre-reader simulation contract; **B:** require a prospectively powered alternative reader design | **A** | Clinical, statistical, ethics, governance, and resource owners | `OPEN / SIMULATION-BLOCKED` | No clinical contact or annotation. A smaller/overlapping roster or different coefficient requires a new dependence, blinding, precision, and workload model; two readers plus adjudication is not an automatic substitute. |
 | `G0-ESTIMAND` | **A:** approve primary `psi_mag`, each method's own compatible-reference SD scale, `0.20` specificity SESOI, `0.10` `A_psi` margin on the difference of method-specifically standardized dimensionless effects, and signed/raw-scale/median-MAD diagnostics; **B:** replace them prospectively with a fully justified and recalculated package | **A** | Statistical owner and Commander | `OPEN` | `A_psi` is not expressed in one common reference-SD unit. No holdout or confirmation may run. Non-superiority cannot be relabelled equivalence or deterministic subsumption. |
 | `G0-INFERENCE` | **A:** approve the nonparametric patient-cluster studentized max-`t` bootstrap with exactly 9,999 fixed-seed resamples (seed `20270829`), common within-stratum patient indices, joint method-by-control component bounds, and derived—not directly bootstrapped—`psi_mag`/`A_psi` bounds; use one-sided 90% simultaneous Month-3 bounds (`alpha_F=0.10`, 80% target family power), one-sided 97.5% simultaneous confirmatory bounds (`alpha_F=0.025`, 90% target family power), the construct-to-advantage-to-downstream-to-decision fixed sequence, and Holm/Romano--Wolf control for secondary families; **B:** replace the complete package prospectively and recalculate every affected floor | **A** | Commander and statistical owner | `OPEN` | No protected population may open. Month 3 cannot establish confirmation, non-inferiority, or equivalence; changing the family after results is prohibited. |
-| `G0-METHOD` | **A:** accept TB-0006's pointwise method-claim kill and use the Method-A partial-construct, intervention-identified measurement/inference framework; **B:** inactive unless a later dated Commander decision reopens the route before data | **A** | Commander, scientific supervisor, statistical owner, and model owner | `COMMANDER APPROVED A / SUPERVISOR FRAMEWORK AND NAMED-ROLE ALIGNMENT / FORMAL SUPERVISOR, STATISTICAL, AND MODEL APPROVALS OPEN` | DR-0016 supplies the Commander sole-route decision; DR-0017 records user-attested supervisor agreement with the intervention framing and named roles, but the email did not ask whether B is inactive. The exact score, inference, and executable interface also remain open. No core implementation, development-first replacement, or relabelling `psi_mag` as a pair-level score. |
-| `G0-BASELINES` | **A:** primary pair `PROBVLM-2ADAPTER` plus `POINT-2ADAPTER-RECON`; secondary `POINT-INFONCE`, `RAW-COS`, project-native `DET-LR`, and clean-room/separate-runner `DBF-TASK`, under the supervision ledger in `baselines_and_ablations.md`; **B:** replace prospectively before execution | **A**, conditional on approving every remaining implementation/licence/task-port choice | Scientific, statistical, model, and governance/licensing owners | `COMMANDER INTERFACE FROZEN / SUPERVISOR AGREES WITH NAMED ROLES / FULL OWNER AND EXECUTABLE SPEC OPEN` | Only the reconstruction pair is the primary same-selection-information/same-GGD-score-family/same-target-topology full-route comparison. Both use independently verified determinate-compatible fit membership, disclosed as semantic selection supervision; labels are not inputs or targets. The point route's global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen; unit constants are sensitivity only. Removing heads changes active capacity and gradient paths, which must be reported. POINT-INFONCE adds contrastive-negative assumptions; DET-LR and DBF are privileged ceilings. Exact baseline/ablation, statistical/model, licensing, and executable approvals remain open. Direct DBF and CLIP-Adapter vendoring remain excluded. No method zoo may be selected on holdout. |
+| `G0-METHOD` | **A:** accept TB-0006's pointwise method-claim kill and use the Method-A partial-construct, intervention-identified measurement/inference framework; **B:** inactive unless a later dated Commander decision reopens the route before data | **A** | Commander, scientific supervisor, statistical owner, and model owner | `INTERNALLY APPROVED A / EXECUTABLE SPECIFICATION BLOCKED` | DR-0018 closes all internal co-approval gaps for the exact canonical protocol/interface package and sole-route boundary. Unstated architecture, software, optimizer, tuning, calibration, and checkpoint details remain specification-blocked. No core implementation, development-first replacement, or relabelling `psi_mag` as a pair-level score. |
+| `G0-BASELINES` | **A:** primary pair `PROBVLM-2ADAPTER` plus `POINT-2ADAPTER-RECON`; secondary `POINT-INFONCE`, `RAW-COS`, project-native `DET-LR`, and clean-room/separate-runner `DBF-TASK`, under the supervision ledger in `baselines_and_ablations.md`; **B:** replace prospectively before execution | The named primary pair and `POINT-INFONCE` role are internally approved; selection of A still requires an explicit decision on `RAW-COS`, `DET-LR`, and `DBF-TASK`, plus every implementation/licence/task-port choice | Scientific, statistical, model, and governance/licensing owners | `PARTIALLY INTERNALLY APPROVED / REMAINING ROLES CHOICE-BLOCKED / EXECUTABLE AND LICENCE SPECIFICATION OPEN` | Only the reconstruction pair is the primary same-selection-information/same-GGD-score-family/same-target-topology full-route comparison. Both use independently verified determinate-compatible fit membership, disclosed as semantic selection supervision; labels are not inputs or targets. The point route's global coordinatewise scale/shape constants are fitted on the same compatible fit/development objective and frozen; unit constants are sensitivity only. Removing heads changes active capacity and gradient paths, which must be reported. POINT-INFONCE adds contrastive-negative assumptions; RAW-COS, DET-LR, and DBF remain candidate roles, with DET-LR and DBF privileged ceilings. Exact architecture/software, licensing, negative-policy, calibration, and task-port specifications remain open. Direct DBF and CLIP-Adapter vendoring remain excluded. No method zoo may be selected on holdout. |
 | `G0-ABLATIONS` | **A:** freeze the minimum ablations as (i) remove `C_vt` from the downstream risk model; (ii) remove `A_v`, `A_t`, `M_v`, and `M_t` one at a time; (iii) replace `PROBVLM-2ADAPTER` with `POINT-2ADAPTER-RECON` under the information/score-family/topology/capacity-disclosure ledger; (iv) hold fitted ProbVLM means fixed while replacing input-dependent scale/shape with the point route's frozen global constants; (v) report raw-SD versus median/MAD normalization; and (vi) run image-only, text-only, structured-nuisance-only, and provenance/process-only recovery views; **B:** replace this exact set prospectively with a claim-by-claim rationale | **A**, conditional on exact implementation and applicability mapping before closure | Scientific, statistical, and model owners | `OPEN / SPECIFICATION` | Ablation (iv) diagnoses only a direct score-path contribution conditional on jointly trained means; it cannot establish a training-path or causal mechanism. An inapplicable row requires a pre-results structural rationale and an exact matched substitute or narrower claim. No ablation may be dropped because it weakens the result. |
-| `G0-MODEL` | **A:** freeze BiomedCLIP snapshot `9f341de24bfb00180f1b847274256e9b65a3a32e` through OpenCLIP 2.23.0 commit `f08f25f3f226bdb538de2b4ed48a9213ba6b179e` as the unknown-exposure primary development feature route, plus the source/type/time-auditable ResNet-50/original-BERT pair as a strict non-VLM control lead; **B:** require a manifest-cleared pretrained VLM and remain blocked | **A**, while lineage/exposure and strict-route feasibility remain unresolved | Commander, model, governance, and statistical owners | `OPEN / FEASIBILITY` | The named components publish MIT terms, but no checkpoint download or model execution is authorized and the snapshot does not prove MIMIC exclusion. Without a strict component, Gate 0 stays open or every model/generalization claim narrows. |
+| `G0-MODEL` | **A:** freeze BiomedCLIP snapshot `9f341de24bfb00180f1b847274256e9b65a3a32e` through OpenCLIP 2.23.0 commit `f08f25f3f226bdb538de2b4ed48a9213ba6b179e` as the unknown-exposure primary development feature route, plus the source/type/time-auditable ResNet-50/original-BERT pair as a strict non-VLM control lead; **B:** require a manifest-cleared pretrained VLM and remain blocked | **A**, while lineage/exposure and strict-route feasibility remain unresolved | Commander, model, governance, and statistical owners | `OPEN / FEASIBILITY` | The named BiomedCLIP and OpenCLIP snapshots publish MIT terms. Exact ResNet-50/BERT releases and licences remain open. No checkpoint download or model execution is authorized, and the snapshot does not prove MIMIC exclusion. Without a strict component, Gate 0 stays open or every model/generalization claim narrows. |
 | `G0-CALIBRATION` | **A:** freeze logistic recalibration (intercept and slope) on official-validation patients, with identical inputs/tuning budget for all methods; **B:** use isotonic calibration with a new complexity/power calculation | **A** as a protocol choice, not an empirical winner | Statistical and clinical owners | `OPEN` | No calibrated-risk, Brier-skill, or decision claim; calibration method cannot be chosen on final results. |
 | `G0-ARTIFACT` | **A:** exact construction balance plus four frozen learned probes as a veto/falsification audit, with no global equivalence claim; **B:** fund and power a bounded four-probe equivalence claim; **C:** widen `+0.05` without a consequence-based justification | **A**; reject C, while exact feature sets, algorithms, tuning grids, and software remain unspecified blockers | Commander, statistical, model, and resource owners | `OPEN / NOT FULLY SPECIFIED` | Under A, demonstrated recovery kills and an interval crossing `0.55` is inconclusive; the paper may claim only design balance and the exact probe results. Under B, materially larger samples and simulation are required. C is not scientifically admissible. |
-| `G0-DATA` | **A:** approve coupled MIMIC-CXR/JPG v2.1.0, strict-single-frontal exclusions, exact HMAC partitions/key custody, one-study rank, official validation/test roles, screening floors, metadata-only query, aggregate suppression record, and a nested `AINC/v1/mv1-qualification` rank from official-train bucket 0--69 before model fitting; under recommended `G0-MV-Q A`, reserve the first 150 strict-single-frontal metadata candidates in each positive/negative report-screen stratum (300 total) and exclude them from every development/protected/target population; **B:** reject the source/partition package | **A**, subject to written institutional terms, `G0-MV-Q` choice, and qualification-yield verification | Commander, governance/infrastructure, clinical, and statistical owners | `OPEN / EXTERNAL VERIFICATION` | Report-screen polarity is not image truth. Metadata can verify 300 sampling candidates under A, not independent image polarity, intervention validity, evaluability, or the q gate. No access request, image/report inspection, derivative, or reader task. A shortfall in either polarity stops `MV-1`; choosing B reopens dataset, sampling, and power. |
+| `G0-DATA` | **A:** approve coupled MIMIC-CXR/JPG v2.1.0, strict-single-frontal exclusions, exact HMAC partition/rank logic, one-study rank, official validation/test roles, screening floors, restricted tabular screening query, aggregate suppression record, and a nested `AINC/v1/mv1-qualification` rank from official-train bucket 0--69 before model fitting; under whichever `G0-MV-Q A/B` reserve is later selected, exclude every qualification candidate from development/protected/target populations; **B:** reject the source/partition package | **A** is internally selected for its resource, exclusion, partition/rank, official-role, suppression, and readiness logic; execution remains conditional on key custody, written institutional terms, `G0-MV-Q` choice, checkpoint-role reconciliation, and qualification-yield verification | Commander, governance/infrastructure, clinical, and statistical owners | `INTERNALLY APPROVED A / EXTERNAL EVIDENCE AND FEASIBILITY BLOCKED` | DR-0018 and `DDR-2026-09-02-001` freeze the data and partition readiness logic, not key creation, access, or observed feasibility. The query reads restricted identifiers and report-derived clinical screening variables; report-screen polarity is not image truth. It can verify sampling candidates, not independent image polarity, intervention validity, evaluability, or the q gate. No access request, query, image/report inspection, derivative, or reader task. |
 | `G0-SAMPLING` | **A:** use balanced complete intervention blocks for construct evidence and the strict-single-frontal official-test cohort at natural prevalence for target evidence, with unit weights unless enrichment is prospectively approved; **B:** approve a different target/weighting rule | **A**, conditional on independent target labels and feasibility | Clinical, statistical, and governance owners | `OPEN` | No prevalence-sensitive proper score, calibration, or review-budget claim. Any enrichment reopens weighting/recalibration and power. |
 | `G0-SHIFT` | **A:** freeze AP-versus-PA view position as the one declared acquisition shift and primary subgroup audit, requiring at least 50 independently labelled patients per view; **B:** choose another shift/subgroup set and recalculate | **A** as a low-field metadata candidate | Clinical, statistical, and governance owners | `OPEN / FEASIBILITY` | Insufficient cells yield an inconclusive shift audit; no post-results demographic or acquisition subgroup may be promoted. |
-| `G0-RETENTION` | **A:** keep all restricted inputs and record-level derivatives in the approved environment, export only disclosure-cleared aggregates, and obtain exact DUA/ethics retention/deletion/backup terms before closure; **B:** approve a different written institutional boundary | **A** | Governance/ethics/infrastructure and Commander | `OPEN / EXTERNAL VERIFICATION` | No annotations, counterfactual text, embeddings, checkpoints, weights, or record-level artifacts may be created, retained, or exported. |
+| `G0-RETENTION` | **A:** keep all restricted inputs and record-level derivatives in the approved environment, export only disclosure-cleared aggregates, and obtain exact DUA/ethics retention/deletion/backup terms before closure; **B:** approve a different written institutional boundary | **A** | Governance/ethics/infrastructure and Commander | `INTERNALLY APPROVED A / EXACT INSTITUTIONAL TERMS BLOCKED` | The no-hosted-service boundary is selected, but exact ACL, retention, deletion, backup, incident, derivative-use, and disclosure terms require objective written evidence. No record-level artifact may be created or exported before that evidence. |
 | `G0-CHECKPOINT` | **A:** adopt the three-tier exposure rule and require a clean control/cohort before strict confirmation; **B:** accept only a manifest-cleared pretrained VLM and remain blocked until one exists; **C:** call undocumented exposure clean | **A**; reject C | Model, governance, statistical owners and Commander | `OPEN` | Under A, BiomedCLIP/SigLIP2/Qwen remain sensitivity only and BioViL-T diagnostic only; without a strict component, all confirmation wording is narrowed. B can stop the MIMIC route. C is prohibited. |
 | `G0-RESOURCES` | **A:** retain the proposed storage/GPU/clinical ceilings and resource-qualify the unchanged pre-reader simulation only after approving/amending TB-0011's registry, closing every extension and storage upper-bound term, running an authorized workload-equivalent generic-kernel benchmark, establishing conservative scaling/storage/contingency bounds, and explicitly allocating capacity; **B:** commission a prospective proof-preserving computational redesign and re-enumeration before setting verified ceilings; **C:** reject or narrow the affected reader/`MV-1` route before execution | Close the remaining registry blockers and test A before considering a scientific redesign; this is not approval of A, a benchmark, allocation, or run | Commander, clinical, statistical, resource, governance, and infrastructure owners | `OPEN / SIMULATION- AND FEASIBILITY-BLOCKED` | TB-0009 finds 10,847 reliability and 2,438 pre-calibration `MV-1` candidates, up to 1,594,200,000 outer datasets and 15,940,405,800,000 nested bootstraps. TB-0011 corrects the conditional core floor to 613,093,770,610 bytes but supplies no final upper bound, runtime, or capacity fact; DR-0015 rules out the Commander's local workstation for that route. Pre-Gate-0 work may not implement the project RNG/DGP/calibration/bootstrap pipeline; exact scientific implementation remains post-Gate-0. Resource shortage narrows or stops the route; it never lowers 120,000/9,999, deletes hard cells, or weakens scientific gates. |
 | `G0-STAGING` | **A:** follow the canonical contract: freeze the exact pointwise instrument/interface, backbone, baseline/calibration, partitions/sampling, breadth, resources, and governance at Gate 0; lock the fitted instance/config before Month-3 and final power before confirmation; **B:** approve a dated canonical amendment | **A** | Commander, scientific supervisor, statistical, governance, and model owners | `OPEN` | The older “named from development” ambiguity is now reconciled in `measurement_protocol.md`: only the fitted instance of a Gate-0-frozen identity may be locked later. No later brief may override an unfrozen canonical item. |
@@ -259,7 +260,7 @@ select replacements silently:
 
 | Lock | Must be frozen before | Required content |
 | --- | --- | --- |
-| Secure metadata feasibility brief | Any MIMIC query | Approved account/DUA, exact metadata fields, query, aggregate cells, disclosure rule, compute/storage, stop condition |
+| Secure restricted-tabular screening brief | Any MIMIC query | Approved account/DUA, exact restricted fields, query, aggregate cells, disclosure rule, compute/storage, stop condition |
 | Non-core simulation resource brief | Any pre-Gate-0 workload-equivalent microbenchmark | TB-0009 hashes, TB-0010 stage/proof design, and TB-0011 typed registry/ledger; approve or amend every owner-blocked field and close the final storage upper bound first; artificial buffers only; no project RNG/DGP/calibration/bootstrap/statistic; conservative scaling plus CPU/RAM/scratch/storage/wall-time/cost/contingency allocation; statistical, resource, infrastructure, security, and governance approval |
 | Post-Gate-0 simulation implementation brief | Any project RNG stream, DGP, calibration, bootstrap statistic, or scientific simulation code | Gate-0-approved identity and resources; exact implementation/schema; output-equivalence proof for compression; deterministic streams/reduction/restart; frozen software/hardware; code review; no scientific execution |
 | Annotation qualification brief | Any reader contact or clinical item | Ethics determination, access basis, exact roster, compensation, interface, examples, timing/reliability rules, permitted outputs |
@@ -293,57 +294,41 @@ select replacements silently:
 
 ## Owner Sign-off Record
 
-DR-0015 and DR-0016 record two partial Commander sign-offs: `G0-SCOPE A` on
-2026-08-29 and `G0-METHOD A` plus its scientific interfaces on 2026-09-01.
-DR-0017 records user-attested scientific-supervisor alignment with the
-ambiguity/conflict distinction, Method-A intervention framing and named method
-roles, chest-radiography validation domain, and conditional venue strategy. It
-does not record formal supervisor approval of `G0-SCOPE A` or Method A's sole-
-route/B-inactive boundary. No aggregate owner checklist is checked because
-those formal boundaries and technical, statistical, model, clinical,
-governance, resource, and the Commander's other Gate-0 choices remain open.
+DR-0018 records the Commander's consolidated internal authority. It converts
+the Commander's current attestation into a dated repository decision without
+claiming independent correspondence or institutional evidence. Consolidating
+owner roles does not collapse required independent reader panels, manufacture
+technical specifications, or prove external feasibility.
 
-- [x] Commander partial sign-off: `G0-SCOPE A`.
-- [x] Commander partial sign-off: `G0-METHOD A`, paper-faithful
-  `PROBVLM-2ADAPTER`, `POINT-2ADAPTER-RECON`, and secondary `POINT-INFONCE`
-  role only; statistical/model owners and executable specification open.
-- [x] Scientific-supervisor partial alignment, user-attested through DR-0017:
-  ambiguity/conflict distinction; Method-A intervention framing; the named
-  primary/secondary method roles; chest radiography as validation domain; and
-  conditional NeurIPS 2027 strategy. Formal approval of `G0-SCOPE A` and the
-  Method-A sole-route/B-inactive boundary, exact technical details, and every
-  unasked Gate-0 item remain open.
+- [x] Consolidated internal sign-off: exact `G0-SCOPE A` veto-only boundary.
+- [x] Consolidated internal sign-off: Method A as the sole route with B
+  inactive, its canonical partial-construct/intervention framework, and the
+  named `PROBVLM-2ADAPTER`, `POINT-2ADAPTER-RECON`, and secondary
+  `POINT-INFONCE` protocol/interface roles.
+- [x] Consolidated internal route selection: `G0-DATA A` for Stage-A readiness
+  and `G0-RETENTION A` for the no-hosted-service/restricted-environment
+  boundary. Both remain externally unverified and non-executable.
 
-- [ ] Commander: `G0-SCOPE`, `G0-TASK`, `G0-ESTIMAND`, `G0-INFERENCE`, `G0-METHOD`,
-  `G0-MODEL`, `G0-ARTIFACT`, `G0-DATA`, `G0-RETENTION`, `G0-CHECKPOINT`,
-  `G0-RESOURCES`, `G0-STAGING`, `G0-DOWNSTREAM`, and `G0-BREADTH`.
-- [ ] Scientific supervisor remaining full-package approvals: the exact
-  `G0-SCOPE A` veto-only and Method-A sole-route/B-inactive boundaries,
-  `G0-TASK`, `G0-ONTOLOGY`, the exact `G0-BASELINES` suite, `G0-ABLATIONS`,
-  `G0-STAGING`, and `G0-BREADTH`, plus any scientific review of exact score/
-  inference or executable details not asked in the five-point email.
-- [ ] Clinical owner: `G0-TASK`, `G0-ONTOLOGY`, `G0-MV`, `G0-MV-Q`, `G0-MT`,
-  `G0-READERS`, `G0-CALIBRATION`, `G0-DATA`, `G0-SAMPLING`, `G0-SHIFT`,
-  `G0-RESOURCES`, and `G0-DOWNSTREAM`.
-- [ ] Statistical owner: `G0-ONTOLOGY`, `G0-MV`, `G0-MV-Q`, `G0-MT`,
-  `G0-READERS`, `G0-ESTIMAND`,
-  `G0-INFERENCE`, `G0-METHOD`, `G0-BASELINES`, `G0-ABLATIONS`, `G0-MODEL`, `G0-CALIBRATION`,
-  `G0-ARTIFACT`, `G0-DATA`, `G0-SAMPLING`, `G0-SHIFT`, `G0-CHECKPOINT`,
-  `G0-RESOURCES`, `G0-STAGING`, `G0-DOWNSTREAM`, and `G0-BREADTH`.
-- [ ] Governance/ethics/infrastructure/licensing owners: `G0-TASK`,
-  `G0-READERS`, `G0-MV-Q`, `G0-BASELINES`, `G0-MODEL`, `G0-DATA`, `G0-SAMPLING`,
-  `G0-SHIFT`, `G0-RETENTION`, `G0-CHECKPOINT`, `G0-RESOURCES`,
-  `G0-STAGING`, and `G0-BREADTH`, plus every permitted derivative/output term.
-- [ ] Model owner: `G0-METHOD`, `G0-BASELINES`, `G0-ABLATIONS`, `G0-MODEL`, `G0-ARTIFACT`,
-  `G0-CHECKPOINT`, and `G0-STAGING`, including exact revisions, feature/probe
-  implementations, security, preprocessing, matched budgets, and exposure tier.
-- [ ] Resource owner: `G0-READERS`, `G0-MV`, `G0-MV-Q`, `G0-ARTIFACT`, and
-  `G0-RESOURCES`, including the separate 150-unit image reliability and
-  300-screened/216-evaluable balanced `MV-1` qualification burdens.
+- [ ] Still choice-blocked: `G0-TASK`, `G0-ONTOLOGY`, `G0-MV`, `G0-MV-Q`,
+  `G0-MT`, `G0-READERS`, `G0-ESTIMAND`, `G0-INFERENCE`, the `RAW-COS`/
+  `DET-LR`/`DBF-TASK` remainder of `G0-BASELINES`, `G0-ABLATIONS`, `G0-MODEL`,
+  `G0-CALIBRATION`, `G0-ARTIFACT`, `G0-SAMPLING`, `G0-SHIFT`,
+  `G0-CHECKPOINT`, `G0-RESOURCES`, `G0-STAGING`, `G0-DOWNSTREAM`, and
+  `G0-BREADTH`.
+- [ ] Still specification-blocked: exact adapter/backbone dimensions and
+  transforms; numerical floors/objective weights; optimizer, tuning, seeds,
+  software, calibration and probe pipelines; `POINT-INFONCE` false-negative
+  policy; licence/task-port decisions; strict-confirmatory representation; and
+  immutable breadth snapshot.
+- [ ] Still externally blocked: PhysioNet credentials, training, DUA/access,
+  ethics determination, secure path and ACL, retention/deletion/backup/
+  incident terms, derivative permissions, qualified independent reader roster,
+  storage/compute allocation, cohort yields, and checkpoint/source evidence.
 
-An approval becomes authoritative only through a dated decision record naming
-the owner and accepted choice. Conversation context, repository presence, or
-continued work is not approval.
+No remaining row becomes approved merely because it appears in the repository
+or has a recommended A option. A later approval requires a dated record naming
+the exact choice; a later feasibility result requires objective evidence under
+its own bounded authorization.
 
 ## Permitted Claim
 

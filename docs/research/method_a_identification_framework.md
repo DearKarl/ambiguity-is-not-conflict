@@ -1,11 +1,10 @@
 # Method-A Identification and Measurement Framework
 
-**Status:** Commander-approved interface freeze with user-attested supervisor
-alignment on the intervention framing and named method roles; formal
-supervisor approval of the sole-route/B-inactive boundary and exact
-statistical, model, inference, and executable approvals open; protocol only
+**Status:** Consolidated internal approval of Method A's sole-route and
+canonical protocol/interface package; exact executable specification and all
+other Gate-0 evidence remain open; protocol only
 
-**Authority:** DR-0016 and DR-0017
+**Authority:** DR-0016, DR-0017, and DR-0018
 
 **Date:** 2026-09-02
 
@@ -18,16 +17,14 @@ prospectively frozen score responds specifically to determinate semantic
 incompatibility rather than to approved modality-specific information-loss
 controls.
 
-This document retains the Commander-level scientific-interface freeze from
-DR-0016. Based on the Commander's report, DR-0017 adds supervisor agreement
-with Method A's scientific framing and the named method roles, not the exact
-score, inference, architecture, or executable package. The email asked whether
-the intervention framework should be the primary contribution, not whether
-Method A must be the sole route with B inactive; formal supervisor approval of
-that exact boundary remains open. This does not close Gate 0, approve
-implementation, establish novelty, authorize data/model access, or create
-scientific evidence. Exact software, backbone, data, numerical, calibration,
-reader, and resource choices remain owner-blocked.
+This document retains the scientific-interface freeze from DR-0016 and the
+historical supervisor-alignment record in DR-0017. DR-0018 records consolidated
+internal approval of Method A's sole-route/B-inactive boundary and the
+previously named canonical protocol/interface package. This does not close Gate
+0, approve implementation, establish novelty, authorize data/model access, or
+create scientific evidence. Exact software, backbone, data, numerical,
+calibration, reader, resource, and other independent Gate-0 choices remain
+specification-, decision-, or feasibility-blocked.
 
 ## Fact, Inference, Assumption, and Decision Ledger
 
@@ -284,10 +281,11 @@ probabilistic mechanism. Exact active/trainable parameter counts, fit-time
 compute, and inference cost must be reported for both routes; no capacity-parity
 claim is permitted.
 
-This is a scientific-interface freeze, not executable architecture approval.
-The model owner must still approve the exact feature transform, dimensions,
-layer widths, optimizer values, schedules, finite tuning grid, seeds, software,
-and calibration procedure before Gate 0 can close.
+This is an internally approved scientific-interface freeze, not an executable
+architecture. The exact feature transform, dimensions, layer widths, optimizer
+values, schedules, finite tuning grid, seeds, software, and calibration
+procedure still must be prospectively specified and recorded before Gate 0 can
+close.
 
 ## Required Attribution Ablation and Secondary Contrastive Baseline
 
@@ -406,15 +404,14 @@ that did or did not falsify the narrow specificity interpretation.
 
 | Boundary | Commander | Other required owners | Execution status |
 | --- | --- | --- | --- |
-| Method A as sole route | Approved | Scientific-supervisor approval of the sole-route/B-inactive boundary open; statistical and model owners open | Not executable |
-| Partial-construct and intervention framework | Approved | Scientific supervisor aligned with primary-contribution framing; statistical owner open | Not executable |
-| `PROBVLM-2ADAPTER` scientific interface | Approved | Scientific supervisor aligned with named role, not exact interface; model owner open | Not executable |
-| `POINT-2ADAPTER-RECON` matched interface | Approved | Scientific supervisor aligned with named role, not exact interface; statistical and model owners open | Not executable |
-| `POINT-INFONCE` secondary role | Approved | Scientific supervisor aligned with named role; statistical and model owners open; negative policy unresolved | Not executable |
-| Task, data, readers, backbone, software, calibration, and resources | Open | Named owners open | Gate 0 blocked |
+| Method A as sole route | Internally approved | DR-0018 closes the prior co-approval gap | Not executable |
+| Partial-construct and intervention framework | Internally approved | Canonical protocol/interface accepted; validity remains untested | Not executable |
+| `PROBVLM-2ADAPTER` scientific interface | Internally approved | Exact architecture/software/numerics absent | Not executable |
+| `POINT-2ADAPTER-RECON` matched interface | Internally approved | Exact architecture/software/numerics absent | Not executable |
+| `POINT-INFONCE` secondary role | Internally approved | Negative/multi-positive policy unresolved | Not executable |
+| Task, data access, readers, backbone execution, software, calibration, and resources | Open or externally blocked | See Gate-0 dossier and DDR-2026-09-02-001 | Gate 0 blocked |
 
-The next permitted action is explicit supervisor confirmation of the exact
-scope and sole-route boundaries, plus owner reconciliation of this interface
-together with the remaining Gate-0 task, data, intervention, inference, model,
-reader, resource, and governance choices. A later bounded brief is required
-even after Gate 0 closes; no experiment begins from this document alone.
+The next permitted action is to finish the still-open Gate-0 task,
+intervention, inference, executable-model, reader, resource, governance, and
+external data-access evidence. A later bounded brief is required even after
+Gate 0 closes; no experiment begins from this document alone.

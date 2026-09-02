@@ -1,7 +1,9 @@
 # Dataset Decision Candidate
 
-**Status:** Two-stage pre-access candidate; no access request, agreement,
-download, or record query is authorized
+**Status:** Two-stage route internally selected for readiness under DR-0018;
+external evidence, remaining Gate-0 choices, and a later Stage-B authorization
+are required; no access request, agreement, download, or record query is
+authorized
 
 **Date:** 2026-08-29
 **Evidence class:** Official-source facts plus protocol assumptions
@@ -58,7 +60,7 @@ A signed record must name:
 Gate-0 documentation does not create credentials, accept terms, claim access,
 or authorize an application.
 
-## Stage B — Restricted Metadata-Only Feasibility Query
+## Stage B — Restricted Tabular Screening Query
 
 Only a later bounded brief in the approved environment may read:
 

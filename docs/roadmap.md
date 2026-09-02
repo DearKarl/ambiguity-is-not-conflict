@@ -5,16 +5,16 @@
 **Anchor:** Month 0 begins 2026-08-27. Official 2027 venue dates are not yet
 assumed; the schedule will be rebased when the call is published.
 
-The current [Gate-0 closure audit](research/gate0_closure_audit.md) is a freeze
-candidate, not approval. It explicitly leaves image/text ambiguity
-identification and strict checkpoint non-exposure unresolved. DR-0016 selects
-Method A and its Commander-level instrument/comparator interfaces; DR-0017
-records user-attested scientific-supervisor agreement with that framing, the
-ambiguity/conflict distinction, named method roles, chest-radiography
-validation, and conditional venue strategy. The exact `G0-SCOPE A` veto-only
-and Method-A sole-route/B-inactive choices were not asked and still require
-formal supervisor approval. No experiment begins until the remaining Gate-0
-owners and execution package are complete.
+The current [Gate-0 closure audit](research/gate0_closure_audit.md) records
+partial internal approval, not execution readiness. It explicitly leaves
+image/text ambiguity identification and strict checkpoint non-exposure
+unresolved. DR-0018 records consolidated internal approval of `G0-SCOPE A`,
+Method A's sole-route and canonical protocol/interface package, and
+readiness-only `G0-DATA A`/`G0-RETENTION A`. The
+[dataset decision record](research/dataset_decision_record.md) lists the
+objective access, ethics, security, reader, licence, capacity, and feasibility
+evidence still required. No experiment or restricted query begins until every
+remaining Gate-0 choice and evidence requirement is complete.
 
 ## Month 0–1 — Freeze the Research Contract
 

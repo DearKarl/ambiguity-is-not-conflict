@@ -1,6 +1,8 @@
 # Data and Clinical Governance
 
-**Status:** Candidate data route; no dataset access approved by this document
+**Status:** `G0-DATA A`/`G0-RETENTION A` internally selected for readiness;
+external access, institutional evidence, Gate-0 closure, and data execution
+remain blocked
 
 ## Minimal Viable Data Route
 
@@ -28,6 +30,8 @@ Candidate status does not imply credentialing, access, licence compatibility,
 scientific suitability, or permission to redistribute derived artifacts.
 The complete official-source comparison is in the
 [dataset feasibility audit](dataset_feasibility_audit.md).
+The canonical pre-access status and evidence checklist are in
+[DDR-2026-09-02-001](dataset_decision_record.md).
 
 ## Pre-Access Gate-0 Dataset Record
 
@@ -38,7 +42,8 @@ Before any download or access, freeze the planned route:
   access occurs;
 - licence, data-use agreement, credentialing, ethics, and storage boundary;
 - task, prediction unit, ontology, planned inclusion/exclusion criteria, exact
-  metadata-only feasibility query/schema, minimum viable counts, and stop rules;
+  restricted tabular screening query/schema, minimum viable counts, and stop
+  rules;
 - planned patient-level split, repeated-study links, duplicates, and leakage
   controls;
 - planned label extraction, uncertainty, provenance, and adjudication;
@@ -48,7 +53,9 @@ Before any download or access, freeze the planned route:
 
 Gate-0 closure does not require invented observed counts or a retrospective
 access date. After Gate 0 freezes, a new bounded brief may authorize only the
-pre-specified metadata feasibility check in the approved environment. That
+pre-specified restricted tabular screening check in the approved environment.
+It reads restricted linkage identifiers and report-derived clinical screening
+variables, not public metadata. That
 check must record the actual access date, immutable resource snapshot, observed
 counts, exclusions, and cohort flow. If the frozen minimum counts or leakage
 conditions fail, data work stops and Gate 0 reopens. No record inspection,

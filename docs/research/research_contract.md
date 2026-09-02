@@ -2,12 +2,11 @@
 
 **Status:** Gate 0 open; protocol design only
 
-**Authority:** DR-0001 through DR-0006; DR-0015 for the Commander's partial
-`G0-SCOPE A` choice and local-storage boundary; DR-0016 for the Commander's
-partial `G0-METHOD A` and scientific-interface choices; DR-0017 for the
-Commander's report of scientific-supervisor agreement with the five bounded
-scope, Method-A framing/named-role, validation-domain, and venue-strategy
-questions
+**Authority:** DR-0001 through DR-0006; DR-0015 for the initial Commander
+`G0-SCOPE A` choice and local-storage boundary; DR-0016 for the initial
+`G0-METHOD A` and scientific-interface choices; DR-0017 for the bounded
+supervisor-alignment history; and DR-0018 for consolidated internal approval of
+the scope/Method-A protocol boundaries and Stage-A data/retention route
 
 **Last reviewed:** 2026-09-02
 
@@ -31,21 +30,17 @@ conflict specificity. Its exact formula and smallest effect of interest remain
 open Gate 0 decisions. Calibration and selective-review value are downstream
 promotion outcomes, not substitutes for construct validity.
 
-The Commander has selected the narrower `G0-SCOPE A` route: determinate-
-conflict specificity is primary and natural ambiguity is a veto-only audit.
-DR-0017 records the Commander's report that the scientific supervisor aligned
-with the ambiguity/conflict distinction, but the email did not ask the
-supervisor to approve this exact A-over-B, veto-only boundary. The Commander
-has also selected `G0-METHOD A` as the sole route; the supervisor aligned with
-its intervention-based framing as the primary contribution and with the
-scientific roles of the explicitly non-novel `PROBVLM-2ADAPTER` instrument,
-`POINT-2ADAPTER-RECON` comparator, and secondary `POINT-INFONCE`, but was not
-asked to approve the sole-route/B-inactive boundary. Chest radiography as the
-primary validation domain and NeurIPS 2027 Main Track as a conditional
-strategic target are also aligned. Formal supervisor boundary, statistical-
-owner, model-owner, exact executable, clinical, data, governance, resource,
-and other applicable approvals remain open. This bounded alignment does not
-close Gate 0 or authorize execution.
+DR-0018 records consolidated internal approval of the narrower `G0-SCOPE A`
+route and Method A as the sole route with B inactive. Determinate-conflict
+specificity is primary; natural ambiguity is veto-only. The canonical
+protocol/interface roles are the explicitly non-novel
+`PROBVLM-2ADAPTER` instrument, `POINT-2ADAPTER-RECON` comparator, and secondary
+`POINT-INFONCE`. Chest radiography remains the primary validation domain and
+NeurIPS 2027 Main Track remains a conditional strategic target. `G0-DATA A`
+and `G0-RETENTION A` are selected for readiness only. The exact executable
+specification, remaining independent Gate-0 choices, and objective access,
+ethics, security, reader, licence, capacity, and feasibility evidence remain
+open. This internal approval does not close Gate 0 or authorize execution.
 
 ## Authoritative Inputs
 

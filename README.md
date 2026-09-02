@@ -36,13 +36,12 @@ The [formalization audit](docs/research/estimator_formalization_audit.md)
 selected no novel pointwise estimator: the three exact candidates collapsed to
 deterministic or already published forms. The Commander has therefore selected
 [Method A](docs/research/method_a_identification_framework.md) as the sole
-route. As reported by the Commander, the scientific supervisor agrees with the
-intervention-based framework as the primary contribution and with the named
-method roles, but the five-question email did not ask for formal approval of
-the sole-route/B-inactive boundary. DR-0016 freezes a non-novel paper-faithful
-`PROBVLM-2ADAPTER` instrument and the mean-only `POINT-2ADAPTER-RECON`
-comparator at the Commander interface level. Formal supervisor boundary,
-statistical/model, and all executable approvals remain open.
+route. DR-0018 records consolidated internal approval of the scope and
+Method-A protocol/interface boundaries. DR-0016 freezes a non-novel paper-
+faithful `PROBVLM-2ADAPTER` instrument and the mean-only
+`POINT-2ADAPTER-RECON` comparator; `POINT-INFONCE` remains secondary. Exact
+executable specifications and every other Gate-0 choice or external fact remain
+open.
 
 The [reader and MV-1 qualification audit](docs/research/reader_measurement_and_mv1_qualification_audit.md)
 now supplies an exact finite-roster measurement candidate, joint polarity gate,
@@ -108,22 +107,24 @@ the permitted terminology.
 | --- | --- |
 | Project identity | **Decided:** `Ambiguity Is Not Conflict` |
 | Primary route | **Decided in principle:** identification of an intervention-relative frozen-score response within determinate image--report blocks before calibration or decision claims; not arbitrary-pair conflict identification |
-| Scope boundary | **Commander approved `G0-SCOPE A`; supervisor aligned with the ambiguity/conflict distinction:** determinate-conflict specificity is primary and natural ambiguity is veto-only under the Commander decision. Formal supervisor approval of A over B remains open. |
+| Scope boundary | **Internally approved `G0-SCOPE A`:** determinate-conflict specificity is primary and natural ambiguity is veto-only; H2 remains unresolved. |
 | Validation domain | **Commander and supervisor aligned:** chest radiography is primary; the exact task and dataset remain Gate 0 decisions |
-| Data route | **Candidate:** coupled MIMIC-CXR/JPG; clinician-reviewed controlled subset; ReXErr only as a MIMIC-derived synthetic stress test, never independent breadth |
-| Method identity | **Commander approved `G0-METHOD A`; supervisor aligned with its intervention framework and named roles:** formal supervisor approval of the sole-route/B-inactive boundary and exact statistical, model, inference, and executable approvals remain open |
-| Primary instrument | **Named role agreed:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; its exact technical interface remains owner-blocked and no probabilistic advantage is presumed |
-| Matched comparator | **Named role agreed:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary, while exact technical and negative-policy approvals remain open |
+| Data route | **Internally selected for readiness, externally blocked:** coupled MIMIC-CXR/JPG v2.1.0 under `DDR-2026-09-02-001`; no credential, query, download, or record access is authorized |
+| Method identity | **Internally approved `G0-METHOD A`:** sole route with B inactive; exact executable specification and remaining Gate-0 rows are open |
+| Primary instrument | **Protocol/interface approved:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; no probabilistic advantage is presumed |
+| Matched comparator | **Protocol/interface approved:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary, while executable and negative-policy specifications remain open |
 | Local storage | **Binding constraint:** the approximately 613-GB conditional simulation-output floor cannot run locally; this is not the medical dataset size, and `G0-RESOURCES` remains open |
 | Submission target | **Commander/supervisor-aligned planning decision:** NeurIPS 2027 Main Track, conditional on evidence and the official call; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
-| Core execution | **Blocked by Gate 0:** task, estimand, interventions, endpoint, smallest effect, baselines, data governance, and stopping rules must be frozen |
+| Core execution | **Blocked by Gate 0:** remaining finite choices plus access, ethics, security, reader, licence, capacity, and feasibility evidence must be closed |
 
-The current [Gate-0 closure audit](docs/research/gate0_closure_audit.md) supplies
-a freeze candidate, not approval. The
+The current [Gate-0 closure audit](docs/research/gate0_closure_audit.md) records
+partial internal approval, not execution readiness. The
 [decision dossier](docs/research/gate0_decision_dossier.md) reduces the
 remaining intervention, artifact, checkpoint, and staging questions to finite
-owner choices. It recommends narrowing the first identified claim to
+owner choices. The [dataset decision record](docs/research/dataset_decision_record.md)
+defines the non-executable MIMIC readiness boundary. The dossier retains the
+first identified claim as
 determinate-conflict specificity while natural ambiguity remains a
 falsification audit. A valid ambiguity-identification route or explicit claim
 narrowing, owner-approved controls, and a strict confirmatory evidence tier
@@ -169,16 +170,17 @@ paper/                       manuscript workspace after evidence promotion
 15. [Data and clinical governance](docs/research/data_governance.md)
 16. [Dataset feasibility audit](docs/research/dataset_feasibility_audit.md)
 17. [Dataset decision candidate](docs/research/dataset_decision_candidate.md)
-18. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
-19. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
-20. [Method-A identification framework](docs/research/method_a_identification_framework.md)
-21. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
-22. [Literature matrix](docs/research/literature_matrix.md)
-23. [Novelty audit](docs/research/novelty_audit.md)
-24. [Submission strategy](docs/research/submission_strategy.md)
-25. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
-26. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
-27. [Decision log](docs/research/decision_log.md)
+18. [Dataset decision/readiness record](docs/research/dataset_decision_record.md)
+19. [Backbone and resource audit](docs/research/execution_budget_and_backbone_audit.md)
+20. [Estimator formalization audit](docs/research/estimator_formalization_audit.md)
+21. [Method-A identification framework](docs/research/method_a_identification_framework.md)
+22. [Baseline and ablation matrix](docs/research/baselines_and_ablations.md)
+23. [Literature matrix](docs/research/literature_matrix.md)
+24. [Novelty audit](docs/research/novelty_audit.md)
+25. [Submission strategy](docs/research/submission_strategy.md)
+26. [Gate-0 decision dossier](docs/research/gate0_decision_dossier.md)
+27. [Gate-0 closure audit](docs/research/gate0_closure_audit.md)
+28. [Decision log](docs/research/decision_log.md)
 
 ## Repository Checks
 
