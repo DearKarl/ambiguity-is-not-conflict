@@ -42,178 +42,141 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-02-002`
+## Handoff record `HC-2026-09-09-003`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-02-002`
-- Task: reconcile consolidated internal approvals, audit Gate-0 closure, and
-  prepare the restricted-data readiness record
-- Status: `COMPLETE`
-- Prepared by: Codex, Ultra scientific-governance task
-- Handoff date: 2026-09-02 (Asia/Shanghai)
+- Linked Execution Contract: `EC-2026-09-09-003`
+- Task: finalize the four-role migration, recover misdirected edits, and
+  synchronize the reviewed progress branch
+- Status: `READY FOR REMOTE FINALIZATION`
+- Prepared by: current Codex module under Commander's explicit recovery authority
+- Handoff date: 2026-09-09 (Asia/Shanghai)
 
 ### Outcome
 
-The bounded reconciliation records consolidated internal approval of
-`G0-SCOPE A`, Method A's sole-route/B-inactive boundary, and the previously
-named canonical Method-A protocol/interface package. It internally selects
-`G0-DATA A` and `G0-RETENTION A` for readiness while preserving their external
-and feasibility blockers. `DDR-2026-09-02-001` and TB-0012 define the exact
-non-executable pre-access boundary. Gate 0 remains open; no restricted query,
-download, annotation, model execution, or experiment is included.
+- Installed the shared four-role harness and profiles with exact model/effort
+  mappings and parenthesized display titles.
+- Replaced the old five-role definitions: Advisor owns strategic advice;
+  Engineer retains daily research/technical design; Adjutant coordinates;
+  Executor performs approved implementation and operations.
+- Restored the desktop handoff, preserved both permanent contract prefaces,
+  and returned the misdirected `4565` checkout to its exact clean base.
+- No scientific scope, model choice, dataset, Gate-0, or experiment decision
+  changed. This delivery is branch synchronization, not main integration.
 
 ### Changed boundary
 
-- The task is limited to the exact paths named in `EC-2026-09-02-002`.
-- The observed 23-path change set is exactly:
-  `EXECUTION_CONTRACT.md`, `HANDOFF_CONTRACT.md`, `README.md`,
-  `data/README.md`, `docs/roadmap.md`, `docs/research/README.md`,
-  `docs/research/baselines_and_ablations.md`,
-  `docs/research/data_governance.md`,
-  `docs/research/dataset_decision_candidate.md`,
-  `docs/research/dataset_decision_record.md`,
-  `docs/research/dataset_feasibility_audit.md`,
-  `docs/research/decision_log.md`, `docs/research/gate0_closure_audit.md`,
-  `docs/research/gate0_decision_dossier.md`,
-  `docs/research/measurement_protocol.md`,
-  `docs/research/method_a_identification_framework.md`,
-  `docs/research/research_contract.md`,
-  `docs/research/research_question.md`, `docs/research/scope_charter.md`,
-  `docs/research/statistical_analysis_plan.md`,
-  `docs/research/submission_strategy.md`,
-  `docs/research/task_briefs/TB-0012-gate0-owner-consolidation-data-readiness.md`,
-  and `tests/test_repository_contract.py`.
-- The completion-only change is limited to `EXECUTION_CONTRACT.md` and
-  `HANDOFF_CONTRACT.md`, based exactly on the primary merge revision.
-- Scientific hypotheses, estimands, thresholds, sample floors, interventions,
-  method roles, bootstrap counts/seeds, hard-kill rules, and venue boundaries
-  are unchanged.
-- Restricted data, credentials, identifiers, private approvals, certificates,
-  DUA/ethics files, models, code environments, simulations, clinical work, and
-  large artifacts are excluded.
+- The complete primary migration contains exactly nine paths:
+  `AGENTS.md`, `CODEX_TASK_GOVERNANCE.md`, `CODEX_ROLE_HARNESS.md`,
+  `.codex/agents/advisor.toml`, `.codex/agents/adjutant.toml`,
+  `.codex/agents/engineer.toml`, `.codex/agents/executor.toml`,
+  `EXECUTION_CONTRACT.md`, and `HANDOFF_CONTRACT.md`.
+- Final desktop recovery edits touch only the two contracts. In `4565`,
+  tracked originals were restored and erroneous untracked role files removed;
+  the cleanup contributes no committed change.
+- Scientific documents, tests, compiler behavior, research tables, models,
+  data, and unrelated local files are excluded.
 
 ### Facts
 
-- The Commander states that the prior formal scope/method approvals have been
-  obtained and that the Commander is the consolidated internal owner.
-- Current official public PhysioNet pages classify both MIMIC resources as
-  credentialed access and require individual credentials, current CITI
-  training, and DUA acceptance.
-- The current License/DUA 1.5.0 prohibits access sharing and requires physical/
-  electronic security and current human-subjects/HIPAA training.
-- PhysioNet's online-service guidance requires verifiable zero retention, no
-  training, and no human review; unclear online services must not be used.
-- No external access, institutional, reader, or capacity evidence was provided
-  or independently verified in this task.
+- The desktop handoff was temporarily deleted during a wrong-path repair and
+  has been restored. Both contracts in `4565` now equal the base byte-for-byte;
+  `git status --porcelain` there is empty.
+- All four saved projects contain byte-identical copies of the five shared
+  files; all 16 TOML model/effort/sandbox-default mappings parse correctly.
+- The 16 app display titles were verified during migration. Borderless's
+  `Research (5.6 Sol / XHigh)` remains active and keeps its ongoing work:
+  no rename, archive, interruption, or reassignment occurred.
+- Metadata contains restricted identifiers and must never be treated as public
+  or harmless. No restricted data or model was accessed.
+- Spark exhausted its allowance before finalization; Commander explicitly
+  authorized the current module to complete this bounded task.
 
 ### Decisions recorded
 
-- DR-0018 closes the internal `G0-SCOPE A` and Method-A sole-route co-approval
-  gaps without reopening Method B or claiming a new pair-level estimator.
-- The canonical Method-A protocol/interface roles are internally approved, but
-  unstated executable details remain specification-blocked.
-- `G0-DATA A` and `G0-RETENTION A` are internally selected for readiness only.
-- Every other Gate-0 row retains its exact decision, specification, external,
-  simulation, or feasibility blocker in the dossier and closure audit.
-- The Stage-B metadata schema is a prospectively fixed non-executable candidate;
-  it requires Gate-0 closure plus a fresh linked contract and brief.
+- Keep the permanent role/model assignments. Current-module recovery is a
+  task-specific exception, not a changed default.
+- TOMLs request defaults for future sessions that actually load them; they do
+  not establish retroactive sandboxing or universal tool/budget enforcement.
+- Use one owner per bounded task and scoped independent review when justified;
+  no mandatory four-role relay or guaranteed token-saving claim.
+- Publish only the dedicated branch after checks pass. No PR, main merge,
+  protection change, or contracts-to-COMPLETE transition is authorized.
 
 ### Assumptions and unresolved items
 
-- The Commander's attestation accurately represents the internal authority
-  structure and the approvals obtained.
-- PhysioNet credential/training/DUA status, institutional ethics, secure path,
-  ACL, encryption, network, backup, incident, retention/deletion, derivative
-  permissions, reader qualifications/independence, licences, storage/compute,
-  and cohort yield remain objective unknowns.
-- `G0-RESOURCES A/B/C` remains a genuine unselected choice.
-- Exact task, ontology, controls, reader package, estimand/inference freeze,
-  executable model/baseline/probe/calibration details, target/shift, checkpoint
-  tier, staging, downstream power, and breadth snapshot remain open as recorded.
+- The verified base is fixed for this delivery; remote divergence or unrelated
+  changes require a stop before push.
+- Runtime activation and measured token savings remain unverified.
+- Main integration and finite contract closure are separate next boundaries;
+  existing scientific gates remain unchanged.
 
 ### Validation and review evidence
 
-- Contract traversal and post-amendment re-traversal are complete.
-- Independent scientific review first returned NO-GO on eight status and
-  finite-blocker inconsistencies. After reconciliation, its final focused
-  review passed: all 24 Gate-0 rows map one-to-one; the baseline, `MV-1`, exact
-  ablation, partition, authority, licence, and staging boundaries are
-  consistent; no scientific drift or execution authority remains.
-- Independent data-governance review passed. It concludes that no restricted
-  tabular screening query is authorized, every Stage-B field is restricted,
-  and the CheXpert/NegBio values are report-derived clinical screening
-  variables rather than image truth, model targets, or public metadata.
-- Independent repository-governance review passed subject to the now-completed
-  TB status, Handoff readiness evidence, and two specification-language fixes.
-- Deterministic local validation passed: `pytest -q` reports 53 passed;
-  `python scripts/check_repository.py --final --base-ref origin/main` reports
-  `Repository contract: OK`; and `git diff --check` reports no error.
-- Completion-state validation on the two-contract diff passed the same 53-test,
-  final-checker, and diff-check commands before the closure commit.
-- The changed-path scan contains exactly the 23 authorized paths. Sensitive-
-  content, binary-diff, untracked-file, and greater-than-1-MB scans found only
-  the two intended new Markdown records and no restricted, credential, model,
-  medical-data, or large artifact.
+- Independent shared-template review passed for the frozen five-file package.
+- Independent integration review passed with named finalization conditions:
+  align EC authority/scope, list all nine HC paths, restore the exact HC
+  preface, and record actual validation results before ready-state publication.
+  Recovery addresses those conditions without scientific or checker/test edits.
+- Earlier recovery ran `pytest -q`: 53 passed. Base-aware and final checkers
+  then rejected the IN PROGRESS handoff as required; these were not passes.
+- Fresh finalization: `pytest -q` passed all 53 tests in 13.27 seconds;
+  `python scripts/check_repository.py` reported `Repository contract: OK`;
+  `git diff --check` passed. Bayesian's existing suite passed 17 tests in
+  1.31 seconds and its worktree/upstream divergence is clean at `0/0`.
+- Exact-prefix comparison passed for both contracts. The observed change set
+  contains only the nine named small text files, with no science, script,
+  test, or research-table changes. Shared hashes and all 16 profiles passed.
+- The independent review's named documentary conditions are now satisfied.
+  The final base-aware checker must run after this READY transition and pass
+  immediately before commit; a failed check cancels publication. Its exact
+  result, the pushed SHA, and CI are reported in the final delivery receipt.
 
 ### Git and external evidence
 
-- Base revision: `d4ba3fa586be4881a74bee2ab5aa2493544a3414`.
-- Working branch: `codex/gate0-data-preparation`.
+- Pre-commit head: `d63e96abafe965ba0a59fb2c8442921fe94d0ab6`.
+- Working branch: `codex/four-role-harness-desktop`.
 - Remote: `https://github.com/DearKarl/ambiguity-is-not-conflict.git`.
-- Initial remote branch: absent; initial divergence: `0/0`.
-- Public official-source verification was limited to the MIMIC-CXR/JPG v2.1.0
-  resource pages, License/DUA 1.5.0, CITI instructions, online-service notice,
-  and derived-resource guidance. No login or restricted page/file access
-  occurred.
-- Primary commit: `ddb1f018627ca060ed3f252f8b733bfeb9860038`.
-- Primary branch CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590692077`
-  (`SUCCESS`).
-- Primary PR: `https://github.com/DearKarl/ambiguity-is-not-conflict/pull/8`;
-  PR CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590757092`
-  (`SUCCESS`).
-- Primary merge revision: `b01c103b522b5e4c384d5d5942d8eb955f9c23d6`;
-  post-merge `main` CI:
-  `https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/33590838380`
-  (`SUCCESS`).
-- The merge used the disclosed normal SHA-guarded API path under the verified
-  single-collaborator residual, without an explicit override flag, force
-  operation, branch deletion, or protection change.
-- Completion branch: `codex/gate0-data-preparation-completion`, based exactly
-  on the primary merge revision. The closure commit and PR self-identify in Git
-  and GitHub and are not recursively inserted here.
+- Expected base: `d63e96abafe965ba0a59fb2c8442921fe94d0ab6`.
+- Fresh fetch confirmed `origin/main` still equals the base; the new remote
+  progress branch was absent at preflight.
+- Bayesian's migration commit is
+  `3d5411a3a86c696f1c480b18c471919fe27bf820`, verified on GitHub. Its clone
+  fetched only main; one exact branch refspec repaired upstream tracking
+  without changing remote history or main.
+- This primary commit and its push/CI identify themselves through immutable
+  Git/GitHub evidence, reported in the final user receipt rather than through
+  recursive self-recording commits. No PR, merge, or main update is included.
 
 ### Deviations and negative results
 
-- Gate 0 did not close because consolidated internal approval cannot establish
-  external access/security/ethics/reader/licence/capacity facts or supply
-  missing executable specifications.
-- The active Execution Contract initially used a singular heading where the
-  repository checker requires the plural control phrase; it was corrected
-  before validation and did not alter scope.
-- An independent review identified stale breadth wording that deferred the
-  identity decision beyond Gate 0; it was reconciled to freeze identity/rights/
-  portability prospectively while deferring execution until promotion.
-- No scientific hypothesis was tested and no empirical result was produced.
+- Initial integration misrouted legacy Research/Operations and removed
+  permanent contract text. Review caught both before push; they were repaired.
+- A later repair used the wrong checkout, and Spark's limit interrupted
+  cleanup. Recovery restored tracked originals and removed only verified
+  task-created duplicates; no user content was deleted.
+- The parent-selected `-desktop` branch suffix avoided a branch checked out
+  elsewhere; it was not a scientific or Commander-selected change.
+- No experiment, scientific RNG/DGP/bootstrap pipeline, full persisted ledger,
+  data/model download, paid compute, or large artifact was produced.
 
 ### Residual risks and recovery
 
-- User-attested internal approval is a dated decision input, not independent
-  correspondence or institutional evidence.
-- Metadata contains restricted identifiers and must never be treated as public
-  or harmless; logs, screenshots, exceptions, and aggregate marginals can leak
-  information.
-- Every documentation change is recoverable through ordinary Git. No force,
-  protection change, destructive operation, or restricted artifact is allowed.
+- Use explicit absolute workdirs and patch paths. Do not copy contracts or
+  profiles into another checkout during recovery.
+- `4565` is clean at its original base. The older `492b` checkout and its local
+  untracked `HANDOFF.md` are deliberately preserved and excluded from publishing.
+- Correct shared profiles remain in all four saved folders. Deleted duplicates
+  were erroneous task drafts, not unique user artifacts.
+- No task is archived or removed. Borderless Research retains current work
+  until explicit handoff.
 
 ### Next permitted boundary
 
-No further substantive work is authorized under this completed contract. A
-new explicit Commander authorization and fresh linked contracts are required
-for evidence collection and the remaining Gate-0 choices: exact access/
-training/DUA, ethics, secure environment, readers, derivative/licence and
-resource facts, plus the executable package. Only after dated Gate-0 closure
-may a fresh Stage-B contract authorize the four-file restricted tabular
-screening query. No experiment follows from this handoff.
+- Run the final base-aware checker and staged-content review, then normally
+  commit/push the nine-path branch and verify its Actions run. Stop on any
+  failed required check. After delivery, no further file changes are authorized
+  by this ready-state record.
+- PR/main integration, closure-to-COMPLETE, and research execution require
+  explicit next authority; none follows automatically from this delivery.

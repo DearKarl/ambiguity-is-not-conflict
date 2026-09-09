@@ -103,5 +103,16 @@ path.
 
 ## Codex Role Lanes
 
-The role boundaries and handoff artifacts for Ultra, Research, Engineering,
-Coding, and Operations are defined in `CODEX_TASK_GOVERNANCE.md`.
+Runtime module routing is defined by `CODEX_ROLE_HARNESS.md` and
+`.codex/agents/{advisor,adjutant,engineer,executor}.toml`.
+
+Role keys map to legacy lane ownership as an in-flight overlay, unchanged until an
+explicit task handoff:
+
+- `advisor` → `Ultra`: strategic advice and Commander-facing tradeoff framing.
+- `engineer` → `Research + technical-design aspects of Engineering`: design and
+  technical specification; retains delegated daily research authority.
+- `executor` → `Coding + implementation portions of Engineering + authorized
+  deterministic Operations`: implementation and deterministic execution.
+- `adjutant` → `coordination / intake / receipts`: routing, state summaries, and
+  dispatch support.
