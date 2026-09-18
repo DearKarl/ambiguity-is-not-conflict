@@ -57,7 +57,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 - Contract ID: `EC-2026-09-18-001`
 - Task: synchronize all non-sensitive research progress and literature, consolidate the four-role architecture, and package a cross-device NeurIPS 2027 plan
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander, explicit request in the Adjutant session on 2026-09-18
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/neurips-2027-progress-sync`
@@ -173,3 +173,35 @@ No claim that all legacy sessions were reviewed unless actually inspected.
   the Adjutant clarified pytest-only static compiler calls and explicit
   download/query prohibitions. No standalone compiler is authorized.
 - Completed 2026-09-18: Adjutant read the contract and mandatory governance inputs in full, including prior HC and Desktop role profiles. Authority, boundaries, promotion/stop criteria and finite closure reviewed. This contract was the sole pre-traversal mutation. Per-owner targeted reads must precede their dependent edits.
+
+### Completion record
+
+- Primary head: `8ffc4217047c3e07000974f525f4a5626bc2ff97`.
+- Primary PR: https://github.com/DearKarl/ambiguity-is-not-conflict/pull/10.
+- Primary merge: `156da144f097b0c817d6b351a2bd1205473c58f3`.
+- Adjutant verified branch CI `35401681440`, PR CI `35401697772`, and
+  post-merge main CI `35401764981`, all `SUCCESS`.
+- Adjutant used the ordinary SHA-guarded REST merge under the verified sole
+  collaborator DearKarl condition, required review count one and
+  `enforce_admins=false`. No override or protection change was used.
+- Adjutant reviewed scope, objective and plan and passed targeted privacy,
+  binary and size scans. All 83 original paths were retained, 71 original
+  files stayed byte-identical, and the final primary snapshot has 94 paths.
+- The Desktop migration package and ZIP were built at the primary merge.
+  Adjutant compared every project snapshot file with its Git blob, recorded
+  a 98-file manifest, verified the Git bundle and restored it offline to the
+  exact primary merge. The bundle includes origin/main and the already-public
+  four-role branch. The original Desktop checkout's four changes are preserved.
+- Executor confirmed a clean closure branch
+  `codex/neurips-2027-progress-sync-completion` at the exact primary merge,
+  equal to origin/main, and read both contracts fully before this finite edit.
+- The completion-only change updates only these two contracts. Closure
+  checks and publication receipts are returned directly to Adjutant; the
+  closure's own identity is self-evidencing in Git/GitHub and the final
+  external delivery receipt, never recursively inserted here.
+- No substantive work remains authorized. Adjutant may publish this closure,
+  verify its CI and mechanically refresh the external snapshot, manifest,
+  receipt and ZIP to the final closure revision as delivery verification.
+  The verified archive currently represents the primary merge, not a closure
+  revision that has not yet been published. No new substantive documentation
+  or scientific work is permitted under this completed contract.
