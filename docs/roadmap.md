@@ -2,6 +2,11 @@
 
 **Status:** Planning schedule governed by evidence gates
 
+**Sole submission objective:** NeurIPS 2027 Main Track (DR-0019).
+The [pre-access preparation plan](research/pre_access_preparation_plan.md) and
+[dated progress ledger](research/progress_2026-09-18.md) identify the immediate
+work while access review remains open. Calendar pressure never relaxes a gate.
+
 **Anchor:** Month 0 begins 2026-08-27. Official 2027 venue dates are not yet
 assumed; the schedule will be rebased when the call is published.
 
@@ -134,22 +139,23 @@ applicable 2027 contribution type exists, only if all earlier gates pass.
   reproducibility checklist;
 - write the paper around estimand, identification, matched evidence, and null
   boundaries;
-- choose exactly one track after reading the official NeurIPS 2027 calls;
+- verify Main Track eligibility and requirements against the official 2027 call;
 - prepare anonymized code and artifacts consistent with data licences.
 
 **Submission gate:** independent internal review finds no leakage, post-hoc
 endpoint switching, unsupported clinical claim, or missing decisive baseline.
 
-## Month 10–12 — Review, Rebuttal, and Evidence-Preserving Fallback
+## Month 10–12 — Review, Rebuttal, and Evidence Preservation
 
-**Outcome:** respond to review or prepare the same completed research route for
-the best-fitting next venue without manufacturing new claims.
+**Outcome:** respond to NeurIPS 2027 Main Track review and preserve the complete
+scientific record, including negative results.
 
 - answer reviewer questions with pre-existing or clearly labelled additional
   analysis;
 - archive exact submission artifacts and decision records;
-- if not accepted or if the deadline is missed, choose one fit-based venue
-  family and revise the same paper;
+- if not accepted, the deadline is missed, or a scientific gate fails, record
+  the outcome and return any objective change to the Commander; another venue
+  is not automatically authorized;
 - plan any validation beyond the frozen breadth study only after the primary
   study is complete.
 

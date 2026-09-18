@@ -29,53 +29,21 @@ scope and an explicit bounded brief.
   protocol before acting.
 - No core experiment may start while Gate 0 remains open.
 
-## Ultra — `Ultra (5.6 Sol / Ultra)`
+### Runtime module overlay roles
 
-Purpose: highest-stakes scientific challenge and strategic convergence.
+Use the four module role keys in `CODEX_ROLE_HARNESS.md` and `.codex/agents/*.toml` as the runtime mapping:
 
-Allowed work includes novelty audits, adversarial review of the estimand,
-route-killing analysis, venue-fit decisions, and resolution of decisions that
-would materially change the paper. Ultra produces a `DECISION_RECORD` or a
-precise question for the Commander; it does not perform routine coding or run
-experiments unless separately authorized.
+- `advisor` (legacy `Ultra`): strategic advice and Commander-facing tradeoff framing.
+- `engineer` (legacy `Research + technical-design portions of Engineering`):
+  technical strategy, specification, and delegated daily research work.
+- `executor` (legacy `Coding + implementation portions of Engineering +
+  authorized deterministic Operations`): implementation and deterministic
+  execution steps.
+- `adjutant` (legacy `coordination / intake / receipts`): routing and state
+  tracking.
 
-## Research — `Research (5.6 Sol / XHigh)`
-
-Purpose: the strategic command lane for daily research planning.
-
-Research maintains the literature matrix, protocols, hypotheses, statistical
-design, decision log, and 12-month plan. Before delegating execution, it emits a
-linked `TASK_BRIEF` inside the already active Execution Contract, containing
-the primary outcome, authoritative inputs, allowed and forbidden actions,
-required artifacts, promotion criteria, stopping criteria, and irreversible
-boundaries.
-
-## Engineering — `Engineering (5.6 Sol / High)`
-
-Purpose: difficult or scientifically sensitive implementation after design is
-frozen.
-
-Engineering owns interfaces, data-pipeline architecture, estimator correctness,
-numerical stability, performance, integration tests, and failure diagnosis. It
-must not silently change the estimand, cohort, split, endpoint, or baselines.
-Material scientific ambiguity returns to Research.
-
-## Coding — `Coding (5.3 Codex-Spark / XHigh)`
-
-Purpose: fast, narrow, reviewable code changes under an exact `TASK_BRIEF`.
-
-Coding changes only the named files or smallest necessary dependency surface,
-runs specified checks, and returns a compact implementation summary. It stops
-on unclear scientific semantics, restricted data, failing preconditions, or a
-scope expansion.
-
-## Operations — `Operations (5.6 Luna / Medium)`
-
-Purpose: deterministic, repeatable execution of already-approved procedures.
-
-Operations may run frozen commands, collect logs, verify artifacts, update
-inventories, and monitor bounded jobs. It may not select methods, tune against
-confirmatory outcomes, reinterpret failures, or alter protocols.
+This mapping does not alter scientific protocols, budgets, methods, or data-
+governance decisions.
 
 ## Required Handoff Artifacts
 

@@ -5,6 +5,13 @@
 
 **Intervention-identified measurement of cross-modal conflict specificity.**
 
+**Sole submission objective: NeurIPS 2027 Main Track** (DR-0019).
+Submission requires every scientific promotion gate; acceptance is not promised.
+Alternative venues and tracks in historical records are not authorized targets.
+Start with the [portable handoff](Handoff/README.md),
+[September 18 progress](docs/research/progress_2026-09-18.md), and
+[complete literature/progress index](docs/research/literature_progress_index.md).
+
 This repository is the standalone research home for a single question:
 
 > At the atomic clinical-finding level, can a frozen cross-modal score respond
@@ -114,7 +121,7 @@ the permitted terminology.
 | Primary instrument | **Protocol/interface approved:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; no probabilistic advantage is presumed |
 | Matched comparator | **Protocol/interface approved:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary, while executable and negative-policy specifications remain open |
 | Local storage | **Binding constraint:** the approximately 613-GB conditional simulation-output floor cannot run locally; this is not the medical dataset size, and `G0-RESOURCES` remains open |
-| Submission target | **Commander/supervisor-aligned planning decision:** NeurIPS 2027 Main Track, conditional on evidence and the official call; acceptance is not assumed |
+| Submission target | **Sole Commander-authorized objective:** NeurIPS 2027 Main Track; submission remains conditional on evidence and the official call; acceptance is not assumed |
 | Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
 | Core execution | **Blocked by Gate 0:** remaining finite choices plus access, ethics, security, reader, licence, capacity, and feasibility evidence must be closed |
 

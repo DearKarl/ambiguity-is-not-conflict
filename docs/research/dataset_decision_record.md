@@ -10,6 +10,16 @@
 
 ## Decision Summary
 
+### Dated administrative update: 2026-09-18
+
+The sanitized Adjutant receipt reports credentialing **Awaiting review**, both
+required CITI courses **Passed**, and the full training report uploaded with
+status **Review**. DUA acceptance and access to either resource remain
+unconfirmed. This is a reported administrative status, not independent account
+verification or an access grant. See the [public progress ledger](progress_2026-09-18.md).
+The original September 2 evidence statements below remain historical; all
+scientific, institutional, security, reader and capacity gates still apply.
+
 The coupled MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0 route remains the sole
 primary medical data candidate for the first controlled study. This record
 prospectively fixes the non-executable Stage-B restricted tabular screening
