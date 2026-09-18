@@ -48,7 +48,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 - Linked Execution Contract: `EC-2026-09-18-001`
 - Task: synchronize non-sensitive progress, literature and four-role configuration for the sole NeurIPS 2027 Main Track objective
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Executor; Adjutant owns publication and final external archive
 - Handoff date: 2026-09-18 (Europe/London)
 
@@ -62,8 +62,9 @@ session recovery record with a prominent historical-status wrapper.
 The pre-access plan integrates Advisor priorities and proposed management
 checkpoints, Engineer's six bounded packages, and Executor readiness boundaries.
 The substantive preparation, mandated pytest, final repository checker and
-diff checks pass. Remote publication and external archive completion remain
-Adjutant-owned and are not claimed complete by this local handoff.
+diff checks pass. Adjutant verified primary publication, post-merge CI and the
+local migration archive at the primary merge. This finite two-contract closure
+records those receipts; final archive revision refresh follows closure merge.
 This is a protocol/administrative synchronization, not completed science.
 
 ### Changed boundary
@@ -86,6 +87,10 @@ The observed 23-path change set is:
 No existing
 literature, scientific audit, report table, code or test is removed or changed.
 The source Desktop checkout and its local contracts remain untouched.
+The completion-only change is restricted to `EXECUTION_CONTRACT.md` and
+`HANDOFF_CONTRACT.md`, based on the exact primary merge. Adjutant verified all
+83 original paths retained, 71 original files byte-identical and 94 final
+tracked paths. No new substantive artifact is introduced by closure.
 
 ### Facts
 
@@ -126,6 +131,14 @@ origin/main` returned `Repository contract: OK` after the publishable lifecycle
 transition. `git diff --check` passed again. Final evidence-only HC wording
 is checked once more before the direct publication handoff.
 
+Adjutant's final primary review passed scope, protocol-objective and plan
+checks plus targeted privacy, binary and size scans. For the external package,
+Adjutant compared each project file against its Git blob, recorded a 98-file
+manifest, verified the Git bundle and restored it offline to the exact primary
+merge. Closure-state pytest, final checker and diff-check results are supplied
+directly in the Executor receipt before closure publication; they do not
+replace the primary evidence above.
+
 ### Git and external evidence
 
 Executor confirmed branch `codex/neurips-2027-progress-sync`, origin URL
@@ -133,8 +146,27 @@ Executor confirmed branch `codex/neurips-2027-progress-sync`, origin URL
 `d63e96abafe965ba0a59fb2c8442921fe94d0ab6`; only EC was initially modified.
 Adjutant reports 12 worktrees inventoried, no unpublished local branch commits,
 and only `cc3c2ad`'s governance overlay absent from main; no unique scientific
-branch content. Adjutant owns commit, push, PR, CI, merge and external archive
-receipts; none is claimed completed by Executor.
+branch content. Adjutant subsequently supplied these verified primary receipts:
+
+- Head: `8ffc4217047c3e07000974f525f4a5626bc2ff97`.
+- PR: https://github.com/DearKarl/ambiguity-is-not-conflict/pull/10.
+- Merge: `156da144f097b0c817d6b351a2bd1205473c58f3`.
+- Branch CI: https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35401681440 (`SUCCESS`).
+- PR CI: https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35401697772 (`SUCCESS`).
+- Post-merge main CI: https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35401764981 (`SUCCESS`).
+
+The ordinary SHA-guarded REST merge used the verified sole collaborator
+DearKarl condition, required review count one and `enforce_admins=false`.
+No explicit override or protection change occurred. The Desktop package at
+`/Users/dearkarl/Desktop/Handoff/ambiguity-is-not-conflict-2026-09-18` and its
+ZIP are verified at the primary merge; the bundle includes origin/main and the
+already-public four-role branch. These are Adjutant receipts, not repeated
+Executor archive inspections.
+
+Executor confirmed the clean closure branch
+`codex/neurips-2027-progress-sync-completion` at the primary merge, equal to
+origin/main. The closure commit/PR identity and final delivery revision belong
+in the external receipt and Git history, not recursively in these contracts.
 
 ### Deviations and negative results
 
@@ -156,12 +188,19 @@ produced; no approval or execution state is promoted.
 Metadata contains restricted identifiers and must never be treated as public
 or harmless. No private documents or restricted content are copied. Historical
 source notes contain older status language, explicitly superseded by the dated
-wrapper and progress ledger. No remote publication or archive completion is
-claimed before Adjutant receipts. Local source changes remain preserved.
+wrapper and progress ledger. Primary publication and archive verification are
+supported by the Adjutant receipts above; the archive still needs its mechanical
+final-revision refresh after closure merge. The original Desktop source's four
+changes remain preserved; its authorized role delta is integrated in the
+published repository. Data access and every scientific execution gate remain
+separate and unresolved as recorded.
 
 ### Next permitted boundary
 
-After the final-checker receipt and Adjutant review, Adjutant performs authorized
-publication and archive preparation. Executor makes no commit, push or PR.
-Core code,
-data/model access, simulations and research execution remain forbidden.
+No further substantive work is authorized. Executor returns closure check
+results and stops without staging, committing or publishing. Adjutant may
+publish this completion-only closure, verify its CI, and mechanically refresh
+the external snapshot, manifest, receipt and ZIP to the final closure revision
+as delivery verification. No new substantive docs or recursive closure record
+are permitted. Any later project work requires a fresh bounded contract;
+core code, data/model access, simulations and research execution remain blocked.
