@@ -2,6 +2,11 @@
 
 **Status:** Canonical one-paper boundary
 
+**Submission objective:** NeurIPS 2027 Main Track only, under DR-0019.
+Historical alternate-venue language does not authorize a new target. A failed
+scientific gate still stops the current claim; retain the negative record and
+return any objective change to the Commander.
+
 **Decision:** DR-0002, DR-0006, DR-0016, DR-0017, and DR-0018
 
 ## Title-Level Direction

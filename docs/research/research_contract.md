@@ -16,8 +16,9 @@ The first paper succeeds scientifically if it establishes—or cleanly
 falsifies—an intervention-relative population response of a frozen cross-modal
 score that is specific to determinate incompatibility against approved paired
 controls. It does not claim that model outputs identify semantic conflict for
-an arbitrary pair. Publication at a top venue is the strategic objective, not
-the scientific endpoint and not a guaranteed outcome.
+an arbitrary pair. Submission to NeurIPS 2027 Main Track is the sole strategic
+objective under DR-0019, not the scientific endpoint and not a guaranteed
+acceptance outcome.
 
 The single intended paper contribution is the partial-construct,
 intervention-identified measurement and inference framework in
@@ -61,7 +62,9 @@ facts.
 
 - verify current primary literature and code availability;
 - refine definitions, causal contrasts, annotation rubrics, and power plans;
-- compare candidate tasks, datasets, estimands, baselines, and venues;
+- compare candidate tasks, datasets, estimands, and baselines within the
+  approved scope; other venues are historical possibilities, not authorized
+  objectives under DR-0019;
 - prepare governance applications and access checklists without accessing data;
 - draft task briefs, decision records, and preregistration-style protocols;
 - maintain repository structure and documentation checks.

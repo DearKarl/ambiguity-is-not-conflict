@@ -1,11 +1,12 @@
 # Submission Strategy
 
-**Status:** NeurIPS 2027 Main Track remains the internally aligned conditional
-objective; Gate-0 evidence remains open and the 2027 call is not yet available
+**Status:** NeurIPS 2027 Main Track is the sole authorized submission objective
+under DR-0019; Gate-0 evidence remains open. The inherited planning record says
+the 2027 call is not yet available; this synchronization did not reverify it.
 
-## Primary Objective
+## Sole Submission Objective
 
-Prepare one submission-quality paper for **NeurIPS 2027 Main Track**. This is a
+Prepare one submission-quality paper for **NeurIPS 2027 Main Track** only. This is a
 planning target, not a prediction of acceptance. The route remains a viable
 Main Track candidate only while its scientific contribution is
 methodologically substantive and supported by the frozen evidence gates.
@@ -52,8 +53,9 @@ be the 2027 deadlines.
   and clinical-support plans will become documented resources.
 - **Decision:** prepare one Main Track Method-A identification-and-measurement
   route; DR-0018 retains consolidated internal alignment with that conditional
-  strategy. Recheck the official 2027 call before choosing the final track and
-  contribution type.
+  strategy. DR-0019 makes Main Track the sole authorized objective. Recheck
+  its official 2027 eligibility, dates, and contribution type before submission;
+  changing the objective requires a new Commander decision.
 
 ## Main Track Paper Identity
 
@@ -157,21 +159,21 @@ post-hoc repackaged as the same Main Track framework claim. Passing is necessary
 but not sufficient: confirmatory,
 calibration, breadth, decision, and reproducibility gates still remain.
 
-## Track Decision Checkpoint
+## Main Track Eligibility Checkpoint
 
 NeurIPS 2026 treated Main Track and Evaluations & Datasets as separate tracks
-and prohibited simultaneous submission or later switching between them. When
-the 2027 call appears, a single track must be chosen before submission.
+and prohibited simultaneous submission or later switching between them. Verify
+the official 2027 Main Track requirements before submission; no deadline or
+eligibility is inferred from the historical call.
 
-Use **Main Track** if the central result is a substantive, generalizable
-identification/measurement/inference framework with broad machine-learning
-insight. **Evaluations & Datasets is retained only
-as a pre-submission contingency** if the enduring contribution becomes the
-controlled benchmark, annotation methodology, or evaluation science and the
-instrument is secondary. This is a fallback framing of the same research route,
-not a second project or a simultaneous submission.
+The central result must be a substantive, generalizable identification,
+measurement and inference framework with broad machine-learning insight.
+The earlier Evaluations & Datasets contingency is historical and no longer an
+authorized target under DR-0019. The project is not a second project or a simultaneous submission.
+If only evaluation science survives, preserve that result and stop the failed
+Main Track claim; do not automatically redirect the paper.
 
-## Other Venue Families if Timing or Evidence Changes
+## Historical Venue Alternatives: Not Authorized
 
 - **ICLR or ICML:** method-first uncertainty, representation, or evaluation
   contribution with broad ML evidence;
@@ -182,8 +184,10 @@ not a second project or a simultaneous submission.
 - **Medical Image Analysis or Journal of Biomedical Informatics:** expanded
   medical validation and analysis when journal depth fits better.
 
-These are contingency families, not concurrent targets. Current calls and
-policies must be verified at the decision date.
+These families are retained only as historical planning context. None is an
+authorized fallback or concurrent target. Changing the sole NeurIPS 2027 Main
+Track objective requires an explicit new Commander decision, even if a deadline
+is missed or the current scientific route fails.
 
 ## Submission Stop Conditions
 
@@ -192,4 +196,5 @@ functional is not identified under its stated assumptions, the frozen
 instrument fails the matched deterministic advantage gate, confirmatory
 evaluation leaks patient/source information, the main result depends on post-hoc
 endpoint selection, or clinical claims exceed the evidence. A rigorous negative
-paper may be redirected only through a recorded venue-fit decision.
+paper remains part of the scientific record. Redirection requires an explicit
+new Commander decision; DR-0019 supplies no alternative-venue authority.

@@ -33,6 +33,13 @@ This directory is authoritative for the scientific scope and evidence state of
 28. [Gate-0 closure audit](gate0_closure_audit.md)
 29. [Decision log](decision_log.md)
 
+DR-0019 records **NeurIPS 2027 Main Track as the sole submission objective**.
+The [literature/progress completeness index](literature_progress_index.md)
+links all existing canonical records and reports. See the
+[dated progress ledger](progress_2026-09-18.md),
+[pre-access preparation plan](pre_access_preparation_plan.md), and
+[portable migration entry](../../Handoff/README.md) for current coordination.
+
 The [roadmap](../roadmap.md) turns these documents into evidence gates. A
 planned method or experiment is not a result. Any conflict between a task brief
 and this directory is resolved in favour of the most recent approved decision

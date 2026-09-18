@@ -994,3 +994,43 @@ decisions are separated explicitly.
 - the Gate-0 breadth choice between VisMin and PadChest-GR, plus immutable
   snapshot, rights, construct-portability, and later execution boundary;
 - final NeurIPS 2027 track and deadline after the official call.
+
+## DR-0019 - Sole Submission Objective and Public Progress Synchronization
+
+- **Date:** 2026-09-18
+- **Status:** Commander-authorized planning and documentation decision; not executable science
+- **Authority:** EC-2026-09-18-001 and explicit Adjutant dispatch to Executor.
+- **Facts:** The Commander directs complete non-sensitive progress/literature
+  synchronization, four-role consolidation and cross-device preparation.
+  The sanitized administrative receipt reports credentialing Awaiting review,
+  both required CITI courses Passed, full training report uploaded with status
+  Review, and DUA/access unconfirmed. Executor did not inspect live account
+  approvals, private screenshots, certificates or training PDFs.
+- **Decision:** The project's sole submission objective is NeurIPS 2027 Main
+  Track. Work must support the approved Method-A contribution and its evidence
+  requirements. Submission remains conditional on passing every applicable
+  scientific and governance gate; acceptance is not promised. Any alternative
+  venue or track requires a fresh Commander decision.
+- **Historical supersession:** Earlier venue/track contingencies, including
+  DR-0004/DR-0006 and alternative-venue recommendations in preserved audits,
+  are historical context, not currently authorized objectives. Their scientific
+  claim-narrowing and hard-kill conditions remain binding. Preserve their
+  original dated evidence rather than rewriting history.
+- **Inference:** Access-review progress permits useful specification and
+  coordination work while waiting, but does not establish feasibility,
+  provider approval, institutional authorization or Gate-0 closure.
+- **Assumptions:** The sanitized receipt accurately summarizes the Commander's
+  September 18 status evidence; future changes require a dated update.
+- **Alternatives considered:** Automatic venue fallback, blanket copying of
+  Desktop contracts, and treating training completion as data access were
+  rejected. Preserve scientific records and publish only sanitized progress.
+- **Consequences:** Use Advisor, Adjutant, Engineer and Executor with the
+  approved Astra effort mappings. Preserve Method A, the instrument/comparator
+  roles, natural-ambiguity veto boundary and all resource/scientific gates.
+  Publish a complete indexed snapshot and portable handoff after checks.
+- **Review date:** At the next consolidated readiness review and before any
+  Gate-0 closure or submission decision; no official deadline is inferred.
+- **Reopening condition:** A new Commander objective decision, corrected
+  administrative evidence, failed scientific gate, or changed official rules.
+- **Permitted claim:** Documentation, administrative progress and migration
+  readiness only; no new research result, access grant or execution approval.
