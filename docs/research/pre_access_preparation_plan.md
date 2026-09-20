@@ -3,6 +3,26 @@
 Date: 2026-09-18. Evidence class: non-executable preparation plan.
 Authority: EC-2026-09-18-001. Sole objective: NeurIPS 2027 Main Track submission.
 
+## September 20 specification packet
+
+EC-2026-09-20-001 advances this historical backlog into a
+[concrete readiness specification](pre_access_readiness_specification.md),
+[prospective acceptance matrix](pre_access_acceptance_matrix.md), and
+[finite Commander decision package](pre_access_decision_package.md).
+Engineer supplies read-only technical recommendations, Adjutant coordinates
+external evidence and scope, and Executor is the sole repository writer.
+The packet distinguishes approved boundaries, source-derived specifications,
+proposals, owner decisions, external evidence and data-dependent checks.
+Its acceptance does not select the open decisions or pass later scientific
+gates. The September 18 administrative ledger remains historical; no fresh
+account verification or research execution is reported.
+
+Resource and external-evidence dependencies remain first. Review the finite
+choices, obtain dated decisions and objective evidence, and only then consider
+Gate-0 closure and a separately bounded next-stage brief. After this packet's
+delivery, return to Advisor/Commander for discussion of the mathematics,
+instrument, comparator and inference; no legacy job resumes automatically.
+
 ## Ownership and dependencies
 
 | Owner | Preparation deliverable | Dependency and stopping boundary |

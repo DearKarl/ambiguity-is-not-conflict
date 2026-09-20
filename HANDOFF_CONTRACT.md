@@ -42,165 +42,151 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-18-001`
+## Handoff record `HC-2026-09-20-001`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-18-001`
-- Task: synchronize non-sensitive progress, literature and four-role configuration for the sole NeurIPS 2027 Main Track objective
-- Status: `COMPLETE`
-- Prepared by: Executor; Adjutant owns publication and final external archive
-- Handoff date: 2026-09-18 (Europe/London)
+- Linked Execution Contract: `EC-2026-09-20-001`
+- Task: compile the pre-access specification, acceptance matrix and finite decision package
+- Status: `READY FOR REMOTE FINALIZATION`
+- Prepared by: Executor, sole writer in cd30; Engineer read-only technical owner; Adjutant coordination
+- Handoff date: 2026-09-20 (Europe/London)
 
 ### Outcome
 
-Phase 1 integrates the authorized four-role configuration, explicit sole
-submission objective, dated public administrative progress, safe historical
-dataset explanation, portable entry and full canonical research/report index.
-Additional explicit migration authority includes the already-sanitized Chinese
-session recovery record with a prominent historical-status wrapper.
-The pre-access plan integrates Advisor priorities and proposed management
-checkpoints, Engineer's six bounded packages, and Executor readiness boundaries.
-The substantive preparation, mandated pytest, final repository checker and
-diff checks pass. Adjutant verified primary publication, post-merge CI and the
-local migration archive at the primary merge. This finite two-contract closure
-records those receipts; final archive revision refresh follows closure merge.
-This is a protocol/administrative synchronization, not completed science.
+The packet integrates canonical sources and Engineer's attributed read-only
+technical recommendations into a specification, prospective acceptance matrix
+and all 24 Gate-0 decisions grouped into six finite discussion sets. EX-A and
+NA/PR/DY/DC completions make model, measurement, inference, resource and
+decision interfaces reviewable. It is not a scientific implementation,
+observed result or Gate-0 freeze. Publication has not begun.
 
 ### Changed boundary
 
-The observed 23-path change set is:
-
-- `AGENTS.md`, `CODEX_TASK_GOVERNANCE.md`, `CODEX_ROLE_HARNESS.md`;
-- `.codex/agents/advisor.toml`, `.codex/agents/adjutant.toml`,
-  `.codex/agents/engineer.toml`, `.codex/agents/executor.toml`;
-- `EXECUTION_CONTRACT.md`, `HANDOFF_CONTRACT.md`, `README.md`, `docs/roadmap.md`;
-- `docs/research/README.md`, `docs/research/dataset_decision_record.md`,
-  `docs/research/decision_log.md`, `docs/research/research_contract.md`,
-  `docs/research/scope_charter.md`, `docs/research/submission_strategy.md`;
-- `docs/research/progress_2026-09-18.md`,
-  `docs/research/pre_access_preparation_plan.md`,
-  `docs/research/literature_progress_index.md`;
-- `Handoff/README.md`, `Handoff/dataset_preparation_note_2026-09-15.md`,
-  `Handoff/session_recovery_2026-09-18.md`.
-
-No existing
-literature, scientific audit, report table, code or test is removed or changed.
-The source Desktop checkout and its local contracts remain untouched.
-The completion-only change is restricted to `EXECUTION_CONTRACT.md` and
-`HANDOFF_CONTRACT.md`, based on the exact primary merge. Adjutant verified all
-83 original paths retained, 71 original files byte-identical and 94 final
-tracked paths. No new substantive artifact is introduced by closure.
+Exactly seven authorized paths: EXECUTION_CONTRACT.md, HANDOFF_CONTRACT.md,
+docs/research/pre_access_readiness_specification.md,
+docs/research/pre_access_acceptance_matrix.md,
+docs/research/pre_access_decision_package.md, docs/research/README.md, and
+docs/research/pre_access_preparation_plan.md. No code, tests, historical
+scientific decisions, data or model files are changed. Other worktrees are
+preserved. The separately authorized temporary validation dependencies are
+outside the repository.
 
 ### Facts
 
-Credentialing is reported Awaiting review; both required CITI courses Passed;
-full report uploaded with status Review; DUA and access unconfirmed. Gate 0
-remains open. Method A remains sole route. The record contains no live-account
-verification, certificate/PDF audit, new literature verification or experiment.
+Gate 0 remains open. Method A is the sole scientific route and NeurIPS 2027
+Main Track the sole submission objective. September 18 credential Awaiting
+review, courses Passed and report Review are historical reported states;
+DUA/access remain unconfirmed. No live provider or institutional verification
+occurred. Package completeness, decision-freeze readiness, stage operational
+readiness and scientific success remain distinct.
 
 ### Decisions recorded
 
-DR-0019 makes NeurIPS 2027 Main Track the sole submission objective. Historical
-venue alternatives carry no current authorization. All scientific kill gates
-remain binding. Four runtime roles use Astra: Advisor Ultra, Adjutant Medium,
-Engineer XHigh and Executor Low. Profile defaults are not runtime enforcement.
+No new scientific choice, threshold, budget or data access is approved.
+DR-0018/DR-0019 boundaries remain intact. Engineer's concrete recommendations
+are proposals, not canonical amendments. Adjutant confirmed necessary ordinary
+validation preparation in a precisely named temporary directory; EC was
+amended and fully re-read before it occurred.
 
 ### Assumptions and unresolved items
 
-Sanitized status receipts are accepted as reported evidence, not external
-approval. Clinical unit/readers, exact executable specifications, remaining
-Gate-0 choices, institutional/security/licence/capacity facts and resource
-qualification remain open. No official 2027 deadline is inferred.
+Open scientific selections, exact executable/software/rights freezes and
+external/data-dependent E01--E09 evidence remain blockers to their respective
+stages. The package carries finite owner choices, not a generic permission to
+implement. No official 2027 deadline or novel contribution is established.
 
 ### Validation and review evidence
 
-Mandatory contracts/governance and all targeted inputs were traversed.
-Executor re-traversed the Adjutant-amended EC clarification allowing existing
-static compilers only within mandated pytest. `pytest -q` passed all 53 tests
-in 12.86 seconds; `git diff --check` passed. The targeted scan of new migration
-and progress/plan/index text found no email address, private-key block, common
-API/GitHub token or tokenized URL pattern. This is a bounded scan, not proof
-against every possible sensitive string. The source explanation hash matches
-`7bbf45fecbbcbd87a35021dd646f649d84b72ea3ee3a51c39fa911483b7aa418`.
-Advisor and Engineer separately completed read-only planning receipts,
-relayed by Adjutant and integrated with attribution; neither receipt is an
-independent implementation review or a fresh literature search. No standalone
-resource compiler ran. `python scripts/check_repository.py --final --base-ref
-origin/main` returned `Repository contract: OK` after the publishable lifecycle
-transition. `git diff --check` passed again. Final evidence-only HC wording
-is checked once more before the direct publication handoff.
+Executor completed full mandatory and dependent-source traversal, recovering
+truncated output in bounded segments. Engineer separately reported complete
+read-only traversal at the same source baseline; that is an attributed receipt,
+not independent implementation review. Adjutant supplied E01--E09 evidence
+triage; Advisor supplied claim/failure and readiness distinctions. Engineer
+delivered three design batches plus the NA/PR/DY/DC addendum, with public
+immutable configuration/code text inspected in memory only. No model/data
+retrieval or scientific execution occurred.
 
-Adjutant's final primary review passed scope, protocol-objective and plan
-checks plus targeted privacy, binary and size scans. For the external package,
-Adjutant compared each project file against its Git blob, recorded a 98-file
-manifest, verified the Git bundle and restored it offline to the exact primary
-merge. Closure-state pytest, final checker and diff-check results are supplied
-directly in the Executor receipt before closure publication; they do not
-replace the primary evidence above.
+Adjutant's read-only scope receipt confirms all 24 unique rows, seven-file
+boundary, historical evidence labels, six decision groups, stage stops,
+resource floor and hard-kill distinctions, then rechecked the addendum,
+development split consistency and probability-scale calibration correction.
+This is coordination/design review, not independent implementation review.
+Advisor's final packet-level claim/readiness review passed, explicitly not a
+scientific approval or fresh-context independent review. It confirmed estimand
+order/signs, own-SD, unequal capacity, frozen-means scope, veto-only and hard
+kill, deployable inputs and limited equal-review-count claim. Engineer's final
+read-only technical review found no blocking inconsistency and confirmed the
+same mathematical interfaces; design/review work stops. Its final bounded
+correction supplies proposed CAL-A probability-scale evaluation, NA heading
+tie and PR permutation statistic/evaluation split, without approval or run.
+Engineer additionally read the final CAL-A/NA/PR integration, matrix I18 and
+decision references and passed documentation integration/proposal status;
+its requested negative-loglikelihood wording precision was applied without
+changing the model or inference. No additional design work is authorized.
+
+Existing `python -m pytest -q` passed 53 tests in 20.43 seconds; final
+`pytest -q` passed 53 in 19.35 seconds after integration. Final
+`python scripts/check_repository.py --final --base-ref origin/main` returned
+`Repository contract: OK`. `git diff --check` passed; bounded seven-file
+credential/private-key/email/tokenized-URL scan found no matches, with manual
+scope/privacy review. Initial final checker correctly rejected the then-
+IN-PROGRESS handoff; READY-state verification passed. No tests or checker
+were changed. Reproduction uses the executable above, process-only PATH
+entries for its directory and the temporary dependency target's bin, plus
+PYTHONPATH set to that target and PYTHONUTF8=1. Required final checker is
+repeated after receipt-only edits and staged-file verification before commit.
+
+Existing bundled Python 3.12.14 is used. PATH had no working pytest or gh;
+pytest==8.4.2 and only its required dependencies were installed with
+`python -m pip install --disable-pip-version-check --no-cache-dir --target
+C:/Users/karl/.codex/tmp/ec-2026-09-20-001-validation -r requirements-dev.txt`.
+Python absolute executable:
+`C:/Users/karl/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`.
+Installed dependencies: colorama 0.4.6, iniconfig 2.3.0, packaging 26.3,
+pluggy 1.6.0 and pygments 2.21.0. No scientific environment or gh installation.
 
 ### Git and external evidence
 
-Executor confirmed branch `codex/neurips-2027-progress-sync`, origin URL
-`https://github.com/DearKarl/ambiguity-is-not-conflict.git`, and HEAD/origin/main
-`d63e96abafe965ba0a59fb2c8442921fe94d0ab6`; only EC was initially modified.
-Adjutant reports 12 worktrees inventoried, no unpublished local branch commits,
-and only `cc3c2ad`'s governance overlay absent from main; no unique scientific
-branch content. Adjutant subsequently supplied these verified primary receipts:
+Initial HEAD, live ls-remote main and fetched origin/main were all
+`585be42d47a86b84a16bbf986d83e96f37145306`, with zero divergence; only the
+Adjutant EC bootstrap was modified. Origin is
+https://github.com/DearKarl/ambiguity-is-not-conflict.git. Created branch
+`codex/pre-access-readiness-2026-09-20` after traversal and fetch.
 
-- Head: `8ffc4217047c3e07000974f525f4a5626bc2ff97`.
-- PR: https://github.com/DearKarl/ambiguity-is-not-conflict/pull/10.
-- Merge: `156da144f097b0c817d6b351a2bd1205473c58f3`.
-- Branch CI: https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35401681440 (`SUCCESS`).
-- PR CI: https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35401697772 (`SUCCESS`).
-- Post-merge main CI: https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35401764981 (`SUCCESS`).
-
-The ordinary SHA-guarded REST merge used the verified sole collaborator
-DearKarl condition, required review count one and `enforce_admins=false`.
-No explicit override or protection change occurred. The Desktop package at
-`/Users/dearkarl/Desktop/Handoff/ambiguity-is-not-conflict-2026-09-18` and its
-ZIP are verified at the primary merge; the bundle includes origin/main and the
-already-public four-role branch. These are Adjutant receipts, not repeated
-Executor archive inspections.
-
-Executor confirmed the clean closure branch
-`codex/neurips-2027-progress-sync-completion` at the primary merge, equal to
-origin/main. The closure commit/PR identity and final delivery revision belong
-in the external receipt and Git history, not recursively in these contracts.
+Read-only GitHub REST evidence reports actual admin/push permissions,
+`enforce_admins=false`, strict required `repository-contract` check and one
+required approving review. The EC narrowly permits an ordinary administrator-
+exempt merge under these existing settings after checks and coordination
+acceptance; this path is disclosed here and will be reverified before merge.
+No override, protection weakening or credential output is allowed. Existing
+Git Credential Manager supplies credentials in memory only. No PR/merge has
+occurred at this preparation state.
 
 ### Deviations and negative results
 
-Adjutant's pre-commit staged check found Markdown hard-break trailing spaces
-in the two new historical migration copies; the earlier unstaged diff check
-had not covered those then-untracked files. Executor normalized trailing
-whitespace in those copies only and documented it in their wrappers. Original
-Desktop sources remain untouched. `git diff --cached --check` passed and the
-final checker returned `Repository contract: OK` for this formatting-only
-correction; the full pytest suite was not repeated.
-
-Large read output was truncated and recovered through bounded output segments.
-One patch context failed before any documentation changes from that patch;
-it was reapplied with the exact context. No scientific negative result is
-produced; no approval or execution state is promoted.
+Large read outputs required bounded recovery. Validation-runtime preparation
+was explicitly bounded in the amended EC before installation. The first
+direct pytest invocation used a nonexistent Scripts path; this pip target
+places launchers in bin, and module invocation then passed. Review caught a
+calibration units error: probability-scale 0.02 calibration-in-the-large was
+incorrectly called an intercept tolerance; all three documents distinguish
+it from log-odds recalibration parameters. No scientific negative result or
+scientific success is inferred from this documentation work.
 
 ### Residual risks and recovery
 
 Metadata contains restricted identifiers and must never be treated as public
-or harmless. No private documents or restricted content are copied. Historical
-source notes contain older status language, explicitly superseded by the dated
-wrapper and progress ledger. Primary publication and archive verification are
-supported by the Adjutant receipts above; the archive still needs its mechanical
-final-revision refresh after closure merge. The original Desktop source's four
-changes remain preserved; its authorized role delta is integrated in the
-published repository. Data access and every scientific execution gate remain
-separate and unresolved as recorded.
+or harmless. No private evidence, clinical record or restricted derivative is
+included. Historical source statements are attributed, not freshly verified.
+Recovery is the named branch and current seven-file diff at the base above;
+no published history has been rewritten.
 
 ### Next permitted boundary
 
-No further substantive work is authorized. Executor returns closure check
-results and stops without staging, committing or publishing. Adjutant may
-publish this completion-only closure, verify its CI, and mechanically refresh
-the external snapshot, manifest, receipt and ZIP to the final closure revision
-as delivery verification. No new substantive docs or recursive closure record
-are permitted. Any later project work requires a fresh bounded contract;
-core code, data/model access, simulations and research execution remain blocked.
+Technical integration and coordination reviews are complete. Perform only
+existing final validation and authorized normal primary publication. Primary
+commit/PR/check/merge identities are self-evidencing until the completion
+record. After successful primary merge and CI, use one
+completion-only two-contract closure; its own identity stays in Git/GitHub
+and the final receipt. No scientific work or new task follows automatically.
