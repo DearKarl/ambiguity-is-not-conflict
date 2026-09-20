@@ -57,7 +57,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 - Contract ID: `EC-2026-09-20-003`
 - Task: withdraw discussion issue 15 and discuss organization with Commander
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander's explicit request on 2026-09-20 to withdraw the previously created issue and discuss here in Adjutant without other modules.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/withdraw-issue-15-2026-09-20`
@@ -107,3 +107,7 @@ Issue identity and before/after readback, exact two-file diff, pytest and final 
 - Initial read-only inspection verified clean worktree, expected HEAD and correct origin. All listed sources except this new draft have been read in full. This EC is the sole pre-traversal mutation.
 
 - Adjutant completed full traversal of this new EC and all listed inputs on 2026-09-20; verified explicit authority, sole-writer scope, exact target, no science, promotion/stops, external boundaries and finite closure. No modules dispatched.
+
+### Completion record
+
+Issue 15 closure verified. Primary PR 18 merged as 7d028daadb91318a6d2f011f7b0b50e57ad029a7 with branch, PR and main CI successful. Only validation and publication of this single two-contract completion closure remain. No deletion, Project creation or delegation follows.
