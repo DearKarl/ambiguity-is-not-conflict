@@ -48,7 +48,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 - Linked Execution Contract: `EC-2026-09-20-002`
 - Task: publish one English-only discussion issue about the probabilistic instrument
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Executor, sole writer in cd30; Adjutant coordinates
 - Handoff date: 2026-09-20 (Europe/London)
 
@@ -64,6 +64,11 @@ labels or assignees. The URL was returned immediately to Adjutant for Commander;
 Codex browser opening was queued for the calling task; Adjutant subsequently
 confirmed returning and opening the URL for Commander. Adjutant's bounded
 scope/editorial acceptance passed; no design or independent review is claimed.
+Adjutant later navigated the user's existing Chrome Issues tab to #15 and
+verified the visible English title, open state, complete body, four unchecked
+questions, three pinned links and no labels/assignees. This actual-browser
+receipt supersedes the earlier queued opening status without another issue
+mutation. Primary contract publication and post-merge CI are complete.
 
 ### Changed boundary
 
@@ -90,8 +95,8 @@ it immediately while completing the required finite contract lifecycle.
 
 ### Assumptions and unresolved items
 
-Discussion questions remain open. The remaining work is normal two-contract
-Git synchronization and finite closure, not a scientific decision or execution.
+Discussion questions remain open. The only remaining work is publication and
+verification of this single completion closure, not science or another issue.
 No additional issue, comment, label or assignment is authorized by this record.
 
 ### Validation and review evidence
@@ -128,6 +133,28 @@ No override/protection mutation is authorized. GCM credentials remain only in
 memory. No issue/PR creation is inferred from an uncertain response; readback
 and duplicate inspection are mandatory before any retry.
 
+Primary commit `036ed6530212261ca0174efd883ed74b5973cee0` was published
+through [PR #16](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/16),
+attached to the task and merged with exact-head SHA guard as
+`e818390d35bcff46fbb17fd9dd79f8d613b4e911`. Before publication, remote/base
+matched, divergence was 0/0, exact staged paths were the two contracts and
+final checker/diff/privacy passed. Normal push established the branch upstream.
+Fresh pre-merge checks confirmed admin/push true, enforce_admins=false,
+strict repository-contract and one required approving review unchanged.
+Normal merge used the explicitly authorized existing administrator exemption
+after CI; no bypass flag, protection edit or manufactured approval.
+
+Successful primary CI receipts:
+
+- [Push run 35500713806](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35500713806).
+- [PR run 35500726726](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35500726726).
+- [Post-merge main run 35500774930](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35500774930).
+
+Fetched main confirmed the merge before creating the single closure branch
+`codex/probabilistic-tool-discussion-closure-2026-09-20`. Only EC/HC change.
+Closure commit/PR/merge/check identity stays self-evidencing in Git/GitHub and
+the final receipt; it is not recursively added to another contract commit.
+
 ### Deviations and negative results
 
 The English-only correction arrived just after initial bilingual creation.
@@ -145,8 +172,6 @@ of blindly creating another issue.
 
 ### Next permitted boundary
 
-The issue is created, corrected, verified and returned. Complete only the final
-checks and normal two-contract publication. After primary merge/main CI,
-create the single EC/HC COMPLETE closure. Its own identity and CI are
-self-evidencing and returned in the final receipt, not recursively committed.
-Then stop; no research or old job resumes.
+The issue and primary publication are complete. Validate and publish only this
+single EC/HC COMPLETE closure, verify its CI, return the final receipt and stop.
+No further issue mutation, research, implementation or old job resumes.
