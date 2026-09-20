@@ -55,71 +55,55 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 ### Identity and status
 
-- Contract ID: `EC-2026-09-20-002`
-- Task: publish one English-only discussion issue about the probabilistic instrument
-- Status: `COMPLETE`
-- Authorized by: Commander explicitly requested creation of the proposed GitHub issue in the Adjutant conversation on 2026-09-20.
+- Contract ID: `EC-2026-09-20-003`
+- Task: withdraw discussion issue 15 and discuss organization with Commander
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander's explicit request on 2026-09-20 to withdraw the previously created issue and discuss here in Adjutant without other modules.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/probabilistic-tool-discussion-2026-09-20`
-- Expected base: `9ffc751a17091441162bec9bcdfdec4da5f71309`
-- Linked Handoff Contract: `HC-2026-09-20-002`
-- Owner: Adjutant coordinates and bootstraps this EC; existing Executor receives sole contract-writing and deterministic publication responsibility after explicit transfer.
+- Working branch: `codex/withdraw-issue-15-2026-09-20`
+- Expected base: `f5943238ba2efe3ca3e42806a85251a021b51e75`
+- Linked Handoff Contract: `HC-2026-09-20-003`
+- Owner: Adjutant, sole writer; no delegation.
 
 ### Primary outcome
 
-Create one readable English-only GitHub Issue containing the four discussion questions already proposed to Commander: what distribution the instrument predicts; why mismatch is not conflict probability; why this instrument and its deterministic comparator; and what evidence would establish incremental value. Include a short beginner explanation and immutable links to existing specifications. Mark open discussion, not an approved scientific decision, experiment or implementation request. Return and open the actual issue for Commander.
+Close issue 15 as not planned, preserving its English content and history; verify readback and discuss organization here. No Project creation or scientific change.
 
 ### Authoritative inputs
 
-Read in full: this EC, AGENTS.md, CODEX_TASK_GOVERNANCE.md, CODEX_ROLE_HARNESS.md, previous HC and the assigned role profile, plus docs/research/research_contract.md and the current explicit Commander request. The issue body is the bounded editorial draft supplied by Adjutant; previously completed scientific records are context, not renewed authority. Executor reads existing checker/test and CI lifecycle requirements before publication, reusing verified source evidence without redesign. Existing specification links are pinned to the expected base.
+Read this contract, AGENTS.md, CODEX_TASK_GOVERNANCE.md, CODEX_ROLE_HARNESS.md, .codex/agents/adjutant.toml, prior HANDOFF_CONTRACT.md, docs/research/research_contract.md and Commander's current request in full. Existing checker and CI requirements govern publication.
 
 ### Allowed actions
 
-After traversal, coordinate with the existing Executor under the harness's routine pre-approved execution lane; read remote/issues/permissions/protection to avoid duplicates and verify target; create exactly one discussion issue, apply the Commander's language correction to that same issue if already created, and verify its title/body/state/URL; open that URL. Only EXECUTION_CONTRACT.md and HANDOFF_CONTRACT.md may be changed in cd30 at C:/Users/karl/.codex/worktrees/cd30/ambiguity-is-not-conflict. Use existing bundled Python and existing pytest target C:/Users/karl/.codex/tmp/ec-2026-09-20-001-validation; ordinary pytest and final repository checker are permitted including static compiler calls only within existing tests. Temporary non-sensitive request/response drafts may be stored outside Git under C:/Users/karl/.codex/tmp/ec-2026-09-20-002. Use existing Git credentials only in memory; never print/persist them. Normal fetch/branch/commit/push/PR/merge and CI verification for the required contract record are allowed; preserve the established finite primary and one completion-only closure lifecycle. No new permanent task or automation.
+Only the two contracts may change in this worktree. Read GitHub issue 15, close it with state_reason not_planned, verify and open its URL. No additional comment is needed. Use bundled Python and existing pytest target ec-2026-09-20-001-validation. Non-sensitive temporary helper files may be written under C:/Users/karl/.codex/tmp/ec-2026-09-20-003. Credentials stay in memory. Normal fetch, branch, commit, push, PR and merge for required contract records follow the finite primary and one completion closure lifecycle. Read official GitHub documentation for discussion.
 
 ### Forbidden actions
 
-No dataset or model download. No query of restricted data. No scientific execution, simulations, standalone resource compilation, training, annotations, clinical contradiction generation, new method/threshold/budget decisions, core code/test/scientific document edits or Gate-0 closure. No labels/assignees/mentions that imply scientific approval, unsolicited messages, private correspondence or protected content. No force push, history rewrite, branch deletion, protection weakening or explicit override. Do not restart completed research work.
+No dataset or model download. No query of restricted data. No scientific execution, new research decisions, code/test/research-document changes, issue deletion, comment creation, Project creation, or delegation to any module. No force push, history rewrite, protection changes or explicit bypass.
 
 ### Preconditions
 
-cd30 clean at expected base before this sole bootstrap mutation; live origin main verified at the same base and origin correct. Complete coordinator traversal and explicit sole-writer transfer before dependent actions. Verify again before publication; stop affected work on unrelated divergence. Check existing issues for an exact duplicate before creating one.
+Initial worktree clean at expected base. Verify live main and exact issue identity before mutation. Complete traversal before external actions. User's direct request authorizes Adjutant to perform this bounded administrative reversal without dispatch.
 
 ### Promotion criteria
 
-Exactly one issue exists with the intended English-only content, four questions, open-discussion boundary, and working immutable source links. No claim of approved new science or measured results. Required checks and bounded privacy/diff review pass. HC records issue identity/readback, scope and checks; normal contract publication and finite closure have honest CI receipts. User receives the issue link and browser opening. No new research task follows.
+Authenticated readback confirms issue 15 closed with not_planned; history preserved. Checks pass, only two contracts change, finite synchronization receipts recorded, and discussion returns to Commander.
 
 ### Stopping criteria
 
-Stop affected action on missing authority, unexpected duplicate, sensitive content, target mismatch, failed checks or divergent unrelated changes. Do not retry uncertain issue creation blindly; inspect issues first. A normal publication blocker must be reported without weakening protections. After creation, validation and contract closure, stop.
+Stop affected action on target mismatch, unrelated divergence, failed checks, missing authority or uncertain external response; inspect before retry. Stop after closure and discussion; do not create a Project.
 
 ### Irreversible and external boundaries
 
-Commander explicitly authorizes this single issue publication. Required governance contract GitHub synchronization follows AGENTS. Ordinary administrator-exempt merge is narrowly permitted only after freshly verifying existing actual permissions and enforce_admins=false, with unchanged required checks and explicit HC disclosure; no bypass/override flag or protection mutation. No paid compute, account agreements, new external recipients or scientific access.
+The specific issue closure is explicitly authorized. Required contract synchronization is authorized by AGENTS. Ordinary administrator-exempt merge is allowed only with freshly verified actual permissions and enforce_admins=false after required CI, disclosed in HC. No override flags or protection changes.
 
 ### Required evidence
 
-Initial and final revisions/status, exact two-file diff, issue title/body/readback/URL, tests and final checker results, privacy and staged review, remote/branch/upstream/divergence, PR and CI receipts. Record HC READY FOR REMOTE FINALIZATION before primary contract publication; after primary merge/CI use one EC/HC COMPLETE closure. Closure identity is self-evidencing and returned directly, never recursively recorded.
+Issue identity and before/after readback, exact two-file diff, pytest and final checker, privacy review, remote/branch/upstream/divergence, primary PR/merge/CI receipts. Closure identity remains self-evidencing in GitHub, never recursively committed.
 
 ### Pre-task traversal record
 
 - Traversal status: `COMPLETE`
-- Adjutant initial inspection: clean cd30; HEAD and live origin main at expected base; origin https://github.com/DearKarl/ambiguity-is-not-conflict.git. Previous completed contracts confer no new execution authority. This EC is the only bootstrap mutation.
+- Initial read-only inspection verified clean worktree, expected HEAD and correct origin. All listed sources except this new draft have been read in full. This EC is the sole pre-traversal mutation.
 
-- Adjutant completed full traversal on 2026-09-20: new EC, AGENTS, governance, harness, prior HC, Adjutant profile, research contract and explicit request. Recovered truncated output with bounded reads. Verified authority, one-issue/two-contract boundary, no science, prerequisites, promotion/stops, external publication and finite closure. Executor must complete its role-specific traversal before acting.
-
-- Executor completed full traversal on 2026-09-20 after explicit sole-writer transfer: new EC, AGENTS, governance, harness, prior HC, Executor profile, full research contract and the relayed explicit Commander request plus complete editorial draft. Re-read checker freshness and CI lifecycle requirements and reused the unchanged checker/test source evidence already fully traversed in the preceding task. Verified live main at the expected base, correct origin, and only the EC bootstrap dirty. Checked one-issue/two-contract scope, exact temporary boundary, no science, publication authority, stops and finite closure. No additional design or reviewer dispatch is required.
-
-- Language amendment on 2026-09-20: Commander explicitly requested English only after issue #15 was created from the earlier bilingual draft. Update that same issue, never create a replacement. Sole-writer Executor rereads this amended EC in full before the authorized editorial update; all scientific and two-contract boundaries remain unchanged.
-- Executor completed full reread of the language-amended EC before updating the same issue; prior mandatory-source traversal remains valid. The amendment changes editorial language only, with no scientific or recipient expansion.
-
-### Completion record
-
-Issue #15 was created once and corrected in place to English only, with exact
-API readback and Adjutant's actual-browser verification. Primary contract
-commit `036ed6530212261ca0174efd883ed74b5973cee0` merged through PR #16 as
-`e818390d35bcff46fbb17fd9dd79f8d613b4e911`; branch/PR/main CI all passed.
-The only remaining action is validation/publication/CI of this single
-two-contract completion closure on
-`codex/probabilistic-tool-discussion-closure-2026-09-20`, then final handoff
-and stop. No scientific or additional issue action is authorized.
+- Adjutant completed full traversal of this new EC and all listed inputs on 2026-09-20; verified explicit authority, sole-writer scope, exact target, no science, promotion/stops, external boundaries and finite closure. No modules dispatched.
