@@ -48,7 +48,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 - Linked Execution Contract: `EC-2026-09-20-003`
 - Task: withdraw discussion issue 15 and discuss organization with Commander
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Adjutant, sole writer; no other module dispatched
 - Handoff date: 2026-09-20 (Europe/London)
 
@@ -70,7 +70,7 @@ Interpret withdrawal as reversible closure with not_planned, preserving history.
 
 ### Assumptions and unresolved items
 
-Whether to use a GitHub Project remains Commander's choice. Required contract publication follows the finite primary and closure lifecycle; PR and CI identity will be captured after successful primary synchronization.
+Whether to use a GitHub Project remains Commander's choice. Primary publication and CI are complete. The single completion-only closure identifies itself through Git and GitHub; no recursive third record is permitted.
 
 ### Validation and review evidence
 
@@ -91,3 +91,7 @@ Metadata contains restricted identifiers and must never be treated as public or 
 ### Next permitted boundary
 
 Validate and synchronize the two administrative records, perform one completion-only closure and return to direct discussion. No Project or new issue creation, delegation, or research execution.
+
+### Primary completion evidence
+
+Primary commit e3ccd6d was published in [PR 18](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/18), attached to this task, and merged as 7d028daadb91318a6d2f011f7b0b50e57ad029a7. Push CI 35501300987, PR CI 35501302416 and post-merge main CI 35501352650 all completed successfully. Remote/base divergence was 0/0 before publication; exact staged paths were the two contracts. Fresh permissions confirmed admin and push true, enforce_admins=false, strict repository-contract and one approving review. The ordinary existing administrator exemption was used with exact SHA guard after CI, without override or protection edits. No independent review is claimed. The issue remains closed, not deleted; a later capability question about deletion does not authorize it. Commander was told permanent deletion is possible but was not performed. Only validation/publication/CI of this completion closure remains; return to Adjutant discussion afterward.
