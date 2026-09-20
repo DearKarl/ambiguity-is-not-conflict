@@ -48,7 +48,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 - Linked Execution Contract: `EC-2026-09-20-004`
 - Task: permanently delete issue 15 and prepare a PhD Kanban discussion
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Adjutant, sole writer; no delegation
 - Handoff date: 2026-09-20 (Europe/London)
 
@@ -93,3 +93,9 @@ Metadata contains restricted identifiers and must never be treated as public or 
 ### Next permitted boundary
 
 Finish the finite two-contract primary and completion-only synchronization, then discuss the proposed Kanban directly with Commander. Creating or populating a GitHub Project is a later boundary after this discussion; no other module is called.
+
+### Primary completion evidence
+
+Primary commit 09ba843 was published in [PR 20](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/20), attached to this task and merged as a595b7e28eaf101c67e80f8c53433eb2c0ba4205. Push CI 35501682262, PR CI 35501683966 and main CI 35501748152 all succeeded. Before publication divergence was 0/0 and exact staged paths were both contracts. Fresh actual admin/push rights, enforce_admins=false, strict repository-contract and one approving review were verified. Normal exact-SHA merge used the existing administrator exemption without protection changes or explicit override.
+
+The English discussion draft at C:/Users/karl/.codex/tmp/ec-2026-09-20-004/kanban-proposal.md contains six statuses, minimal fields, 19 candidate cards, acceptance criteria, a card template and a suggested weekly routine. It is an unapproved discussion artifact, not a created Project. Opening the draft in Codex was queued. Commander was asked whether scope is this research route or the whole doctorate; absent an answer, the draft explicitly assumes the current route. No dates, assignments or scientific approval were fabricated. Only the single completion closure's verification/publication/CI and final discussion remain; its own identity is self-evidencing and is not recursively committed.
