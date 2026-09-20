@@ -42,60 +42,52 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-20-004`
+## Handoff record `HC-2026-09-20-005`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-20-004`
-- Task: permanently delete issue 15 and prepare a PhD Kanban discussion
-- Status: `COMPLETE`
-- Prepared by: Adjutant, sole writer; no delegation
+- Linked Execution Contract: `EC-2026-09-20-005`
+- Task: simplify the existing research Kanban
+- Status: `READY FOR REMOTE FINALIZATION`
+- Prepared by: Adjutant, sole writer and operator
 - Handoff date: 2026-09-20 (Europe/London)
 
 ### Outcome
 
-Permanently deleted the specifically authorized GitHub issue 15, Discussion: understanding PROBVLM-2ADAPTER. The official GraphQL deleteIssue mutation returned success for DearKarl/ambiguity-is-not-conflict. Subsequent authenticated REST readback returned HTTP 410 Gone while the repository remained accessible. No other issue or historical Git record was deleted.
-
-A discussion proposal uses one research Project, a Status-based Kanban and optional decision/evidence views over the same cards. Proposed columns are Inbox, Ready, In Progress, Review, Blocked and Done. Initial contents distinguish completed protocol preparation from unapproved D1-D6 choices and future gated execution. No Project or replacement issue was created.
+[Project 5](https://github.com/users/DearKarl/projects/5/views/1), named ambiguity-is-not-conflict by the Commander, now contains exactly one Ready draft: MIMIC-CXR / MIMIC-CXR-JPG access — awaiting approval. The other four existing columns are empty. All 17 remaining old cards were removed after inspecting the unfiltered full item list; the user had already removed Blocked and its two items. Five existing statuses and the user's project name/view were preserved. Each status has one concise English purpose sentence, and the README is reduced to the same simple overview.
 
 ### Changed boundary
 
-Only EXECUTION_CONTRACT.md and HANDOFF_CONTRACT.md change. Non-sensitive temporary API helpers are under C:/Users/karl/.codex/tmp/ec-2026-09-20-004. No scientific documents, code, tests, data or models change.
+Only EC and HC change in the repository. Temporary helpers are under C:/Users/karl/.codex/tmp/ec-2026-09-20-005. External changes are confined to existing private Project 5. No repository Issue, scientific file, code, test, data or model changed.
 
 ### Facts
 
-Commander explicitly requested permanent deletion after the prior close-only action and asked to discuss a doctoral research Project/Kanban. The initial worktree was clean at f0e9ebe6cd60dc54bc7a8d420eaaaec5bfd3e15a, equal to live origin/main. The research contract and pre-access decision package confirm Gate 0 remains open; the package is protocol recommendations, not completed experiments or blanket approval.
+The dataset decision record and Commander report identify MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0. The card distinguishes credentialing awaiting review from confirmed dataset access; training is complete and its report submitted. No independent PhysioNet account verification is claimed. Initial HEAD/live main was 03270a43b2ac51fbe78760b40c25bef713108280. Gate 0 remains open.
 
 ### Decisions recorded
 
-Delete only issue 15, without further confirmation because the current instruction is explicit. Discuss a lightweight board using English artifact titles, links to canonical research records and specific completion evidence. Proposed board status is workflow status, never scientific approval. All new fields, cards and organization choices remain discussion proposals.
+Keep one draft and plain English descriptions: Inbox holds questions/ideas awaiting clarification; Ready holds agreed next steps and applications awaiting prerequisites; In Progress holds active research; Review holds outputs/methods/decisions awaiting review; Done holds documented completed work. No new planning hierarchy, module dispatch, research decisions or execution.
 
 ### Assumptions and unresolved items
 
-The board initially covers Ambiguity Is Not Conflict; whether it should cover the entire doctorate's additional activities is a question for Commander. No dates, commitments, new scientific choices or staffing assignments are invented. A draft card can capture a question before any repository Issue is created.
+Dataset approval/access remains pending. Repository Projects-page linkage is excluded by the amended boundary. Existing optional fields remain unused. No further user input is needed for this administrative scope.
 
 ### Validation and review evidence
 
-Full new-contract traversal completed before deletion. Exact issue number, title and URL were checked before the single deletion mutation; success, 410 Gone and repository availability were verified afterward. Official GitHub documentation verifies deletion and Projects/Kanban/draft capabilities. Before contract publication, python -m pytest -q passed 53 tests in 19.58s; python scripts/check_repository.py --final --base-ref origin/main returned Repository contract: OK. Diff and bounded privacy review passed; only two authorized administrative files change. No independent scientific review is required or claimed.
+The amended contract traversal preceded resumed changes. Browser reload confirmed exactly 0/1/0/0/0 items across Inbox/Ready/In Progress/Review/Done and all five saved descriptions. The sole draft's body and Ready status were read back. Required existing tests, final checker and diff/privacy review run before publication; exact results are recorded in the completion phase. No independent scientific review claimed.
 
 ### Git and external evidence
 
-Origin remains https://github.com/DearKarl/ambiguity-is-not-conflict.git. Primary branch codex/delete-issue-15-2026-09-20 begins at the verified expected base. Credentials remain in memory. Primary PR/merge/CI are self-identifying until the completion record captures their receipts. Ordinary administrator-exempt merge is authorized narrowly by EC after fresh permissions/protection and CI verification; no override or protection changes.
+Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git; branch codex/research-board-2026-09-20 begins at the expected base. Existing private visibility preserved. No account permission changes, invitations or sensitive records published. Finite synchronization uses an ordinary administrator-exempt merge only after fresh admin/push rights, enforce_admins=false and passing CI; no protection edit or explicit bypass. Primary receipts enter the one completion record; closure identifies itself in Git/GitHub.
 
 ### Deviations and negative results
 
-This request replaces the earlier close-only outcome with explicitly authorized permanent deletion. Historical Git references remain; deletion does not claim erasure of every record or cache. No module dispatch, Project creation or scientific execution.
+Historical initial work created a 19-card board. Work stopped immediately at the Commander's pause request before commit/PR. The latest instruction superseded that content and authorized the simple replacement after contract amendment and traversal. Earlier HC draft described initial work and incorrectly anticipated repository linkage; this dated amendment supersedes that unfinished outcome. Project API lacked scopes, so documented browser controls were used without permission expansion. Async UI updates required saved-state readback; no duplicate Project was created.
 
 ### Residual risks and recovery
 
-Metadata contains restricted identifiers and must never be treated as public or harmless. No restricted records or credentials are published. The issue is permanently deleted; any later recreation would be a new issue requiring authority. Preserve existing Git history. Never blindly retry a deletion after an uncertain response.
+Metadata contains restricted identifiers and must never be treated as public or harmless. Only sanitized administrative text appears on the board; restricted medical data and identifiers remain excluded. Board status is not scientific authority. Open the existing Project to recover; do not recreate it. Approval must be checked before future data access work.
 
 ### Next permitted boundary
 
-Finish the finite two-contract primary and completion-only synchronization, then discuss the proposed Kanban directly with Commander. Creating or populating a GitHub Project is a later boundary after this discussion; no other module is called.
-
-### Primary completion evidence
-
-Primary commit 09ba843 was published in [PR 20](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/20), attached to this task and merged as a595b7e28eaf101c67e80f8c53433eb2c0ba4205. Push CI 35501682262, PR CI 35501683966 and main CI 35501748152 all succeeded. Before publication divergence was 0/0 and exact staged paths were both contracts. Fresh actual admin/push rights, enforce_admins=false, strict repository-contract and one approving review were verified. Normal exact-SHA merge used the existing administrator exemption without protection changes or explicit override.
-
-The English discussion draft at C:/Users/karl/.codex/tmp/ec-2026-09-20-004/kanban-proposal.md contains six statuses, minimal fields, 19 candidate cards, acceptance criteria, a card template and a suggested weekly routine. It is an unapproved discussion artifact, not a created Project. Opening the draft in Codex was queued. Commander was asked whether scope is this research route or the whole doctorate; absent an answer, the draft explicitly assumes the current route. No dates, assignments or scientific approval were fabricated. Only the single completion closure's verification/publication/CI and final discussion remain; its own identity is self-evidencing and is not recursively committed.
+Complete required validation and finite primary/completion synchronization, return the board URL and stop. No underlying research work is authorized by these cards.

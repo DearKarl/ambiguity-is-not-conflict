@@ -55,59 +55,55 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 ### Identity and status
 
-- Contract ID: `EC-2026-09-20-004`
-- Task: permanently delete issue 15 and prepare a PhD Kanban discussion
-- Status: `COMPLETE`
-- Authorized by: Commander's explicit request on 2026-09-20 to permanently delete issue 15 and discuss a GitHub Project/Kanban for this doctoral research; no other modules.
+- Contract ID: `EC-2026-09-20-005`
+- Task: simplify the existing research Kanban
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander explicitly accepted the current-research scope and requested actual Project creation with its contents on 2026-09-20.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/delete-issue-15-2026-09-20`
-- Expected base: `f0e9ebe6cd60dc54bc7a8d420eaaaec5bfd3e15a`
-- Linked Handoff Contract: `HC-2026-09-20-004`
-- Owner: Adjutant, sole writer; no delegation.
+- Working branch: `codex/research-board-2026-09-20`
+- Expected base: `03270a43b2ac51fbe78760b40c25bef713108280`
+- Linked Handoff Contract: `HC-2026-09-20-005`
+- Owner: Adjutant sole writer and operator; no delegation.
 
 ### Primary outcome
 
-Permanently delete the specifically authorized issue 15, verify the result, and prepare a concrete Kanban discussion proposal with statuses, fields, initial cards and acceptance criteria. Project creation remains for discussion, not part of this external mutation. No scientific change.
+Latest Commander instruction supersedes the complex initial board: clear all current Project 5 items, retain exactly one Ready draft describing the MIMIC access application awaiting approval, and give each existing status one concise English sentence explaining its contents. Preserve the user-renamed project and existing column choices. No new planning hierarchy.
 
 ### Authoritative inputs
 
-Read this contract, AGENTS.md, CODEX_TASK_GOVERNANCE.md, CODEX_ROLE_HARNESS.md, .codex/agents/adjutant.toml, prior HANDOFF_CONTRACT.md, docs/research/research_contract.md, docs/research/pre_access_decision_package.md and Commander's current request in full. Existing checker and CI requirements govern publication.
+Read this amended EC, AGENTS.md, CODEX_TASK_GOVERNANCE.md and prior HC; reuse already-read unchanged harness/profile/research sources and draft only as history. Dataset identity/status is supported by the opening status section of docs/research/dataset_decision_record.md and the latest Commander report. Reuse the previously fully traversed immutable pre_access_decision_package.md evidence at the same research-document revision. Official GitHub API/UI documentation governs mechanics, not scientific authority.
 
 ### Allowed actions
 
-Only the two contracts may change in this worktree. Read and positively identify GitHub issue 15, permanently delete it through the official API or UI, and verify absence. No additional comment is needed. Use bundled Python and existing pytest target ec-2026-09-20-001-validation. Non-sensitive temporary helper files may be written under C:/Users/karl/.codex/tmp/ec-2026-09-20-004. Credentials stay in memory. Normal fetch, branch, commit, push, PR and merge for required contract records follow the finite primary and one completion closure lifecycle. Read official GitHub documentation for discussion.
+Only EC and HC may change in this repository. Temporary non-sensitive helpers/receipts under C:/Users/karl/.codex/tmp/ec-2026-09-20-005. Operate only on existing Project 5; preserve current name, visibility and view. Inspect all items including any hidden columns before clearing. No additional views, fields, invitations or repository-link task. Remove all existing Project 5 cards as explicitly requested (including drafts and any hidden status items), then create exactly one Ready draft. Add concise existing-status descriptions and simplify the README to match. Do not delete repository Issues. Use official authenticated GitHub APIs with existing credentials in memory and browser UI via documented tools. No invented owner or deadline. Read back all items and fields; inspect saved board. Use existing bundled Python/pytest. Normal finite primary and one completion closure Git/PR/CI synchronization is allowed.
 
 ### Forbidden actions
 
-No dataset or model download. No query of restricted data. No scientific execution, new research decisions, code/test/research-document changes, deletion of any other issue, comment creation, Project creation, or delegation to any module. Do not rewrite historical Git records; full deletion here means the GitHub issue object, not erasure of every reference. No force push, history rewrite, protection changes or explicit bypass.
+No dataset or model download. No query of restricted data. No scientific execution, approval, decisions, or change to research/code/tests. No recreation of deleted issue 15, unsolicited comments/messages, unrelated Project edits, public visibility expansion, module dispatch, paid resources, force push, history rewrite, protection weakening or explicit bypass.
 
 ### Preconditions
 
-Initial worktree clean at expected base. Verify live main and exact issue identity before mutation. Complete traversal before external actions. User's direct request authorizes Adjutant to perform this bounded administrative reversal without dispatch.
+Existing two dirty contracts are this interrupted task, not unrelated changes. Initial task began at expected base; inspect current Project after user edits and retraverse amendment before further mutation. User authorizes this administrative work here in Adjutant. Board tasks do not start their underlying research work.
 
 ### Promotion criteria
 
-Successful deletion response and subsequent authenticated readback confirm issue 15 is no longer available. A source-grounded Kanban proposal is reviewable. Checks pass, only two contracts change, finite synchronization receipts recorded, and discussion returns to Commander.
+Project 5 contains exactly one Ready item and concise explanations for all existing statuses; other columns are empty. MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0 are the planned coupled source; distinguish submitted credentialing from access granted. Gate 0 remains open. Verification and required checks pass; user receives actual Project URL; finite contracts close.
 
 ### Stopping criteria
 
-Stop affected action on target mismatch, unrelated divergence, failed checks, missing authority or uncertain external response; inspect before retry. Stop after closure and discussion; do not create a Project.
+Stop affected action on identity mismatch, unrelated divergence, failed checks, sensitive content or absent permission. Inspect uncertain results before retry; never duplicate Projects/items. No scientific task follows board creation.
 
 ### Irreversible and external boundaries
 
-The irreversible permanent deletion of issue 15 is explicitly authorized by the latest user request; no renewed confirmation is needed. Required contract synchronization is authorized by AGENTS. Ordinary administrator-exempt merge is allowed only with freshly verified actual permissions and enforce_admins=false after required CI, disclosed in HC. No override flags or protection changes.
+Current Commander explicitly authorizes clearing all Kanban contents and replacing them with one Ready access-status card. Use private visibility by default, no invitations or notifications to others. Required contract sync follows AGENTS. Ordinary administrator-exempt merge permitted only after fresh actual permissions, enforce_admins=false and successful required CI, disclosed in HC; no override/protection edit.
 
 ### Required evidence
 
-Issue identity and before/after readback, exact two-file diff, pytest and final checker, privacy review, remote/branch/upstream/divergence, primary PR/merge/CI receipts. Closure identity remains self-evidencing in GitHub, never recursively committed.
+Initial/final revisions, two-file diff, source/draft review, Project ID/URL/visibility/repository link, field/options and all-item readback, saved board UI, tests/final checker/privacy review, staged files/remote/upstream/divergence, PR/merge/CI. Closure self-identifies in GitHub without recursive commits.
 
 ### Pre-task traversal record
 
 - Traversal status: `COMPLETE`
-- Initial inspection found a clean worktree at the expected base. Mandatory governance, prior contracts, role profile and research inputs read; truncated research output recovered by bounded reads. Full new EC reread follows before action.
+- Task paused immediately when Commander requested stop; no primary commit or PR occurred. Latest instruction resumes only the simplified boundary. Prior 19-card work is historical, not the final outcome.
 
-- Adjutant completed full new-contract traversal on 2026-09-20. Verified explicit permanent-deletion authority, exact issue and two-contract boundary, source-grounded discussion only, forbidden actions, stops, evidence and finite closure. No delegation.
-
-### Completion record
-
-Issue 15 deletion verified by successful mutation and HTTP 410 Gone. Kanban discussion draft prepared outside Git with 19 candidate cards. Primary PR 20 merged as a595b7e28eaf101c67e80f8c53433eb2c0ba4205 with branch, PR and main CI successful. Only validation/publication/CI of this one two-contract completion closure remain before final discussion handoff.
+- Adjutant fully retraversed amended EC, AGENTS, governance, prior HC and named current source section on 2026-09-20. Verified latest clearing/replacement authority, existing-user-edit preservation, exact boundary, no science, promotion/stops and finite closure. Prior unchanged inputs reused as specified.
