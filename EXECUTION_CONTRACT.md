@@ -57,7 +57,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 - Contract ID: `EC-2026-09-20-004`
 - Task: permanently delete issue 15 and prepare a PhD Kanban discussion
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander's explicit request on 2026-09-20 to permanently delete issue 15 and discuss a GitHub Project/Kanban for this doctoral research; no other modules.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/delete-issue-15-2026-09-20`
@@ -107,3 +107,7 @@ Issue identity and before/after readback, exact two-file diff, pytest and final 
 - Initial inspection found a clean worktree at the expected base. Mandatory governance, prior contracts, role profile and research inputs read; truncated research output recovered by bounded reads. Full new EC reread follows before action.
 
 - Adjutant completed full new-contract traversal on 2026-09-20. Verified explicit permanent-deletion authority, exact issue and two-contract boundary, source-grounded discussion only, forbidden actions, stops, evidence and finite closure. No delegation.
+
+### Completion record
+
+Issue 15 deletion verified by successful mutation and HTTP 410 Gone. Kanban discussion draft prepared outside Git with 19 candidate cards. Primary PR 20 merged as a595b7e28eaf101c67e80f8c53433eb2c0ba4205 with branch, PR and main CI successful. Only validation/publication/CI of this one two-contract completion closure remain before final discussion handoff.
