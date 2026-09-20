@@ -42,52 +42,51 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-20-005`
+## Handoff record `HC-2026-09-20-006`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-20-005`
-- Task: simplify the existing research Kanban
-- Status: `COMPLETE`
-- Prepared by: Adjutant, sole writer and operator
-- Handoff date: 2026-09-20 (Europe/London)
+- Linked Execution Contract: `EC-2026-09-20-006`
+- Task: replace the closed MIMIC access item with an open submitted Issue
+- Status: `READY FOR REMOTE FINALIZATION`
+- Prepared by: Adjutant, sole operator
+- Handoff date: 2026-09-20
 
 ### Outcome
 
-[Project 5](https://github.com/users/DearKarl/projects/5/views/1), named ambiguity-is-not-conflict by the Commander, now contains exactly one Ready draft: MIMIC-CXR / MIMIC-CXR-JPG access — awaiting approval. The other four existing columns are empty. All 17 remaining old cards were removed after inspecting the unfiltered full item list; the user had already removed Blocked and its two items. Five existing statuses and the user's project name/view were preserved. Each status has one concise English purpose sentence, and the README is reduced to the same simple overview.
-
-### Changed boundary
-
-Only EC and HC change in the repository. Temporary helpers are under C:/Users/karl/.codex/tmp/ec-2026-09-20-005. External changes are confined to existing private Project 5. No repository Issue, scientific file, code, test, data or model changed.
+Deleted the verified old MIMIC access issue #24 and submitted [issue #25](https://github.com/DearKarl/ambiguity-is-not-conflict/issues/25) with its concise English title/body, tracking MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0 credentialing awaiting review. The replacement is open and is the sole item in Project 5 In Progress. Only EC/HC repository files change; project descriptions, science, code and tests remain unchanged.
 
 ### Facts
 
-The dataset decision record and Commander report identify MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0. The card distinguishes credentialing awaiting review from confirmed dataset access; training is complete and its report submitted. No independent PhysioNet account verification is claimed. Initial HEAD/live main was 03270a43b2ac51fbe78760b40c25bef713108280. Gate 0 remains open.
-
-### Decisions recorded
-
-Keep one draft and plain English descriptions: Inbox holds questions/ideas awaiting clarification; Ready holds agreed next steps and applications awaiting prerequisites; In Progress holds active research; Review holds outputs/methods/decisions awaiting review; Done holds documented completed work. No new planning hierarchy, module dispatch, research decisions or execution.
-
-### Assumptions and unresolved items
-
-Dataset approval/access remains pending. Repository Projects-page linkage is excluded by the amended boundary. Existing optional fields remain unused. No further user input is needed for this administrative scope.
+Live board inspection found the user had converted the prior draft into closed issue #24 and moved it In Progress. Commander explicitly requested deleting/replacing it and confirmed future board items must be submitted Issues, never Drafts. This preference is recorded for future intake; each future task still requires its own bounded authority. Dataset access is not confirmed, and no new PhysioNet account verification is claimed. The same reported administrative status was preserved.
 
 ### Validation and review evidence
 
-The amended contract traversal preceded resumed changes. Browser reload confirmed exactly 0/1/0/0/0 items across Inbox/Ready/In Progress/Review/Done and all five saved descriptions. The sole draft's body and Ready status were read back. 53 existing tests passed, final repository checker and diff/privacy review passed. Initial checks exposed two omitted legacy metadata-risk phrases in this handoff; both were restored before publication without changing tests or science. No independent scientific review claimed.
+Full contract traversal preceded mutation. Authenticated REST verified old title/body/state and the new open issue's matching body. GraphQL deleteIssue returned the expected repository; authenticated old-issue readback returned HTTP 410. Project UI readback verifies the single replacement and In Progress status before publication. Existing pytest, final repository checker and diff/privacy review are required before publication; completion phase records final evidence. No scientific or independent review is claimed.
 
 ### Git and external evidence
 
-Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git; branch codex/research-board-2026-09-20 begins at the expected base. Existing private visibility preserved. No account permission changes, invitations or sensitive records published. Finite synchronization uses an ordinary administrator-exempt merge only after fresh admin/push rights, enforce_admins=false and passing CI; no protection edit or explicit bypass. Primary commit 4bdd088; PR #22 merged as 7a6aa4d88209aeae3d4188a46e0c88e6afac7f82. PR CI 35503421586 and push CI 35503420298 passed; post-merge CI 35503459585 passed. Fresh admin/push rights and enforce_admins=false were verified; ordinary administrator exemption was used, with no protection change. Closure identifies itself in Git/GitHub.
-
-### Deviations and negative results
-
-Historical initial work created a 19-card board. Work stopped immediately at the Commander's pause request before commit/PR. The latest instruction superseded that content and authorized the simple replacement after contract amendment and traversal. Earlier HC draft described initial work and incorrectly anticipated repository linkage; this dated amendment supersedes that unfinished outcome. Project API lacked scopes, so documented browser controls were used without permission expansion. Async UI updates required saved-state readback; no duplicate Project was created.
+Initial base e780a2c62dddcc2ce652d53e0e6902ff043e9249; origin https://github.com/DearKarl/ambiguity-is-not-conflict.git; branch codex/mimic-access-issue-2026-09-20. Primary and one closure PR follow successful checks. Any ordinary administrator-exempt merge requires fresh admin/push rights and enforce_admins=false with CI passing; no protection edit or explicit bypass. Primary merge receipts enter the completion-only record; closure identifies itself in Git/GitHub.
 
 ### Residual risks and recovery
 
-Metadata contains restricted identifiers and must never be treated as public or harmless. Only sanitized administrative text appears on the board; restricted medical data and identifiers remain excluded. Board status is not scientific authority. Open the existing Project to recover; do not recreate it. Approval must be checked before future data access work.
+No scope deviation. Only sanitized administrative content was published. Metadata contains restricted identifiers and must never be treated as public or harmless. Old issue deletion is permanent and was explicitly requested. Recovery is the replacement #25, not another duplicate. Gate 0 remains open; In Progress describes administrative follow-up, not authorized scientific execution. Helpers and non-sensitive receipts are under C:/Users/karl/.codex/tmp/ec-2026-09-20-006.
 
 ### Next permitted boundary
 
-Only verification and normal synchronization of this one completion record remain; return the board URL and stop. No underlying research work is authorized by these cards.
+Finish verification and finite primary/completion synchronization; return issue and board links, then stop. No data access or research work follows.
+### Changed boundary
+
+Only the execution/handoff contracts and the specifically authorized GitHub issue/project item changed. No scientific files, credentials, data, tests or code changed.
+
+### Decisions recorded
+
+Use a submitted open Issue in In Progress. The Commander's continuing preference is to submit future authorized board items directly, never as drafts.
+
+### Assumptions and unresolved items
+
+PhysioNet approval and actual dataset access remain unconfirmed. No underlying scientific task is started. No missing input prevents this administrative replacement.
+
+### Deviations and negative results
+
+Initial contract validation found required handoff headings/date and an exact safety phrase missing; these formatting omissions were restored before publication. No checker/test was changed and no scientific scope was expanded.
