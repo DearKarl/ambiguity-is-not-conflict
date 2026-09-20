@@ -48,7 +48,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 - Linked Execution Contract: `EC-2026-09-20-001`
 - Task: compile the pre-access specification, acceptance matrix and finite decision package
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Executor, sole writer in cd30; Engineer read-only technical owner; Adjutant coordination
 - Handoff date: 2026-09-20 (Europe/London)
 
@@ -59,7 +59,8 @@ technical recommendations into a specification, prospective acceptance matrix
 and all 24 Gate-0 decisions grouped into six finite discussion sets. EX-A and
 NA/PR/DY/DC completions make model, measurement, inference, resource and
 decision interfaces reviewable. It is not a scientific implementation,
-observed result or Gate-0 freeze. Publication has not begun.
+observed result or Gate-0 freeze. Primary PR #12 is merged with successful
+post-merge CI. This is the single two-contract completion record.
 
 ### Changed boundary
 
@@ -124,6 +125,10 @@ Engineer additionally read the final CAL-A/NA/PR integration, matrix I18 and
 decision references and passed documentation integration/proposal status;
 its requested negative-loglikelihood wording precision was applied without
 changing the model or inference. No additional design work is authorized.
+Advisor's final delta review also passed CAL-A/NA/PR, I18 and the decision
+calibration row; the units finding is closed. Adjutant relayed final scope,
+technical and claim acceptance with no additional approval gate. None is
+represented as fresh-context independent implementation review.
 
 Existing `python -m pytest -q` passed 53 tests in 20.43 seconds; final
 `pytest -q` passed 53 in 19.35 seconds after integration. Final
@@ -159,9 +164,36 @@ Read-only GitHub REST evidence reports actual admin/push permissions,
 required approving review. The EC narrowly permits an ordinary administrator-
 exempt merge under these existing settings after checks and coordination
 acceptance; this path is disclosed here and will be reverified before merge.
-No override, protection weakening or credential output is allowed. Existing
-Git Credential Manager supplies credentials in memory only. No PR/merge has
-occurred at this preparation state.
+No override, protection weakening or credential output occurred. Existing
+Git Credential Manager supplied credentials in memory only. Immediately before
+publication, remote main still matched the expected base, divergence was 0/0,
+the seven staged paths matched scope, privacy/diff/final checks passed and the
+branch had no prior upstream. Normal push established the matching origin
+branch; unrelated files were not included.
+
+Primary commit: `27c31ce73459286f20c71f4d0c5b606989f3346c`.
+Primary [PR #12](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/12)
+was attached to the task and merged normally with an exact-head SHA guard as
+`4c4c3c30fd455b259932749dc4bf0c992f9be9c7`.
+Reverified protection/actual rights: admin/maintain/push true,
+enforce_admins=false, strict required repository-contract, one required
+approving review. The merge used the EC's disclosed ordinary administrator
+exemption from that review requirement after both required runs succeeded;
+no bypass flag, protection edit, forged review or review-as-independent claim.
+
+Successful primary CI evidence:
+
+- [Branch push run 35477920676](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35477920676).
+- [PR run 35477935896](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35477935896).
+- [Post-merge main run 35477981692](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35477981692).
+
+Fetched origin/main confirmed the merge. The clean worktree then created the
+single closure branch `codex/pre-access-readiness-closure-2026-09-20` at that
+revision. Only EC/HC are changed for closure. Their own final commit/PR/merge
+and post-merge CI are self-evidencing in Git/GitHub and the final handoff;
+they are deliberately not recursively inserted into this record. A failed
+closure check stops publication for repair only under the existing finite
+contract rule; no scientific scope or second closure is authorized.
 
 ### Deviations and negative results
 
@@ -179,14 +211,17 @@ scientific success is inferred from this documentation work.
 Metadata contains restricted identifiers and must never be treated as public
 or harmless. No private evidence, clinical record or restricted derivative is
 included. Historical source statements are attributed, not freshly verified.
-Recovery is the named branch and current seven-file diff at the base above;
-no published history has been rewritten.
+Recovery is the merged primary revision and named two-contract closure branch;
+no published history has been rewritten. New scientific selections, software
+conformance, external access/ethics/roster/capacity and all observed gates remain
+unresolved at their explicitly named future boundaries.
 
 ### Next permitted boundary
 
-Technical integration and coordination reviews are complete. Perform only
-existing final validation and authorized normal primary publication. Primary
-commit/PR/check/merge identities are self-evidencing until the completion
-record. After successful primary merge and CI, use one
-completion-only two-contract closure; its own identity stays in Git/GitHub
-and the final receipt. No scientific work or new task follows automatically.
+Technical integration, coordination reviews, primary publication and main CI
+are complete. Only validate and publish this one completion-only two-contract
+closure, verify its post-merge CI, then stop and return to Advisor/Commander
+for discussion of mathematics, instruments, matched deterministic comparison
+and inference. No scientific work, new task, benchmark, download, annotation
+or legacy job follows automatically. Gate 0 remains open; packet completeness
+does not grant decision-freeze readiness, operational readiness or success.

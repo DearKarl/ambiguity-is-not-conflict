@@ -57,7 +57,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 - Contract ID: `EC-2026-09-20-001`
 - Task: compile the pre-access specification, acceptance matrix and finite decision package
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander on 2026-09-20, explicitly relayed by Advisor task 01a0bb7b-e9b9-7f61-acb0-38a7584670b8.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Expected base: `585be42d47a86b84a16bbf986d83e96f37145306`; verify remote before implementation.
@@ -113,3 +113,15 @@ Versioned input/source crosswalk; Engineer specification receipt; Adjutant histo
 
 - Engineer attributed read-only traversal receipt received 2026-09-20: mandatory governance/EC/HC/profile, all 17 named design inputs, research/progress/preparation, DR-0018/remaining/DR-0019, and additional dataset candidate, intervention audit and evaluation protocol fully read at the expected base; truncated reads recovered. No edits, tests, downloads, queries or research execution. Executor owns integration.
 - Executor re-traversed the full amended EC on 2026-09-20 for the precisely named temporary validation-dependency boundary; retained all prior mandatory-source traversal and scientific prohibitions. Adjutant confirmed this as necessary ordinary validation preparation under the current authorization, not a scientific environment or scope expansion.
+
+### Completion record
+
+The authorized seven-file packet was published through PR #12, primary commit
+`27c31ce73459286f20c71f4d0c5b606989f3346c`, merged as
+`4c4c3c30fd455b259932749dc4bf0c992f9be9c7`. Push, PR and post-merge
+repository-contract CI passed; HC records the exact receipts and disclosed
+ordinary administrator exemption. The single completion-only branch is
+`codex/pre-access-readiness-closure-2026-09-20`, based on that merge and
+limited to these two contracts. No substantive work remains or is authorized
+after COMPLETE. Only closure validation/publication/CI and the final handoff
+may follow. Gate 0 remains open; no scientific execution is approved.
