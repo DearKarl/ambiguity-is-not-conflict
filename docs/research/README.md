@@ -40,6 +40,13 @@ links all existing canonical records and reports. See the
 [pre-access preparation plan](pre_access_preparation_plan.md), and
 [portable migration entry](../../Handoff/README.md) for current coordination.
 
+The September 20 pre-access packet provides the
+[readiness specification](pre_access_readiness_specification.md),
+[prospective acceptance matrix](pre_access_acceptance_matrix.md), and
+[finite decision package](pre_access_decision_package.md). These compile
+reviewable choices and evidence requirements; package acceptance is not
+Gate-0 closure, operational readiness, or scientific success.
+
 The [roadmap](../roadmap.md) turns these documents into evidence gates. A
 planned method or experiment is not a result. Any conflict between a task brief
 and this directory is resolved in favour of the most recent approved decision

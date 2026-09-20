@@ -55,153 +55,61 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 ### Identity and status
 
-- Contract ID: `EC-2026-09-18-001`
-- Task: synchronize all non-sensitive research progress and literature, consolidate the four-role architecture, and package a cross-device NeurIPS 2027 plan
-- Status: `COMPLETE`
-- Authorized by: Commander, explicit request in the Adjutant session on 2026-09-18
+- Contract ID: `EC-2026-09-20-001`
+- Task: compile the pre-access specification, acceptance matrix and finite decision package
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander on 2026-09-20, explicitly relayed by Advisor task 01a0bb7b-e9b9-7f61-acb0-38a7584670b8.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/neurips-2027-progress-sync`
-- Expected base: `d63e96abafe965ba0a59fb2c8442921fe94d0ab6`, subject to read-only remote verification before branching
-- Linked Handoff Contract: `HC-2026-09-18-001`
-- Owner: Adjutant coordinates; Executor is sole substantive repository writer after explicit dispatch; Advisor and Engineer provide read-only bounded plans.
+- Expected base: `585be42d47a86b84a16bbf986d83e96f37145306`; verify remote before implementation.
+- Working branch: `codex/pre-access-readiness-2026-09-20`
+- Linked Handoff Contract: `HC-2026-09-20-001`
+- Owner: Adjutant coordinates. Adjutant only bootstraps this EC in cd30. After explicit transfer Executor is the sole writer, including both contracts, in cd30; Engineer is read-only specification owner; Advisor is read-only strategic adviser.
 
 ### Primary outcome
 
-Publish a complete non-sensitive progress and literature snapshot to GitHub and
-assemble a project-specific migration package under Desktop/Handoff. Record
-NeurIPS 2027 Main Track submission as the sole project objective, without
-promising acceptance or weakening scientific kill gates. Obtain complementary
-Advisor, Engineer and Executor contributions to a concrete pre-access plan.
-The prior opt-out for meeting/admin publication is superseded only for sanitized
-progress summaries explicitly requested now, not private correspondence or data.
+Deliver concrete reviewable protocol specifications, prospective acceptance checks and finite Commander decisions for pre-access preparation. Preserve Method A as sole route and NeurIPS 2027 Main Track as sole strategic objective without acceptance promises. Package acceptance is separate from scientific success and operational readiness; Gate 0 remains open.
 
 ### Authoritative inputs
 
-Read in full before dependent work: AGENTS.md, CODEX_TASK_GOVERNANCE.md, this
-contract, the prior HANDOFF_CONTRACT.md, the current Commander request,
-and the Desktop CODEX_ROLE_HARNESS.md and four .codex/agents profiles.
-Targeted implementation inputs, read by their assigned owner before edits:
-README.md, docs/roadmap.md, docs/research/README.md, submission_strategy.md,
-research_contract.md, scope_charter.md, dataset_decision_record.md,
-decision_log.md, literature_matrix.md, novelty_audit.md, scripts/check_repository.py,
-and tests/test_repository_contract.py. Research paths are under docs/research.
-The sanitized Desktop Adjutant handoff and dataset requirements note are
-migration inputs, not scientific authority. Published four-role branch changes
-may be reconciled without copying stale local task contracts wholesale.
+Adjutant fully reads AGENTS.md, CODEX_TASK_GOVERNANCE.md, CODEX_ROLE_HARNESS.md, this EC, prior HC, .codex/agents/adjutant.toml, docs/research/research_contract.md, pre_access_preparation_plan.md, progress_2026-09-18.md, and the complete DR-0018, remaining-Gate-0 list and DR-0019 sections of docs/research/decision_log.md. Research short paths in this contract are under docs/research/.
+Engineer and Executor fully traverse the mandatory governance/contracts and their role profile before dependent work, then read the relevant canonical design inputs: gate0_decision_dossier.md, gate0_closure_audit.md, method_a_identification_framework.md, statistical_analysis_plan.md, estimator_formalization_audit.md, measurement_protocol.md, annotation_and_intervention_protocol.md, reader_measurement_and_mv1_qualification_audit.md, baselines_and_ablations.md, dataset_decision_record.md, data_governance.md, execution_budget_and_backbone_audit.md, simulation_output_and_operation_registry.md, noncore_simulation_computational_design.md, submission_strategy.md and novelty_audit.md. Read any further referenced source before relying on its detail. Executor additionally reads scripts/check_repository.py and tests/test_repository_contract.py to follow existing validation, without editing them.
 
 ### Allowed actions
 
-After traversal, inspect remote/worktree/branch inventories; fetch; create a
-clean bounded branch; send explicit read-only planning requests to the existing
-Advisor and Engineer tasks and bounded implementation to Executor. No new tasks
-are needed. Reconcile authorized governance/profile changes, submission purpose,
-non-sensitive access-status summaries, plan and literature/progress indexes.
-Allowed repository surface: the two contracts; AGENTS.md; CODEX_TASK_GOVERNANCE.md;
-CODEX_ROLE_HARNESS.md; .codex/agents/*.toml; README.md; docs/roadmap.md;
-docs/research/README.md, submission_strategy.md, research_contract.md,
-scope_charter.md, decision_log.md, dataset_decision_record.md;
-new docs/research progress/plan/migration records; and a portable Handoff/
-folder containing only non-sensitive documentation and inventories.
-Preserve existing literature, bibliography, reports, code and tests; include them
-in the portable snapshot and Git completeness inventory, without rewriting their
-scientific contents. Read additional tracked material as needed for inventory.
-Outside Git, create a project-specific Desktop/Handoff migration package,
-manifest, full safe repository snapshot and Git bundle if useful. Preserve other
-projects and the existing handoff. Ordinary local validation only; no paid compute.
-Existing static registry/compiler calls inside the mandated pytest suite are
-permitted as deterministic validation, not scientific simulation; do not run
-resource compilers independently.
-Run required checks, commit, push, create and normally merge PRs after passing CI,
-then use one completion-only two-contract closure. A normal administrator-exempt
-merge is allowed only if the repository's existing sole-collaborator condition is
-verified and disclosed; no explicit override flag or protection weakening.
+Read-only source and Git verification; existing-module coordination; branch/fetch; documentation drafting and review; deterministic existing pytest and final checker; normal commit, push, PR and merge after checks. Exact writable surface: EXECUTION_CONTRACT.md, HANDOFF_CONTRACT.md, docs/research/pre_access_readiness_specification.md, docs/research/pre_access_acceptance_matrix.md, docs/research/pre_access_decision_package.md, docs/research/README.md and docs/research/pre_access_preparation_plan.md. Worktree: C:/Users/karl/.codex/worktrees/cd30/ambiguity-is-not-conflict. Other worktrees remain unchanged. English durable artifacts and concise Chinese dialogue. As coordinated by Adjutant on 2026-09-20, necessary reversible validation preparation may install only existing requirements-dev.txt pytest==8.4.2 and its required dependencies into C:/Users/karl/.codex/tmp/ec-2026-09-20-001-validation, using the existing bundled Python. This is the sole additional temporary filesystem boundary; no scientific dependencies/models, paid service, tracked environment files or gh installation. Record exact versions and commands. Existing Git Credential Manager credentials may be used only in memory for authorized GitHub REST operations; never print or persist credentials.
 
 ### Forbidden actions
 
-Explicit boundaries: no dataset or model download; no query of restricted data.
-No restricted data/model access or download, credential export, clinical records,
-private screenshots, raw personal correspondence, training reports or verification
-tokens in Git or the package. No scientific execution, annotation, threshold,
-method or budget changes, Gate-0 closure, experiments, force push, history rewrite,
-branch deletion, protection changes, or automatic resumption of legacy work.
-No overwriting unrelated dirty worktrees or other projects in Desktop/Handoff.
+No dataset or model download. No query of restricted data. No core code/test changes, historical decision or approved-method rewrites, Gate-0 closure, scientific execution, dataset/model download, restricted query, training, simulation, independent resource compiler, clinical contradiction generation or annotation. No new threshold/budget approval by inference, no account actions, agreements, private correspondence, credentials or identifiers. No new tasks/automations, legacy job resumption, force push, history rewrite, branch deletion, protection weakening or explicit override.
 
 ### Preconditions
 
-Current worktree clean except this authorized contract draft; existing Desktop
-changes preserved. Confirm exact remote and remote base before substantive edits.
-Full traversal and explicit per-owner boundary before delegation or mutation.
-If remote base differs, amend this contract and re-traverse before proceeding.
+Local base and origin match the stated repository; worktree initially clean. Complete traversal before delegation or mutation other than this EC bootstrap. Verify remote divergence before substantive writing. Preserve unrelated work. Executor acknowledges exclusive writing transfer before editing.
 
 ### Promotion criteria
 
-Sole submission objective is consistent, current access status is not inflated,
-four roles match the latest authorized configuration, literature/progress coverage
-is inventoried, plans identify owners/dependencies/deliverables without execution
-permission, privacy scans and required repository checks pass, and primary plus
-closure publication evidence is recorded. The Desktop package includes final
-repository content and exact revision identity, without recursive self-hashes.
+Cover every DR-0018 and remaining Gate-0 row with approved/source-derived/proposed/owner-decision/external-evidence/data-dependent status and exact authority. Clinical unit, independent readers, construct, interventions, information-loss controls, artifact rules and natural-ambiguity veto each have object, method, threshold or explicit prior decision, evidence and failure action. Preserve psi_mag, named instrument/comparators, ablations, patient splits and inference semantics. Missing executable fields have precise gaps, recommendations, alternatives and reasons; no generic TBD substitutes. Predefine data-dependent yield, reliability, validity and resource checks. Specify Stage-B and later stage sequence without execution permission. Include claim/evidence/failure mapping and finite Commander decisions. Required checks pass; sanitized Git/publication and finite closure receipts are recorded. Neither novelty nor scientific readiness is claimed from documentation acceptance.
 
 ### Stopping criteria
 
-Stop affected work on conflicting ownership, sensitive artifacts, scientific scope
-expansion, failed checks or remote divergence. Resolve bounded routine errors;
-never weaken checks to publish. Keep distinct remote publication and local archive
-completion states if an external blocker prevents completion.
+Stop affected work for authority conflict, overlapping writers, sensitive content, remote divergence, failed validation, scope expansion or unsourced scientific changes. Repair only within scope; do not weaken checks. Return exact blockers if ordinary publication cannot finish. After delivery stop and return to Advisor/Commander for discussion of mathematics, instruments, comparator and inference.
 
 ### Irreversible and external boundaries
 
-GitHub publication and coordination with the three existing project modules are
-explicitly authorized. No other messages, applications, agreements, payments or
-restricted access. Remote publication follows review/checks; ordinary merge only.
+Only existing project-module coordination, read-only public source verification and normal GitHub synchronization are authorized. Before merge verify current protection and permissions. A normal administrator-exempt merge is narrowly permitted only if existing enforce_admins=false and actual account permission permit it, explicitly disclosed in HC; no override flag, protection change or inferred privilege. If unavailable, retain PR and report blocker. No paid compute; ordinary local documentation validation only. Static compiler calls are permitted only inside existing mandated pytest.
 
 ### Required evidence
 
-Exact before/after revisions and changed files; all-worktree non-sensitive
-inventory; module receipts; literature index and snapshot manifest; test/checker
-results; privacy/path checks; PR/CI/merge receipts; Desktop package verification.
-No claim that all legacy sessions were reviewed unless actually inspected.
+Versioned input/source crosswalk; Engineer specification receipt; Adjutant historical/external-evidence ledger and scope review; Executor changed-file inventory; pytest -q, python scripts/check_repository.py --final and diff-check results; privacy review; remote/branch/upstream/staged/divergence checks; commit/PR/CI/merge status. Use existing finite primary/closure lifecycle: HC READY FOR REMOTE FINALIZATION before primary publication, then one two-contract COMPLETE closure after primary merge/CI. Closure identity remains self-evidencing, not recursive.
 
 ### Pre-task traversal record
 
 - Traversal status: `COMPLETE`
-- Executor traversal: completed 2026-09-18 before dependent documentation work;
-  read mandatory contracts/governance, Desktop role sources, every named
-  targeted input, and the two sanitized migration inputs. Confirmed branch,
-  origin URL, HEAD and origin/main at the expected base, with only the
-  authorized EC draft initially modified. Re-read the full amended EC after
-  the Adjutant clarified pytest-only static compiler calls and explicit
-  download/query prohibitions. No standalone compiler is authorized.
-- Completed 2026-09-18: Adjutant read the contract and mandatory governance inputs in full, including prior HC and Desktop role profiles. Authority, boundaries, promotion/stop criteria and finite closure reviewed. This contract was the sole pre-traversal mutation. Per-owner targeted reads must precede their dependent edits.
+- Initial read-only evidence: cd30 clean detached HEAD at expected base; origin https://github.com/DearKarl/ambiguity-is-not-conflict.git. Historical EC/HC COMPLETE confer no new authority. This EC is the sole bootstrap mutation.
 
-### Completion record
+- Adjutant completed full coordinator traversal on 2026-09-20: mandatory governance, new EC, prior HC, role profile, research contract, preparation plan, historical ledger, DR-0018, remaining-Gate-0 list and DR-0019. Recovered truncated output with bounded reads. Authority, exact scope, approval labels, preconditions, acceptance, stops, zero-paid-compute and external boundaries checked. Remote main verified at the expected base. Engineer/Executor must record their dependent-source traversals before work.
 
-- Primary head: `8ffc4217047c3e07000974f525f4a5626bc2ff97`.
-- Primary PR: https://github.com/DearKarl/ambiguity-is-not-conflict/pull/10.
-- Primary merge: `156da144f097b0c817d6b351a2bd1205473c58f3`.
-- Adjutant verified branch CI `35401681440`, PR CI `35401697772`, and
-  post-merge main CI `35401764981`, all `SUCCESS`.
-- Adjutant used the ordinary SHA-guarded REST merge under the verified sole
-  collaborator DearKarl condition, required review count one and
-  `enforce_admins=false`. No override or protection change was used.
-- Adjutant reviewed scope, objective and plan and passed targeted privacy,
-  binary and size scans. All 83 original paths were retained, 71 original
-  files stayed byte-identical, and the final primary snapshot has 94 paths.
-- The Desktop migration package and ZIP were built at the primary merge.
-  Adjutant compared every project snapshot file with its Git blob, recorded
-  a 98-file manifest, verified the Git bundle and restored it offline to the
-  exact primary merge. The bundle includes origin/main and the already-public
-  four-role branch. The original Desktop checkout's four changes are preserved.
-- Executor confirmed a clean closure branch
-  `codex/neurips-2027-progress-sync-completion` at the exact primary merge,
-  equal to origin/main, and read both contracts fully before this finite edit.
-- The completion-only change updates only these two contracts. Closure
-  checks and publication receipts are returned directly to Adjutant; the
-  closure's own identity is self-evidencing in Git/GitHub and the final
-  external delivery receipt, never recursively inserted here.
-- No substantive work remains authorized. Adjutant may publish this closure,
-  verify its CI and mechanically refresh the external snapshot, manifest,
-  receipt and ZIP to the final closure revision as delivery verification.
-  The verified archive currently represents the primary merge, not a closure
-  revision that has not yet been published. No new substantive documentation
-  or scientific work is permitted under this completed contract.
+- Executor completed full traversal on 2026-09-20 after explicit sole-writer transfer: governance, EC, prior HC, Executor profile, all named canonical design inputs, research contract, plan, historical progress, DR-0018/remaining Gate-0/DR-0019, plus dataset decision candidate, intervention option audit, research index, existing checker/tests, CI workflow and requirements. Truncated reads were recovered in bounded segments. Verified HEAD and live origin main at the expected base with only the EC bootstrap modified. Scope, evidence labels, stops, no scientific execution, exact seven-file boundary and finite closure reviewed. Adjutant retains coordination; Engineer remains read-only. No other worktree is written.
+
+- Engineer attributed read-only traversal receipt received 2026-09-20: mandatory governance/EC/HC/profile, all 17 named design inputs, research/progress/preparation, DR-0018/remaining/DR-0019, and additional dataset candidate, intervention audit and evaluation protocol fully read at the expected base; truncated reads recovered. No edits, tests, downloads, queries or research execution. Executor owns integration.
+- Executor re-traversed the full amended EC on 2026-09-20 for the precisely named temporary validation-dependency boundary; retained all prior mandatory-source traversal and scientific prohibitions. Adjutant confirmed this as necessary ordinary validation preparation under the current authorization, not a scientific environment or scope expansion.
