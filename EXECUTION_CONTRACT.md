@@ -57,7 +57,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 - Contract ID: `EC-2026-09-20-005`
 - Task: simplify the existing research Kanban
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander explicitly accepted the current-research scope and requested actual Project creation with its contents on 2026-09-20.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/research-board-2026-09-20`
