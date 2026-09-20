@@ -48,7 +48,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 
 - Linked Execution Contract: `EC-2026-09-20-005`
 - Task: simplify the existing research Kanban
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: Adjutant, sole writer and operator
 - Handoff date: 2026-09-20 (Europe/London)
 
@@ -74,11 +74,11 @@ Dataset approval/access remains pending. Repository Projects-page linkage is exc
 
 ### Validation and review evidence
 
-The amended contract traversal preceded resumed changes. Browser reload confirmed exactly 0/1/0/0/0 items across Inbox/Ready/In Progress/Review/Done and all five saved descriptions. The sole draft's body and Ready status were read back. Required existing tests, final checker and diff/privacy review run before publication; exact results are recorded in the completion phase. No independent scientific review claimed.
+The amended contract traversal preceded resumed changes. Browser reload confirmed exactly 0/1/0/0/0 items across Inbox/Ready/In Progress/Review/Done and all five saved descriptions. The sole draft's body and Ready status were read back. 53 existing tests passed, final repository checker and diff/privacy review passed. Initial checks exposed two omitted legacy metadata-risk phrases in this handoff; both were restored before publication without changing tests or science. No independent scientific review claimed.
 
 ### Git and external evidence
 
-Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git; branch codex/research-board-2026-09-20 begins at the expected base. Existing private visibility preserved. No account permission changes, invitations or sensitive records published. Finite synchronization uses an ordinary administrator-exempt merge only after fresh admin/push rights, enforce_admins=false and passing CI; no protection edit or explicit bypass. Primary receipts enter the one completion record; closure identifies itself in Git/GitHub.
+Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git; branch codex/research-board-2026-09-20 begins at the expected base. Existing private visibility preserved. No account permission changes, invitations or sensitive records published. Finite synchronization uses an ordinary administrator-exempt merge only after fresh admin/push rights, enforce_admins=false and passing CI; no protection edit or explicit bypass. Primary commit 4bdd088; PR #22 merged as 7a6aa4d88209aeae3d4188a46e0c88e6afac7f82. PR CI 35503421586 and push CI 35503420298 passed; post-merge CI 35503459585 passed. Fresh admin/push rights and enforce_admins=false were verified; ordinary administrator exemption was used, with no protection change. Closure identifies itself in Git/GitHub.
 
 ### Deviations and negative results
 
@@ -90,4 +90,4 @@ Metadata contains restricted identifiers and must never be treated as public or 
 
 ### Next permitted boundary
 
-Complete required validation and finite primary/completion synchronization, return the board URL and stop. No underlying research work is authorized by these cards.
+Only verification and normal synchronization of this one completion record remain; return the board URL and stop. No underlying research work is authorized by these cards.
