@@ -57,7 +57,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 - Contract ID: `EC-2026-09-20-002`
 - Task: publish one English-only discussion issue about the probabilistic instrument
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander explicitly requested creation of the proposed GitHub issue in the Adjutant conversation on 2026-09-20.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/probabilistic-tool-discussion-2026-09-20`
@@ -112,3 +112,14 @@ Initial and final revisions/status, exact two-file diff, issue title/body/readba
 
 - Language amendment on 2026-09-20: Commander explicitly requested English only after issue #15 was created from the earlier bilingual draft. Update that same issue, never create a replacement. Sole-writer Executor rereads this amended EC in full before the authorized editorial update; all scientific and two-contract boundaries remain unchanged.
 - Executor completed full reread of the language-amended EC before updating the same issue; prior mandatory-source traversal remains valid. The amendment changes editorial language only, with no scientific or recipient expansion.
+
+### Completion record
+
+Issue #15 was created once and corrected in place to English only, with exact
+API readback and Adjutant's actual-browser verification. Primary contract
+commit `036ed6530212261ca0174efd883ed74b5973cee0` merged through PR #16 as
+`e818390d35bcff46fbb17fd9dd79f8d613b4e911`; branch/PR/main CI all passed.
+The only remaining action is validation/publication/CI of this single
+two-contract completion closure on
+`codex/probabilistic-tool-discussion-closure-2026-09-20`, then final handoff
+and stop. No scientific or additional issue action is authorized.
