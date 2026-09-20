@@ -55,55 +55,53 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 ### Identity and status
 
-- Contract ID: `EC-2026-09-20-005`
-- Task: simplify the existing research Kanban
-- Status: `COMPLETE`
-- Authorized by: Commander explicitly accepted the current-research scope and requested actual Project creation with its contents on 2026-09-20.
+- Contract ID: `EC-2026-09-20-006`
+- Task: replace the old MIMIC access issue and submit an open In Progress issue
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander explicitly requested deleting the old item, submitting its replacement, and placing it In Progress on 2026-09-20.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/research-board-2026-09-20`
-- Expected base: `03270a43b2ac51fbe78760b40c25bef713108280`
-- Linked Handoff Contract: `HC-2026-09-20-005`
-- Owner: Adjutant sole writer and operator; no delegation.
+- Working branch: `codex/mimic-access-issue-2026-09-20`
+- Expected base: `e780a2c62dddcc2ce652d53e0e6902ff043e9249`
+- Linked Handoff Contract: `HC-2026-09-20-006`
+- Owner: Adjutant sole operator; no delegation.
 
 ### Primary outcome
 
-Latest Commander instruction supersedes the complex initial board: clear all current Project 5 items, retain exactly one Ready draft describing the MIMIC access application awaiting approval, and give each existing status one concise English sentence explaining its contents. Preserve the user-renamed project and existing column choices. No new planning hierarchy.
+Replace the existing closed MIMIC access issue #24 with one open repository Issue, retained as the sole Project 5 card in In Progress. Keep concise English dataset/version and awaiting-review content. Delete the old issue as expressly requested; do not alter column descriptions or other project settings.
 
 ### Authoritative inputs
 
-Read this amended EC, AGENTS.md, CODEX_TASK_GOVERNANCE.md and prior HC; reuse already-read unchanged harness/profile/research sources and draft only as history. Dataset identity/status is supported by the opening status section of docs/research/dataset_decision_record.md and the latest Commander report. Reuse the previously fully traversed immutable pre_access_decision_package.md evidence at the same research-document revision. Official GitHub API/UI documentation governs mechanics, not scientific authority.
+Read this contract, AGENTS.md, CODEX_TASK_GOVERNANCE.md, prior HANDOFF_CONTRACT.md, and the opening administrative update/decision summary of docs/research/dataset_decision_record.md. Live Project 5 and issue #24 establish the item identity. Earlier immutable research traversal remains valid; no scientific decision is made here.
 
 ### Allowed actions
 
-Only EC and HC may change in this repository. Temporary non-sensitive helpers/receipts under C:/Users/karl/.codex/tmp/ec-2026-09-20-005. Operate only on existing Project 5; preserve current name, visibility and view. Inspect all items including any hidden columns before clearing. No additional views, fields, invitations or repository-link task. Remove all existing Project 5 cards as explicitly requested (including drafts and any hidden status items), then create exactly one Ready draft. Add concise existing-status descriptions and simplify the README to match. Do not delete repository Issues. Use official authenticated GitHub APIs with existing credentials in memory and browser UI via documented tools. No invented owner or deadline. Read back all items and fields; inspect saved board. Use existing bundled Python/pytest. Normal finite primary and one completion closure Git/PR/CI synchronization is allowed.
+Only EC and HC repository edits; temporary non-sensitive helpers under C:/Users/karl/.codex/tmp/ec-2026-09-20-006. Inspect #24 then create one replacement with matching sanitized administrative content, delete only verified #24, add replacement to Project 5 and select In Progress. Existing GitHub credentials in memory and documented browser UI permitted. Run existing tests/final checker. Commit/push with finite primary PR and one completion-only closure PR.
 
 ### Forbidden actions
 
-No dataset or model download. No query of restricted data. No scientific execution, approval, decisions, or change to research/code/tests. No recreation of deleted issue 15, unsolicited comments/messages, unrelated Project edits, public visibility expansion, module dispatch, paid resources, force push, history rewrite, protection weakening or explicit bypass.
+No dataset or model download. No query of restricted data. No science, dataset/model access, unrelated issue deletion, account permission change, new project/fields, delegation, sensitive information, force push, history rewrite or protection change.
 
 ### Preconditions
 
-Existing two dirty contracts are this interrupted task, not unrelated changes. Initial task began at expected base; inspect current Project after user edits and retraverse amendment before further mutation. User authorizes this administrative work here in Adjutant. Board tasks do not start their underlying research work.
+Clean base verified. Live board shows only closed issue #24 already in In Progress, replacing the previous draft through user edits. Verify issue title/body before deletion and preserve its relevant content in the new issue.
 
 ### Promotion criteria
 
-Project 5 contains exactly one Ready item and concise explanations for all existing statuses; other columns are empty. MIMIC-CXR v2.1.0 and MIMIC-CXR-JPG v2.1.0 are the planned coupled source; distinguish submitted credentialing from access granted. Gate 0 remains open. Verification and required checks pass; user receives actual Project URL; finite contracts close.
+Old #24 deletion confirmed, one open replacement with exact dataset versions and truthful awaiting-review status, Project In Progress count one and other columns empty. Tests/checker/diff privacy review pass. Finite contracts close.
 
 ### Stopping criteria
 
-Stop affected action on identity mismatch, unrelated divergence, failed checks, sensitive content or absent permission. Inspect uncertain results before retry; never duplicate Projects/items. No scientific task follows board creation.
+Stop affected action on identity mismatch, uncertain deletion, failed checks, unrelated divergence or absent permissions. Inspect before retry to avoid duplicates. User interruption stops work immediately.
 
 ### Irreversible and external boundaries
 
-Current Commander explicitly authorizes clearing all Kanban contents and replacing them with one Ready access-status card. Use private visibility by default, no invitations or notifications to others. Required contract sync follows AGENTS. Ordinary administrator-exempt merge permitted only after fresh actual permissions, enforce_admins=false and successful required CI, disclosed in HC; no override/protection edit.
+Commander explicitly authorizes deletion of the old item and submission of its replacement in the same repository. Delete only #24 after matching title/body. Normal administrator-exempt merge is allowed after fresh admin/push rights, enforce_admins=false and passing required CI; disclose in HC. No protection edit or explicit bypass.
 
 ### Required evidence
 
-Initial/final revisions, two-file diff, source/draft review, Project ID/URL/visibility/repository link, field/options and all-item readback, saved board UI, tests/final checker/privacy review, staged files/remote/upstream/divergence, PR/merge/CI. Closure self-identifies in GitHub without recursive commits.
+Issue identity/body/readback, replacement URL, deletion receipt, sole In Progress card, two-file diff, tests/final checker, staged-file/remote/upstream/divergence verification, primary PR/merge/CI. Closure self-identifies without recursive commits.
 
 ### Pre-task traversal record
 
 - Traversal status: `COMPLETE`
-- Task paused immediately when Commander requested stop; no primary commit or PR occurred. Latest instruction resumes only the simplified boundary. Prior 19-card work is historical, not the final outcome.
-
-- Adjutant fully retraversed amended EC, AGENTS, governance, prior HC and named current source section on 2026-09-20. Verified latest clearing/replacement authority, existing-user-edit preservation, exact boundary, no science, promotion/stops and finite closure. Prior unchanged inputs reused as specified.
+- Read the full active EC, AGENTS, governance, prior HC and named dataset source section. Verified explicit replacement/deletion authority, precise boundary, promotion and stopping criteria, and finite closure on 2026-09-20. Commander additionally confirmed all future board items should be submitted Issues, never Drafts.
