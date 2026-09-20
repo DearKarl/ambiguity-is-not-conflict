@@ -42,136 +42,52 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-20-002`
+## Handoff record `HC-2026-09-20-003`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-20-002`
-- Task: publish one English-only discussion issue about the probabilistic instrument
-- Status: `COMPLETE`
-- Prepared by: Executor, sole writer in cd30; Adjutant coordinates
+- Linked Execution Contract: `EC-2026-09-20-003`
+- Task: withdraw discussion issue 15 and discuss organization with Commander
+- Status: `READY FOR REMOTE FINALIZATION`
+- Prepared by: Adjutant, sole writer; no other module dispatched
 - Handoff date: 2026-09-20 (Europe/London)
 
 ### Outcome
 
-Created exactly one [discussion issue #15](https://github.com/DearKarl/ambiguity-is-not-conflict/issues/15),
-then updated that same issue to English only under the Commander's latest
-explicit correction. Title: "Discussion: understanding PROBVLM-2ADAPTER".
-The exact supplied English content retains a beginner explanation, four
-unchecked questions, discussion-only boundary and three immutable references.
-Authenticated readback confirms exact title/body and open state, with no
-labels or assignees. The URL was returned immediately to Adjutant for Commander;
-Codex browser opening was queued for the calling task; Adjutant subsequently
-confirmed returning and opening the URL for Commander. Adjutant's bounded
-scope/editorial acceptance passed; no design or independent review is claimed.
-Adjutant later navigated the user's existing Chrome Issues tab to #15 and
-verified the visible English title, open state, complete body, four unchecked
-questions, three pinned links and no labels/assignees. This actual-browser
-receipt supersedes the earlier queued opening status without another issue
-mutation. Primary contract publication and post-merge CI are complete.
+Issue [15](https://github.com/DearKarl/ambiguity-is-not-conflict/issues/15), titled Discussion: understanding PROBVLM-2ADAPTER, is closed as not_planned at 2026-09-20T09:03:08Z. Authenticated API readback verified both fields and unchanged body. Opening its URL in Codex was queued. No comment or replacement issue was created.
 
 ### Changed boundary
 
-Only EXECUTION_CONTRACT.md and HANDOFF_CONTRACT.md change in cd30.
-The non-sensitive exact issue draft is outside Git at
-C:/Users/karl/.codex/tmp/ec-2026-09-20-002/issue-body.md.
-No scientific document, code, test, data, model or other worktree is changed.
+Only EXECUTION_CONTRACT.md and HANDOFF_CONTRACT.md change. A non-sensitive API helper is outside Git at C:/Users/karl/.codex/tmp/ec-2026-09-20-003/github.py. No scientific or Project changes.
 
 ### Facts
 
-Commander explicitly requested creation of the proposed issue. Adjutant
-supplied the complete English/Chinese body and sole-writer transfer. Gate 0
-remains open; the issue creates no scientific approval or implementation task.
-No existing issues or exact title duplicate were found in the authenticated
-all-state issue listing. All three pinned source paths resolve at the expected
-base through GitHub's contents API.
+Commander explicitly requested withdrawal and direct Adjutant discussion without other modules. Initial issue was open. Initial HEAD and live main were f5943238ba2efe3ca3e42806a85251a021b51e75. Gate 0 remains open.
 
 ### Decisions recorded
 
-Use the supplied English content with Markdown spacing only, removing Chinese text under the latest explicit language correction. Keep all four boxes
-unchecked, no labels, assignees or mentions. No new research choice, threshold,
-budget or access is approved. Request opening of the real issue URL after readback and return
-it immediately while completing the required finite contract lifecycle.
+Interpret withdrawal as reversible closure with not_planned, preserving history. No deletion or rollback of research documents or prior PRs. Organization discussion conveys no authority to create a Project.
 
 ### Assumptions and unresolved items
 
-Discussion questions remain open. The only remaining work is publication and
-verification of this single completion closure, not science or another issue.
-No additional issue, comment, label or assignment is authorized by this record.
+Whether to use a GitHub Project remains Commander's choice. Required contract publication follows the finite primary and closure lifecycle; PR and CI identity will be captured after successful primary synchronization.
 
 ### Validation and review evidence
 
-Executor fully traversed the new EC, mandatory governance/harness/profile,
-prior HC, research contract, relayed explicit request and supplied body.
-Unchanged checker/test evidence from the preceding task was reused; freshness
-and CI lifecycle were reread. Draft review confirms English-only sections, four
-unchecked questions, three immutable references and no sensitive information.
-Before issue creation, pytest -q passed 53 tests in 19.66 seconds and
-python scripts/check_repository.py --final --base-ref origin/main returned
-Repository contract: OK. Diff and bounded privacy review passed. Final
-checker is repeated after receipt/language edits before contract publication. No independent
-review is required or claimed for this deterministic editorial publication.
-
-Use existing Python 3.12.14 at
-C:/Users/karl/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe
-and pytest 8.4.2 from C:/Users/karl/.codex/tmp/ec-2026-09-20-001-validation.
-Process PATH includes Python and that target's bin; PYTHONPATH points to the
-target and PYTHONUTF8=1. No installation or scientific environment work occurs.
+Full traversal completed before substantive action. Authenticated before/after issue readback passed, including exact body equality. Only administrative records are changed; no independent scientific review is needed or claimed. Before contract publication, python -m pytest -q passed 53 tests in 21.68s; python scripts/check_repository.py --final --base-ref origin/main returned Repository contract: OK; git diff --check passed. Bounded privacy and diff review found only authorized administrative content.
 
 ### Git and external evidence
 
-HEAD and live main initially equal
-`9ffc751a17091441162bec9bcdfdec4da5f71309`; origin is
-https://github.com/DearKarl/ambiguity-is-not-conflict.git, with only Adjutant's
-EC bootstrap dirty. Created branch
-`codex/probabilistic-tool-discussion-2026-09-20` after traversal.
-Fresh REST verification reports actual admin/maintain/push rights,
-enforce_admins=false, strict required repository-contract and one approving
-review. The EC explicitly permits normal administrator-exempt merge after CI;
-that narrow path is disclosed here and will be reverified before merge.
-No override/protection mutation is authorized. GCM credentials remain only in
-memory. No issue/PR creation is inferred from an uncertain response; readback
-and duplicate inspection are mandatory before any retry.
-
-Primary commit `036ed6530212261ca0174efd883ed74b5973cee0` was published
-through [PR #16](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/16),
-attached to the task and merged with exact-head SHA guard as
-`e818390d35bcff46fbb17fd9dd79f8d613b4e911`. Before publication, remote/base
-matched, divergence was 0/0, exact staged paths were the two contracts and
-final checker/diff/privacy passed. Normal push established the branch upstream.
-Fresh pre-merge checks confirmed admin/push true, enforce_admins=false,
-strict repository-contract and one required approving review unchanged.
-Normal merge used the explicitly authorized existing administrator exemption
-after CI; no bypass flag, protection edit or manufactured approval.
-
-Successful primary CI receipts:
-
-- [Push run 35500713806](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35500713806).
-- [PR run 35500726726](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35500726726).
-- [Post-merge main run 35500774930](https://github.com/DearKarl/ambiguity-is-not-conflict/actions/runs/35500774930).
-
-Fetched main confirmed the merge before creating the single closure branch
-`codex/probabilistic-tool-discussion-closure-2026-09-20`. Only EC/HC change.
-Closure commit/PR/merge/check identity stays self-evidencing in Git/GitHub and
-the final receipt; it is not recursively added to another contract commit.
+Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git. Working branch codex/withdraw-issue-15-2026-09-20 starts at the verified expected base. Credentials are held only in memory. Primary PR identity and CI are externally self-identifying until the single completion record captures them. Ordinary administrator-exempt merge is narrowly allowed by EC only after fresh permissions/protection verification and required CI; no override or protection edits.
 
 ### Deviations and negative results
 
-The English-only correction arrived just after initial bilingual creation.
-EC was amended and fully reread before updating the same issue. No duplicate
-was created. This remains a bounded editorial publication, with no new scientific design,
-experiment, evidence promotion or additional module circulation.
+No other module was dispatched. The explicit user instruction to handle this administrative reversal here governs sole Adjutant execution. No scientific execution or claim promotion occurred.
 
 ### Residual risks and recovery
 
-Metadata contains restricted identifiers and must never be treated as public
-or harmless. No restricted records, credentials, personal correspondence or
-private screenshots appear in the draft. Recover from the named branch and
-exact external draft; if creation is uncertain inspect the issue list instead
-of blindly creating another issue.
+Metadata contains restricted identifiers and must never be treated as public or harmless. No restricted metadata or credentials enter these records. Issue history remains intact and can be reopened only on later authority. On uncertain API result inspect before retrying.
 
 ### Next permitted boundary
 
-The issue and primary publication are complete. Validate and publish only this
-single EC/HC COMPLETE closure, verify its CI, return the final receipt and stop.
-No further issue mutation, research, implementation or old job resumes.
+Validate and synchronize the two administrative records, perform one completion-only closure and return to direct discussion. No Project or new issue creation, delegation, or research execution.
