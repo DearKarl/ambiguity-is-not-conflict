@@ -55,31 +55,31 @@ GitHub protection. No unrecorded or second remediation is allowed.
 
 ### Identity and status
 
-- Contract ID: `EC-2026-09-20-003`
-- Task: withdraw discussion issue 15 and discuss organization with Commander
-- Status: `COMPLETE`
-- Authorized by: Commander's explicit request on 2026-09-20 to withdraw the previously created issue and discuss here in Adjutant without other modules.
+- Contract ID: `EC-2026-09-20-004`
+- Task: permanently delete issue 15 and prepare a PhD Kanban discussion
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander's explicit request on 2026-09-20 to permanently delete issue 15 and discuss a GitHub Project/Kanban for this doctoral research; no other modules.
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/withdraw-issue-15-2026-09-20`
-- Expected base: `f5943238ba2efe3ca3e42806a85251a021b51e75`
-- Linked Handoff Contract: `HC-2026-09-20-003`
+- Working branch: `codex/delete-issue-15-2026-09-20`
+- Expected base: `f0e9ebe6cd60dc54bc7a8d420eaaaec5bfd3e15a`
+- Linked Handoff Contract: `HC-2026-09-20-004`
 - Owner: Adjutant, sole writer; no delegation.
 
 ### Primary outcome
 
-Close issue 15 as not planned, preserving its English content and history; verify readback and discuss organization here. No Project creation or scientific change.
+Permanently delete the specifically authorized issue 15, verify the result, and prepare a concrete Kanban discussion proposal with statuses, fields, initial cards and acceptance criteria. Project creation remains for discussion, not part of this external mutation. No scientific change.
 
 ### Authoritative inputs
 
-Read this contract, AGENTS.md, CODEX_TASK_GOVERNANCE.md, CODEX_ROLE_HARNESS.md, .codex/agents/adjutant.toml, prior HANDOFF_CONTRACT.md, docs/research/research_contract.md and Commander's current request in full. Existing checker and CI requirements govern publication.
+Read this contract, AGENTS.md, CODEX_TASK_GOVERNANCE.md, CODEX_ROLE_HARNESS.md, .codex/agents/adjutant.toml, prior HANDOFF_CONTRACT.md, docs/research/research_contract.md, docs/research/pre_access_decision_package.md and Commander's current request in full. Existing checker and CI requirements govern publication.
 
 ### Allowed actions
 
-Only the two contracts may change in this worktree. Read GitHub issue 15, close it with state_reason not_planned, verify and open its URL. No additional comment is needed. Use bundled Python and existing pytest target ec-2026-09-20-001-validation. Non-sensitive temporary helper files may be written under C:/Users/karl/.codex/tmp/ec-2026-09-20-003. Credentials stay in memory. Normal fetch, branch, commit, push, PR and merge for required contract records follow the finite primary and one completion closure lifecycle. Read official GitHub documentation for discussion.
+Only the two contracts may change in this worktree. Read and positively identify GitHub issue 15, permanently delete it through the official API or UI, and verify absence. No additional comment is needed. Use bundled Python and existing pytest target ec-2026-09-20-001-validation. Non-sensitive temporary helper files may be written under C:/Users/karl/.codex/tmp/ec-2026-09-20-004. Credentials stay in memory. Normal fetch, branch, commit, push, PR and merge for required contract records follow the finite primary and one completion closure lifecycle. Read official GitHub documentation for discussion.
 
 ### Forbidden actions
 
-No dataset or model download. No query of restricted data. No scientific execution, new research decisions, code/test/research-document changes, issue deletion, comment creation, Project creation, or delegation to any module. No force push, history rewrite, protection changes or explicit bypass.
+No dataset or model download. No query of restricted data. No scientific execution, new research decisions, code/test/research-document changes, deletion of any other issue, comment creation, Project creation, or delegation to any module. Do not rewrite historical Git records; full deletion here means the GitHub issue object, not erasure of every reference. No force push, history rewrite, protection changes or explicit bypass.
 
 ### Preconditions
 
@@ -87,7 +87,7 @@ Initial worktree clean at expected base. Verify live main and exact issue identi
 
 ### Promotion criteria
 
-Authenticated readback confirms issue 15 closed with not_planned; history preserved. Checks pass, only two contracts change, finite synchronization receipts recorded, and discussion returns to Commander.
+Successful deletion response and subsequent authenticated readback confirm issue 15 is no longer available. A source-grounded Kanban proposal is reviewable. Checks pass, only two contracts change, finite synchronization receipts recorded, and discussion returns to Commander.
 
 ### Stopping criteria
 
@@ -95,7 +95,7 @@ Stop affected action on target mismatch, unrelated divergence, failed checks, mi
 
 ### Irreversible and external boundaries
 
-The specific issue closure is explicitly authorized. Required contract synchronization is authorized by AGENTS. Ordinary administrator-exempt merge is allowed only with freshly verified actual permissions and enforce_admins=false after required CI, disclosed in HC. No override flags or protection changes.
+The irreversible permanent deletion of issue 15 is explicitly authorized by the latest user request; no renewed confirmation is needed. Required contract synchronization is authorized by AGENTS. Ordinary administrator-exempt merge is allowed only with freshly verified actual permissions and enforce_admins=false after required CI, disclosed in HC. No override flags or protection changes.
 
 ### Required evidence
 
@@ -104,10 +104,6 @@ Issue identity and before/after readback, exact two-file diff, pytest and final 
 ### Pre-task traversal record
 
 - Traversal status: `COMPLETE`
-- Initial read-only inspection verified clean worktree, expected HEAD and correct origin. All listed sources except this new draft have been read in full. This EC is the sole pre-traversal mutation.
+- Initial inspection found a clean worktree at the expected base. Mandatory governance, prior contracts, role profile and research inputs read; truncated research output recovered by bounded reads. Full new EC reread follows before action.
 
-- Adjutant completed full traversal of this new EC and all listed inputs on 2026-09-20; verified explicit authority, sole-writer scope, exact target, no science, promotion/stops, external boundaries and finite closure. No modules dispatched.
-
-### Completion record
-
-Issue 15 closure verified. Primary PR 18 merged as 7d028daadb91318a6d2f011f7b0b50e57ad029a7 with branch, PR and main CI successful. Only validation and publication of this single two-contract completion closure remain. No deletion, Project creation or delegation follows.
+- Adjutant completed full new-contract traversal on 2026-09-20. Verified explicit permanent-deletion authority, exact issue and two-contract boundary, source-grounded discussion only, forbidden actions, stops, evidence and finite closure. No delegation.

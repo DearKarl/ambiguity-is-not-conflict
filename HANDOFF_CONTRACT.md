@@ -42,56 +42,54 @@ in the fully re-traversed Execution Contract before one exceptional closure
 may include only the exact governance files named there. The exception remains
 single-use, independently reviewed, and inside the same final closure PR.
 
-## Handoff record `HC-2026-09-20-003`
+## Handoff record `HC-2026-09-20-004`
 
 ### Identity and status
 
-- Linked Execution Contract: `EC-2026-09-20-003`
-- Task: withdraw discussion issue 15 and discuss organization with Commander
-- Status: `COMPLETE`
-- Prepared by: Adjutant, sole writer; no other module dispatched
+- Linked Execution Contract: `EC-2026-09-20-004`
+- Task: permanently delete issue 15 and prepare a PhD Kanban discussion
+- Status: `READY FOR REMOTE FINALIZATION`
+- Prepared by: Adjutant, sole writer; no delegation
 - Handoff date: 2026-09-20 (Europe/London)
 
 ### Outcome
 
-Issue [15](https://github.com/DearKarl/ambiguity-is-not-conflict/issues/15), titled Discussion: understanding PROBVLM-2ADAPTER, is closed as not_planned at 2026-09-20T09:03:08Z. Authenticated API readback verified both fields and unchanged body. Opening its URL in Codex was queued. No comment or replacement issue was created.
+Permanently deleted the specifically authorized GitHub issue 15, Discussion: understanding PROBVLM-2ADAPTER. The official GraphQL deleteIssue mutation returned success for DearKarl/ambiguity-is-not-conflict. Subsequent authenticated REST readback returned HTTP 410 Gone while the repository remained accessible. No other issue or historical Git record was deleted.
+
+A discussion proposal uses one research Project, a Status-based Kanban and optional decision/evidence views over the same cards. Proposed columns are Inbox, Ready, In Progress, Review, Blocked and Done. Initial contents distinguish completed protocol preparation from unapproved D1-D6 choices and future gated execution. No Project or replacement issue was created.
 
 ### Changed boundary
 
-Only EXECUTION_CONTRACT.md and HANDOFF_CONTRACT.md change. A non-sensitive API helper is outside Git at C:/Users/karl/.codex/tmp/ec-2026-09-20-003/github.py. No scientific or Project changes.
+Only EXECUTION_CONTRACT.md and HANDOFF_CONTRACT.md change. Non-sensitive temporary API helpers are under C:/Users/karl/.codex/tmp/ec-2026-09-20-004. No scientific documents, code, tests, data or models change.
 
 ### Facts
 
-Commander explicitly requested withdrawal and direct Adjutant discussion without other modules. Initial issue was open. Initial HEAD and live main were f5943238ba2efe3ca3e42806a85251a021b51e75. Gate 0 remains open.
+Commander explicitly requested permanent deletion after the prior close-only action and asked to discuss a doctoral research Project/Kanban. The initial worktree was clean at f0e9ebe6cd60dc54bc7a8d420eaaaec5bfd3e15a, equal to live origin/main. The research contract and pre-access decision package confirm Gate 0 remains open; the package is protocol recommendations, not completed experiments or blanket approval.
 
 ### Decisions recorded
 
-Interpret withdrawal as reversible closure with not_planned, preserving history. No deletion or rollback of research documents or prior PRs. Organization discussion conveys no authority to create a Project.
+Delete only issue 15, without further confirmation because the current instruction is explicit. Discuss a lightweight board using English artifact titles, links to canonical research records and specific completion evidence. Proposed board status is workflow status, never scientific approval. All new fields, cards and organization choices remain discussion proposals.
 
 ### Assumptions and unresolved items
 
-Whether to use a GitHub Project remains Commander's choice. Primary publication and CI are complete. The single completion-only closure identifies itself through Git and GitHub; no recursive third record is permitted.
+The board initially covers Ambiguity Is Not Conflict; whether it should cover the entire doctorate's additional activities is a question for Commander. No dates, commitments, new scientific choices or staffing assignments are invented. A draft card can capture a question before any repository Issue is created.
 
 ### Validation and review evidence
 
-Full traversal completed before substantive action. Authenticated before/after issue readback passed, including exact body equality. Only administrative records are changed; no independent scientific review is needed or claimed. Before contract publication, python -m pytest -q passed 53 tests in 21.68s; python scripts/check_repository.py --final --base-ref origin/main returned Repository contract: OK; git diff --check passed. Bounded privacy and diff review found only authorized administrative content.
+Full new-contract traversal completed before deletion. Exact issue number, title and URL were checked before the single deletion mutation; success, 410 Gone and repository availability were verified afterward. Official GitHub documentation verifies deletion and Projects/Kanban/draft capabilities. Before contract publication, python -m pytest -q passed 53 tests in 19.58s; python scripts/check_repository.py --final --base-ref origin/main returned Repository contract: OK. Diff and bounded privacy review passed; only two authorized administrative files change. No independent scientific review is required or claimed.
 
 ### Git and external evidence
 
-Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git. Working branch codex/withdraw-issue-15-2026-09-20 starts at the verified expected base. Credentials are held only in memory. Primary PR identity and CI are externally self-identifying until the single completion record captures them. Ordinary administrator-exempt merge is narrowly allowed by EC only after fresh permissions/protection verification and required CI; no override or protection edits.
+Origin remains https://github.com/DearKarl/ambiguity-is-not-conflict.git. Primary branch codex/delete-issue-15-2026-09-20 begins at the verified expected base. Credentials remain in memory. Primary PR/merge/CI are self-identifying until the completion record captures their receipts. Ordinary administrator-exempt merge is authorized narrowly by EC after fresh permissions/protection and CI verification; no override or protection changes.
 
 ### Deviations and negative results
 
-No other module was dispatched. The explicit user instruction to handle this administrative reversal here governs sole Adjutant execution. No scientific execution or claim promotion occurred.
+This request replaces the earlier close-only outcome with explicitly authorized permanent deletion. Historical Git references remain; deletion does not claim erasure of every record or cache. No module dispatch, Project creation or scientific execution.
 
 ### Residual risks and recovery
 
-Metadata contains restricted identifiers and must never be treated as public or harmless. No restricted metadata or credentials enter these records. Issue history remains intact and can be reopened only on later authority. On uncertain API result inspect before retrying.
+Metadata contains restricted identifiers and must never be treated as public or harmless. No restricted records or credentials are published. The issue is permanently deleted; any later recreation would be a new issue requiring authority. Preserve existing Git history. Never blindly retry a deletion after an uncertain response.
 
 ### Next permitted boundary
 
-Validate and synchronize the two administrative records, perform one completion-only closure and return to direct discussion. No Project or new issue creation, delegation, or research execution.
-
-### Primary completion evidence
-
-Primary commit e3ccd6d was published in [PR 18](https://github.com/DearKarl/ambiguity-is-not-conflict/pull/18), attached to this task, and merged as 7d028daadb91318a6d2f011f7b0b50e57ad029a7. Push CI 35501300987, PR CI 35501302416 and post-merge main CI 35501352650 all completed successfully. Remote/base divergence was 0/0 before publication; exact staged paths were the two contracts. Fresh permissions confirmed admin and push true, enforce_admins=false, strict repository-contract and one approving review. The ordinary existing administrator exemption was used with exact SHA guard after CI, without override or protection edits. No independent review is claimed. The issue remains closed, not deleted; a later capability question about deletion does not authorize it. Commander was told permanent deletion is possible but was not performed. Only validation/publication/CI of this completion closure remains; return to Adjutant discussion afterward.
+Finish the finite two-contract primary and completion-only synchronization, then discuss the proposed Kanban directly with Commander. Creating or populating a GitHub Project is a later boundary after this discussion; no other module is called.
