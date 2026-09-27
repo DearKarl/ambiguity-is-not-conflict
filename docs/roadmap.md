@@ -1,14 +1,17 @@
-# Twelve-Month Research Roadmap
+# Evidence-Gated Research Roadmap
 
 **Status:** Planning schedule governed by evidence gates
 
-**Sole submission objective:** NeurIPS 2027 Main Track (DR-0019).
+**Sole submission objective:** ICML 2027 main conference (DR-0020).
 The [pre-access preparation plan](research/pre_access_preparation_plan.md) and
 [dated progress ledger](research/progress_2026-09-18.md) identify the immediate
 work while access review remains open. Calendar pressure never relaxes a gate.
 
-**Anchor:** Month 0 begins 2026-08-27. Official 2027 venue dates are not yet
-assumed; the schedule will be rebased when the call is published.
+**Calendar update (2026-09-27):** the inherited Month 0–12 labels below are
+scientific stage identifiers, not a feasible ICML submission calendar. ICML
+2027 exact dates are unconfirmed. Engineer must propose a separately reviewed
+feasibility/rebaselining plan; no shortened experiment or relaxed gate is
+authorized by this venue transition. The former anchor was 2026-08-27.
 
 The current [Gate-0 closure audit](research/gate0_closure_audit.md) records
 partial internal approval, not execution readiness. It explicitly leaves
@@ -131,8 +134,8 @@ calibration criteria.
 
 ## Month 8–9 — Selective Review and Main Paper
 
-**Outcome:** submission-ready Main Track package, planned as Use-Inspired if an
-applicable 2027 contribution type exists, only if all earlier gates pass.
+**Outcome:** submission-ready ICML main-conference package, subject to the official
+2027 requirements and only if all earlier gates pass.
 
 - evaluate `answer | human_review` at equal review budgets or coverage;
 - complete ablations, compute statement, limitations, ethics, and
@@ -147,7 +150,7 @@ endpoint switching, unsupported clinical claim, or missing decisive baseline.
 
 ## Month 10–12 — Review, Rebuttal, and Evidence Preservation
 
-**Outcome:** respond to NeurIPS 2027 Main Track review and preserve the complete
+**Outcome:** respond to ICML 2027 main conference review and preserve the complete
 scientific record, including negative results.
 
 - answer reviewer questions with pre-existing or clearly labelled additional

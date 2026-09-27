@@ -54,54 +54,86 @@ GitHub protection. No unrecorded or second remediation is allowed.
 ## Active contract
 
 ### Identity and status
-
-- Contract ID: `EC-2026-09-20-006`
-- Task: replace the old MIMIC access issue and submit an open In Progress issue
-- Status: `COMPLETE`
-- Authorized by: Commander explicitly requested deleting the old item, submitting its replacement, and placing it In Progress on 2026-09-20.
+- Contract ID: `EC-2026-09-27-ICML`
+- Task: record the Commander-authorized ICML 2027 venue transition
+- Status: `AUTHORIZED / IN PROGRESS`
+- Authorized by: Commander explicit venue change and GitHub synchronization request, 2026-09-27
 - Repository: `DearKarl/ambiguity-is-not-conflict`
-- Working branch: `codex/mimic-access-issue-2026-09-20`
-- Expected base: `e780a2c62dddcc2ce652d53e0e6902ff043e9249`
-- Linked Handoff Contract: `HC-2026-09-20-006`
-- Owner: Adjutant sole operator; no delegation.
+- Working branch: `codex/icml-2027-venue-transition`
+- Expected base: `0d90d822dd7e67b7673ed20c93c3f3325843b202` (remote main; local detached 585be42)
+- Linked Handoff Contract: `HC-2026-09-27-ICML`
+- Owner: executor — Executor (GPT-6 Astra / Low)
 
 ### Primary outcome
-
-Replace the existing closed MIMIC access issue #24 with one open repository Issue, retained as the sole Project 5 card in In Progress. Keep concise English dataset/version and awaiting-review content. Delete the old issue as expressly requested; do not alter column descriptions or other project settings.
+Record ICML 2027 main conference as the sole submission objective, superseding
+DR-0019's venue choice only. Synchronize canonical active planning references.
+Manuscript migration and remote rename belong to another Executor task.
 
 ### Authoritative inputs
-
-Read this contract, AGENTS.md, CODEX_TASK_GOVERNANCE.md, prior HANDOFF_CONTRACT.md, and the opening administrative update/decision summary of docs/research/dataset_decision_record.md. Live Project 5 and issue #24 establish the item identity. Earlier immutable research traversal remains valid; no scientific decision is made here.
+AGENTS.md, CODEX_ROLE_HARNESS.md, CODEX_TASK_GOVERNANCE.md, this contract,
+HANDOFF_CONTRACT.md; README.md, docs/roadmap.md, docs/research/README.md,
+submission_strategy.md, research_contract.md, scope_charter.md,
+pre_access_preparation_plan.md and decision_log.md (research-relative paths),
+Handoff/README.md and paper/README.md; Commander request and parent bounded dispatch.
+Read remote changes after fetch before adopting that base. Official ICML
+2026 CFP is historical guidance only; 2027 dates/template are unconfirmed.
 
 ### Allowed actions
-
-Only EC and HC repository edits; temporary non-sensitive helpers under C:/Users/karl/.codex/tmp/ec-2026-09-20-006. Inspect #24 then create one replacement with matching sanitized administrative content, delete only verified #24, add replacement to Project 5 and select In Progress. Existing GitHub credentials in memory and documented browser UI permitted. Run existing tests/final checker. Commit/push with finite primary PR and one completion-only closure PR.
+Read/fetch remote, inspect divergence, adopt verified current main on named branch,
+update only contracts and named documentation inputs; add venue decision and
+minimal dated coordination entry. Run pytest -q (including existing static
+compiler calls), python scripts/check_repository.py --final, and diff checks.
+Commit, push, PR and normal merge only after checks; finite two-contract closure.
+Normal administrator-exempt merge is narrowly authorized by parent dispatch
+on 2026-09-27 only after verifying sole collaborator DearKarl, existing
+enforce_admins=false, passing required checks and parent diff review. Use a
+normal SHA-guarded merge; never an override flag or protection change.
 
 ### Forbidden actions
-
-No dataset or model download. No query of restricted data. No science, dataset/model access, unrelated issue deletion, account permission change, new project/fields, delegation, sensitive information, force push, history rewrite or protection change.
+No scientific method, estimand, gate, budget, resource or approval changes.
+No dataset or model download. No query of restricted data.
+No datasets/models, restricted records, credentials, private correspondence,
+scientific execution, annotation, paid compute, standalone compilers, forced
+push, history rewrite, protection changes, manuscript/browser edits or overlapping
+writer work. Do not assert manuscript migration completed without owner receipt.
 
 ### Preconditions
-
-Clean base verified. Live board shows only closed issue #24 already in In Progress, replacing the previous draft through user edits. Verify issue title/body before deletion and preserve its relevant content in the new issue.
+Clean checkout except sole EC draft; verified remote base and exclusive ownership.
+Fully read listed inputs and record traversal before substantive edits.
 
 ### Promotion criteria
-
-Old #24 deletion confirmed, one open replacement with exact dataset versions and truthful awaiting-review status, Project In Progress count one and other columns empty. Tests/checker/diff privacy review pass. Finite contracts close.
+Active venue references agree with new decision; historical evidence retained;
+2026 guidance explicitly provisional; all checks pass and publication evidence
+recorded without claiming scientific progress.
 
 ### Stopping criteria
-
-Stop affected action on identity mismatch, uncertain deletion, failed checks, unrelated divergence or absent permissions. Inspect before retry to avoid duplicates. User interruption stops work immediately.
+Stop on remote/ownership conflict, sensitive content, scope ambiguity or failing
+checks. Resolve routine bounded errors without weakening checks. If the narrow verified normal-merge conditions fail, leave PR ready and report
+the blocker; do not override protection.
 
 ### Irreversible and external boundaries
-
-Commander explicitly authorizes deletion of the old item and submission of its replacement in the same repository. Delete only #24 after matching title/body. Normal administrator-exempt merge is allowed after fresh admin/push rights, enforce_admins=false and passing required CI; disclose in HC. No protection edit or explicit bypass.
+Commander authorized GitHub synchronization of non-sensitive documentation.
+No other account or publication action. Closure follows primary merge and CI.
 
 ### Required evidence
-
-Issue identity/body/readback, replacement URL, deletion receipt, sole In Progress card, two-file diff, tests/final checker, staged-file/remote/upstream/divergence verification, primary PR/merge/CI. Closure self-identifies without recursive commits.
+Exact revisions, changed paths, commands/outcomes, PR and CI receipts, deviations,
+recovery state and next owner. No retrospective scientific results.
 
 ### Pre-task traversal record
-
 - Traversal status: `COMPLETE`
-- Read the full active EC, AGENTS, governance, prior HC and named dataset source section. Verified explicit replacement/deletion authority, precise boundary, promotion and stopping criteria, and finite closure on 2026-09-20. Commander additionally confirmed all future board items should be submitted Issues, never Drafts.
+- Completed 2026-09-27: mandatory governance, prior contracts and every named
+  documentation input read fully; authority, scope, checks and stop boundaries
+  verified. Only this EC changed before traversal. Remote inspection is the next
+  allowed action; any changed authority requires another full traversal.
+
+- Remote review: 0d90d82 adds September 20 pre-access documentation and completed
+  administrative issue/board contracts. Preserve all additions; no method change.
+  Latest EC/HC and changed active input sections read fully before adoption.
+
+- Amendment: paper/README.md included for venue-policy wording only. Full amended
+  contract and that input read before its edit; all other boundaries unchanged.
+
+- Merge amendment: verified sole collaborator DearKarl with admin/push rights and
+  existing enforce_admins=false, required reviews one. Full amended contract
+  traversal completed before publication; parent independently reviewed the
+  substantive diff with no blocking findings. CI remains a merge prerequisite.

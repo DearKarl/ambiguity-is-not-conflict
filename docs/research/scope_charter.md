@@ -2,7 +2,7 @@
 
 **Status:** Canonical one-paper boundary
 
-**Submission objective:** NeurIPS 2027 Main Track only, under DR-0019.
+**Submission objective:** ICML 2027 main conference only, under DR-0020.
 Historical alternate-venue language does not authorize a new target. A failed
 scientific gate still stops the current claim; retain the negative record and
 return any objective change to the Commander.
