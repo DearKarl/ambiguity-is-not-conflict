@@ -8,7 +8,7 @@
 supervisor-alignment history; and DR-0018 for consolidated internal approval of
 the scope/Method-A protocol boundaries and Stage-A data/retention route
 
-**Last reviewed:** 2026-09-02
+**Scientific review:** 2026-09-02; venue-only update: 2026-09-27 (DR-0020)
 
 ## Primary Outcome
 
@@ -16,8 +16,8 @@ The first paper succeeds scientifically if it establishes—or cleanly
 falsifies—an intervention-relative population response of a frozen cross-modal
 score that is specific to determinate incompatibility against approved paired
 controls. It does not claim that model outputs identify semantic conflict for
-an arbitrary pair. Submission to NeurIPS 2027 Main Track is the sole strategic
-objective under DR-0019, not the scientific endpoint and not a guaranteed
+an arbitrary pair. Submission to ICML 2027 main conference is the sole strategic
+objective under DR-0020, not the scientific endpoint and not a guaranteed
 acceptance outcome.
 
 The single intended paper contribution is the partial-construct,
@@ -37,7 +37,7 @@ specificity is primary; natural ambiguity is veto-only. The canonical
 protocol/interface roles are the explicitly non-novel
 `PROBVLM-2ADAPTER` instrument, `POINT-2ADAPTER-RECON` comparator, and secondary
 `POINT-INFONCE`. Chest radiography remains the primary validation domain and
-NeurIPS 2027 Main Track remains a conditional strategic target. `G0-DATA A`
+ICML 2027 main conference remains a conditional strategic target. `G0-DATA A`
 and `G0-RETENTION A` are selected for readiness only. The exact executable
 specification, remaining independent Gate-0 choices, and objective access,
 ethics, security, reader, licence, capacity, and feasibility evidence remain
@@ -64,7 +64,7 @@ facts.
 - refine definitions, causal contrasts, annotation rubrics, and power plans;
 - compare candidate tasks, datasets, estimands, and baselines within the
   approved scope; other venues are historical possibilities, not authorized
-  objectives under DR-0019;
+  objectives under DR-0020;
 - prepare governance applications and access checklists without accessing data;
 - draft task briefs, decision records, and preregistration-style protocols;
 - maintain repository structure and documentation checks.

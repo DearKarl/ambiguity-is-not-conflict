@@ -5,7 +5,7 @@
 
 **Intervention-identified measurement of cross-modal conflict specificity.**
 
-**Sole submission objective: NeurIPS 2027 Main Track** (DR-0019).
+**Sole submission objective: ICML 2027 main conference** (DR-0020).
 Submission requires every scientific promotion gate; acceptance is not promised.
 Alternative venues and tracks in historical records are not authorized targets.
 Start with the [portable handoff](Handoff/README.md),
@@ -121,8 +121,8 @@ the permitted terminology.
 | Primary instrument | **Protocol/interface approved:** explicitly non-novel paper-faithful `PROBVLM-2ADAPTER`; no probabilistic advantage is presumed |
 | Matched comparator | **Protocol/interface approved:** `POINT-2ADAPTER-RECON`; `POINT-INFONCE` is secondary, while executable and negative-policy specifications remain open |
 | Local storage | **Binding constraint:** the approximately 613-GB conditional simulation-output floor cannot run locally; this is not the medical dataset size, and `G0-RESOURCES` remains open |
-| Submission target | **Sole Commander-authorized objective:** NeurIPS 2027 Main Track; submission remains conditional on evidence and the official call; acceptance is not assumed |
-| Contribution type | **Planning classification:** Use-Inspired if the official 2027 rules retain an applicable category |
+| Submission target | **Sole Commander-authorized objective:** ICML 2027 main conference; submission remains conditional on evidence and the official call; acceptance is not assumed |
+| Contribution type | **Planning classification:** main-conference research paper; verify official 2027 categories |
 | Core execution | **Blocked by Gate 0:** remaining finite choices plus access, ethics, security, reader, licence, capacity, and feasibility evidence must be closed |
 
 The current [Gate-0 closure audit](docs/research/gate0_closure_audit.md) records
@@ -146,7 +146,7 @@ for the authoritative state.
 ```text
 docs/research/               canonical scientific contract and protocols
 docs/research/templates/     frozen-brief and evidence-record templates
-docs/roadmap.md              evidence gates and 12-month submission plan
+docs/roadmap.md              evidence gates and calendar-rebaselining boundary
 experiments/research_core/   reserved; no core experiment is implemented
 configs/                     reserved for frozen experiment configurations
 src/                         reserved until the protocol defines an interface

@@ -3,6 +3,9 @@
 This file records scope-changing decisions. Facts, inferences, assumptions, and
 decisions are separated explicitly.
 
+**Current venue:** DR-0020 supersedes the venue choice in DR-0019 and earlier
+NeurIPS planning records. Historical entries retain their dated meaning.
+
 ## DR-0001 — Standalone Project Identity
 
 - **Date:** 2026-08-27
@@ -1034,3 +1037,34 @@ decisions are separated explicitly.
   administrative evidence, failed scientific gate, or changed official rules.
 - **Permitted claim:** Documentation, administrative progress and migration
   readiness only; no new research result, access grant or execution approval.
+
+## DR-0020 — ICML 2027 Venue Transition
+
+- **Date:** 2026-09-27
+- **Status:** Commander-authorized venue/documentation decision; not executable science
+- **Authority:** explicit Commander selection of ICML and request to migrate
+  the current manuscript, name both projects `ICML_2027_Manuscript`, and sync GitHub.
+- **Facts:** ICML 2026 official guidance is available; exact ICML 2027 dates,
+  rules and template are unconfirmed. Existing scientific evidence remains
+  protocol-stage. Manuscript migration is separately owned.
+- **Decision:** ICML 2027 main conference is the sole submission objective.
+  Supersede only DR-0019's venue choice and earlier NeurIPS venue classifications.
+  No fallback or concurrent venue is authorized.
+- **Consequences:** update active planning entries and provisionally use official
+  ICML style in the separately owned manuscript. The inherited twelve-month
+  roadmap is not a claim of meeting the earlier submission window; Engineer
+  must propose a bounded feasibility/rebaselining plan for Commander review.
+- **Preserved boundary:** Method A, primary instrument/comparator, scientific
+  thresholds, Gate 0, access, annotation, resources and execution approvals are
+  unchanged. A venue change cannot reinterpret historical supervisor agreement
+  as fresh approval of ICML or of a new method.
+- **Inference:** the earlier planning window motivates prompt feasibility
+  review; it does not establish feasibility or justify reduced evidence.
+- **Assumptions:** official 2027 rules will be verified before submission.
+- **Alternatives considered:** retaining NeurIPS or automatic fallback rejected
+  in favor of the Commander's explicit sole target; preserve historical records.
+- **Review date:** on official 2027 publication and at the next feasibility review.
+- **Reopening condition:** new Commander decision, incompatible official rules,
+  missed deadline or failed scientific gate; no automatic redirection.
+- **Permitted claim:** venue and documentation transition only; no new research
+  result, access grant, Gate-0 closure, eligibility or acceptance claim.

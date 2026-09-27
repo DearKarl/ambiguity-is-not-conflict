@@ -3,6 +3,13 @@
 Date: 2026-09-18. Evidence class: non-executable preparation plan.
 Authority: EC-2026-09-18-001. Sole objective: NeurIPS 2027 Main Track submission.
 
+## September 27 venue-only update
+
+DR-0020 supersedes the historical NeurIPS objective below with ICML 2027 main
+conference alone. Existing work packages and scientific gates are unchanged.
+Exact 2027 deadlines are unconfirmed; a separately reviewed calendar/resource
+feasibility plan is the next Engineer boundary.
+
 ## September 20 specification packet
 
 EC-2026-09-20-001 advances this historical backlog into a

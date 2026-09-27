@@ -1,61 +1,49 @@
 # Submission Strategy
 
-**Status:** NeurIPS 2027 Main Track is the sole authorized submission objective
-under DR-0019; Gate-0 evidence remains open. The inherited planning record says
-the 2027 call is not yet available; this synchronization did not reverify it.
+**Status:** ICML 2027 main conference is the sole authorized submission objective
+under DR-0020 (2026-09-27), superseding the venue choice in DR-0019.
+Gate 0 remains open; this transition changes no scientific method or approval.
+The earlier NeurIPS planning record stated that the "2027 call is not yet available";
+that historical observation is not verification of current ICML publication status.
 
 ## Sole Submission Objective
 
-Prepare one submission-quality paper for **NeurIPS 2027 Main Track** only. This is a
-planning target, not a prediction of acceptance. The route remains a viable
-Main Track candidate only while its scientific contribution is
-methodologically substantive and supported by the frozen evidence gates.
-
-The working contribution-type classification is **Use-Inspired**, conditional
-on the official 2027 rules retaining an applicable category. The classification
-does not establish eligibility or venue fit in advance; it states how the
-methodological contribution is intended to be evaluated if the 2027 call
-supports that framing.
-
-The 2026 Main Track call explicitly included computer vision, language and
-multimodal models, AI/ML for health, probabilistic methods, decision-making,
-and general machine learning. It also welcomed rigorous analysis yielding new
-insight into method limitations or behaviour. The 2027 call, policies,
-template, dates, and subject areas must be reverified when published.
-
-Official planning references:
-
-- [NeurIPS 2026 Main Track call](https://neurips.cc/Conferences/2026/CallForPapers)
-- [NeurIPS 2026 Main Track handbook](https://neurips.cc/Conferences/2026/MainTrackHandbook)
-- [NeurIPS 2026 reviewer guidelines](https://neurips.cc/Conferences/2026/ReviewerGuidelines)
-- [NeurIPS paper checklist](https://neurips.cc/public/guides/PaperChecklist)
-- [NeurIPS code submission policy](https://neurips.cc/public/guides/CodeSubmissionPolicy)
-- [NeurIPS 2026 Evaluations & Datasets call](https://neurips.cc/Conferences/2026/CallForEvaluationsDatasets)
-- [NeurIPS 2026 Evaluations & Datasets FAQ](https://neurips.cc/Conferences/2026/EvaluationsDatasetsFAQ)
-
-Historical dates are used only for backwards planning. They are not assumed to
-be the 2027 deadlines.
+Prepare one submission-quality research paper for **ICML 2027 main conference**.
+Acceptance is not promised. All existing contribution, identification, matched
+comparison and evidence gates below remain binding. The former NeurIPS
+Use-Inspired classification is historical and is not an ICML category.
 
 ## Venue-Fit Evidence Classification
 
-- **Verified 2026 facts:** the Main Track handbook offered a Use-Inspired
-  contribution type for novel methods, tasks, or metrics associated with a
-  real-world use case; the reviewer guidelines allowed originality through new
-  insight, problem framing, task, metric, method, or a justified combination
-  rather than requiring a new architecture; and the call prohibited switching
-  between or simultaneously submitting to multiple NeurIPS tracks/types.
-- **Inference:** a domain-general partial-construct, intervention-identified
-  measurement and inference framework, rigorously validated in chest
-  radiography, could fit that contribution logic better than a benchmark-only
-  paper even without a new architecture or pointwise score.
-- **Assumptions:** an applicable contribution type and compatible track rules
-  will exist in 2027, and the currently reported time, compute, data-access,
-  and clinical-support plans will become documented resources.
-- **Decision:** prepare one Main Track Method-A identification-and-measurement
-  route; DR-0018 retains consolidated internal alignment with that conditional
-  strategy. DR-0019 makes Main Track the sole authorized objective. Recheck
-  its official 2027 eligibility, dates, and contribution type before submission;
-  changing the objective requires a new Commander decision.
+- **Verified historical guidance:** the official ICML 2026 call specifies
+  double-blind review, eight main-text pages, with references, impact statement
+  and appendices outside that limit in a single submission file. Its scope
+  includes evaluation, probabilistic methods, trustworthy ML and application-
+  driven ML. Its abstract/full-paper deadlines were January 23/28, 2026 AoE.
+- **Unconfirmed:** exact ICML 2027 dates, rules and template. A January 2027
+  window is a planning estimate only. Use an official 2026 template solely as
+  an explicitly provisional drafting format, then replace/revalidate when the
+  2027 materials appear.
+- **Inference:** the existing framework may fit the main-conference research
+  scope if its scientific gates pass; formatting migration proves neither
+  novelty nor readiness.
+- **Decision:** no automatic NeurIPS fallback or concurrent submission. Any
+  later target change requires a new Commander decision.
+
+Official source checked 2026-09-27:
+[ICML 2026 Call for Papers](https://icml.cc/Conferences/2026/CallForPapers).
+Check the official 2027 call, author instructions, anonymity, author/reviewer
+requirements, overlap policy and formatting before actual submission.
+
+This remains one paper, not a second project or a simultaneous submission.
+
+## Manuscript Coordination
+
+Commander requests Overleaf project and private manuscript repository names
+`ICML_2027_Manuscript`. Their migration, compilation and synchronization are
+owned by the separately assigned manuscript Executor. This record specifies
+the intended names, not evidence that remote migration has completed. The
+research repository keeps its current name and scientific authority.
 
 ## Main Track Paper Identity
 
@@ -159,35 +147,19 @@ post-hoc repackaged as the same Main Track framework claim. Passing is necessary
 but not sufficient: confirmatory,
 calibration, breadth, decision, and reproducibility gates still remain.
 
-## Main Track Eligibility Checkpoint
+## Main Conference Eligibility Checkpoint
 
-NeurIPS 2026 treated Main Track and Evaluations & Datasets as separate tracks
-and prohibited simultaneous submission or later switching between them. Verify
-the official 2027 Main Track requirements before submission; no deadline or
-eligibility is inferred from the historical call.
-
-The central result must be a substantive, generalizable identification,
-measurement and inference framework with broad machine-learning insight.
-The earlier Evaluations & Datasets contingency is historical and no longer an
-authorized target under DR-0019. The project is not a second project or a simultaneous submission.
-If only evaluation science survives, preserve that result and stop the failed
-Main Track claim; do not automatically redirect the paper.
+Verify the official ICML 2027 requirements before submission. Historical
+NeurIPS track/Use-Inspired classifications confer no current eligibility.
+The unchanged scientific promotion bar above is a project requirement, not a
+claim that ICML mandates this exact design. Calendar pressure cannot relax it.
+If only a narrower or negative result survives, preserve it and return any
+new paper claim or target decision to the Commander.
 
 ## Historical Venue Alternatives: Not Authorized
 
-- **ICLR or ICML:** method-first uncertainty, representation, or evaluation
-  contribution with broad ML evidence;
-- **UAI:** stronger probabilistic or Bayesian methodology and uncertainty
-  analysis;
-- **MIDL or MLHC:** medical-imaging/health-method contribution with rigorous
-  clinical task definition;
-- **Medical Image Analysis or Journal of Biomedical Informatics:** expanded
-  medical validation and analysis when journal depth fits better.
-
-These families are retained only as historical planning context. None is an
-authorized fallback or concurrent target. Changing the sole NeurIPS 2027 Main
-Track objective requires an explicit new Commander decision, even if a deadline
-is missed or the current scientific route fails.
+NeurIPS, ICLR, UAI, MIDL, MLHC and journal alternatives remain historical
+possibilities only. DR-0020 authorizes ICML 2027 main conference alone.
 
 ## Submission Stop Conditions
 
@@ -197,4 +169,4 @@ instrument fails the matched deterministic advantage gate, confirmatory
 evaluation leaks patient/source information, the main result depends on post-hoc
 endpoint selection, or clinical claims exceed the evidence. A rigorous negative
 paper remains part of the scientific record. Redirection requires an explicit
-new Commander decision; DR-0019 supplies no alternative-venue authority.
+new Commander decision; DR-0020 supplies no alternative-venue authority.

@@ -1,7 +1,7 @@
 # Ambiguity Is Not Conflict: Portable Project Entry
 
-Snapshot preparation date: 2026-09-18. Sole submission objective: **NeurIPS 2027
-Main Track**. This entry provides coordination context, not execution authority.
+Entry updated: 2026-09-27. Sole submission objective: **ICML 2027 main
+conference**, under DR-0020. September 18 snapshots remain historical. This entry provides coordination context, not execution authority.
 
 ## Start here
 
@@ -30,7 +30,7 @@ persists until explicitly handed off. Use one writer per bounded task.
 
 ## Current progress
 
-Credentialing is reported **Awaiting review**; both required CITI courses are
+The September 18 administrative receipt reports credentialing **Awaiting review**; both required CITI courses are
 reported **Passed**; the full training report was uploaded with status **Review**.
 DUA and dataset access remain unconfirmed. Gate 0 is open. Method A and its
 non-novel instrument/comparator roles remain unchanged. No experiment or
@@ -61,3 +61,12 @@ are excluded. Other projects in the external Handoff folder remain untouched.
 
 Any next task needs a current owner, input revision, bounded contract, file and
 compute scope, checks, stop conditions and external-action boundary.
+
+## Manuscript migration boundary
+
+The Commander requests `ICML_2027_Manuscript` for both Overleaf and the private
+GitHub manuscript repository. The separate manuscript owner must supply its
+actual URL, revision, compilation and sync receipts; this research entry does
+not assert that migration is complete. Keep research and manuscript repositories
+separate. ICML 2027 exact dates/template remain unconfirmed; official 2026 style
+is provisional. Engineer owns a future bounded calendar-feasibility review.
