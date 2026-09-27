@@ -56,7 +56,7 @@ GitHub protection. No unrecorded or second remediation is allowed.
 ### Identity and status
 - Contract ID: `EC-2026-09-27-ICML`
 - Task: record the Commander-authorized ICML 2027 venue transition
-- Status: `AUTHORIZED / IN PROGRESS`
+- Status: `COMPLETE`
 - Authorized by: Commander explicit venue change and GitHub synchronization request, 2026-09-27
 - Repository: `DearKarl/ambiguity-is-not-conflict`
 - Working branch: `codex/icml-2027-venue-transition`
@@ -137,3 +137,15 @@ recovery state and next owner. No retrospective scientific results.
   existing enforce_admins=false, required reviews one. Full amended contract
   traversal completed before publication; parent independently reviewed the
   substantive diff with no blocking findings. CI remains a merge prerequisite.
+
+### Completion record
+Primary head 3d1282e317a5fb24e4b86353750a911134688202, PR #28,
+merged as deaa3fb4faa3e577e667f158c7cec6645eaa2571. Branch CI 36355974688,
+PR CI 36355987086 and post-merge CI 36356040306 all passed. Parent independently
+reviewed substantive documentation with no blocking findings. Verified sole
+collaborator DearKarl, admin/push rights and enforce_admins=false; ordinary
+SHA-guarded REST merge used, no explicit override or protection change.
+This one closure changes only EC/HC at the exact primary merge. Its identity
+and CI self-identify in Git/GitHub and final receipt; no recursive closure.
+Next owner: Adjutant for delivery, Engineer for a separately bounded calendar
+feasibility review. No substantive or scientific work remains authorized here.

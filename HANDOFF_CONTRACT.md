@@ -98,7 +98,7 @@ single-use, independently reviewed, and inside the same final closure PR.
 ### Identity and status
 - Linked Execution Contract: `EC-2026-09-27-ICML`
 - Task: record sole ICML 2027 venue transition
-- Status: `READY FOR REMOTE FINALIZATION`
+- Status: `COMPLETE`
 - Prepared by: executor — Executor (GPT-6 Astra / Low)
 - Handoff date: 2026-09-27
 
@@ -141,8 +141,20 @@ statements without changing tests; repeat `pytest -q`: 53 passed. `python script
 ### Git and external evidence
 Origin is https://github.com/DearKarl/ambiguity-is-not-conflict.git; branch
 codex/icml-2027-venue-transition starts at verified remote main 0d90d82.
-Primary PR and CI will self-identify on publication. Only the EC narrow normal administrator-exempt merge is authorized after
-parent review and passing CI; no override flag or protection change.
+Primary head: 3d1282e317a5fb24e4b86353750a911134688202.
+Primary PR: https://github.com/DearKarl/ambiguity-is-not-conflict/pull/28.
+Primary merge: deaa3fb4faa3e577e667f158c7cec6645eaa2571.
+Branch CI 36355974688, PR CI 36355987086 and post-merge CI 36356040306
+all passed. Verified sole collaborator DearKarl with admin/push rights,
+existing enforce_admins=false and one required review. Used ordinary SHA-guarded
+REST merge after parent review and passing CI; no override flag or protection
+change. Commands: `gh pr checks 28 --watch --interval 10`,
+`gh api --method PUT repos/DearKarl/ambiguity-is-not-conflict/pulls/28/merge
+-f sha=3d1282e317a5fb24e4b86353750a911134688202 -f merge_method=merge`,
+`git fetch origin main`, and `gh run watch 36356040306 --interval 10 --exit-status`.
+The clean closure branch codex/icml-2027-venue-closure starts at that primary
+merge. Both contracts were reread fully before this finite completion update.
+Closure changes only EC/HC; its own commit, PR and CI are reported externally.
 
 ### Deviations and negative results
 Read-only remote inspection revealed newer main; used that base rather than
@@ -156,6 +168,7 @@ download. No query of restricted data. Recovery is the verified base and branch
 history; no force push or original manuscript replacement occurred here.
 
 ### Next permitted boundary
-Run mandated checks, review bounded diff, publish primary PR and merge only under
-the EC narrow normal administrator-exempt conditions. After primary merge and CI, one contracts-only
-closure may record completion. If reviews block merge, return PR to Adjutant.
+Only validate and publish this one contracts-only closure, verify CI and return
+the receipt to Adjutant. No further substantive edits under this task. Engineer
+owns a future separately authorized calendar/resource feasibility review;
+independent manuscript owner completes its migration and compilation receipts.
